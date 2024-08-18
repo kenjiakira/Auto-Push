@@ -289,7 +289,7 @@
         "vanity": "100029043375434",
         "gender": 2,
         "isBirthday": false,
-        "money": 88557,
+        "money": 93874,
         "exp": 0,
         "createTime": {
             "timestamp": 1721407829312
@@ -545,7 +545,7 @@
         "vanity": "100092325757607",
         "gender": 1,
         "isBirthday": false,
-        "money": 154075,
+        "money": 154155,
         "exp": 0,
         "createTime": {
             "timestamp": 1721463351357
@@ -13276,7 +13276,7 @@
         "vanity": "61561545866379",
         "gender": 1,
         "isBirthday": false,
-        "money": 4256.23828125,
+        "money": 348.4765625,
         "exp": 0,
         "createTime": {
             "timestamp": 1723549037294
@@ -13289,7 +13289,7 @@
         "coins": 47,
         "pay_limit_2024-08-16_61561545866379": 5,
         "pay_limit_2024-08-17_61561545866379": 8,
-        "pay_limit_2024-08-18_61561545866379": 1
+        "pay_limit_2024-08-18_61561545866379": 2
     },
     "61560665985427": {
         "userID": "61560665985427",
@@ -18303,7 +18303,7 @@
         "vanity": "61561567035490",
         "gender": 2,
         "isBirthday": false,
-        "money": 125000,
+        "money": 22850,
         "exp": 0,
         "createTime": {
             "timestamp": 1723815253749
@@ -20081,7 +20081,7 @@
         "vanity": "aravinth.svs.5",
         "gender": 2,
         "isBirthday": false,
-        "money": 99000,
+        "money": 388120,
         "exp": 0,
         "createTime": {
             "timestamp": 1723883411261
@@ -20260,7 +20260,7 @@
         "vanity": "100079621883786",
         "gender": 6,
         "isBirthday": false,
-        "money": 0,
+        "money": 8000,
         "exp": 0,
         "createTime": {
             "timestamp": 1723883413858
