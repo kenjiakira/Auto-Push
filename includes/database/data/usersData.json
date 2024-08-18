@@ -289,7 +289,7 @@
         "vanity": "100029043375434",
         "gender": 2,
         "isBirthday": false,
-        "money": 88026,
+        "money": 88557,
         "exp": 0,
         "createTime": {
             "timestamp": 1721407829312
@@ -12296,10 +12296,10 @@
         },
         "data": {
             "timestamp": 1723463408554,
-            "work2Time": 1723975239257
+            "work2Time": 1723976641205
         },
         "lastUpdate": 1723463408554,
-        "coins": 216,
+        "coins": 239,
         "lastDailyClaim": 1723969600318,
         "pay_limit_2024-08-13_61554963407981": 4,
         "pay_limit_2024-08-14_61554963407981": 5,
@@ -13276,7 +13276,7 @@
         "vanity": "61561545866379",
         "gender": 1,
         "isBirthday": false,
-        "money": 1084.5595703125,
+        "money": 4256.23828125,
         "exp": 0,
         "createTime": {
             "timestamp": 1723549037294
@@ -18303,7 +18303,7 @@
         "vanity": "61561567035490",
         "gender": 2,
         "isBirthday": false,
-        "money": 0,
+        "money": 125000,
         "exp": 0,
         "createTime": {
             "timestamp": 1723815253749
@@ -20081,7 +20081,7 @@
         "vanity": "aravinth.svs.5",
         "gender": 2,
         "isBirthday": false,
-        "money": 0,
+        "money": 99000,
         "exp": 0,
         "createTime": {
             "timestamp": 1723883411261
