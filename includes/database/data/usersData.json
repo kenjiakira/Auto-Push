@@ -289,7 +289,7 @@
         "vanity": "100029043375434",
         "gender": 2,
         "isBirthday": false,
-        "money": 87403,
+        "money": 88026,
         "exp": 0,
         "createTime": {
             "timestamp": 1721407829312
@@ -545,7 +545,7 @@
         "vanity": "100092325757607",
         "gender": 1,
         "isBirthday": false,
-        "money": 153575,
+        "money": 154075,
         "exp": 0,
         "createTime": {
             "timestamp": 1721463351357
@@ -10139,20 +10139,20 @@
         "vanity": "61554932909767",
         "gender": 2,
         "isBirthday": false,
-        "money": 55414,
+        "money": 5744,
         "exp": 0,
         "createTime": {
             "timestamp": 1723354229282
         },
         "data": {
             "timestamp": 1723354229282,
-            "work2Time": 1723804343135
+            "work2Time": 1723976603275
         },
         "lastUpdate": 1723354229282,
-        "lastDailyClaim": 1723771260299,
+        "lastDailyClaim": 1723976586677,
         "coins": 17,
         "pay_limit_2024-08-16_61554932909767": 1,
-        "pay_limit_2024-08-18_61554932909767": 1
+        "pay_limit_2024-08-18_61554932909767": 2
     },
     "61556067967833": {
         "userID": "61556067967833",
@@ -12289,7 +12289,7 @@
         "vanity": "61554963407981",
         "gender": 1,
         "isBirthday": false,
-        "money": 97100.48000000417,
+        "money": 0.48000000417232513,
         "exp": 0,
         "createTime": {
             "timestamp": 1723463408554
@@ -12916,14 +12916,14 @@
         "vanity": "100087052970126",
         "gender": 2,
         "isBirthday": false,
-        "money": 198758.32,
+        "money": 197650.32,
         "exp": 0,
         "createTime": {
             "timestamp": 1723532164267
         },
         "data": {
             "timestamp": 1723532164267,
-            "work2Time": 1723902544604
+            "work2Time": 1723976615341
         },
         "lastUpdate": 1723532164267,
         "coins": 48,
@@ -13276,7 +13276,7 @@
         "vanity": "61561545866379",
         "gender": 1,
         "isBirthday": false,
-        "money": 34.5595703125,
+        "money": 1084.5595703125,
         "exp": 0,
         "createTime": {
             "timestamp": 1723549037294
@@ -16436,7 +16436,7 @@
         "vanity": "100087614525995",
         "gender": 1,
         "isBirthday": false,
-        "money": 0,
+        "money": 50000,
         "exp": 0,
         "createTime": {
             "timestamp": 1723731548259
@@ -18303,7 +18303,7 @@
         "vanity": "61561567035490",
         "gender": 2,
         "isBirthday": false,
-        "money": 1320064,
+        "money": 0,
         "exp": 0,
         "createTime": {
             "timestamp": 1723815253749
@@ -18861,7 +18861,7 @@
         "vanity": "anhlamsanghahahah",
         "gender": 2,
         "isBirthday": false,
-        "money": 6912,
+        "money": 0,
         "exp": 0,
         "createTime": {
             "timestamp": 1723815262061
@@ -19121,7 +19121,7 @@
         "vanity": "100086368033663",
         "gender": 1,
         "isBirthday": false,
-        "money": 25655,
+        "money": 25665,
         "exp": 0,
         "createTime": {
             "timestamp": 1723815265943
@@ -20028,7 +20028,7 @@
         "vanity": "61562959491909",
         "gender": 1,
         "isBirthday": false,
-        "money": 158400.15741348267,
+        "money": 558400.1574134827,
         "exp": 0,
         "createTime": {
             "timestamp": 1723883410500
