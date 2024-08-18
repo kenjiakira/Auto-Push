@@ -49,21 +49,45 @@ module.exports.run = async function({ api, event }) {
     const questionData = res.data.results[0];
     const { question, correct_answer, incorrect_answers } = questionData;
 
+    // Xáo trộn và chuẩn bị câu trả lời
     const answers = [correct_answer, ...incorrect_answers].sort(() => Math.random() - 0.5);
     const correctIndex = answers.indexOf(correct_answer);
 
-    const translatedData = await translate([
-      question,
-      ...answers
-    ], { to: 'vi' });
+    // Tiền xử lý văn bản trước khi dịch
+    const preprocessText = text => text.replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+
+    // Dịch từng phần một với từ điển bổ sung cho các thuật ngữ cụ thể
+    const translatedData = await Promise.all([
+      translate(preprocessText(question), { to: 'vi' }),
+      ...answers.map(answer => translate(preprocessText(answer), { to: 'vi' }))
+    ]);
 
     const translatedQuestion = translatedData[0];
     const translatedAnswers = translatedData.slice(1);
     const options = translatedAnswers.map((answer, index) => `${String.fromCharCode(65 + index)}. ${answer}`).join('\n');
 
-    const questionText = `${translatedQuestion}\n\n${options}`;
+    // Thay thế các thuật ngữ chưa được dịch chính xác bằng cách sử dụng từ điển bổ sung
+    const termDictionary = {
+      "Erchius Ghost": "Ma Quái Erchius",
+      "CETRICUB": "CETRICUB",
+      "Giò": "Giò",
+      "Pyromantle": "Pyromantle"
+    };
+
+    const adjustedOptions = translatedAnswers.map(answer => {
+      for (const [term, replacement] of Object.entries(termDictionary)) {
+        if (answer.includes(term)) {
+          return answer.replace(term, replacement);
+        }
+      }
+      return answer;
+    });
+
+    const questionText = `${translatedQuestion}\n\n${adjustedOptions.map((answer, index) => `${String.fromCharCode(65 + index)}. ${answer}`).join('\n')}`;
 
     api.sendMessage(questionText, event.threadID, (error, info) => {
+      if (error) return console.error("Lỗi khi gửi câu hỏi:", error);
+
       const messageID = info.messageID;
 
       global.client.handleReply.push({
@@ -73,7 +97,7 @@ module.exports.run = async function({ api, event }) {
         messageID,
         question,
         correctAnswer: translatedAnswers[correctIndex],
-        answers: translatedAnswers
+        answers: adjustedOptions
       });
 
       setTimeout(() => {
@@ -87,7 +111,7 @@ module.exports.run = async function({ api, event }) {
       }, 30000); 
     });
   } catch (error) {
-    console.error(error);
+    console.error("Lỗi khi lấy câu hỏi:", error);
     api.sendMessage("Đã xảy ra lỗi khi lấy câu hỏi. Vui lòng thử lại sau.", event.threadID, event.messageID);
   }
 };

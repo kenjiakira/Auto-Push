@@ -264,7 +264,7 @@ module.exports.run = async ({ event, api, Currencies }) => {
             }
 
             const data = await Currencies.getData(senderID);
-            const coinsMined = Math.floor(Math.random() * (10 - 5 + 1)) + 5; 
+            const coinsMined = Math.floor(Math.random() * (10 - 5 + 1)) + 20; 
             const newCoins = (data.coins || 0) + coinsMined;
 
             await Currencies.setData(senderID, { coins: newCoins });

@@ -7,6 +7,7 @@ let toolsData = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
 let userToolsData = JSON.parse(fs.readFileSync(userToolsPath, 'utf8'));
 
 const cooldown = new Map();
+const botUID = "100092325757607"; 
 
 module.exports.config = {
   name: "steal",
@@ -17,7 +18,11 @@ module.exports.config = {
   commandCategory: "game",
   usePrefix: true,
   usages: "steal [@mention] | steal bail | steal shop",
-  cooldowns: 5
+  cooldowns: 12
+};
+const adjustSuccessRate = (baseRate, numAttempts) => {
+  const additionalRate = Math.min(numAttempts * 0.05, 0.5); 
+  return baseRate + additionalRate;
 };
 
 module.exports.run = async ({ api, event, args, Currencies }) => {
@@ -53,9 +58,18 @@ module.exports.run = async ({ api, event, args, Currencies }) => {
 
   if (!mentionID) return api.sendMessage("Bạn phải tag người dùng để trộm tiền.", threadID, messageID);
 
+  if (mentionID === botUID) {
+    return api.sendMessage("Bạn không thể trộm tiền từ tài khoản của bot.", threadID, messageID);
+  }
+
   const currentTime = Date.now();
   const lastUsed = cooldown.get(senderID) || 0;
   const cooldownFailure = 24 * 60 * 60 * 1000;
+
+  if (currentTime < lastUsed + cooldownFailure) {
+    const remainingTime = Math.ceil((lastUsed + cooldownFailure - currentTime) / 1000);
+    return api.sendMessage(`Bạn đã bị giam 24 giờ và không thể thực hiện hành động trộm tiền trong thời gian này. Thời gian còn lại: ${remainingTime} giây. Sử dụng lệnh "steal bail" để được bảo lãnh.`, threadID, messageID);
+  }
 
   const userTools = userToolsData[senderID] || {};
   const toolSuccessIncrease = Object.keys(userTools).reduce((total, toolId) => {
@@ -63,7 +77,9 @@ module.exports.run = async ({ api, event, args, Currencies }) => {
     return total + (tool ? tool.successIncrease : 0);
   }, 0);
 
-  const successRate = 0.5 + (toolSuccessIncrease / 100);
+  const numAttempts = cooldown.get(senderID) ? Math.floor((currentTime - cooldown.get(senderID)) / (cooldownFailure)) : 0;
+  const baseSuccessRate = 0.5;
+  const successRate = adjustSuccessRate(baseSuccessRate, numAttempts) + (toolSuccessIncrease / 100);
   const success = Math.random() < successRate;
   const amount = Math.floor(Math.random() * 2000) + 1000;
 
@@ -86,7 +102,8 @@ module.exports.run = async ({ api, event, args, Currencies }) => {
     const penalty = 1000; 
     await Currencies.decreaseMoney(senderID, penalty);
 
-    api.sendMessage(`Bạn đã bị cảnh sát bắt và bị phạt ${penalty} xu. Bạn bị giam 24 giờ và không thể thực hiện hành động trộm tiền trong thời gian này. Sử dụng lệnh "steal bail" để được bảo lãnh.`, threadID, messageID);
+    const timeLeft = Math.ceil((cooldown.get(senderID) + cooldownFailure - currentTime) / 1000);
+    api.sendMessage(`Bạn đã bị cảnh sát bắt và bị phạt ${penalty} xu. Bạn bị giam 24 giờ và không thể thực hiện hành động trộm tiền trong thời gian này. Thời gian còn lại: ${timeLeft} giây. Sử dụng lệnh "steal bail" để được bảo lãnh.`, threadID, messageID);
     cooldown.set(senderID, currentTime + cooldownFailure); 
   }
 };

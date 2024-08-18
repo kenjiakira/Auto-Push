@@ -33,7 +33,7 @@ async function circleImage(imageBuffer) {
 module.exports.config = {
     name: "id",
     version: "1.2.2",
-    hasPermission: 0,
+    hasPermission: 2,
     credits: "Hoàng Ngọc Từ",
     description: "Tạo căn cước",
     commandCategory: "Social",

@@ -3,21 +3,16 @@ const path = require('path');
 
 const dataFilePath = path.resolve(__dirname, 'json', 'khaosat.json');
 const surveyQuestions = [
-  "Bạn có thường xuyên sử dụng bot không?\n1. Có\n2. Không",
-  "Bạn thấy bot có dễ sử dụng không? \n1. Rất dễ \n2. Dễ \n3. Bình thường \n4. Khó \n5. Rất khó",
-  "Bạn có hài lòng với tốc độ phản hồi của bot không? \n1. Rất hài lòng \n2. Hài lòng \n3. Bình thường \n4. Không hài lòng \n5. Rất không hài lòng",
-  "Bạn có gặp vấn đề gì khi sử dụng bot không? \n1. Có \n2. Không",
-  "Bạn muốn thêm tính năng gì cho bot? \n1. Chat tự động \n2. Game mới \n3. Tiện ích mới \n4. Khác",
-  "Bạn có thấy thông tin trong bot rõ ràng không? \n1. Rõ ràng \n2. Bình thường \n3. Không rõ ràng",
-  "Bạn có khuyến nghị bot này cho người khác không? \n1. Có \n2. Không",
-  "Bạn nghĩ mức độ thân thiện của bot như thế nào? \n1. Rất thân thiện \n2. Thân thiện \n3. Bình thường \n4. Không thân thiện \n5. Rất không thân thiện",
-  "Bạn có thích giao diện và thiết kế của bot không? \n1. Có \n2. Bình thường \n3. Không",
-  "Bạn có hài lòng với sự hỗ trợ của đội ngũ phát triển bot không? \n1. Rất hài lòng \n2. Hài lòng \n3. Bình thường \n4. Không hài lòng \n5. Rất không hài lòng"
+  "Bạn muốn thêm lệnh gì cho bot?",
+  "Bạn cảm thấy giao diện của bot có cần cải tiến không? Nếu có, hãy cho biết điều gì cần thay đổi.",
+  "Có tính năng nào mà bạn nghĩ rằng bot nên bổ sung để cải thiện trải nghiệm của bạn?",
+  "Bạn có gặp phải khó khăn gì khi sử dụng bot không? Nếu có, vui lòng mô tả.",
+  "Bạn có đề xuất gì để làm cho bot trở nên hữu ích hơn?"
 ];
 
 module.exports.config = {
   name: "tk",
-  version: "1.0.0",
+  version: "1.0.1",
   hasPermission: 2,
   credits: "HNT",
   description: "Thống kê kết quả khảo sát với kết quả chi tiết và trực quan",
@@ -31,37 +26,48 @@ module.exports.run = async ({ api, event }) => {
   const { threadID, messageID } = event;
 
   try {
+    // Đọc dữ liệu khảo sát
     const data = await fs.readJson(dataFilePath, { default: {} });
 
+    // Cấu trúc để lưu trữ thống kê cho từng câu hỏi
     const questionStats = surveyQuestions.map(() => ({
-      count: Array(5).fill(0),
+      count: {},
       total: 0
     }));
 
-    Object.values(data).forEach(answers => {
-      answers.forEach((answer, index) => {
-        if (answer) {
-          questionStats[index].count[parseInt(answer) - 1]++;
-          questionStats[index].total++;
-        }
-      });
+    // Xử lý dữ liệu để đếm số lượng câu trả lời
+    Object.values(data).forEach(userData => {
+      if (userData.answers && Array.isArray(userData.answers)) {
+        userData.answers.forEach((answer, index) => {
+          if (answer) {
+            const answerText = answer.trim().toLowerCase();
+            if (!questionStats[index].count[answerText]) {
+              questionStats[index].count[answerText] = 0;
+            }
+            questionStats[index].count[answerText]++;
+            questionStats[index].total++;
+          }
+        });
+      } else {
+        console.warn(`Dữ liệu không hợp lệ cho người dùng: ${JSON.stringify(userData)}`);
+      }
     });
 
+    // Tạo thông điệp thống kê
     let resultMessage = "===📊 THỐNG KÊ KẾT QUẢ KHẢO SÁT ===\n\n";
     surveyQuestions.forEach((question, index) => {
       resultMessage += `\n🔹 ${question}\n`;
 
       const stats = questionStats[index];
-      stats.count.forEach((count, i) => {
-        if (count > 0) {
-          const percentage = stats.total ? ((count / stats.total) * 100).toFixed(2) : 0;
-          resultMessage += `  ${i + 1}: ${count} phản hồi (${percentage}%)\n`;
-        }
-      });
+      for (const [answerText, count] of Object.entries(stats.count)) {
+        const percentage = stats.total ? ((count / stats.total) * 100).toFixed(2) : 0;
+        resultMessage += `  "${answerText}"\n`;
+      }
 
       resultMessage += "---------------------------------------";
     });
 
+    // Gửi thông điệp thống kê
     api.sendMessage(resultMessage || "Không có dữ liệu để thống kê.", threadID, messageID);
   } catch (error) {
     console.error("Lỗi khi thống kê kết quả khảo sát:", error);

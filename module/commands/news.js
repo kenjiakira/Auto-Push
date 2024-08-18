@@ -1,20 +1,21 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+const schedule = require('node-schedule');
 
 module.exports.config = {
   name: "news",
-  version: "1.0.2",
+  version: "1.0.3",
   hasPermission: 0,
   credits: "HungCho mod by Hoàng Ngọc Từ",
-  description: "xem tin tức mới nhất!",
+  description: "Xem tin tức mới nhất và gửi tin tức tự động mỗi giờ!",
   commandCategory: "Tiện ích",
   usePrefix: true,
   usages: "news\n\nLệnh này lấy tin tức mới nhất từ VnExpress và gửi đến bạn",
   cooldowns: 0,
-  dependencies: { "axios": "", "cheerio": "" }
+  dependencies: { "axios": "", "cheerio": "", "node-schedule": "" }
 };
 
-module.exports.run = async function({ api, event }) {
+async function fetchNews(api, threadID) {
   try {
     const response = await axios.get('https://vnexpress.net/tin-tuc-24h');
     const $ = cheerio.load(response.data);
@@ -29,8 +30,20 @@ module.exports.run = async function({ api, event }) {
 
     const message = `===  [ 𝗧𝗜𝗡 𝗧𝗨̛́𝗖 ] ===\n━━━━━━━━━━━━━\n📺 Tin tức mới nhất\n⏰ Thời gian đăng: ${time}\n📰 Tiêu đề: ${title}\n\n📌 Nội dung: ${description[0]}\n🔗 Link: ${link}\n`;
 
-    api.sendMessage(message, event.threadID, event.messageID);
+    api.sendMessage(message, threadID);
   } catch (error) {
-    api.sendMessage("Đã xảy ra lỗi khi lấy tin từ VnExpress.", event.threadID, event.messageID);
+    api.sendMessage("Đã xảy ra lỗi khi lấy tin từ VnExpress.", threadID);
   }
+}
+
+module.exports.run = async function({ api, event }) {
+  const { threadID } = event;
+
+  // Lập lịch gửi tin tức tự động mỗi giờ
+  schedule.scheduleJob('0 * * * *', () => {
+    fetchNews(api, threadID);
+  });
+
+  // Gửi tin tức ngay lập tức khi lệnh được gọi
+  await fetchNews(api, threadID);
 };

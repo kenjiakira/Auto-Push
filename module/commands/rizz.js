@@ -54,14 +54,14 @@ module.exports.run = async ({ api, event }) => {
     return api.sendMessage('Câu nói mới đã được thêm thành công!', threadID);
   }
 
-  let name1 = "Tôi"; 
-  let name2 = "Cậu";  
+  let n1 = "Tôi"; 
+  let n2 = "Cậu";  
   let randomPickupLine = pickupLines[Math.floor(Math.random() * pickupLines.length)];
-  randomPickupLine = randomPickupLine.replace(/{name1}/g, name1).replace(/{name2}/g, name2);
+  randomPickupLine = randomPickupLine.replace(/{n1}/g, n1).replace(/{n2}/g, n2);
 
   do {
     randomPickupLine = pickupLines[Math.floor(Math.random() * pickupLines.length)];
-    randomPickupLine = randomPickupLine.replace(/{name1}/g, name1).replace(/{name2}/g, name2);
+    randomPickupLine = randomPickupLine.replace(/{n1}/g, n1).replace(/{n2}/g, n2);
   } while (recentPickupLines.includes(randomPickupLine));
 
   recentPickupLines.push(randomPickupLine);

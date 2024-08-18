@@ -1235,7 +1235,8 @@
                 "100091220332951",
                 "100083299398462",
                 "61555034078738",
-                "61562861017092"
+                "61562861017092",
+                "61556520389453"
             ],
             "userInfo": [
                 {
@@ -4890,7 +4891,8 @@
             "timestamp": 1689818847244
         },
         "data": {
-            "timestamp": 1689818847244
+            "timestamp": 1689818847244,
+            "gemini": true
         }
     },
     "6646432605422272": {
@@ -8411,7 +8413,6 @@
                 "100040842141538",
                 "100049504262694",
                 "100050968664314",
-                "100051501231542",
                 "100052394821987",
                 "100054035411784",
                 "100056912411974",
@@ -13531,7 +13532,7 @@
                 "100089415987625": "mấy thg chó",
                 "100090935716088": "mấy thg chó",
                 "100091940997489": "mấy thg chó",
-                "100092325757607": "con chó",
+                "100092325757607": "Ngân ali",
                 "100092615966279": "mấy thg chó",
                 "100093038925780": "mấy thg chó",
                 "100093410867151": "mấy thg chó",
@@ -13570,18 +13571,6 @@
                     "id": "100092325757607"
                 },
                 {
-                    "id": "61561753304881"
-                },
-                {
-                    "id": "61561753304881"
-                },
-                {
-                    "id": "61561753304881"
-                },
-                {
-                    "id": "61561753304881"
-                },
-                {
                     "id": "61563982612558"
                 },
                 {
@@ -13616,12 +13605,12 @@
         "data": {
             "timestamp": 1690335180724,
             "antiout": {
-                "status": true,
+                "status": false,
                 "storage": []
             },
             "PREFIX": "/",
             "autoresponse": true,
-            "gemini": true
+            "gemini": false
         }
     },
     "6312082135566239": {
@@ -18308,275 +18297,6 @@
             "timestamp": 1696665674809
         }
     },
-    "6614461798634649": {
-        "threadInfo": {
-            "threadID": "6614461798634649",
-            "threadName": "fandom HKN",
-            "participantIDs": [
-                "1190221779",
-                "100002734181466",
-                "100004366982560",
-                "100012962912422",
-                "100014034669306",
-                "100020600508676",
-                "100053121190229",
-                "100068242252863",
-                "100068679725242",
-                "100068786864021",
-                "100073222825866",
-                "100078219626966",
-                "100080985534030",
-                "100081803346729",
-                "100092325757607",
-                "100094246817772"
-            ],
-            "userInfo": [
-                {
-                    "id": "1190221779",
-                    "name": "Sầu Trong Tâm",
-                    "firstName": "Sầu",
-                    "vanity": "tranhuyhoangvanhungnoibuon",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/453068067_10229540225188568_725651854772983649_n.jpg?stp=dst-jpg_p120x120&_nc_cat=111&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHBMDhA7g11OYpJvqz1ZWp8lr6zwMwLqPGWvrPAzAuo8b2Iy3x-t5Vr75C9P2jUUOoWoJNfh39HimlJNpVpbCup&_nc_ohc=dNjksyyxHS4Q7kNvgHbaWqA&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYA1zl-DkIaam0WQFcdp-tVB6brUvRFNekJkkGV_urCYSQ&oe=66B0BCAA",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/453068067_10229540225188568_725651854772983649_n.jpg?stp=dst-jpg_p120x120&_nc_cat=111&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHBMDhA7g11OYpJvqz1ZWp8lr6zwMwLqPGWvrPAzAuo8b2Iy3x-t5Vr75C9P2jUUOoWoJNfh39HimlJNpVpbCup&_nc_ohc=dNjksyyxHS4Q7kNvgHbaWqA&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYA1zl-DkIaam0WQFcdp-tVB6brUvRFNekJkkGV_urCYSQ&oe=66B0BCAA",
-                    "gender": "NEUTER",
-                    "type": "User",
-                    "isFriend": false,
-                    "isBirthday": false
-                },
-                {
-                    "id": "100002734181466",
-                    "name": "Nguyễn Thanh Tùng",
-                    "firstName": "Nguyễn",
-                    "vanity": "mtpyps.tungbinh",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/445417624_7097828720318197_422565953070997383_n.jpg?stp=dst-jpg_p120x120&_nc_cat=101&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeFToKGx1_fPWgzVzyjXTKQJEPPhtai_1CEQ8-G1qL_UIT242u820cWlZkpTVIAHHgGj45MnBNNHD-GG_tB8gU4t&_nc_ohc=5uGyo1cNT0cQ7kNvgFZ04Zs&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCDsXjxrtf3B3dmXKShudWl2mSTNl49mZ5DH4lGB1z-Ug&oe=66B0B3E0",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/445417624_7097828720318197_422565953070997383_n.jpg?stp=dst-jpg_p120x120&_nc_cat=101&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeFToKGx1_fPWgzVzyjXTKQJEPPhtai_1CEQ8-G1qL_UIT242u820cWlZkpTVIAHHgGj45MnBNNHD-GG_tB8gU4t&_nc_ohc=5uGyo1cNT0cQ7kNvgFZ04Zs&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCDsXjxrtf3B3dmXKShudWl2mSTNl49mZ5DH4lGB1z-Ug&oe=66B0B3E0",
-                    "gender": "MALE",
-                    "type": "User",
-                    "isFriend": false,
-                    "isBirthday": false
-                },
-                {
-                    "id": "100004366982560",
-                    "name": " Đoàn Văn Hậu",
-                    "firstName": "",
-                    "vanity": "vanhau99",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/311291645_2313931765429034_8727402560617455104_n.jpg?stp=dst-jpg_p120x120&_nc_cat=104&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeFKfJ4jHEpLjTiMdrsjcHSV117UFIeGMEPXXtQUh4YwQ9GDML0zJTJpDITWha3QXSZKLOPfYnwTO118ta5btJUk&_nc_ohc=LLwHt-nf020Q7kNvgEgToPJ&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYABPtTeVtgtsOWFClptMRjgcx59tCDlB03k7ILiy0niEg&oe=66B0C9F1",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/311291645_2313931765429034_8727402560617455104_n.jpg?stp=dst-jpg_p120x120&_nc_cat=104&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeFKfJ4jHEpLjTiMdrsjcHSV117UFIeGMEPXXtQUh4YwQ9GDML0zJTJpDITWha3QXSZKLOPfYnwTO118ta5btJUk&_nc_ohc=LLwHt-nf020Q7kNvgEgToPJ&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYABPtTeVtgtsOWFClptMRjgcx59tCDlB03k7ILiy0niEg&oe=66B0C9F1",
-                    "gender": "MALE",
-                    "type": "User",
-                    "isFriend": false,
-                    "isBirthday": false
-                },
-                {
-                    "id": "100012962912422",
-                    "name": "𓅄 Dẫu Anh Không Là Chàng Hoàng Tử Mà Em Đắm Say 𓅷 Chỉ Là Giản Đơn Thôi Như Hình Hài Anh Lúc Này 𓃰 Anh Vẫn Muốn Quỳ Gối Trước Nàng Công Chúa Đẹp Nhất Đêm Nay 𖣘 Điều Anh Muốn Là Luôn Thấy Em Cười 𖠃 Chẳng Cần Phải Lo Lắng Vì Anh Ở Đây Rồi 𖣦 Để Anh Che Chở Em Hết Quãng Đường Ngày Sau Nhé 𖣔 Ngày Đầu Tiên Cùng Nhau Sống Suốt Đời 𓅘 Cùng Nhìn Về Phía Trước Cầm Tay Mãi Không Rời",
-                    "firstName": "▂╱▔▔╲╱▔▔▔▔╲╱▔▔╲▂  ╲┈▔╲┊╭╮┈┈╭╮┊╱▔┈╱  ┊▔╲╱▏┈╱▔▔╲┈▕╲╱▔┊  ┊┊┊┃┈┈▏┃┃▕┈┈┃┊┊┊  ┊┊┊▏╲┈╲▂▂╱┈╱▕┊┊┊",
-                    "vanity": "",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/453007003_1917020345406711_7765304740469315898_n.jpg?stp=c0.36.120.120a_dst-jpg_p120x120&_nc_cat=101&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF-lmsW1TQUFrmzH_QcXvPTekeP6RNHMcN6R4_pE0cxw3xlhI8PSaj-4wezbenFEYCo6dr73mcJYvrO-Y2RfP5X&_nc_ohc=K9ZY9tBHSvYQ7kNvgEXQ9Vh&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCHqBLSmegFE0MdTyAna4KC243iv1aaJbDBEVQlwDsb8A&oe=66B0B675",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/453007003_1917020345406711_7765304740469315898_n.jpg?stp=c0.36.120.120a_dst-jpg_p120x120&_nc_cat=101&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF-lmsW1TQUFrmzH_QcXvPTekeP6RNHMcN6R4_pE0cxw3xlhI8PSaj-4wezbenFEYCo6dr73mcJYvrO-Y2RfP5X&_nc_ohc=K9ZY9tBHSvYQ7kNvgEXQ9Vh&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCHqBLSmegFE0MdTyAna4KC243iv1aaJbDBEVQlwDsb8A&oe=66B0B675",
-                    "gender": "MALE",
-                    "type": "User",
-                    "isFriend": false,
-                    "isBirthday": false
-                },
-                {
-                    "id": "100014034669306",
-                    "name": "Nguyen Thao Anh",
-                    "firstName": "Anh",
-                    "vanity": "susu.lee.5011",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=dst-png_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeEeiG3o014-05qUQ0oYjGELso2H55p0AlGyjYfnmnQCUYA6aAt8TyPCiPrxNqU-zXwIBNbbfONU868psvrnifFI&_nc_ohc=5Mq6i7oiH4gQ7kNvgE8_ml-&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYBWBV1X3yqvdtkh4PhzXYCygduaDXInl68qI2lCs14Q3g&oe=66D24DF8",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=dst-png_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeEeiG3o014-05qUQ0oYjGELso2H55p0AlGyjYfnmnQCUYA6aAt8TyPCiPrxNqU-zXwIBNbbfONU868psvrnifFI&_nc_ohc=5Mq6i7oiH4gQ7kNvgE8_ml-&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYBWBV1X3yqvdtkh4PhzXYCygduaDXInl68qI2lCs14Q3g&oe=66D24DF8",
-                    "gender": "FEMALE",
-                    "type": "User",
-                    "isFriend": false,
-                    "isBirthday": false
-                },
-                {
-                    "id": "100020600508676",
-                    "name": "Hồ Nam Khánh",
-                    "firstName": "Hồ",
-                    "vanity": "hog.bicth.B",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/453439186_1435286290501374_4193154405764242376_n.jpg?stp=dst-jpg_p120x120&_nc_cat=106&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHCeBxeWV1XOUL6QqerQQsqow_F600cJQmjD8XrTRwlCT_Ndj7WI70ZtqoitMsvm87sXECSzEJxT_d917zXoLV4&_nc_ohc=aKl5QrhyyLgQ7kNvgFl5YRg&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYDFgHXdRLGgxn-6bLy1r-W3U-N5xGtqCHnIYwZrc7xcMA&oe=66B0B3A9",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/453439186_1435286290501374_4193154405764242376_n.jpg?stp=dst-jpg_p120x120&_nc_cat=106&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHCeBxeWV1XOUL6QqerQQsqow_F600cJQmjD8XrTRwlCT_Ndj7WI70ZtqoitMsvm87sXECSzEJxT_d917zXoLV4&_nc_ohc=aKl5QrhyyLgQ7kNvgFl5YRg&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYDFgHXdRLGgxn-6bLy1r-W3U-N5xGtqCHnIYwZrc7xcMA&oe=66B0B3A9",
-                    "gender": "FEMALE",
-                    "type": "User",
-                    "isFriend": false,
-                    "isBirthday": false
-                },
-                {
-                    "id": "100053121190229",
-                    "name": "Quang Hưng",
-                    "firstName": "Hưng",
-                    "vanity": "hombiee.68815",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/453073534_1008395580941139_5021665890838668948_n.jpg?stp=dst-jpg_p120x120&_nc_cat=106&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF0JSdTRxiDDI46pby10g1prwsi6iDIovGvCyLqIMii8XxgSwrEoYugROV3sk5RS7EF26fEt72M7WUP1Bpw2ye1&_nc_ohc=aQNPY0hN9B4Q7kNvgEXRt-w&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYC-YdyKAXiKW11USQ0_5gqPzXYxbLciWEDQ_bPY-RTWdQ&oe=66B0D8A7",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/453073534_1008395580941139_5021665890838668948_n.jpg?stp=dst-jpg_p120x120&_nc_cat=106&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF0JSdTRxiDDI46pby10g1prwsi6iDIovGvCyLqIMii8XxgSwrEoYugROV3sk5RS7EF26fEt72M7WUP1Bpw2ye1&_nc_ohc=aQNPY0hN9B4Q7kNvgEXRt-w&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYC-YdyKAXiKW11USQ0_5gqPzXYxbLciWEDQ_bPY-RTWdQ&oe=66B0D8A7",
-                    "gender": "MALE",
-                    "type": "User",
-                    "isFriend": false,
-                    "isBirthday": false
-                },
-                {
-                    "id": "100068242252863",
-                    "name": "Xiao Xiao",
-                    "firstName": "Xiao",
-                    "vanity": "PhamTuanDung.Profile",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=dst-png_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeEeiG3o014-05qUQ0oYjGELso2H55p0AlGyjYfnmnQCUYA6aAt8TyPCiPrxNqU-zXwIBNbbfONU868psvrnifFI&_nc_ohc=5Mq6i7oiH4gQ7kNvgE8_ml-&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYBWBV1X3yqvdtkh4PhzXYCygduaDXInl68qI2lCs14Q3g&oe=66D24DF8",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=dst-png_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeEeiG3o014-05qUQ0oYjGELso2H55p0AlGyjYfnmnQCUYA6aAt8TyPCiPrxNqU-zXwIBNbbfONU868psvrnifFI&_nc_ohc=5Mq6i7oiH4gQ7kNvgE8_ml-&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYBWBV1X3yqvdtkh4PhzXYCygduaDXInl68qI2lCs14Q3g&oe=66D24DF8",
-                    "gender": "MALE",
-                    "type": "User",
-                    "isFriend": false,
-                    "isBirthday": false
-                },
-                {
-                    "id": "100068679725242",
-                    "name": "Thao Vy",
-                    "firstName": "Vy",
-                    "vanity": "",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/250541134_186919206940736_3078068719880668538_n.jpg?stp=dst-jpg_p120x120&_nc_cat=100&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHekkYSpiCifMyhyOtabUIBYRFg7QwDtzlhEWDtDAO3OQV_TUOHepl3_Wh6HTJnEskLxj7ZL0Fsigm8fcf5HFEn&_nc_ohc=PkBEiTo55YoQ7kNvgFP-J0i&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYBPQBQgJOl5Y-lhs-NAZzs7Ep3oevQsWzGjUAVgQf9YQw&oe=66B0D52F",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/250541134_186919206940736_3078068719880668538_n.jpg?stp=dst-jpg_p120x120&_nc_cat=100&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHekkYSpiCifMyhyOtabUIBYRFg7QwDtzlhEWDtDAO3OQV_TUOHepl3_Wh6HTJnEskLxj7ZL0Fsigm8fcf5HFEn&_nc_ohc=PkBEiTo55YoQ7kNvgFP-J0i&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYBPQBQgJOl5Y-lhs-NAZzs7Ep3oevQsWzGjUAVgQf9YQw&oe=66B0D52F",
-                    "gender": "FEMALE",
-                    "type": "User",
-                    "isFriend": false,
-                    "isBirthday": false
-                },
-                {
-                    "id": "100068786864021",
-                    "name": "Người dùng Facebook",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c35.0.120.120a_dst-jpg_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=51f973&_nc_eui2=AeF3GArUPfAy4kR2igtmzeOC6MrNeXlqq-boys15eWqr5nuTzvWIp0xCoDXmzzt-3RGwPbSK9Y8jRPZWZLOKhgMi&_nc_ohc=zLYBmCaYDQYQ7kNvgFX8m_Y&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCx5H_3NzatOiqEGvKpdyVSYgBi_FP-qgukrRzp85eZ6A&oe=66D24D56",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c35.0.120.120a_dst-jpg_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=51f973&_nc_eui2=AeF3GArUPfAy4kR2igtmzeOC6MrNeXlqq-boys15eWqr5nuTzvWIp0xCoDXmzzt-3RGwPbSK9Y8jRPZWZLOKhgMi&_nc_ohc=zLYBmCaYDQYQ7kNvgFX8m_Y&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCx5H_3NzatOiqEGvKpdyVSYgBi_FP-qgukrRzp85eZ6A&oe=66D24D56",
-                    "type": "UnavailableMessagingActor",
-                    "isBirthday": false
-                },
-                {
-                    "id": "100073222825866",
-                    "name": "Nguyễn Phùng Đạt",
-                    "vanity": "pdat207",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c35.0.120.120a_dst-jpg_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=9d5ba0&_nc_eui2=AeF3GArUPfAy4kR2igtmzeOC6MrNeXlqq-boys15eWqr5nuTzvWIp0xCoDXmzzt-3RGwPbSK9Y8jRPZWZLOKhgMi&_nc_ohc=zLYBmCaYDQYQ7kNvgFX8m_Y&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCx5H_3NzatOiqEGvKpdyVSYgBi_FP-qgukrRzp85eZ6A&oe=66D24D56",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c35.0.120.120a_dst-jpg_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=9d5ba0&_nc_eui2=AeF3GArUPfAy4kR2igtmzeOC6MrNeXlqq-boys15eWqr5nuTzvWIp0xCoDXmzzt-3RGwPbSK9Y8jRPZWZLOKhgMi&_nc_ohc=zLYBmCaYDQYQ7kNvgFX8m_Y&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCx5H_3NzatOiqEGvKpdyVSYgBi_FP-qgukrRzp85eZ6A&oe=66D24D56",
-                    "type": "ReducedMessagingActor",
-                    "isBirthday": false
-                },
-                {
-                    "id": "100078219626966",
-                    "name": "Người dùng Facebook",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c35.0.120.120a_dst-jpg_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=51f973&_nc_eui2=AeF3GArUPfAy4kR2igtmzeOC6MrNeXlqq-boys15eWqr5nuTzvWIp0xCoDXmzzt-3RGwPbSK9Y8jRPZWZLOKhgMi&_nc_ohc=zLYBmCaYDQYQ7kNvgFX8m_Y&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCx5H_3NzatOiqEGvKpdyVSYgBi_FP-qgukrRzp85eZ6A&oe=66D24D56",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c35.0.120.120a_dst-jpg_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=51f973&_nc_eui2=AeF3GArUPfAy4kR2igtmzeOC6MrNeXlqq-boys15eWqr5nuTzvWIp0xCoDXmzzt-3RGwPbSK9Y8jRPZWZLOKhgMi&_nc_ohc=zLYBmCaYDQYQ7kNvgFX8m_Y&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCx5H_3NzatOiqEGvKpdyVSYgBi_FP-qgukrRzp85eZ6A&oe=66D24D56",
-                    "type": "UnavailableMessagingActor",
-                    "isBirthday": false
-                },
-                {
-                    "id": "100080985534030",
-                    "name": "Huỳnh Khánh Như",
-                    "firstName": "Khánh Như",
-                    "vanity": "yunnn.cute.ne",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/432657644_423829316993249_2832082744720603092_n.jpg?stp=dst-jpg_p120x120&_nc_cat=107&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeFJpdt_X-YeqYEan3SeBMK1CY5Z7c8mFXcJjlntzyYVdzaLpbyMfJT5AR5-qamt1Iy6fgcPFrxLBDI491qxWudg&_nc_ohc=19hjhXf7PR8Q7kNvgG5y-Yt&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYBUiHXyhZjI3BhKYfHdHMe_tT63_vvTY_bIHOjHMNDCiA&oe=66B0CDB1",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/432657644_423829316993249_2832082744720603092_n.jpg?stp=dst-jpg_p120x120&_nc_cat=107&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeFJpdt_X-YeqYEan3SeBMK1CY5Z7c8mFXcJjlntzyYVdzaLpbyMfJT5AR5-qamt1Iy6fgcPFrxLBDI491qxWudg&_nc_ohc=19hjhXf7PR8Q7kNvgG5y-Yt&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYBUiHXyhZjI3BhKYfHdHMe_tT63_vvTY_bIHOjHMNDCiA&oe=66B0CDB1",
-                    "gender": "FEMALE",
-                    "type": "User",
-                    "isFriend": false,
-                    "isBirthday": false
-                },
-                {
-                    "id": "100081803346729",
-                    "name": "Người dùng Facebook",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c35.0.120.120a_dst-jpg_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=51f973&_nc_eui2=AeF3GArUPfAy4kR2igtmzeOC6MrNeXlqq-boys15eWqr5nuTzvWIp0xCoDXmzzt-3RGwPbSK9Y8jRPZWZLOKhgMi&_nc_ohc=zLYBmCaYDQYQ7kNvgFX8m_Y&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCx5H_3NzatOiqEGvKpdyVSYgBi_FP-qgukrRzp85eZ6A&oe=66D24D56",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c35.0.120.120a_dst-jpg_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=51f973&_nc_eui2=AeF3GArUPfAy4kR2igtmzeOC6MrNeXlqq-boys15eWqr5nuTzvWIp0xCoDXmzzt-3RGwPbSK9Y8jRPZWZLOKhgMi&_nc_ohc=zLYBmCaYDQYQ7kNvgFX8m_Y&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCx5H_3NzatOiqEGvKpdyVSYgBi_FP-qgukrRzp85eZ6A&oe=66D24D56",
-                    "type": "UnavailableMessagingActor",
-                    "isBirthday": false
-                },
-                {
-                    "id": "100092325757607",
-                    "name": "Kim Ngân",
-                    "firstName": "Ngân",
-                    "vanity": "",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/400983270_247041451716712_8392772000526698785_n.jpg?stp=c0.14.120.120a_dst-jpg_p120x120&_nc_cat=102&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHucBgM8ZhiANnmc6klrnFh9a0VdQsEXmv1rRV1CwReawVk5FxDnfjMIFSvnhDTooIxcSw3ciKtkaatqmCCp04F&_nc_ohc=De5_RDEvDOoQ7kNvgGwzTU_&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYDSQV0GjVCiw5HFRUNbiIChJDY6D6y2gkyQIH_l4WEopA&oe=66B0B8B3",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-1/400983270_247041451716712_8392772000526698785_n.jpg?stp=c0.14.120.120a_dst-jpg_p120x120&_nc_cat=102&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHucBgM8ZhiANnmc6klrnFh9a0VdQsEXmv1rRV1CwReawVk5FxDnfjMIFSvnhDTooIxcSw3ciKtkaatqmCCp04F&_nc_ohc=De5_RDEvDOoQ7kNvgGwzTU_&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYDSQV0GjVCiw5HFRUNbiIChJDY6D6y2gkyQIH_l4WEopA&oe=66B0B8B3",
-                    "gender": "FEMALE",
-                    "type": "User",
-                    "isFriend": false,
-                    "isBirthday": false
-                },
-                {
-                    "id": "100094246817772",
-                    "name": "Người dùng Facebook",
-                    "thumbSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c35.0.120.120a_dst-jpg_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=51f973&_nc_eui2=AeF3GArUPfAy4kR2igtmzeOC6MrNeXlqq-boys15eWqr5nuTzvWIp0xCoDXmzzt-3RGwPbSK9Y8jRPZWZLOKhgMi&_nc_ohc=zLYBmCaYDQYQ7kNvgFX8m_Y&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCx5H_3NzatOiqEGvKpdyVSYgBi_FP-qgukrRzp85eZ6A&oe=66D24D56",
-                    "profileUrl": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.30497-1/85215299_479381239411958_7755129104415850496_n.jpg?stp=c35.0.120.120a_dst-jpg_p120x120&_nc_cat=1&ccb=1-7&_nc_sid=51f973&_nc_eui2=AeF3GArUPfAy4kR2igtmzeOC6MrNeXlqq-boys15eWqr5nuTzvWIp0xCoDXmzzt-3RGwPbSK9Y8jRPZWZLOKhgMi&_nc_ohc=zLYBmCaYDQYQ7kNvgFX8m_Y&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=00_AYCx5H_3NzatOiqEGvKpdyVSYgBi_FP-qgukrRzp85eZ6A&oe=66D24D56",
-                    "type": "UnavailableMessagingActor",
-                    "isBirthday": false
-                }
-            ],
-            "unreadCount": 0,
-            "messageCount": 3936,
-            "timestamp": "1721967245068",
-            "muteUntil": null,
-            "isGroup": true,
-            "isSubscribed": true,
-            "isArchived": false,
-            "folder": "INBOX",
-            "cannotReplyReason": null,
-            "eventReminders": [],
-            "emoji": "⭐️",
-            "color": "6A248A",
-            "nicknames": {
-                "1190221779": "sa tăng",
-                "1260188293": "bố thg hưng lợn",
-                "100002734181466": "tùng núi",
-                "100014034669306": "lợn",
-                "100014843821049": "bán kem trộn",
-                "100020600508676": "lợn seg",
-                "100050907277106": "gái dp fe fe",
-                "100053121190229": "lợn",
-                "100055983181045": "lợn gay",
-                "100068679725242": "heo",
-                "100068786864021": "lợn",
-                "100073222825866": "đường tăng",
-                "100074684773818": "nhi nhún nhảy giữa bầu trời trong xanh",
-                "100075944461898": "béo",
-                "100080985534030": "knhuw",
-                "100081803346729": "vy béo",
-                "100092325757607": "con lợn"
-            },
-            "adminIDs": [
-                {
-                    "id": "100073222825866"
-                },
-                {
-                    "id": "100080985534030"
-                }
-            ],
-            "approvalMode": false,
-            "approvalQueue": [],
-            "reactionsMuteMode": "reactions_not_muted",
-            "mentionsMuteMode": "mentions_not_muted",
-            "isPinProtected": false,
-            "relatedPageThread": null,
-            "name": "fandom HKN",
-            "snippet": "Update: lệnh Tx\nmô tả: tự khám phá",
-            "snippetSender": "100092325757607",
-            "snippetAttachments": [],
-            "serverTimestamp": "1721967245068",
-            "imageSrc": "https://scontent-ord5-2.xx.fbcdn.net/v/t1.15752-9/434846232_948059503614571_6571728231905917140_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=935a9d&_nc_eui2=AeGqn4gy6BZCWiMzMwpyNTOIA3kcVxHMQxUDeRxXEcxDFURqaZze2cKIqOWmBfIZ1_S87az4P2grzI7T1tZNVMFU&_nc_ohc=8Rrp-jkx7y4Q7kNvgGCwobP&_nc_ht=scontent-ord5-2.xx&gid=ARrRfTxNIawAc49OWbQacCR&oh=03_Q7cD1QHr4PdU1t0Il3uEsnNWQ-vXdEiwk5gX5TrVICOZnZyRxw&oe=66D246C1",
-            "isCanonicalUser": false,
-            "isCanonical": false,
-            "recipientsLoadable": true,
-            "hasEmailParticipant": false,
-            "readOnly": false,
-            "canReply": true,
-            "lastMessageType": "message",
-            "lastReadTimestamp": "1721967245068",
-            "threadType": 2
-        },
-        "createTime": {
-            "timestamp": 1696685171309
-        },
-        "data": {
-            "timestamp": 1696685171309,
-            "antiout": {
-                "status": true,
-                "storage": []
-            }
-        }
-    },
     "6529717663756214": {
         "threadInfo": {
             "threadID": "6529717663756214",
@@ -21987,7 +21707,6 @@
                 "100081999275121",
                 "100088045826539",
                 "100092325757607",
-                "100095506982239",
                 "100051123632162",
                 "61553807062697",
                 "100051062554774",
@@ -22022,7 +21741,14 @@
                 "100065260538283",
                 "100076663416892",
                 "61564125801274",
-                "61554160139365"
+                "61554160139365",
+                "100024874297909",
+                "61563805442604",
+                "61564216976389",
+                "100071639513410",
+                "100077653372361",
+                "100095506982239",
+                "61561230016907"
             ],
             "userInfo": [
                 {
@@ -23134,7 +22860,7 @@
         "data": {
             "timestamp": 1722910777892,
             "autoresponse": true,
-            "gemini": true
+            "gemini": false
         }
     },
     "8085950098129644": {
@@ -23189,6 +22915,24 @@
                 },
                 {
                     "id": "100000709336080"
+                },
+                {
+                    "id": "61563350055848"
+                },
+                {
+                    "id": "61563350055848"
+                },
+                {
+                    "id": "61564135792122"
+                },
+                {
+                    "id": "61564135792122"
+                },
+                {
+                    "id": "61563953308994"
+                },
+                {
+                    "id": "61563953308994"
                 }
             ],
             "participantIDs": [
@@ -23221,8 +22965,6 @@
                 "61557164642722",
                 "61558344806123",
                 "61558474611699",
-                "61559151106106",
-                "61559182237087",
                 "61559286997346",
                 "61559674613902",
                 "61560665985427",
@@ -23257,7 +22999,6 @@
                 "100054936106317",
                 "100060025685029",
                 "100063719077878",
-                "100065381078044",
                 "100065482477696",
                 "100066401597100",
                 "100068237976703",
@@ -23322,12 +23063,10 @@
                 "100051222560890",
                 "100094507420059",
                 "100056260590367",
-                "100075271592392",
                 "100064763906844",
                 "100066983270967",
                 "61556800505602",
                 "61562700662805",
-                "61551921175615",
                 "100089085843994",
                 "100089095231622",
                 "100080369319455",
@@ -23349,22 +23088,18 @@
                 "100006492165738",
                 "100066234714306",
                 "61563982612558",
-                "61559188024598",
                 "61563349357603",
                 "61563953308994",
                 "61564135792122",
                 "61563350055848",
                 "61556090177273",
                 "61563357831716",
-                "100036979697397",
                 "61557126107112",
                 "100050381629774",
                 "61558002445930",
                 "61564398355104",
                 "100080696460945",
-                "61561545866379",
                 "100019558600932",
-                "100080134156932",
                 "100094901662038",
                 "61551231104537",
                 "100092223767414",
@@ -23376,6 +23111,39 @@
                 "61554901426430",
                 "61564177718429",
                 "100001158424488",
+                "100090369520297",
+                "100092232007114",
+                "61560235683672",
+                "61560725720311",
+                "100067505080291",
+                "100064985763573",
+                "100083352124506",
+                "100065381078044",
+                "61553959265578",
+                "61559188024598",
+                "61559151106106",
+                "100095108599500",
+                "61554910058530",
+                "61560771702243",
+                "100093705167417",
+                "100074899201894",
+                "100090819260479",
+                "100087221966047",
+                "61564199012598",
+                "100069625421330",
+                "61557184603635",
+                "61551921175615",
+                "100036979697397",
+                "61559336081287",
+                "61555069405234",
+                "61558999622052",
+                "100000723897603",
+                "61555375511816",
+                "100083113280723",
+                "100089134298284",
+                "100086201896418",
+                "100083149747595",
+                "61559610548888",
                 "100087614525995"
             ],
             "isGroup": true,
@@ -23467,7 +23235,8 @@
                 "100092325757607",
                 "100069860053133",
                 "100045324197655",
-                "100092681183656"
+                "100092681183656",
+                "100080148697541"
             ],
             "isGroup": true
         },
@@ -23600,7 +23369,6 @@
                 "100087127001846",
                 "100092155373692",
                 "100092325757607",
-                "100092678504615",
                 "100094186427375",
                 "100094340294239",
                 "100076534424582",
@@ -23631,13 +23399,8 @@
             "threadID": "8113751038679859",
             "threadName": null,
             "emoji": null,
-            "adminIDs": [
-                {
-                    "id": "61552603356147"
-                }
-            ],
+            "adminIDs": [],
             "participantIDs": [
-                "61552603356147",
                 "100092325757607",
                 "61556529433226",
                 "100049109850406",
@@ -23646,7 +23409,14 @@
                 "61563982612558",
                 "61561545866379"
             ],
-            "isGroup": true
+            "isGroup": true,
+            "nicknames": {
+                "100053970942155": "dat dubai",
+                "61563982612558": "vợ yêu ghan",
+                "61556529433226": "vợ yêu ghan",
+                "100092325757607": "vợ yêu ghan",
+                "61561545866379": "sv ghan"
+            }
         },
         "createTime": {
             "timestamp": 1723517192132
@@ -23671,7 +23441,6 @@
                 }
             ],
             "participantIDs": [
-                "61554978776745",
                 "61556892414039",
                 "61558820343995",
                 "61560807716413",
@@ -23704,13 +23473,10 @@
                 "100055787179039",
                 "100057332243254",
                 "100063403459357",
-                "100063701163299",
                 "100064188470853",
-                "100064251729779",
                 "100064783871687",
                 "100065058260287",
                 "100065149894038",
-                "100066878168335",
                 "100070015267637",
                 "100071929862967",
                 "100074094566497",
@@ -23729,7 +23495,9 @@
                 "100089801922521",
                 "100092325757607",
                 "100092919727420",
-                "61563982612558"
+                "61563982612558",
+                "100066878168335",
+                "100064251729779"
             ],
             "isGroup": true
         },
@@ -23770,7 +23538,8 @@
                 "100091836665663",
                 "100092325757607",
                 "100092758966155",
-                "100093526612109"
+                "100093526612109",
+                "100089415987625"
             ],
             "isGroup": true,
             "nicknames": {
@@ -23783,7 +23552,252 @@
         "data": {
             "timestamp": 1723788198615,
             "antiout": {
+                "status": false,
+                "storage": []
+            }
+        }
+    },
+    "8129285210485042": {
+        "threadInfo": {
+            "threadID": "8129285210485042",
+            "threadName": null,
+            "emoji": null,
+            "adminIDs": [
+                {
+                    "id": "61561753304881"
+                }
+            ],
+            "participantIDs": [
+                "61561753304881",
+                "61563982612558",
+                "100092325757607"
+            ],
+            "isGroup": true
+        },
+        "createTime": {
+            "timestamp": 1723821327224
+        },
+        "data": {
+            "timestamp": 1723821327224
+        }
+    },
+    "8074690719315023": {
+        "threadInfo": {
+            "threadID": "8074690719315023",
+            "threadName": "Bot chat",
+            "emoji": "🧑‍🌾",
+            "adminIDs": [
+                {
+                    "id": "100092325757607"
+                },
+                {
+                    "id": "61553821221334"
+                },
+                {
+                    "id": "61553821221334"
+                }
+            ],
+            "participantIDs": [
+                "61554139044337",
+                "100045072906456",
+                "100087328463257",
+                "100092325757607",
+                "100026550910594",
+                "100043237982430",
+                "61553821221334",
+                "100031327264208",
+                "61563830678408",
+                "100023342624026",
+                "61563009661239",
+                "61563009661239",
+                "61562161232125",
+                "100084412983532",
+                "61564656146110"
+            ],
+            "isGroup": true,
+            "nicknames": {
+                "61563009661239": "〈 , 〉 • dt",
+                "61562161232125": "Kiên"
+            },
+            "threadIcon": "😆"
+        },
+        "createTime": {
+            "timestamp": 1723822994347
+        },
+        "data": {
+            "timestamp": 1723822994347,
+            "antiout": {
                 "status": true,
+                "storage": []
+            }
+        }
+    },
+    "7916092471777580": {
+        "threadInfo": {
+            "threadID": "7916092471777580",
+            "threadName": "j",
+            "emoji": "🤪",
+            "adminIDs": [
+                {
+                    "id": "61555034078738"
+                },
+                {
+                    "id": "100035373562412"
+                },
+                {
+                    "id": "100066878168335"
+                },
+                {
+                    "id": "100083748707691"
+                },
+                {
+                    "id": "100085405731662"
+                },
+                {
+                    "id": "100087677240339"
+                }
+            ],
+            "participantIDs": [
+                "61555034078738",
+                "100035373562412",
+                "100066878168335",
+                "100083748707691",
+                "100085405731662",
+                "100087677240339",
+                "100092325757607"
+            ],
+            "isGroup": true,
+            "nicknames": {
+                "100092325757607": "𝗕𝗢𝗧 AKI"
+            }
+        },
+        "createTime": {
+            "timestamp": 1723880417919
+        },
+        "data": {
+            "timestamp": 1723880417919
+        }
+    },
+    "25924710300447654": {
+        "threadInfo": {
+            "threadID": "25924710300447654",
+            "threadName": "🌷siêu nhân súp bờ sa🌷",
+            "emoji": "😼",
+            "adminIDs": [
+                {
+                    "id": "61552036259404"
+                },
+                {
+                    "id": "61556529433226"
+                },
+                {
+                    "id": "100093341198824"
+                }
+            ],
+            "participantIDs": [
+                "61550304312980",
+                "61550542439534",
+                "61552036259404",
+                "61552486461594",
+                "61552603356147",
+                "61554398430319",
+                "61554665794176",
+                "61554963407981",
+                "61556083485701",
+                "61556529433226",
+                "61557164353582",
+                "61557426646040",
+                "61560033965045",
+                "61560872141013",
+                "61562028545147",
+                "61562959491909",
+                "61563104458928",
+                "61564365835010",
+                "100000506970548",
+                "100038964846223",
+                "100049109850406",
+                "100053970942155",
+                "100056954574593",
+                "100066030937133",
+                "100068931113635",
+                "100070872048937",
+                "100074169715660",
+                "100075971329832",
+                "100077467057965",
+                "100078935391783",
+                "100079621883786",
+                "100081284359846",
+                "100083572449091",
+                "100084517754018",
+                "100086138315686",
+                "100087626374219",
+                "100091651204582",
+                "100092027421237",
+                "100092325757607",
+                "100093341198824",
+                "61561545866379"
+            ],
+            "isGroup": true
+        },
+        "createTime": {
+            "timestamp": 1723883407612
+        },
+        "data": {
+            "timestamp": 1723883407612
+        }
+    },
+    "8286905628007830": {
+        "threadInfo": {
+            "threadID": "8286905628007830",
+            "threadName": "casino baton",
+            "emoji": "🙉",
+            "adminIDs": [
+                {
+                    "id": "61561545866379"
+                },
+                {
+                    "id": "100053970942155"
+                },
+                {
+                    "id": "100053970942155"
+                }
+            ],
+            "participantIDs": [
+                "61554963407981",
+                "61556529433226",
+                "61561545866379",
+                "61562028545147",
+                "61562889811720",
+                "61562959491909",
+                "100000506970548",
+                "100049109850406",
+                "100053970942155",
+                "100092325757607",
+                "61563528363848",
+                "100079621883786",
+                "61553856278527",
+                "100047464143895",
+                "61563329497578",
+                "61563764523001",
+                "61552603356147"
+            ],
+            "isGroup": true,
+            "nicknames": {
+                "100092325757607": "Tà Môn Bàn Bạc 💔",
+                "100053970942155": "dat dubai",
+                "61556529433226": "vợ yêu ghan",
+                "61561545866379": "sv ghan",
+                "61562959491909": "thy macao",
+                "100079621883786": "ng đàn ông tham vọng"
+            }
+        },
+        "createTime": {
+            "timestamp": 1723886769250
+        },
+        "data": {
+            "timestamp": 1723886769250,
+            "antiout": {
+                "status": false,
                 "storage": []
             }
         }
@@ -23791,17 +23805,11 @@
     "7945260388829260": {
         "threadInfo": {
             "threadID": "7945260388829260",
-            "threadName": "box ngu",
-            "emoji": "💚",
+            "threadName": "Tìm Con Sâu Gaming 💀💀💀",
+            "emoji": "🦴",
             "adminIDs": [
                 {
                     "id": "61555034078738"
-                },
-                {
-                    "id": "61557356161502"
-                },
-                {
-                    "id": "61561570366419"
                 },
                 {
                     "id": "61563628883630"
@@ -23826,12 +23834,6 @@
                 },
                 {
                     "id": "100074888445500"
-                },
-                {
-                    "id": "61557356161502"
-                },
-                {
-                    "id": "61557356161502"
                 }
             ],
             "participantIDs": [
@@ -23849,7 +23851,7 @@
                 "61552009712592",
                 "61552503844700",
                 "61552603356147",
-                "61552721142294",
+                "61553248730993",
                 "61553465669211",
                 "61553609262536",
                 "61553616796462",
@@ -23859,6 +23861,7 @@
                 "61554324942098",
                 "61554478534107",
                 "61555034078738",
+                "61555045847847",
                 "61555527635686",
                 "61555864211722",
                 "61556177756547",
@@ -23871,22 +23874,22 @@
                 "61557049062802",
                 "61557085889506",
                 "61557197669214",
-                "61557356161502",
                 "61557587074201",
                 "61557750744495",
                 "61557871893271",
+                "61558121247524",
                 "61558474611699",
                 "61558492586246",
                 "61558609930957",
                 "61558831988798",
                 "61558868923744",
                 "61559035051609",
-                "61559061011087",
                 "61559296530203",
                 "61559350711127",
                 "61559575409126",
                 "61559869646314",
                 "61560027159066",
+                "61560094628364",
                 "61560108091938",
                 "61560241251410",
                 "61560261551728",
@@ -23896,8 +23899,6 @@
                 "61560771702243",
                 "61561060462893",
                 "61561162694809",
-                "61561570366419",
-                "61561706008732",
                 "61562121954775",
                 "61562234614809",
                 "61562861017092",
@@ -23918,12 +23919,11 @@
                 "100000349406075",
                 "100003036030122",
                 "100004557077439",
+                "100005294624304",
                 "100006074079025",
                 "100008131143712",
-                "100009304469835",
                 "100012456850890",
                 "100014651645942",
-                "100016421228162",
                 "100016890553096",
                 "100019091332556",
                 "100020961582203",
@@ -23938,17 +23938,16 @@
                 "100039077269759",
                 "100040413871958",
                 "100042566205966",
-                "100042861708817",
                 "100043414848101",
                 "100044992386960",
                 "100045211563764",
                 "100046632541720",
                 "100046739981416",
+                "100048799053165",
                 "100050345730154",
                 "100051271448928",
                 "100051917262991",
                 "100053386159734",
-                "100053489243280",
                 "100054435851240",
                 "100054444183544",
                 "100055074463541",
@@ -23982,6 +23981,7 @@
                 "100077083729686",
                 "100077452152509",
                 "100079727621921",
+                "100079951744222",
                 "100079963973337",
                 "100080149704587",
                 "100081032543843",
@@ -23994,11 +23994,10 @@
                 "100083779939363",
                 "100085118490323",
                 "100085191341131",
-                "100085901302183",
                 "100087611824725",
                 "100088016425200",
                 "100088227486032",
-                "100088561195893",
+                "100090133731269",
                 "100090840224278",
                 "100091595269302",
                 "100091758518630",
@@ -24020,36 +24019,284 @@
                 "100095390746911",
                 "100095462460610",
                 "100095504822905",
-                "100095631932905",
-                "100090133731269",
-                "100079951744222",
-                "100053316216312",
-                "100091220332951",
-                "100048799053165"
+                "61561570366419",
+                "100043746979939",
+                "61557356161502",
+                "100069860053133",
+                "100085901302183",
+                "100089415987625",
+                "61550289173976",
+                "100093563311691",
+                "61561706008732"
             ],
-            "isGroup": true
+            "isGroup": true,
+            "nicknames": {
+                "100051917262991": "săn lùng trai trẻ",
+                "61563962975748": "Vũ Hoa",
+                "100012456850890": "عاهرة والدتك",
+                "100069860053133": "mất anh suy quá"
+            }
         },
         "createTime": {
-            "timestamp": 1723800048948
+            "timestamp": 1723889973280
         },
         "data": {
-            "timestamp": 1723800048948
+            "timestamp": 1723889973280,
+            "antiout": {
+                "status": true,
+                "storage": []
+            }
+        }
+    },
+    "8304024296282621": {
+        "threadInfo": {
+            "threadID": "8304024296282621",
+            "threadName": "♡︎",
+            "emoji": "😎",
+            "adminIDs": [
+                {
+                    "id": "61560888477320"
+                },
+                {
+                    "id": "61562930946523"
+                },
+                {
+                    "id": "61563328086145"
+                },
+                {
+                    "id": "100077536463734"
+                },
+                {
+                    "id": "61561972682900"
+                },
+                {
+                    "id": "61561972682900"
+                },
+                {
+                    "id": "61561378718038"
+                },
+                {
+                    "id": "61561378718038"
+                }
+            ],
+            "participantIDs": [
+                "678371425",
+                "61550001481502",
+                "61550033001475",
+                "61552576735756",
+                "61553821221334",
+                "61555407214371",
+                "61556515289641",
+                "61556645276317",
+                "61556881797919",
+                "61556920074095",
+                "61556968102376",
+                "61557053024655",
+                "61557173087211",
+                "61557227233020",
+                "61557310611114",
+                "61557965352831",
+                "61558944262777",
+                "61559224168509",
+                "61559402255437",
+                "61559607786557",
+                "61559618800319",
+                "61559750286613",
+                "61560050881197",
+                "61560092985876",
+                "61560888477320",
+                "61560926290738",
+                "61561378718038",
+                "61561567035490",
+                "61561906739584",
+                "61561958227486",
+                "61562078571023",
+                "61562263261675",
+                "61562287954372",
+                "61562930946523",
+                "61563009661239",
+                "61563290428609",
+                "61563328086145",
+                "61563462968774",
+                "61563737445953",
+                "61563958414410",
+                "61564214675832",
+                "100006234722120",
+                "100006289122252",
+                "100006593615643",
+                "100014983958920",
+                "100017878627977",
+                "100021895544728",
+                "100023342624026",
+                "100029762942813",
+                "100046545830468",
+                "100046716015858",
+                "100047539515709",
+                "100052218243394",
+                "100052298588794",
+                "100052806840739",
+                "100059521208977",
+                "100066759272305",
+                "100069277028463",
+                "100070565349510",
+                "100070680174037",
+                "100071357779666",
+                "100072075702451",
+                "100072085184418",
+                "100072448910077",
+                "100074013464842",
+                "100076528963972",
+                "100077118369985",
+                "100077536463734",
+                "100078405025637",
+                "100080150487982",
+                "100081886533592",
+                "100083687833762",
+                "100086263185144",
+                "100086368033663",
+                "100086645477079",
+                "100087343113817",
+                "100087595417254",
+                "100087974978233",
+                "100090194510994",
+                "100090694913195",
+                "100091519551241",
+                "100092325757607",
+                "100093168872373",
+                "100072324866540",
+                "100088496803431",
+                "100001387645574",
+                "61555733939298",
+                "61562292188157",
+                "61561972682900",
+                "61558432562511",
+                "61561567035490",
+                "100091100310398",
+                "100055164226103"
+            ],
+            "isGroup": true,
+            "nicknames": {
+                "61559750286613": "𝐁𝐨𝐭 𝐓𝐡𝐢𝐞̂𝐧 𝐋𝐨𝐧𝐠"
+            },
+            "threadColor": "🌤"
+        },
+        "createTime": {
+            "timestamp": 1723901098736
+        },
+        "data": {
+            "timestamp": 1723901098736
+        }
+    },
+    "7195238673912858": {
+        "threadInfo": {
+            "threadID": "7195238673912858",
+            "threadName": "VĂN PHÒNG BÚ LỒN GÁI AOV",
+            "emoji": "🐉",
+            "adminIDs": [
+                {
+                    "id": "61559188024598"
+                },
+                {
+                    "id": "100088600797175"
+                }
+            ],
+            "participantIDs": [
+                "61550080161239",
+                "61550114015097",
+                "61552812380173",
+                "61553743753333",
+                "61555305376661",
+                "61556800505602",
+                "61556944945021",
+                "61557164642722",
+                "61559188024598",
+                "61560311734105",
+                "61562769320352",
+                "61563162281991",
+                "100004366982560",
+                "100027467682155",
+                "100029021897290",
+                "100036979697397",
+                "100038087425323",
+                "100049928363635",
+                "100058320200877",
+                "100059716266203",
+                "100060025685029",
+                "100060564731706",
+                "100062623932342",
+                "100070367547391",
+                "100073713045258",
+                "100075659393130",
+                "100077905644619",
+                "100080161302551",
+                "100081046279738",
+                "100082266773430",
+                "100082876952861",
+                "100086073747917",
+                "100087589244396",
+                "100087734433519",
+                "100088459992498",
+                "100088600797175",
+                "100090681814683",
+                "100091906864304",
+                "100092325757607",
+                "100094351848937",
+                "100094507420059",
+                "100094586289940",
+                "100094747442474",
+                "100095174197633",
+                "100095504822905",
+                "100014021296572"
+            ],
+            "isGroup": true,
+            "nicknames": {
+                "100092325757607": "𝗕𝗢𝗧 AKI"
+            }
+        },
+        "createTime": {
+            "timestamp": 1723942556335
+        },
+        "data": {
+            "timestamp": 1723942556335
+        }
+    },
+    "8011240355627433": {
+        "threadInfo": {
+            "threadID": "8011240355627433",
+            "threadName": null,
+            "emoji": null,
+            "adminIDs": [
+                {
+                    "id": "61562959491909"
+                }
+            ],
+            "participantIDs": [
+                "61562959491909",
+                "100092325757607"
+            ],
+            "isGroup": true,
+            "nicknames": {
+                "100092325757607": "𝗕𝗢𝗧 AKI"
+            }
+        },
+        "createTime": {
+            "timestamp": 1723970875194
+        },
+        "data": {
+            "timestamp": 1723970875194
         }
     },
     "8151494331593968": {
         "threadInfo": {
             "threadID": "8151494331593968",
-            "threadName": "hội người mập",
-            "emoji": "🔥",
+            "threadName": "hội người béo",
+            "emoji": null,
             "adminIDs": [
                 {
                     "id": "61559151106106"
                 },
                 {
                     "id": "61559188024598"
-                },
-                {
-                    "id": "100000709336080"
                 },
                 {
                     "id": "100049928363635"
@@ -24059,55 +24306,52 @@
                 "584291935",
                 "61551937277879",
                 "61552475893145",
-                "61552686211305",
                 "61553062227125",
                 "61553975786019",
                 "61554551461157",
                 "61555305376661",
-                "61556591167865",
                 "61556668692567",
                 "61557164642722",
                 "61559151106106",
                 "61559188024598",
                 "61560771702243",
+                "61561047028310",
                 "61561234436328",
                 "61562406704510",
-                "61563890475317",
+                "61562954891756",
+                "61563548034666",
+                "61563737516539",
                 "100000709336080",
                 "100004366982560",
                 "100006159874640",
-                "100034693390831",
                 "100049928363635",
                 "100050344459111",
                 "100053750743331",
                 "100054581467191",
                 "100058320200877",
                 "100060002140311",
-                "100066234714306",
-                "100068467062786",
                 "100073713045258",
                 "100074302323724",
                 "100077905644619",
                 "100078209703791",
+                "100080132345932",
                 "100082325466031",
                 "100082876952861",
                 "100085854731207",
                 "100087515451139",
                 "100087589244396",
+                "100087917213594",
                 "100088600797175",
                 "100089233295473",
                 "100089371710135",
-                "100089471935190",
                 "100092316163688",
                 "100092325757607",
                 "100092752841942",
                 "100093208808025",
                 "100094015131117",
-                "100094351848937",
                 "100094507420059",
                 "100095174197633",
-                "100095504822905",
-                "61563737516539"
+                "100095504822905"
             ],
             "isGroup": true,
             "nicknames": {
@@ -24115,10 +24359,10 @@
             }
         },
         "createTime": {
-            "timestamp": 1723813142168
+            "timestamp": 1723972988111
         },
         "data": {
-            "timestamp": 1723813142168
+            "timestamp": 1723972988111
         }
     }
 }

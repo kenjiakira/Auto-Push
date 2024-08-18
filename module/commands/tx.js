@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
+const crypto = require('crypto'); // Thêm thư viện crypto
 
 const diceImagesPath = path.join(__dirname, 'dice_images');
 const combinedImagePath = path.join(__dirname, 'dice_images', 'combined_dice_image.png');
@@ -58,17 +59,29 @@ const sendResultWithImages = async (api, threadID, message, diceNumbers) => {
 
     await api.sendMessage({
       body: message,
-      attachment: fs.createReadStream(combinedImagePath) 
+      attachment: fs.createReadStream(combinedImagePath)
     }, threadID);
   } catch (error) {
     console.error("Lỗi khi gửi hình ảnh xúc xắc và văn bản:", error);
   }
 };
 
+const lastPlayed = {};
+const canPlay = (senderID) => {
+  const now = Date.now();
+  const lastPlay = lastPlayed[senderID] || 0;
+  if (now - lastPlay < 30000) { 
+  }
+  lastPlayed[senderID] = now;
+  return true;
+};
+
 module.exports.run = async function ({ api, event, args, Currencies, Users }) {
   const { threadID, messageID, senderID } = event;
 
   try {
+    if (!canPlay(senderID)) return api.sendMessage("Bạn phải chờ 5 phút trước khi chơi lại.", threadID, messageID);
+
     if (!args[0]) return api.sendMessage("Bạn chưa nhập đúng cú pháp. Hãy sử dụng: tx [tài/xỉu] [số xu hoặc Allin]", threadID, messageID);
 
     const dataMoney = await Currencies.getData(senderID);
@@ -101,7 +114,7 @@ module.exports.run = async function ({ api, event, args, Currencies, Users }) {
     }
 
     const rollDice = () => {
-      return Math.floor(Math.random() * 6) + 1;
+      return crypto.randomInt(1, 7); // Sinh số ngẫu nhiên từ 1 đến 6
     };
 
     const dices = [rollDice(), rollDice(), rollDice()];

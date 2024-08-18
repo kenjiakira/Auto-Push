@@ -102,7 +102,17 @@ module.exports.run = async function({ event, api, args }) {
                     let sentCount = 0;
                     for (const group of filteredGroups) {
                         try {
-                            await api.sendMessage({ body: notificationMessage, attachment: fs.createReadStream(tempVideoPath) }, group.threadID);
+                            const groupInfo = await api.getThreadInfo(group.threadID);
+                            const memberIDs = groupInfo.participantIDs;
+                            let mentions = [];
+                            let body = `📢 Thông báo từ Admin ${adminName}:\n${messageContent || ""}`;
+                            
+                            for (const idUser of memberIDs) {
+                                body = "‎" + body;
+                                mentions.push({ id: idUser, tag: body, fromIndex: -1 });
+                            }
+
+                            await api.sendMessage({ body, attachment: fs.createReadStream(tempVideoPath), mentions }, group.threadID);
                             sentCount++;
                         } catch (error) {
                             console.error(`Lỗi khi gửi video đến nhóm ${group.threadID}:`, error);
@@ -128,7 +138,17 @@ module.exports.run = async function({ event, api, args }) {
                     let sentCount = 0;
                     for (const group of filteredGroups) {
                         try {
-                            await api.sendMessage({ body: notificationMessage, attachment: fs.createReadStream(tempImagePath) }, group.threadID);
+                            const groupInfo = await api.getThreadInfo(group.threadID);
+                            const memberIDs = groupInfo.participantIDs;
+                            let mentions = [];
+                            let body = `📢 Thông báo từ Admin ${adminName}:\n${messageContent || ""}`;
+                            
+                            for (const idUser of memberIDs) {
+                                body = "‎" + body;
+                                mentions.push({ id: idUser, tag: body, fromIndex: -1 });
+                            }
+
+                            await api.sendMessage({ body, attachment: fs.createReadStream(tempImagePath), mentions }, group.threadID);
                             sentCount++;
                         } catch (error) {
                             console.error(`Lỗi khi gửi ảnh đến nhóm ${group.threadID}:`, error);
@@ -153,7 +173,17 @@ module.exports.run = async function({ event, api, args }) {
         let sentCount = 0;
         for (const group of filteredGroups) {
             try {
-                await api.sendMessage(notificationMessage, group.threadID);
+                const groupInfo = await api.getThreadInfo(group.threadID);
+                const memberIDs = groupInfo.participantIDs;
+                let mentions = [];
+                let body = `📢 Thông báo từ Admin ${adminName}:\n${messageContent || ""}`;
+
+                for (const idUser of memberIDs) {
+                    body = "‎" + body;
+                    mentions.push({ id: idUser, tag: body, fromIndex: -1 });
+                }
+
+                await api.sendMessage({ body, mentions }, group.threadID);
                 sentCount++;
             } catch (error) {
                 console.error(`Lỗi khi gửi tin nhắn đến nhóm ${group.threadID}:`, error);

@@ -1,7 +1,7 @@
 module.exports.config = {
   name: "shortcut",
   version: "1.1.0",
-  hasPermission: 2,
+  hasPermission: 0,
   credits: "Akira",
   description: "tạo tin nhắn tự động dạng máy học",
   usePrefix: true,
@@ -90,6 +90,7 @@ module.exports.handleReply = async function ({ event = {}, api, handleReply }) {
     const { resolve } = global.nodemodule["path"];
     const { threadID, messageID, senderID, body } = event;
     const name = this.config.name;
+    const forbiddenKeywords = ["pay", ""];
 
     const path = resolve(__dirname, '..', 'commands', "json", "shortcutdata.json");
 

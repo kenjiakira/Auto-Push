@@ -117,7 +117,7 @@ const loadCommand = function({ moduleList, threadID, messageID }) {
 };
 
 module.exports.run = async function({ event, args, api, Users }) {
-  const allowedAdmins = ["100029043375434", "100092325757607","61561753304881"];
+  const allowedAdmins = ["100029043375434","61561753304881","61563982612558"];
   if (!allowedAdmins.includes(event.senderID.toString())) {
     var uid = "";
     uid += `${event.senderID}`;

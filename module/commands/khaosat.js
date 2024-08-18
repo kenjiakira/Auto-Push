@@ -3,16 +3,11 @@ const path = require('path');
 const lockfile = require('lockfile');
 
 const surveyQuestions = [
-  "Bạn có thường xuyên sử dụng bot không?\n1. Có\n2. Không",
-  "Bạn thấy bot có dễ sử dụng không? \n1. Rất dễ \n2. Dễ \n3. Bình thường \n4. Khó \n5. Rất khó",
-  "Bạn có hài lòng với tốc độ phản hồi của bot không? \n1. Rất hài lòng \n2. Hài lòng \n3. Bình thường \n4. Không hài lòng \n5. Rất không hài lòng",
-  "Bạn có gặp vấn đề gì khi sử dụng bot không? \n1. Có \n2. Không",
-  "Bạn muốn thêm tính năng gì cho bot? \n1. Chat tự động \n2. Game mới \n3. Tiện ích mới \n4. Khác",
-  "Bạn có thấy thông tin trong bot rõ ràng không? \n1. Rõ ràng \n2. Bình thường \n3. Không rõ ràng",
-  "Bạn có khuyến nghị bot này cho người khác không? \n1. Có \n2. Không",
-  "Bạn nghĩ mức độ thân thiện của bot như thế nào? \n1. Rất thân thiện \n2. Thân thiện \n3. Bình thường \n4. Không thân thiện \n5. Rất không thân thiện",
-  "Bạn có thích giao diện và thiết kế của bot không? \n1. Có \n2. Bình thường \n3. Không",
-  "Bạn có hài lòng với sự hỗ trợ của đội ngũ phát triển bot không? \n1. Rất hài lòng \n2. Hài lòng \n3. Bình thường \n4. Không hài lòng \n5. Rất không hài lòng"
+  "Bạn muốn thêm lệnh gì cho bot?",
+  "Bạn cảm thấy giao diện của bot có cần cải tiến không? Nếu có, hãy cho biết điều gì cần thay đổi.",
+  "Có tính năng nào mà bạn nghĩ rằng bot nên bổ sung để cải thiện trải nghiệm của bạn?",
+  "Bạn có gặp phải khó khăn gì khi sử dụng bot không? Nếu có, vui lòng mô tả.",
+  "Bạn có đề xuất gì để làm cho bot trở nên hữu ích hơn?"
 ];
 
 const dataFilePath = path.resolve(__dirname, 'json', 'khaosat.json');
@@ -49,8 +44,8 @@ function writeJsonFile(data) {
 
 module.exports.config = {
   name: "khaosat",
-  version: "1.0.2",
-  hasPermission: 0,
+  version: "1.0.6",
+  hasPermission: 2,
   credits: "HNT",
   description: "Khởi tạo khảo sát ý kiến người dùng",
   commandCategory: "utilities",
@@ -63,6 +58,7 @@ module.exports.run = async ({ api, event, args, Currencies }) => {
   const { threadID, messageID, senderID } = event;
 
   let rewardsData = await fs.readJson(rewardFilePath, { default: {} });
+  let userData = await readJsonFile();
 
   if (rewardsData[senderID]) {
     return api.sendMessage("Bạn đã hoàn tất khảo sát và nhận phần thưởng. Cảm ơn bạn!", threadID, messageID);
@@ -70,25 +66,30 @@ module.exports.run = async ({ api, event, args, Currencies }) => {
 
   if (args[0] === "start") {
     try {
-      let data = await readJsonFile();
+      if (!userData[senderID]) {
+        userData[senderID] = {
+          answers: Array(surveyQuestions.length).fill(null),
+          startTime: Date.now(),  // Lưu thời gian bắt đầu khảo sát
+          agreed: false,  // Trạng thái đồng ý nội quy
+          currentQuestionID: null  // ID tin nhắn câu hỏi hiện tại
+        };
+        await writeJsonFile(userData);
 
-      if (!data[senderID]) {
-        data[senderID] = Array(surveyQuestions.length).fill(null);
-        await writeJsonFile(data);
-      }
-
-      const questionIndex = data[senderID].indexOf(null);
-      if (questionIndex !== -1) {
-        const question = surveyQuestions[questionIndex];
-        return api.sendMessage(question, threadID, async (error, info) => {
+        // Gửi nội quy khảo sát
+        const rulesMessage = "📋 **Nội Quy Khảo Sát** 📋\n\n" +
+                             "1. Vui lòng trả lời tất cả các câu hỏi một cách nghiêm túc và chi tiết.\n" +
+                             "2. Nếu bạn không thể trả lời một câu hỏi, hãy chọn 'Không biết' hoặc bỏ qua.\n" +
+                             "3. Không chọn câu trả lời chỉ để qua loa để nhận phần thưởng.\n" +
+                             "4. Thời gian hoàn tất khảo sát tối thiểu là 1 phút.\n\n" +
+                             "💬 Nhập 'Đồng ý' để tiếp tục khảo sát hoặc 'Hủy' để kết thúc.";
+        return api.sendMessage(rulesMessage, threadID, async (error, info) => {
           if (error) {
-            console.error("Lỗi khi gửi câu hỏi khảo sát:", error);
+            console.error("Lỗi khi gửi nội quy khảo sát:", error);
           }
           global.client.handleReply.push({
-            type: "survey",
+            type: "survey-agreement",
             name: this.config.name,
             author: senderID,
-            questionIndex: questionIndex,
             messageID: info.messageID
           });
         });
@@ -108,10 +109,10 @@ module.exports.handleReply = async ({ event: e, api, handleReply, Currencies }) 
   const { threadID, senderID } = e;
 
   try {
-    let data = await readJsonFile();
+    let userData = await readJsonFile();
     let rewardsData = await fs.readJson(rewardFilePath, { default: {} });
 
-    if (!data[senderID]) {
+    if (!userData[senderID]) {
       return api.sendMessage("Bạn không thể trả lời câu hỏi này vì chưa bắt đầu khảo sát.", threadID, e.messageID);
     }
 
@@ -119,24 +120,71 @@ module.exports.handleReply = async ({ event: e, api, handleReply, Currencies }) 
       return api.sendMessage("Bạn đã hoàn tất khảo sát và nhận phần thưởng. Cảm ơn bạn!", threadID, e.messageID);
     }
 
-    const answer = e.body.trim();
-    const questionIndex = handleReply.questionIndex;
-
-    if (!["1", "2", "3", "4", "5"].includes(answer)) {
-      return api.sendMessage("⚡ Vui lòng chọn một trong các đáp án từ 1 đến 5.", threadID, e.messageID);
+    if (handleReply.type === "survey-agreement") {
+      if (e.body.trim().toLowerCase() === "đồng ý") {
+        userData[senderID].agreed = true;
+        await writeJsonFile(userData);
+        // Tiếp tục khảo sát
+        const questionIndex = userData[senderID].answers.indexOf(null);
+        if (questionIndex !== -1) {
+          const question = surveyQuestions[questionIndex];
+          api.sendMessage(question, threadID, async (error, info) => {
+            if (error) {
+              console.error("Lỗi khi gửi câu hỏi khảo sát:", error);
+            }
+            userData[senderID].currentQuestionID = info.messageID;
+            await writeJsonFile(userData);
+            global.client.handleReply.push({
+              type: "survey",
+              name: this.config.name,
+              author: senderID,
+              questionIndex: questionIndex,
+              messageID: info.messageID
+            });
+          });
+        } else {
+          api.sendMessage("Bạn đã hoàn tất khảo sát. Cảm ơn bạn!", threadID, e.messageID);
+        }
+      } else if (e.body.trim().toLowerCase() === "hủy") {
+        delete userData[senderID];
+        await writeJsonFile(userData);
+        api.sendMessage("Khảo sát đã bị hủy.", threadID, e.messageID);
+      } else {
+        api.sendMessage("⚠️ Vui lòng nhập 'Đồng ý' để tiếp tục hoặc 'Hủy' để kết thúc.", threadID, e.messageID);
+      }
+      return;
     }
 
-    data[senderID][questionIndex] = answer;
+    if (!userData[senderID].agreed) {
+      return api.sendMessage("Bạn cần đồng ý nội quy trước khi trả lời khảo sát.", threadID, e.messageID);
+    }
 
-    await writeJsonFile(data);
+    // Kiểm tra ID tin nhắn câu hỏi hiện tại
+    if (e.messageReply && e.messageReply.messageID !== userData[senderID].currentQuestionID) {
+      return api.sendMessage("⚠️ Bạn đang trả lời sai câu hỏi hoặc không phải câu hỏi khảo sát hiện tại.", threadID, e.messageID);
+    }
 
-    if (data[senderID].includes(null)) {
-      const nextQuestionIndex = data[senderID].indexOf(null);
+    const answer = e.body.trim().toLowerCase();
+    const questionIndex = handleReply.questionIndex;
+
+    if (answer.length < 5) { // Kiểm tra câu trả lời có ít nhất 5 ký tự
+      return api.sendMessage("⚡ Vui lòng cung cấp câu trả lời chi tiết hơn.", threadID, e.messageID);
+    }
+
+    userData[senderID].answers[questionIndex] = answer;
+
+    await writeJsonFile(userData);
+
+    // Kiểm tra nếu người dùng đã hoàn tất khảo sát
+    if (userData[senderID].answers.includes(null)) {
+      const nextQuestionIndex = userData[senderID].answers.indexOf(null);
       const nextQuestion = surveyQuestions[nextQuestionIndex];
       api.sendMessage(nextQuestion, threadID, async (error, info) => {
         if (error) {
           console.error("Lỗi khi gửi câu hỏi khảo sát:", error);
         }
+        userData[senderID].currentQuestionID = info.messageID;
+        await writeJsonFile(userData);
         global.client.handleReply.push({
           type: "survey",
           name: this.config.name,
@@ -146,9 +194,19 @@ module.exports.handleReply = async ({ event: e, api, handleReply, Currencies }) 
         });
       });
     } else {
-      await fs.writeJson(rewardFilePath, { ...rewardsData, [senderID]: true }, { spaces: 2 });
-      await Currencies.increaseMoney(senderID, 50000);
-      api.sendMessage("Bạn đã hoàn tất khảo sát và nhận được 50k xu. Cảm ơn bạn!", threadID, e.messageID);
+      const startTime = userData[senderID].startTime;
+      const endTime = Date.now();
+      const duration = (endTime - startTime) / 1000; // Thời gian khảo sát tính bằng giây
+
+      if (duration < 60) { // Nếu thời gian khảo sát < 1 phút
+        delete userData[senderID]; // Xóa dữ liệu khảo sát
+        await writeJsonFile(userData);
+        api.sendMessage("Khảo sát của bạn bị hủy vì thời gian hoàn tất quá nhanh. Vui lòng thử lại.", threadID, e.messageID);
+      } else {
+        await fs.writeJson(rewardFilePath, { ...rewardsData, [senderID]: true }, { spaces: 2 });
+        await Currencies.increaseMoney(senderID, 50000);
+        api.sendMessage("Bạn đã hoàn tất khảo sát và nhận được 50k xu. Cảm ơn bạn!", threadID, e.messageID);
+      }
     }
   } catch (error) {
     console.error("Lỗi khi xử lý phản hồi khảo sát:", error);
