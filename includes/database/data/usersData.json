@@ -1754,7 +1754,7 @@
         "vanity": "100029043375434",
         "gender": 2,
         "isBirthday": false,
-        "money": 480191,
+        "money": 480359,
         "exp": 0,
         "createTime": {
             "timestamp": 1721407829312
@@ -16748,14 +16748,14 @@
         "vanity": "Nguenthedannho",
         "gender": 2,
         "isBirthday": false,
-        "money": 0,
+        "money": 13498,
         "exp": 0,
         "createTime": {
             "timestamp": 1723691870295
         },
         "data": {
             "timestamp": 1723691870295,
-            "work2Time": 1723990724604
+            "work2Time": 1724033382143
         },
         "lastUpdate": 1723691870295,
         "coins": 8,
@@ -21754,7 +21754,7 @@
         "vanity": "100079621883786",
         "gender": 6,
         "isBirthday": false,
-        "money": 83161,
+        "money": 67961,
         "exp": 0,
         "createTime": {
             "timestamp": 1723883413858
@@ -24014,7 +24014,7 @@
         "vanity": "61561047028310",
         "gender": 1,
         "isBirthday": false,
-        "money": 0,
+        "money": 1000,
         "exp": 0,
         "createTime": {
             "timestamp": 1723972988315
@@ -24221,5 +24221,21 @@
             "timestamp": 1724033269099
         },
         "lastUpdate": 1724033269099
+    },
+    "100079444158499": {
+        "userID": "100079444158499",
+        "name": "Knam Ctee",
+        "vanity": "100079444158499",
+        "gender": 2,
+        "isBirthday": false,
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1724033366121
+        },
+        "data": {
+            "timestamp": 1724033366121
+        },
+        "lastUpdate": 1724033366121
     }
 }
