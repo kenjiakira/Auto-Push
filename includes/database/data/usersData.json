@@ -21219,7 +21219,7 @@
         "vanity": "100083352124506",
         "gender": 1,
         "isBirthday": false,
-        "money": 30161,
+        "money": 20161,
         "exp": 0,
         "createTime": {
             "timestamp": 1723879868771
@@ -21755,14 +21755,14 @@
         "vanity": "100079621883786",
         "gender": 6,
         "isBirthday": false,
-        "money": 69024,
+        "money": 5681,
         "exp": 0,
         "createTime": {
             "timestamp": 1723883413858
         },
         "data": {
             "timestamp": 1723883413858,
-            "work2Time": 1724032972663
+            "work2Time": 1724033624308
         },
         "lastUpdate": 1723883413858,
         "pay_limit_2024-08-17_100079621883786": 1,
