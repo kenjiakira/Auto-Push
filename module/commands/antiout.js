@@ -13,11 +13,9 @@ module.exports.config = {
 module.exports.run = async function({ api, event, args, Threads }) {
     const { threadID, messageID, senderID } = event;
 
-    // Lấy thông tin nhóm
     const threadInfo = await api.getThreadInfo(threadID);
     const adminIDs = threadInfo.adminIDs.map(admin => admin.id);
 
-    // Kiểm tra nếu người gửi lệnh là admin
     if (!adminIDs.includes(senderID)) {
         return api.sendMessage("Bạn không có quyền sử dụng lệnh này. Chỉ admin nhóm mới có thể thực hiện lệnh này.", threadID, messageID);
     }

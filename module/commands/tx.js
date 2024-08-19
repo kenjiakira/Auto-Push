@@ -114,7 +114,7 @@ module.exports.run = async function ({ api, event, args, Currencies, Users }) {
     }
 
     const rollDice = () => {
-      return crypto.randomInt(1, 7); // Sinh số ngẫu nhiên từ 1 đến 6
+      return crypto.randomInt(1, 7); 
     };
 
     const dices = [rollDice(), rollDice(), rollDice()];

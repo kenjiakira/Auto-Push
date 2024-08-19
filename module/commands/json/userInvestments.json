@@ -118,9 +118,9 @@
     "totalInvestment": 910009
   },
   "100012456850890": {
-    "lastInvestmentTime": "2024-08-15T10:48:34.412Z",
-    "count": 90,
-    "totalInvestment": 8065000
+    "lastInvestmentTime": "2024-08-18T14:41:03.832Z",
+    "count": 95,
+    "totalInvestment": 8565000
   },
   "100046632541720": {
     "lastInvestmentTime": "2024-08-12T02:59:08.904Z",
@@ -138,9 +138,9 @@
     "totalInvestment": 10000
   },
   "61562700662805": {
-    "lastInvestmentTime": "2024-08-18T10:08:19.442Z",
-    "count": 73,
-    "totalInvestment": 204300
+    "lastInvestmentTime": "2024-08-18T12:16:26.989Z",
+    "count": 76,
+    "totalInvestment": 229300
   },
   "100071081723886": {
     "lastInvestmentTime": "2024-08-12T08:10:57.069Z",
@@ -198,9 +198,9 @@
     "totalInvestment": 1953764
   },
   "100087052970126": {
-    "lastInvestmentTime": "2024-08-15T07:30:51.656Z",
-    "count": 7,
-    "totalInvestment": 14235
+    "lastInvestmentTime": "2024-08-18T13:40:34.045Z",
+    "count": 8,
+    "totalInvestment": 19235
   },
   "61555425765560": {
     "lastInvestmentTime": "2024-08-18T01:19:16.781Z",
@@ -218,9 +218,9 @@
     "totalInvestment": 72311
   },
   "61552603356147": {
-    "lastInvestmentTime": "2024-08-14T09:39:33.944Z",
-    "count": 1,
-    "totalInvestment": 3000
+    "lastInvestmentTime": "2024-08-18T14:29:58.186Z",
+    "count": 2,
+    "totalInvestment": 9000
   },
   "100000349406075": {
     "lastInvestmentTime": "2024-08-15T02:33:08.800Z",
@@ -258,9 +258,9 @@
     "totalInvestment": 300000
   },
   "61563762007343": {
-    "lastInvestmentTime": "2024-08-16T08:40:17.295Z",
-    "count": 2,
-    "totalInvestment": 22241
+    "lastInvestmentTime": "2024-08-18T12:25:34.973Z",
+    "count": 3,
+    "totalInvestment": 55573
   },
   "100087614525995": {
     "lastInvestmentTime": "2024-08-16T01:12:42.516Z",
@@ -283,19 +283,19 @@
     "totalInvestment": 59208
   },
   "61564177718429": {
-    "lastInvestmentTime": "2024-08-18T10:15:28.420Z",
-    "count": 62,
-    "totalInvestment": 707783
+    "lastInvestmentTime": "2024-08-18T14:56:52.182Z",
+    "count": 63,
+    "totalInvestment": 777783
   },
   "100049109850406": {
-    "lastInvestmentTime": "2024-08-18T09:31:33.939Z",
-    "count": 24,
-    "totalInvestment": 157362
+    "lastInvestmentTime": "2024-08-18T13:51:08.653Z",
+    "count": 29,
+    "totalInvestment": 187362
   },
   "61554963407981": {
-    "lastInvestmentTime": "2024-08-18T10:20:51.238Z",
-    "count": 47,
-    "totalInvestment": 256088
+    "lastInvestmentTime": "2024-08-18T14:48:20.461Z",
+    "count": 56,
+    "totalInvestment": 315088
   },
   "100053970942155": {
     "lastInvestmentTime": "2024-08-17T13:49:39.579Z",
@@ -308,14 +308,14 @@
     "totalInvestment": 850000
   },
   "61561545866379": {
-    "lastInvestmentTime": "2024-08-17T08:25:09.627Z",
-    "count": 14,
-    "totalInvestment": 73793
+    "lastInvestmentTime": "2024-08-18T14:49:00.838Z",
+    "count": 15,
+    "totalInvestment": 79793
   },
   "61561567035490": {
-    "lastInvestmentTime": "2024-08-18T10:24:33.143Z",
-    "count": 28,
-    "totalInvestment": 165298
+    "lastInvestmentTime": "2024-08-18T14:11:56.996Z",
+    "count": 33,
+    "totalInvestment": 220298
   },
   "61556881797919": {
     "lastInvestmentTime": "2024-08-16T15:45:08.725Z",
@@ -323,9 +323,9 @@
     "totalInvestment": 1000
   },
   "100089095231622": {
-    "lastInvestmentTime": "2024-08-17T13:17:37.669Z",
-    "count": 25,
-    "totalInvestment": 138423
+    "lastInvestmentTime": "2024-08-18T14:01:42.141Z",
+    "count": 32,
+    "totalInvestment": 282191
   },
   "61563204616131": {
     "lastInvestmentTime": "2024-08-17T07:22:56.697Z",
@@ -366,5 +366,10 @@
     "lastInvestmentTime": "2024-08-18T03:57:33.867Z",
     "count": 7,
     "totalInvestment": 27000
+  },
+  "100093202175791": {
+    "lastInvestmentTime": "2024-08-18T13:40:58.044Z",
+    "count": 1,
+    "totalInvestment": 7000
   }
 }
