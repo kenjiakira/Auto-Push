@@ -1754,7 +1754,7 @@
         "vanity": "100029043375434",
         "gender": 2,
         "isBirthday": false,
-        "money": 473862,
+        "money": 478400,
         "exp": 0,
         "createTime": {
             "timestamp": 1721407829312
@@ -2010,7 +2010,7 @@
         "vanity": "100092325757607",
         "gender": 1,
         "isBirthday": false,
-        "money": 224597,
+        "money": 224717,
         "exp": 0,
         "createTime": {
             "timestamp": 1721463351357
@@ -2963,7 +2963,7 @@
         "vanity": "100089754041896",
         "gender": 1,
         "isBirthday": false,
-        "money": 11839,
+        "money": 40549,
         "exp": 0,
         "createTime": {
             "timestamp": 1721745493134
@@ -3297,7 +3297,7 @@
         "vanity": "100089415987625",
         "gender": 6,
         "isBirthday": false,
-        "money": 0,
+        "money": 12,
         "exp": 0,
         "createTime": {
             "timestamp": 1721894626939
@@ -3306,13 +3306,13 @@
             "timestamp": 1721894626939
         },
         "lastUpdate": 1721894626939,
-        "lastDailyClaim": 1723942882586,
+        "lastDailyClaim": 1724032137010,
         "pay_limit_2024-08-01_100089415987625": 1,
         "pay_limit_2024-08-03_100089415987625": 2,
         "pay_limit_2024-08-08_100089415987625": 1,
         "pay_limit_2024-08-10_100089415987625": 10,
         "pay_limit_2024-08-11_100089415987625": 10,
-        "coins": 398,
+        "coins": 423,
         "pay_limit_2024-08-12_100089415987625": 10,
         "pay_limit_2024-08-13_100089415987625": 2,
         "pay_limit_2024-08-16_100089415987625": 6,
@@ -11235,7 +11235,7 @@
         "vanity": "61561706008732",
         "gender": 6,
         "isBirthday": false,
-        "money": 622,
+        "money": 580,
         "exp": 0,
         "createTime": {
             "timestamp": 1723301368927
@@ -11244,10 +11244,11 @@
             "timestamp": 1723301368927
         },
         "lastUpdate": 1723301368927,
-        "lastDailyClaim": 1723301378419,
+        "lastDailyClaim": 1724032047786,
         "pay_limit_2024-08-11_61561706008732": 4,
-        "coins": 40,
-        "pay_limit_2024-08-18_61561706008732": 1
+        "coins": 65,
+        "pay_limit_2024-08-18_61561706008732": 1,
+        "pay_limit_2024-08-19_61561706008732": 1
     },
     "61550959841900": {
         "userID": "61550959841900",
@@ -11741,14 +11742,14 @@
         "vanity": "trunguymeomeow",
         "gender": 1,
         "isBirthday": false,
-        "money": 7612,
+        "money": 0,
         "exp": 0,
         "createTime": {
             "timestamp": 1723354230299
         },
         "data": {
             "timestamp": 1723354230299,
-            "work2Time": 1723974956080
+            "work2Time": 1724031736851
         },
         "lastUpdate": 1723354230299,
         "lastDailyClaim": 1723975192153,
@@ -13309,10 +13310,11 @@
         },
         "data": {
             "timestamp": 1723429047904,
-            "work2Time": 1723948393754
+            "work2Time": 1724032022995
         },
         "lastUpdate": 1723429047904,
-        "coins": 6
+        "coins": 6,
+        "lastDailyClaim": 1724032151887
     },
     "61563162281991": {
         "userID": "61563162281991",
@@ -13775,7 +13777,7 @@
         "vanity": "61554963407981",
         "gender": 1,
         "isBirthday": false,
-        "money": 788331.9375,
+        "money": 902331.9375,
         "exp": 0,
         "createTime": {
             "timestamp": 1723463408554
@@ -15389,14 +15391,14 @@
         "vanity": "AnhNam123cmmb",
         "gender": 2,
         "isBirthday": false,
-        "money": 4527,
+        "money": 0,
         "exp": 0,
         "createTime": {
             "timestamp": 1723606968121
         },
         "data": {
             "timestamp": 1723606968121,
-            "work2Time": 1724031705031
+            "work2Time": 1724031710021
         },
         "lastUpdate": 1723606968121,
         "pay_limit_2024-08-14_100049928363635": 4,
@@ -17924,14 +17926,14 @@
         "vanity": "100087614525995",
         "gender": 1,
         "isBirthday": false,
-        "money": 470448,
+        "money": 7427,
         "exp": 0,
         "createTime": {
             "timestamp": 1723731548259
         },
         "data": {
             "timestamp": 1723731548259,
-            "work2Time": 1723988256671
+            "work2Time": 1724031757495
         },
         "lastUpdate": 1723731548259,
         "coins": 23,
@@ -21752,7 +21754,7 @@
         "vanity": "100079621883786",
         "gender": 6,
         "isBirthday": false,
-        "money": 9820,
+        "money": 10018,
         "exp": 0,
         "createTime": {
             "timestamp": 1723883413858
@@ -24012,7 +24014,7 @@
         "vanity": "61561047028310",
         "gender": 1,
         "isBirthday": false,
-        "money": 3073,
+        "money": 3841,
         "exp": 0,
         "createTime": {
             "timestamp": 1723972988315
@@ -24171,5 +24173,21 @@
             "timestamp": 1724031125319
         },
         "lastUpdate": 1724031125319
+    },
+    "100092172572324": {
+        "userID": "100092172572324",
+        "name": "Hồng An",
+        "vanity": "100092172572324",
+        "gender": 1,
+        "isBirthday": false,
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1724031717113
+        },
+        "data": {
+            "timestamp": 1724031717113
+        },
+        "lastUpdate": 1724031717113
     }
 }
