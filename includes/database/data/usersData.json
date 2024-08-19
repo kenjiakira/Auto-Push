@@ -1754,7 +1754,7 @@
         "vanity": "100029043375434",
         "gender": 2,
         "isBirthday": false,
-        "money": 481942,
+        "money": 482093,
         "exp": 0,
         "createTime": {
             "timestamp": 1721407829312
@@ -15583,7 +15583,7 @@
         "vanity": "100080132345932",
         "gender": 6,
         "isBirthday": false,
-        "money": 10336,
+        "money": 10136,
         "exp": 0,
         "createTime": {
             "timestamp": 1723606970857
@@ -19062,14 +19062,14 @@
         "vanity": "hme.trua",
         "gender": 6,
         "isBirthday": false,
-        "money": 0,
+        "money": 11444,
         "exp": 0,
         "createTime": {
             "timestamp": 1723798275893
         },
         "data": {
             "timestamp": 1723798275893,
-            "work2Time": 1724030311797
+            "work2Time": 1724033814489
         },
         "lastUpdate": 1723798275893,
         "coins": 663,
@@ -21755,7 +21755,7 @@
         "vanity": "100079621883786",
         "gender": 6,
         "isBirthday": false,
-        "money": 35414,
+        "money": 0,
         "exp": 0,
         "createTime": {
             "timestamp": 1723883413858
@@ -24130,14 +24130,14 @@
         "vanity": "61559312500910",
         "gender": 2,
         "isBirthday": false,
-        "money": 12556,
+        "money": 22727,
         "exp": 0,
         "createTime": {
             "timestamp": 1723989562818
         },
         "data": {
             "timestamp": 1723989562818,
-            "work2Time": 1723993028032
+            "work2Time": 1724033821528
         },
         "lastUpdate": 1723989562818,
         "lastDailyClaim": 1723990472121,
