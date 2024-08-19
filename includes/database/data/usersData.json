@@ -1754,7 +1754,7 @@
         "vanity": "100029043375434",
         "gender": 2,
         "isBirthday": false,
-        "money": 479241,
+        "money": 480191,
         "exp": 0,
         "createTime": {
             "timestamp": 1721407829312
@@ -21754,7 +21754,7 @@
         "vanity": "100079621883786",
         "gender": 6,
         "isBirthday": false,
-        "money": 40061,
+        "money": 83161,
         "exp": 0,
         "createTime": {
             "timestamp": 1723883413858
@@ -24205,5 +24205,21 @@
             "timestamp": 1724032963037
         },
         "lastUpdate": 1724032963037
+    },
+    "61558456718593": {
+        "userID": "61558456718593",
+        "name": "Conquỷ Meo Là Tao",
+        "vanity": "61558456718593",
+        "gender": 2,
+        "isBirthday": false,
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1724033269099
+        },
+        "data": {
+            "timestamp": 1724033269099
+        },
+        "lastUpdate": 1724033269099
     }
 }
