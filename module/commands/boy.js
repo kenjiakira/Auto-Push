@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 
-const cost = 10000; // Biến này không cần thiết cho lệnh này nếu không kiểm tra số tiền người dùng
+const cost = 10000; 
 const imagePath = path.join(__dirname, 'json', 'boy.json');
 
 function readOrCreateData(filePath) {
@@ -33,7 +33,7 @@ module.exports.config = {
     credits: "Hoàng Ngọc Từ",
     description: "Gửi ảnh boy",
     commandCategory: "Tài Chính",
-    usePrefix: true,
+    usePrefix: false,
     usages: [
         "Lệnh này gửi cho bạn một số ảnh boy từ danh sách ảnh đã lưu."
     ],
@@ -43,10 +43,9 @@ module.exports.config = {
 module.exports.run = async ({ api, event }) => {
     const { senderID, threadID, messageID } = event;
 
-    // Không kiểm tra nhóm NSFW và không kiểm tra số tiền
 
     const imgurImageUrls = readOrCreateData(imagePath);
-    const totalImages = imgurImageUrls.length; // Số lượng ảnh có trong danh sách
+    const totalImages = imgurImageUrls.length; 
 
     if (totalImages === 0) {
         return api.sendMessage("Danh sách ảnh không có ảnh nào. Vui lòng thêm ảnh vào danh sách trước.", threadID, messageID);

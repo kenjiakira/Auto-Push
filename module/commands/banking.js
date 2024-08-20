@@ -1,22 +1,23 @@
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment-timezone');
-const { createCanvas, loadImage,registerFont } = require('canvas');
+const { createCanvas, loadImage, registerFont } = require('canvas');
 const fse = require('fs-extra');
-const diacritics = require('diacritics'); 
-registerFont(path.join(__dirname, 'cache','Be_Vietnam_Pro', 'BeVietnamPro-Bold.ttf'), { family: 'Be Vietnam Pro' });
+const diacritics = require('diacritics');
+const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
+
+registerFont(path.join(__dirname, 'cache', 'Be_Vietnam_Pro', 'BeVietnamPro-Bold.ttf'), { family: 'Be Vietnam Pro' });
+
 const formatCurrency = (amount) => {
-    // Định dạng số tiền với dấu phân cách hàng nghìn và dấu thập phân
     return amount.toLocaleString('vi-VN', { style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2 });
 };
-
 
 module.exports.config = {
     name: "banking",
     version: "1.1.0",
     hasPermission: 0,
     credits: "Hoàng Ngọc Từ",
-    description: "quản lý ngân hàng của bạn",
+    description: "Quản lý ngân hàng của bạn",
     commandCategory: "Tài chính",
     usePrefix: true,
     usages: "[register | gửi [số xu] | rút [số xu] | info]\n\n" +
@@ -108,7 +109,6 @@ const createBankCard = async (userName, uid) => {
     return imagePath;
 };
 
-
 const createBankInfoImage = async (userName, uid, amount) => {
     const width = 720;
     const height = 1280;
@@ -128,7 +128,6 @@ const createBankInfoImage = async (userName, uid, amount) => {
     const backgroundImage = await loadImage(backgroundImagePath);
     ctx.drawImage(backgroundImage, 0, 0, width, height);
 
-    // Tiêu đề
     ctx.font = 'bold 40px Arial';
     ctx.fillStyle = '#FFFFFF';
     ctx.textAlign = 'center';
@@ -141,7 +140,6 @@ const createBankInfoImage = async (userName, uid, amount) => {
     ctx.textAlign = 'center';
     ctx.fillText(`${formattedUserName}`, width / 2, 268);
 
-    // Các thông tin khác
     ctx.textAlign = 'left'; 
     ctx.textBaseline = 'top'; 
     ctx.fillStyle = '#e20814';
@@ -156,7 +154,6 @@ const createBankInfoImage = async (userName, uid, amount) => {
     return imagePath;
 };
 
-
 const calculateInterest = (amount, hours) => {
     const interestRate = 0.001; 
     return amount * (interestRate * hours);
@@ -166,11 +163,19 @@ module.exports.run = async ({ api, event, args, Currencies, Users }) => {
     const { threadID, messageID, senderID } = event;
     const currentTime = moment().unix();
 
+    if (!await hasID(senderID)) {
+        return api.sendMessage("Bạn cần có ID CCCD để thực hiện lệnh này.\nVui lòng gõ .id để tạo ID.", threadID, messageID);
+    }
+
+    if (await isBanned(senderID)) {
+        return api.sendMessage("Bạn đã bị cấm và không thể thực hiện các lệnh ngân hàng!", threadID, messageID);
+    }
+
     const bankData = await readBankData();
 
     if (args.length === 0) {
         if (!bankData[senderID]) {
-            return api.sendMessage("Bạn chưa đăng ký tài khoản ngân hàng, Vui lòng đăng ký bằng lệnh '.banking register' trước.", threadID, messageID);
+            return api.sendMessage("Bạn chưa đăng ký tài khoản ngân hàng. Vui lòng đăng ký bằng lệnh '.banking register' trước.", threadID, messageID);
         }
 
         const userBankData = bankData[senderID];
@@ -188,7 +193,7 @@ module.exports.run = async ({ api, event, args, Currencies, Users }) => {
 
     if (args[0].toLowerCase() === "info") {
         if (!bankData[senderID]) {
-            return api.sendMessage("Bạn chưa đăng ký tài khoản ngân hàng, Vui lòng đăng ký bằng lệnh '.banking register' trước.", threadID, messageID);
+            return api.sendMessage("Bạn chưa đăng ký tài khoản ngân hàng. Vui lòng đăng ký bằng lệnh '.banking register' trước.", threadID, messageID);
         }
 
         const userBankData = bankData[senderID];
@@ -216,7 +221,10 @@ module.exports.run = async ({ api, event, args, Currencies, Users }) => {
             const userName = await Users.getNameUser(senderID);
             const imagePath = await createBankCard(userName, uid);
             return api.sendMessage({
-                body: "Bạn đã đăng ký tài khoản ngân hàng thành công. bây giờ hãy nhập cú pháp:\nbanking gửi <số tiền>\nbanking rút <số tiền>\nbanking info để xem thẻ ATM ",
+                body: "Bạn đã đăng ký tài khoản ngân hàng thành công. Bây giờ hãy nhập cú pháp:\n" +
+                      "banking gửi <số tiền>\n" +
+                      "banking rút <số tiền>\n" +
+                      "banking info để xem thẻ ATM",
                 attachment: fs.createReadStream(imagePath)
             }, threadID, messageID);
         } catch (error) {

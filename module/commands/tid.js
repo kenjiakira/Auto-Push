@@ -40,7 +40,7 @@ module.exports.config = {
   credits: "Akira",
   description: "Lấy TID và thông tin nhóm",
   commandCategory: "Công Cụ",
-  usePrefix: true,
+  usePrefix: false,
   usages: [".tid", ".tid creator"],
   cooldowns: 5
 };

@@ -99,7 +99,7 @@ module.exports.run = async ({ api, event, args, Currencies }) => {
     cooldown.set(senderID, currentTime); 
 
   } else {
-    const penalty = 1000; 
+    const penalty = 3000; 
     await Currencies.decreaseMoney(senderID, penalty);
 
     const timeLeft = Math.ceil((cooldown.get(senderID) + cooldownFailure - currentTime) / 1000);

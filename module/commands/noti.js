@@ -55,13 +55,13 @@ async function getUserName(api, userID) {
 
 module.exports.config = {
     name: "noti",
-    version: "2.0.0",
+    version: "2.0.1", 
     hasPermission: 2,
     credits: "HNT",
-    description: "lệnh admin",
+    description: "Lệnh admin để gửi thông báo đến các nhóm, gắn thẻ tất cả người dùng nếu sử dụng 'all'.",
     commandCategory: "admin",
     usePrefix: true,
-    usages: "noti [nội dung]",
+    usages: "noti [nội dung] hoặc noti all [nội dung]",
     cooldowns: 0
 };
 
@@ -72,14 +72,15 @@ module.exports.run = async function({ event, api, args }) {
         return api.sendMessage("Bạn không có quyền sử dụng lệnh này.", threadID, messageID);
     }
 
-    const messageContent = args.join(" ");
     const groups = readOrCreateFile(groupsPath);
     const bannedGroups = readOrCreateFile(bannedGroupsPath);
 
-    if (!messageContent && !messageReply) {
+    if (!args.length) {
         return api.sendMessage("Vui lòng nhập nội dung tin nhắn hoặc trả lời một ảnh hoặc video để gửi.", threadID, messageID);
     }
 
+    const commandType = args[0].toLowerCase();
+    const messageContent = args.slice(1).join(" ");
     const adminName = await getUserName(api, senderID);
     const notificationMessage = `📢 Thông báo từ Admin ${adminName}:\n${messageContent || ""}`;
 
@@ -90,77 +91,39 @@ module.exports.run = async function({ event, api, args }) {
 
         if (attachments.length > 0) {
             const { type, url } = attachments[0];
+            const tempFilePath = path.join(notiPath, `temp_file.${type === 'video' ? 'mp4' : 'jpg'}`);
+            ensureDirectoryExistence(tempFilePath);
 
-            if (type === 'video') {
-                const tempVideoPath = path.join(notiPath, 'temp_video.mp4');
-                ensureDirectoryExistence(tempVideoPath);
+            try {
+                const response = await axios.get(url, { responseType: 'arraybuffer' });
+                fs.writeFileSync(tempFilePath, response.data);
 
-                try {
-                    const response = await axios.get(url, { responseType: 'arraybuffer' });
-                    fs.writeFileSync(tempVideoPath, response.data);
+                let sentCount = 0;
+                for (const group of filteredGroups) {
+                    try {
+                        const groupInfo = await api.getThreadInfo(group.threadID);
+                        const memberIDs = groupInfo.participantIDs;
+                        let mentions = [];
+                        let body = notificationMessage;
 
-                    let sentCount = 0;
-                    for (const group of filteredGroups) {
-                        try {
-                            const groupInfo = await api.getThreadInfo(group.threadID);
-                            const memberIDs = groupInfo.participantIDs;
-                            let mentions = [];
-                            let body = `📢 Thông báo từ Admin ${adminName}:\n${messageContent || ""}`;
-                            
+                        if (commandType === 'all') {
                             for (const idUser of memberIDs) {
-                                body = "‎" + body;
+                                body = "‎" + body; 
                                 mentions.push({ id: idUser, tag: body, fromIndex: -1 });
                             }
-
-                            await api.sendMessage({ body, attachment: fs.createReadStream(tempVideoPath), mentions }, group.threadID);
-                            sentCount++;
-                        } catch (error) {
-                            console.error(`Lỗi khi gửi video đến nhóm ${group.threadID}:`, error);
                         }
+
+                        await api.sendMessage({ body, attachment: fs.createReadStream(tempFilePath), mentions }, group.threadID);
+                        sentCount++;
+                    } catch (error) {
+                        console.error(`Lỗi khi gửi ${type} đến nhóm ${group.threadID}:`, error);
                     }
-
-                    fs.unlinkSync(tempVideoPath);
-
-                    return api.sendMessage(`Đã gửi video đến ${sentCount} nhóm.`, threadID, messageID);
-                } catch (error) {
-                    return api.sendMessage("Đã xảy ra lỗi khi tải video.", threadID, messageID);
                 }
-            }
 
-            if (type === 'photo') {
-                const tempImagePath = path.join(notiPath, 'temp_image.jpg');
-                ensureDirectoryExistence(tempImagePath);
-
-                try {
-                    const response = await axios.get(url, { responseType: 'arraybuffer' });
-                    fs.writeFileSync(tempImagePath, response.data);
-
-                    let sentCount = 0;
-                    for (const group of filteredGroups) {
-                        try {
-                            const groupInfo = await api.getThreadInfo(group.threadID);
-                            const memberIDs = groupInfo.participantIDs;
-                            let mentions = [];
-                            let body = `📢 Thông báo từ Admin ${adminName}:\n${messageContent || ""}`;
-                            
-                            for (const idUser of memberIDs) {
-                                body = "‎" + body;
-                                mentions.push({ id: idUser, tag: body, fromIndex: -1 });
-                            }
-
-                            await api.sendMessage({ body, attachment: fs.createReadStream(tempImagePath), mentions }, group.threadID);
-                            sentCount++;
-                        } catch (error) {
-                            console.error(`Lỗi khi gửi ảnh đến nhóm ${group.threadID}:`, error);
-                        }
-                    }
-
-                    fs.unlinkSync(tempImagePath);
-
-                    return api.sendMessage(`Đã gửi ảnh đến ${sentCount} nhóm.`, threadID, messageID);
-                } catch (error) {
-                    return api.sendMessage("Đã xảy ra lỗi khi tải ảnh.", threadID, messageID);
-                }
+                fs.unlinkSync(tempFilePath);
+                return api.sendMessage(`Đã gửi ${type} đến ${sentCount} nhóm.`, threadID, messageID);
+            } catch (error) {
+                return api.sendMessage(`Đã xảy ra lỗi khi tải ${type}.`, threadID, messageID);
             }
         } else {
             return api.sendMessage("Không tìm thấy đính kèm hợp lệ trong tin nhắn trả lời.", threadID, messageID);
@@ -176,11 +139,13 @@ module.exports.run = async function({ event, api, args }) {
                 const groupInfo = await api.getThreadInfo(group.threadID);
                 const memberIDs = groupInfo.participantIDs;
                 let mentions = [];
-                let body = `📢 Thông báo từ Admin ${adminName}:\n${messageContent || ""}`;
+                let body = notificationMessage;
 
-                for (const idUser of memberIDs) {
-                    body = "‎" + body;
-                    mentions.push({ id: idUser, tag: body, fromIndex: -1 });
+                if (commandType === 'all') {
+                    for (const idUser of memberIDs) {
+                        body = "‎" + body; 
+                        mentions.push({ id: idUser, tag: body, fromIndex: -1 });
+                    }
                 }
 
                 await api.sendMessage({ body, mentions }, group.threadID);
@@ -193,6 +158,7 @@ module.exports.run = async function({ event, api, args }) {
         return api.sendMessage(`Đã gửi tin nhắn đến ${sentCount} nhóm.`, threadID, messageID);
     }
 };
+
 
 module.exports.handleEvent = async function({ event, api }) {
     const { threadID } = event;

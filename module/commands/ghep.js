@@ -1,18 +1,20 @@
 module.exports.config = {
   name: "ghep", 
-  version: "1.0.1",
+  version: "1.0.2",
   hasPermission: 2,
   credits: "HNT",
   description: "Xem mức độ hợp đôi giữa 2 người",
   commandCategory: "Mini Game",
   usePrefix: true,
   usages: "gõ ghep [tag] người cần xem",
-  cooldowns: 20,
+  cooldowns: 0,
   dependencies: {
       "fs-extra": "",
       "axios": ""
   }
 }
+
+const cooldownTime = 20 * 1000; // 20 giây
 
 module.exports.run = async function({ api, args, Users, event, Currencies }) {
   const axios = global.nodemodule["axios"];
@@ -23,6 +25,16 @@ module.exports.run = async function({ api, args, Users, event, Currencies }) {
 
   if (!mention) {
     return api.sendMessage("Bạn cần tag một người để xem tỷ lệ hợp đôi.", event.threadID);
+  }
+
+  // Kiểm tra thời gian cooldown
+  const now = Date.now();
+  const cooldownKey = `ghep_${senderID}`;
+  const lastUsage = global.cooldowns[cooldownKey] || 0;
+
+  if (now - lastUsage < cooldownTime) {
+    const timeRemaining = Math.ceil((cooldownTime - (now - lastUsage)) / 1000);
+    return api.sendMessage(`Vui lòng đợi thêm ${timeRemaining} giây trước khi thử lại.`, event.threadID);
   }
 
   try {
@@ -48,8 +60,8 @@ module.exports.run = async function({ api, args, Users, event, Currencies }) {
     const avatar1 = (await axios.get(avatarUrl1, { responseType: "arraybuffer" })).data; 
     const avatar2 = (await axios.get(avatarUrl2, { responseType: "arraybuffer" })).data;
 
-    fs.writeFileSync(__dirname + "/cache/ghep/avt.png", Buffer.from(avatar1, "utf-8"));
-    fs.writeFileSync(__dirname + "/cache/ghep/avt2.png", Buffer.from(avatar2, "utf-8")); 
+    fs.writeFileSync(__dirname + "/cache/ghep/avt.png", Buffer.from(avatar1));
+    fs.writeFileSync(__dirname + "/cache/ghep/avt2.png", Buffer.from(avatar2)); 
 
     const imglove = [
       fs.createReadStream(__dirname + "/cache/ghep/avt2.png"),
@@ -63,6 +75,9 @@ module.exports.run = async function({ api, args, Users, event, Currencies }) {
     };
 
     await api.sendMessage(msg, event.threadID, event.messageID);
+
+    // Cập nhật thời gian sử dụng cuối cùng
+    global.cooldowns[cooldownKey] = Date.now();
 
   } catch (err) {
     console.error(err);

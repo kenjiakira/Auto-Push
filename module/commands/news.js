@@ -7,7 +7,7 @@ module.exports.config = {
   version: "1.0.3",
   hasPermission: 0,
   credits: "HungCho mod by Hoàng Ngọc Từ",
-  description: "Xem tin tức mới nhất và gửi tin tức tự động mỗi giờ!",
+  description: "Xem tin tức mới nhất",
   commandCategory: "Tiện ích",
   usePrefix: true,
   usages: "news\n\nLệnh này lấy tin tức mới nhất từ VnExpress và gửi đến bạn",
@@ -39,11 +39,11 @@ async function fetchNews(api, threadID) {
 module.exports.run = async function({ api, event }) {
   const { threadID } = event;
 
-  // Lập lịch gửi tin tức tự động mỗi giờ
+
   schedule.scheduleJob('0 * * * *', () => {
     fetchNews(api, threadID);
   });
 
-  // Gửi tin tức ngay lập tức khi lệnh được gọi
+
   await fetchNews(api, threadID);
 };

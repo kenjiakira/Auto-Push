@@ -1,5 +1,5 @@
-
 const path = require('path');
+const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
 module.exports.config = {
     name: "lucky",
@@ -21,15 +21,22 @@ function getRandomInt(min, max) {
 module.exports.run = async ({ event, api, Currencies, args }) => {
     const { senderID, threadID, messageID } = event;
 
+    if (!(await hasID(senderID))) {
+        return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện yêu cầu này!\ngõ .id để tạo ID", threadID, messageID);
+    }
+
+    if (await isBanned(senderID)) {
+        return api.sendMessage("⚡ Bạn đã bị cấm và không thể thực hiện yêu cầu này!", threadID, messageID);
+    }
+
     const userData = await Currencies.getData(senderID);
     const money = userData.money || 0;
     const betAmount = 500;
     const winAmount = 5000;
 
     if (money < betAmount) {
-        return api.sendMessage("❌ Bạn không có đủ xu để chơi!n\nLưu ý: Thắng sẽ nhận 5000 Xu - thua sẽ trừ 500 xu", threadID, messageID);
+        return api.sendMessage("❌ Bạn không có đủ xu để chơi!\n\nLưu ý: Thắng sẽ nhận 5000 Xu - thua sẽ trừ 500 xu", threadID, messageID);
     }
-
 
     const number = getRandomInt(1, 5);
     const guess = parseInt(args[0]);

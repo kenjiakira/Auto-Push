@@ -42,6 +42,8 @@ function writeJsonFile(data) {
   });
 }
 
+const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
+
 module.exports.config = {
   name: "khaosat",
   version: "1.0.6",
@@ -57,6 +59,14 @@ module.exports.config = {
 module.exports.run = async ({ api, event, args, Currencies }) => {
   const { threadID, messageID, senderID } = event;
 
+  if (!(await hasID(senderID))) {
+    return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện khảo sát này!\ngõ .id để tạo ID", threadID, messageID);
+  }
+
+  if (await isBanned(senderID)) {
+    return api.sendMessage("⚡ Bạn đã bị cấm và không thể thực hiện khảo sát này!", threadID, messageID);
+  }
+
   let rewardsData = await fs.readJson(rewardFilePath, { default: {} });
   let userData = await readJsonFile();
 
@@ -69,9 +79,9 @@ module.exports.run = async ({ api, event, args, Currencies }) => {
       if (!userData[senderID]) {
         userData[senderID] = {
           answers: Array(surveyQuestions.length).fill(null),
-          startTime: Date.now(),  // Lưu thời gian bắt đầu khảo sát
-          agreed: false,  // Trạng thái đồng ý nội quy
-          currentQuestionID: null  // ID tin nhắn câu hỏi hiện tại
+          startTime: Date.now(),  
+          agreed: false,  
+          currentQuestionID: null 
         };
         await writeJsonFile(userData);
 
@@ -124,7 +134,7 @@ module.exports.handleReply = async ({ event: e, api, handleReply, Currencies }) 
       if (e.body.trim().toLowerCase() === "đồng ý") {
         userData[senderID].agreed = true;
         await writeJsonFile(userData);
-        // Tiếp tục khảo sát
+       
         const questionIndex = userData[senderID].answers.indexOf(null);
         if (questionIndex !== -1) {
           const question = surveyQuestions[questionIndex];
@@ -159,7 +169,6 @@ module.exports.handleReply = async ({ event: e, api, handleReply, Currencies }) 
       return api.sendMessage("Bạn cần đồng ý nội quy trước khi trả lời khảo sát.", threadID, e.messageID);
     }
 
-    // Kiểm tra ID tin nhắn câu hỏi hiện tại
     if (e.messageReply && e.messageReply.messageID !== userData[senderID].currentQuestionID) {
       return api.sendMessage("⚠️ Bạn đang trả lời sai câu hỏi hoặc không phải câu hỏi khảo sát hiện tại.", threadID, e.messageID);
     }
@@ -167,7 +176,7 @@ module.exports.handleReply = async ({ event: e, api, handleReply, Currencies }) 
     const answer = e.body.trim().toLowerCase();
     const questionIndex = handleReply.questionIndex;
 
-    if (answer.length < 5) { // Kiểm tra câu trả lời có ít nhất 5 ký tự
+    if (answer.length < 5) {
       return api.sendMessage("⚡ Vui lòng cung cấp câu trả lời chi tiết hơn.", threadID, e.messageID);
     }
 
@@ -175,7 +184,6 @@ module.exports.handleReply = async ({ event: e, api, handleReply, Currencies }) 
 
     await writeJsonFile(userData);
 
-    // Kiểm tra nếu người dùng đã hoàn tất khảo sát
     if (userData[senderID].answers.includes(null)) {
       const nextQuestionIndex = userData[senderID].answers.indexOf(null);
       const nextQuestion = surveyQuestions[nextQuestionIndex];
@@ -196,10 +204,10 @@ module.exports.handleReply = async ({ event: e, api, handleReply, Currencies }) 
     } else {
       const startTime = userData[senderID].startTime;
       const endTime = Date.now();
-      const duration = (endTime - startTime) / 1000; // Thời gian khảo sát tính bằng giây
+      const duration = (endTime - startTime) / 1000; 
 
-      if (duration < 60) { // Nếu thời gian khảo sát < 1 phút
-        delete userData[senderID]; // Xóa dữ liệu khảo sát
+      if (duration < 60) { 
+        delete userData[senderID]; 
         await writeJsonFile(userData);
         api.sendMessage("Khảo sát của bạn bị hủy vì thời gian hoàn tất quá nhanh. Vui lòng thử lại.", threadID, e.messageID);
       } else {

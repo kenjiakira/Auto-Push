@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const sharp = require('sharp'); 
+const sharp = require('sharp');
+
+const combinedImagePath = path.join(__dirname, 'baucua', 'combined_baucua_image.png');
+const imageDir = path.join(__dirname, 'baucua', 'images');
+const dataDir = path.join(__dirname, 'baucua', 'datauser');
 
 module.exports.config = {
   name: "baucua",
@@ -25,12 +29,8 @@ module.exports.config = {
 
 const playingUsers = new Set();
 const maxBet = 10000;
-const combinedImagePath = path.join(__dirname, 'baucua', 'combined_baucua_image.png');
 
 module.exports.onLoad = function() {
-  const imageDir = path.join(__dirname, 'baucua', 'images');
-  const dataDir = path.join(__dirname, 'baucua', 'datauser');
-
   if (!fs.existsSync(imageDir)) fs.mkdirSync(imageDir, { recursive: true });
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 };
@@ -67,8 +67,18 @@ const combineImages = async (imagePaths) => {
   }
 };
 
+const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
+
 module.exports.run = async function({ api, event, args, Currencies }) {
   const { threadID, messageID, senderID } = event;
+
+  if (!(await hasID(senderID))) {
+    return api.sendMessage("⚡ Bạn cần có ID CCCD để chơi trò này!\ngõ .id để tạo ID", threadID, messageID);
+  }
+
+  if (await isBanned(senderID)) {
+    return api.sendMessage("⚡ Bạn đã bị cấm và không thể chơi trò này!", threadID, messageID);
+  }
 
   if (playingUsers.has(senderID)) {
     return api.sendMessage("⏳ Bạn phải chờ 15 giây trước khi chơi lại.", threadID, messageID);
@@ -91,12 +101,12 @@ module.exports.run = async function({ api, event, args, Currencies }) {
   };
 
   const animalImages = {
-    "bầu": path.join(__dirname, 'baucua', 'images', 'bau.jpg'),
-    "cua": path.join(__dirname, 'baucua', 'images', 'cua.jpg'),
-    "cá": path.join(__dirname, 'baucua', 'images', 'ca.jpg'),
-    "mèo": path.join(__dirname, 'baucua', 'images', 'meo.jpg'),
-    "tôm": path.join(__dirname, 'baucua', 'images', 'tom.jpg'),
-    "nai": path.join(__dirname, 'baucua', 'images', 'nai.jpg')
+    "bầu": path.join(imageDir, 'bau.jpg'),
+    "cua": path.join(imageDir, 'cua.jpg'),
+    "cá": path.join(imageDir, 'ca.jpg'),
+    "mèo": path.join(imageDir, 'meo.jpg'),
+    "tôm": path.join(imageDir, 'tom.jpg'),
+    "nai": path.join(imageDir, 'nai.jpg')
   };
 
   if (!animals.includes(chosenAnimal)) {
@@ -121,10 +131,7 @@ module.exports.run = async function({ api, event, args, Currencies }) {
   playingUsers.add(senderID);
 
   const diceResults = Array(3).fill().map(() => animals[Math.floor(Math.random() * animals.length)]);
-  const diceResultsWithImages = diceResults.map(animal => {
-    const imagePath = animalImages[animal];
-    return imagePath;
-  });
+  const diceResultsWithImages = diceResults.map(animal => animalImages[animal]);
 
   await combineImages(diceResultsWithImages);
 
@@ -141,7 +148,7 @@ module.exports.run = async function({ api, event, args, Currencies }) {
 
   api.sendMessage({
     body: message,
-    attachment: fs.createReadStream(combinedImagePath) 
+    attachment: fs.createReadStream(combinedImagePath)
   }, threadID, messageID);
 
   setTimeout(() => playingUsers.delete(senderID), 15000); 

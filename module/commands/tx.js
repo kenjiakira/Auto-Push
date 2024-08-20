@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
-const crypto = require('crypto'); // Thêm thư viện crypto
+const crypto = require('crypto');
+const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
 const diceImagesPath = path.join(__dirname, 'dice_images');
 const combinedImagePath = path.join(__dirname, 'dice_images', 'combined_dice_image.png');
@@ -50,12 +51,15 @@ const combineImages = async (diceNumbers) => {
     console.log("Hình ảnh đã được kết hợp và lưu tại:", combinedImagePath);
   } catch (error) {
     console.error("Lỗi khi kết hợp hình ảnh:", error);
+    throw error;
   }
 };
 
 const sendResultWithImages = async (api, threadID, message, diceNumbers) => {
   try {
-    await combineImages(diceNumbers);
+    if (!fs.existsSync(combinedImagePath)) {
+      await combineImages(diceNumbers);
+    }
 
     await api.sendMessage({
       body: message,
@@ -63,6 +67,7 @@ const sendResultWithImages = async (api, threadID, message, diceNumbers) => {
     }, threadID);
   } catch (error) {
     console.error("Lỗi khi gửi hình ảnh xúc xắc và văn bản:", error);
+    throw error; 
   }
 };
 
@@ -70,7 +75,8 @@ const lastPlayed = {};
 const canPlay = (senderID) => {
   const now = Date.now();
   const lastPlay = lastPlayed[senderID] || 0;
-  if (now - lastPlay < 30000) { 
+  if (now - lastPlay < 30000) {
+    return false;
   }
   lastPlayed[senderID] = now;
   return true;
@@ -80,9 +86,22 @@ module.exports.run = async function ({ api, event, args, Currencies, Users }) {
   const { threadID, messageID, senderID } = event;
 
   try {
-    if (!canPlay(senderID)) return api.sendMessage("Bạn phải chờ 5 phút trước khi chơi lại.", threadID, messageID);
 
-    if (!args[0]) return api.sendMessage("Bạn chưa nhập đúng cú pháp. Hãy sử dụng: tx [tài/xỉu] [số xu hoặc Allin]", threadID, messageID);
+    if (!(await hasID(senderID))) {
+      return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện trò chơi này!\ngõ .id để tạo ID", threadID, messageID);
+    }
+
+    if (await isBanned(senderID)) {
+      return api.sendMessage("⚡ Bạn đã bị cấm và không thể tham gia trò chơi này!", threadID, messageID);
+    }
+
+    if (!canPlay(senderID)) {
+      return api.sendMessage("Bạn phải chờ 30s trước khi chơi lại.", threadID, messageID);
+    }
+
+    if (!args[0]) {
+      return api.sendMessage("Bạn chưa nhập đúng cú pháp. Hãy sử dụng: tx [tài/xỉu] [số xu hoặc Allin]", threadID, messageID);
+    }
 
     const dataMoney = await Currencies.getData(senderID);
     const userData = await Users.getData(senderID);
@@ -94,11 +113,13 @@ module.exports.run = async function ({ api, event, args, Currencies, Users }) {
     const moneyUser = dataMoney.money;
     const choose = args[0].toLowerCase();
 
-    if (choose !== 'tài' && choose !== 'xỉu')
+    if (choose !== 'tài' && choose !== 'xỉu') {
       return api.sendMessage("Bạn chưa nhập đúng cú pháp. Hãy sử dụng: tx [tài/xỉu] [số xu hoặc Allin]", threadID, messageID);
+    }
 
-    if (!args[1])
+    if (!args[1]) {
       return api.sendMessage("Bạn chưa nhập đúng cú pháp. Hãy sử dụng: tx [tài/xỉu] [số xu hoặc Allin]", threadID, messageID);
+    }
 
     let money = 0;
     const maxBet = 20000;
@@ -107,15 +128,15 @@ module.exports.run = async function ({ api, event, args, Currencies, Users }) {
       money = moneyUser;
     } else {
       money = parseInt(args[1]);
-      if (money < 10 || isNaN(money) || money > maxBet)
+      if (money < 10 || isNaN(money) || money > maxBet) {
         return api.sendMessage("Mức đặt cược không hợp lệ hoặc cao hơn 20K xu!!!", threadID, messageID);
-      if (moneyUser < money)
+      }
+      if (moneyUser < money) {
         return api.sendMessage(`Số dư của bạn không đủ ${money} xu để chơi`, threadID, messageID);
+      }
     }
 
-    const rollDice = () => {
-      return crypto.randomInt(1, 7); 
-    };
+    const rollDice = () => crypto.randomInt(1, 7);
 
     const dices = [rollDice(), rollDice(), rollDice()];
     const totalDice = dices.reduce((sum, dice) => sum + dice, 0);

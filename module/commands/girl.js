@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "Mirai Team",
   description: "Random ảnh gái",
   commandCategory: "ảnh gái :))",
-  usePrefix: true,
+  usePrefix: false,
   usages: "gái",
   cooldowns: 5,
   dependencies: {

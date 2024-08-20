@@ -2,6 +2,7 @@ const moment = require('moment-timezone');
 const fs = require('fs');
 const request = require('request');
 const path = require('path');
+const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
 const rewardMin = 1000;
 const rewardMax = 5000;
@@ -32,6 +33,14 @@ const getRandomReward = () => Math.floor(Math.random() * (rewardMax - rewardMin 
 module.exports.run = async ({ api, event, Currencies, Users }) => {
     const { senderID, threadID } = event;
 
+    if (!(await hasID(senderID))) {
+        return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện yêu cầu này!\ngõ .id để tạo ID", threadID, event.messageID);
+    }
+
+    if (await isBanned(senderID)) {
+        return api.sendMessage("⚡ Bạn đã bị cấm và không thể thực hiện yêu cầu này!", threadID, event.messageID);
+    }
+
     const lastClaim = await getLastDailyClaim(senderID, Currencies);
     const now = moment().tz('Asia/Ho_Chi_Minh').startOf('day').valueOf();
 
@@ -46,8 +55,7 @@ module.exports.run = async ({ api, event, Currencies, Users }) => {
     const userData = await Users.getData(senderID);
     const userName = userData.name || "Người dùng";
 
- 
-    const gifUrl = 'https://imgur.com/L3o6ZyM.gif'; 
+    const gifUrl = 'https://imgur.com/L3o6ZyM.gif';
     const gifPath = path.join(__dirname, 'cache', 'daily_reward.gif');
     request(gifUrl).pipe(fs.createWriteStream(gifPath)).on('close', () => {
         api.sendMessage({

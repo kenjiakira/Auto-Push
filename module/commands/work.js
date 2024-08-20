@@ -1,4 +1,6 @@
 const { randomInt } = require('crypto');
+const path = require('path');
+const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
 module.exports.config = {
     name: "work",
@@ -16,6 +18,14 @@ module.exports.run = async ({ api, event, Currencies, Users }) => {
     const { threadID, messageID, senderID } = event;
     const lastWorkTime = global.lastWorkTime || {};
     const currentTime = Date.now();
+
+    if (!(await hasID(senderID))) {
+        return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện công việc này\ngõ .id để tạo ID", threadID, messageID);
+    }
+
+    if (await isBanned(senderID)) {
+        return api.sendMessage("⚡ Bạn đã bị cấm và không thể thực hiện công việc này!", threadID, messageID);
+    }
 
     if (lastWorkTime[senderID] && currentTime - lastWorkTime[senderID] < 450000) { 
         const remainingTime = Math.ceil((450000 - (currentTime - lastWorkTime[senderID])) / 1000);

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
+const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
 const investmentOpportunitiesPath = path.join(__dirname, '../../module/commands/json/investmentOpportunities.json');
 const userInvestmentsPath = path.join(__dirname, '../../module/commands/json/userInvestments.json');
@@ -87,14 +88,22 @@ module.exports.config = {
   `,
   cooldowns: 0
 };
+
 module.exports.run = async ({ event, api, Currencies }) => {
   const { senderID, threadID } = event;
   const args = event.body.trim().split(' ');
 
   updateStockPrices();
 
+  if (!(await hasID(senderID))) {
+    return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện giao dịch đầu tư!\ngõ .id để tạo ID", threadID);
+  }
+
+  if (await isBanned(senderID)) {
+    return api.sendMessage("⚡ Bạn đã bị cấm và không thể thực hiện giao dịch đầu tư!", threadID);
+  }
+
   if (args.length === 1 && args[0].toLowerCase() === '.trader') {
-   
     const investmentOpportunities = readInvestmentOpportunities();
     const list = investmentOpportunities.map(op => 
       `- ${op.name}: ${op.fullName}\nGiá mở cửa: ${op.openPrice} xu\nGiá thấp nhất: ${op.lowPrice} xu\nGiá hiện tại: ${op.currentPrice} xu\nRủi ro ${op.risk * 100}%\nLợi nhuận ${op.return}x`
@@ -110,7 +119,6 @@ module.exports.run = async ({ event, api, Currencies }) => {
   }
 
   if (args.length === 3 && args[1].toLowerCase() === 'stats') {
-    
     const abbreviation = args[2].toUpperCase();
     const opportunity = findOpportunityByAbbreviation(abbreviation);
 

@@ -1,3 +1,7 @@
+const { randomInt } = require('crypto');
+const path = require('path');
+const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
+
 module.exports.config = {
     name: "chanle",
     version: "1.1.6",
@@ -9,17 +13,27 @@ module.exports.config = {
     usages: "[chẵn | lẻ] [số xu hoặc allin]",
     cooldowns: 5,
 };
+
 module.exports.run = async ({ api, event, args, Currencies, Users }) => {
     const { threadID, messageID, senderID } = event;
     const lastGameTime = global.lastGameTime || 0;
     const currentTime = Date.now();
-    
+
     if (currentTime - lastGameTime < 30000) {
         const remainingTime = Math.ceil((30000 - (currentTime - lastGameTime)) / 1000);
         return api.sendMessage(`Vui lòng đợi ${remainingTime} giây trước khi chơi lại.`, threadID, messageID);
     }
     
     global.lastGameTime = currentTime;
+
+    // Kiểm tra ID CCCD và tình trạng bị cấm (BAN)
+    if (!(await hasID(senderID))) {
+        return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện trò chơi này!\ngõ .id để tạo ID", threadID);
+    }
+
+    if (await isBanned(senderID)) {
+        return api.sendMessage("⚡ Bạn đã bị cấm và không thể chơi trò chơi này!", threadID);
+    }
 
     const generateResult = () => {
         const colors = ["⚪", "🔴"];

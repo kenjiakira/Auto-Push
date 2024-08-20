@@ -7,7 +7,7 @@ module.exports.config = {
   credits: "Akira",
   description: "lấy UID facebook của người nào đó",
   commandCategory: "Công cụ",
-  usePrefix: true,
+  usePrefix: false,
   usages: "gõ .UID [tag] or [reply]",
   cooldowns: 0
 };

@@ -1,3 +1,7 @@
+const { randomInt } = require('crypto');
+const path = require('path');
+const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
+
 const slotSymbols = ["🍒", "🍋", "🍇", "🍀", "🍉", "🍊", "🍎", "💎", "⭐"];
 const betAmounts = [500, 1000, 2000, 5000, 10000];
 const taxRecipientUID = "100029043375434";
@@ -10,7 +14,7 @@ const jackpotRewards = {
   5000: 500000,
   10000: 1000000
 };
-const bonusPrizes = [25000, 50000, 100000]; 
+const bonusPrizes = [25000, 50000, 100000];
 
 module.exports.config = {
   name: "slot",
@@ -26,6 +30,15 @@ module.exports.config = {
 
 module.exports.run = async ({ api, event, args, Currencies, Users }) => {
   const { senderID, threadID } = event;
+
+  // Kiểm tra ID CCCD và tình trạng bị cấm (BAN)
+  if (!(await hasID(senderID))) {
+    return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện trò chơi này!\ngõ .id để tạo ID", threadID);
+  }
+
+  if (await isBanned(senderID)) {
+    return api.sendMessage("⚡ Bạn đã bị cấm và không thể chơi trò chơi này!", threadID);
+  }
 
   const userData = await Currencies.getData(senderID);
   const user = await Users.getData(senderID);
@@ -67,7 +80,6 @@ module.exports.run = async ({ api, event, args, Currencies, Users }) => {
       const winnerName = user.name;
 
       if (spinResult.every(index => slotSymbols[index] === wildSymbol)) {
-     
         const jackpotAmount = jackpotRewards[bet];
         message += `🎉 Chúc mừng! ${winnerName} đã thắng Jackpot trị giá ${formatNumber(jackpotAmount)} xu!`;
         await Currencies.increaseMoney(senderID, jackpotAmount);

@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { createCanvas } = require('canvas');
 const { Chart, registerables } = require('chart.js');
+const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
 Chart.defaults.color = '#ffffff';
 
@@ -183,6 +184,15 @@ module.exports.run = async ({ event, api, Currencies }) => {
     const args = event.body.trim().split(' ');
 
     try {
+        // Kiểm tra ID CCCD và tình trạng bị cấm (BAN)
+        if (!(await hasID(senderID))) {
+            return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện giao dịch này!\ngõ .id để tạo ID", threadID);
+        }
+
+        if (await isBanned(senderID)) {
+            return api.sendMessage("⚡ Bạn đã bị cấm và không thể thực hiện giao dịch này!", threadID);
+        }
+
         if (args[1] === 'buy') {
             if (!isTradingAllowed()) {
                 return api.sendMessage("🕒 Bạn chỉ có thể mua coin từ 6 giờ sáng đến 11 giờ tối hàng ngày", threadID);

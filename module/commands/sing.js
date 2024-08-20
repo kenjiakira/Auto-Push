@@ -115,16 +115,30 @@ const run = async function({ api, event, args }) {
     }
   } else {
     try {
-      const data = (await Youtube.GetListByKeyword(keywordSearch, false, 6))?.items ?? [];
+      const searchResults = await Youtube.GetListByKeyword(keywordSearch, false, 6);
+      if (!searchResults || !searchResults.items) {
+        throw new Error('Không có kết quả tìm kiếm');
+      }
+      const data = searchResults.items;
       const link = data.map(value => value?.id);
       const thumbnails = [];
 
       for (let i = 0; i < data.length; i++) {
-        const thumbnailUrl = `https://i.ytimg.com/vi/${data[i]?.id}/hqdefault.jpg`;
+        const videoId = data[i]?.id;
+        if (!videoId) {
+          console.error(`ID video không tồn tại cho mục ${i}`);
+          continue;
+        }
+
+        const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
         const thumbnailPath = path.resolve(__dirname, 'cache', `thumbnail-${event.senderID}-${i + 1}.jpg`);
-        const response = await axios.get(thumbnailUrl, { responseType: 'arraybuffer' });
-        fs.writeFileSync(thumbnailPath, Buffer.from(response.data, 'binary'));
-        thumbnails.push(fs.createReadStream(thumbnailPath));
+        try {
+          const response = await axios.get(thumbnailUrl, { responseType: 'arraybuffer' });
+          fs.writeFileSync(thumbnailPath, Buffer.from(response.data, 'binary'));
+          thumbnails.push(fs.createReadStream(thumbnailPath));
+        } catch (err) {
+          console.error(`Lỗi khi tải ảnh thu nhỏ từ ${thumbnailUrl}:`, err);
+        }
       }
 
       const body = `Có ${link.length} kết quả phù hợp với từ khóa tìm kiếm của bạn:\n\n${data.map((value, index) => `❍━━━━━━━━━━━━❍\n${index + 1} - ${value?.title} (${value?.length?.simpleText})\n\n`).join('')}❯ Vui lòng trả lời để chọn một trong những kết quả tìm kiếm trên`;
@@ -144,7 +158,7 @@ const run = async function({ api, event, args }) {
       }, event.messageID);
     } catch (e) {
       console.log('Lỗi khi tìm kiếm video:', e);
-      return api.sendMessage(`⚠️Đã xảy ra lỗi, vui lòng thử lại sau!!\n${e}`, event.threadID, event.messageID);
+      return api.sendMessage(`⚠️Đã xảy ra lỗi, vui lòng thử lại sau!!\n${e.message}`, event.threadID, event.messageID);
     }
   }
 };
