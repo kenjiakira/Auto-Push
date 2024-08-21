@@ -135,11 +135,11 @@ module.exports.run = async function ({ api, event, args, Currencies, Users }) {
     // Cơ chế mới: Cược thấp có cơ hội trúng ít, cược cao có cơ hội trúng nhiều hơn
     if (totalDice === 3 && choose === 'xỉu') {
       result = 'thắng';
-      winnings = money * 5 + jackpot;
+      winnings = money * 15 + jackpot;
       jackpot = 0;
     } else if (totalDice === 18 && choose === 'tài') {
       result = 'thắng';
-      winnings = money * 5 + jackpot;
+      winnings = money * 15 + jackpot;
       jackpot = 0;
     } else if (choose === 'xỉu' && totalDice >= 4 && totalDice <= 10) {
       result = 'thắng';

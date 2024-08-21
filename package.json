@@ -16,6 +16,7 @@
     "@google-cloud/vision": "^4.3.1",
     "@google/generative-ai": "^0.16.0",
     "@vitalets/google-translate-api": "^9.2.0",
+    "@zxing/library": "^0.21.3",
     "aes-js": "^3.1.2",
     "axios": "^0.26.1",
     "bluebird": "^2.11.0",

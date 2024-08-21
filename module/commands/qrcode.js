@@ -3,8 +3,6 @@ const path = require('path');
 const Canvas = require('canvas');
 const qrcode = require('qrcode');
 const imageDownloader = require('image-downloader');
-const jimp = require('jimp');
-const QrCode = require('qrcode-reader');
 
 function getRandomColor() {
   let color;
@@ -54,8 +52,8 @@ module.exports.run = async function ({ api, event, args }) {
       const qrCodeBuffer = await qrcode.toBuffer(data, {
         width: 1024,
         color: {
-          dark: getRandomColor(), 
-          light: '#FFFFFF' 
+          dark: getRandomColor(),
+          light: '#FFFFFF'
         }
       });
 
@@ -71,29 +69,13 @@ module.exports.run = async function ({ api, event, args }) {
       const qrSize = Math.min(canvasWidth, canvasHeight) - 60;
       ctx.drawImage(qrImage, 30, 30, qrSize, qrSize);
 
-      const logoUrl = 'https://i.imgur.com/jTjylEF.jpeg';
-      const logoPath = path.join(__dirname, 'cache', 'logo.png');
-      await imageDownloader.image({ url: logoUrl, dest: logoPath });
-
-      const logoImage = await jimp.read(logoPath);
-      logoImage.resize(logoImage.bitmap.width / 4, logoImage.bitmap.height / 4);
-      logoImage.circle();
-      const logoBuffer = await logoImage.getBufferAsync('image/png');
-      const logoCanvas = await Canvas.loadImage(logoBuffer);
-
-      const logoSize = qrSize / 6;
-      const logoX = (canvasWidth - logoSize) / 2;
-      const logoY = (canvasHeight - logoSize) / 2;
-      ctx.drawImage(logoCanvas, logoX, logoY, logoSize, logoSize);
-
-
       ctx.font = '30px Arial';
-      ctx.fillStyle = '#000000';  
+      ctx.fillStyle = '#000000';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       const copyrightText = 'by HNT';
       const textX = canvasWidth / 2;
-      const textY = canvasHeight - 30;  
+      const textY = canvasHeight - 30;
       ctx.fillText(copyrightText, textX, textY);
 
       const canvasPath = path.join(__dirname, 'cache', 'qrcode_canvas.png');
@@ -104,7 +86,6 @@ module.exports.run = async function ({ api, event, args }) {
         attachment: fs.createReadStream(canvasPath)
       }, threadID, () => {
         fs.unlinkSync(canvasPath);
-        fs.unlinkSync(logoPath);
       }, messageID);
 
     } catch (error) {
