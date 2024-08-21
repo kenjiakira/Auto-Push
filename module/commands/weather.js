@@ -19,7 +19,7 @@ const apiKey = "1230a8fdc6457603234c68ead5f3f967";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
 const cities = [
-    "Hà Nội", "Hồ Chí Minh", "Đà Nẵng",
+    "Hà Nội", "Hồ Chí Minh", "Đà Nẵng","cần Thơ","Huế","Nha Trang","Thái Nguyên"
 ];
 
 function getRandomCities(num = 1) {

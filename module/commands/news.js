@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const schedule = require('node-schedule');
+const fs = require('fs').promises;
 
 module.exports.config = {
   name: "news",
@@ -39,11 +39,19 @@ async function fetchNews(api, threadID) {
 module.exports.run = async function({ api, event }) {
   const { threadID } = event;
 
+  const now = new Date();
+  const minutesUntilNextHour = 60 - now.getUTCMinutes();
+  const msUntilNextHour = (minutesUntilNextHour * 60 + (60 - now.getUTCSeconds())) * 1000; 
 
-  schedule.scheduleJob('0 * * * *', () => {
+  console.log(`Đang chờ ${msUntilNextHour} ms để thông báo tin tức vào giờ tiếp theo.`);
+
+  setTimeout(() => {
+    console.log('Gửi tin tức đầu tiên.');
     fetchNews(api, threadID);
-  });
 
-
-  await fetchNews(api, threadID);
+    setInterval(() => {
+      console.log('Gửi tin tức mỗi 2 giờ.');
+      fetchNews(api, threadID);
+    }, 2 * 60 * 60 * 1000); 
+  }, msUntilNextHour);
 };

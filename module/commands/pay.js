@@ -6,7 +6,7 @@ const QRCode = require('qrcode');
 
 module.exports.config = {
   name: "pay",
-  version: "1.0.7",
+  version: "1.1.0",
   hasPermission: 0,
   credits: "Hoàng Ngọc Từ",
   description: "Chuyển tiền cho người khác",
@@ -21,19 +21,22 @@ module.exports.run = async function({ event, api, Currencies, args, Users }) {
   const mention = Object.keys(event.mentions)[0];
 
   const dailyLimitKey = `pay_limit_${moment().tz("Asia/Ho_Chi_Minh").format("YYYY-MM-DD")}_${senderID}`;
-  let dailyLimit = (await Currencies.getData(senderID))[dailyLimitKey] || 0;
-
-  if (dailyLimit >= 10) {
-    return api.sendMessage("Bạn đã đạt đến giới hạn chuyển tiền trong ngày!", threadID, messageID);
-  }
+  const userData = await Currencies.getData(senderID);
+  let dailyLimit = userData[dailyLimitKey] || 0;
 
   if (!args[0] || isNaN(args[0].replace(/\./g, "").replace(/,/g, ""))) {
     return api.sendMessage("Vui lòng nhập số tiền hợp lệ để chuyển!", threadID, messageID);
   }
 
   const coins = parseInt(args[0].replace(/\./g, "").replace(/,/g, ""));
-  const balance = (await Currencies.getData(senderID)).money;
-  const taxAmount = Math.floor(coins * 0.01); 
+  const balance = userData.money;
+
+  let taxAmount = 0;
+
+  if (dailyLimit >= 10) {
+    taxAmount = Math.floor(coins * 0.05); 
+  }
+
   const totalAmount = coins + taxAmount; 
   const transactionID = generateTransactionID(12);
 
@@ -49,7 +52,7 @@ module.exports.run = async function({ event, api, Currencies, args, Users }) {
 
     await Currencies.decreaseMoney(senderID, totalAmount); 
     await Currencies.increaseMoney(event.messageReply.senderID, coins); 
-    await Currencies.increaseMoney("100092325757607", taxAmount);
+    await Currencies.increaseMoney("100092325757607", taxAmount); 
     await Currencies.setData(senderID, { [dailyLimitKey]: dailyLimit + 1 });
 
     const imagePath = await createTransferImage(namePay, coins, taxAmount, event.messageReply.senderID, transactionID);

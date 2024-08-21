@@ -63,7 +63,8 @@ permissionNotEnough=You do not have enough permission to perform this action.
 handleCommand.permssionNotEnough=Không đủ quyền để thực hiện hành động này.
 handleCommand.userBanned=Hiện tại bạn đang bị cấm sử dụng bot!\n%1\n%2
 handleCommand.threadBanned=Hiện tại nhóm của bạn đang bị cấm sử dụng bot!\n%1\n%2
-handleCommand.commandNotExist=[❓]Sai cú pháp lệnh\ngõ [.help] để xem tất cả các lệnh!
+handleCommand.commandNotExist=😅 Oops! Lệnh của bạn không hoàn toàn chính xác.\nHãy thử gõ '.help' để biết thêm thông tin và làm đúng nhé! 📜✨
+
 handleCommand.commandThreadBanned=Nhóm bạn đã bị cấm sử dụng lệnh "%1"
 handleCommand.commandUserBanned=Bạn đã bị cấm sử dụng lệnh "%1"
 handleCommand.threadNotAllowNSFW=Nhóm của bạn không được phép sử dụng những lệnh NSFW

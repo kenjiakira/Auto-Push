@@ -34,7 +34,7 @@ module.exports.run = async ({ api, event, Currencies, Users }) => {
     const { senderID, threadID } = event;
 
     if (!(await hasID(senderID))) {
-        return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện yêu cầu này!\ngõ .id để tạo ID", threadID, event.messageID);
+        return api.sendMessage("⚡ Bạn cần có ID để thực hiện yêu cầu này!\ngõ .id để tạo ID", threadID, event.messageID);
     }
 
     if (await isBanned(senderID)) {

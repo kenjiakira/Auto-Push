@@ -22,13 +22,13 @@ module.exports.config = {
       "- Cược 1000 xu vào con mèo: `baucua 1000 mèo`\n" +
       "- Cược 5000 xu vào con tôm: `baucua 5000 tôm`\n\n" +
       "Lưu ý:\n" +
-      "- Số tiền cược tối đa là 10000 xu.\n" +
+      "- Số tiền cược tối đa là 20000 xu.\n" +
       "- Bạn phải chờ 15 giây trước khi chơi lại.",
   cooldowns: 5
 };
 
 const playingUsers = new Set();
-const maxBet = 10000;
+const maxBet = 20000;
 
 module.exports.onLoad = function() {
   if (!fs.existsSync(imageDir)) fs.mkdirSync(imageDir, { recursive: true });
@@ -73,7 +73,7 @@ module.exports.run = async function({ api, event, args, Currencies }) {
   const { threadID, messageID, senderID } = event;
 
   if (!(await hasID(senderID))) {
-    return api.sendMessage("⚡ Bạn cần có ID CCCD để chơi trò này!\ngõ .id để tạo ID", threadID, messageID);
+    return api.sendMessage("⚡ Bạn cần có ID để chơi trò này!\ngõ .id để tạo ID", threadID, messageID);
   }
 
   if (await isBanned(senderID)) {

@@ -117,7 +117,7 @@ module.exports.run = async ({ event: e, api, handleReply, Currencies }) => {
 
     // Kiểm tra xem người dùng có ID CCCD không
     if (!(await hasID(senderID))) {
-        return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện hành động này!\ngõ .id để tạo ID", threadID, e.messageID);
+        return api.sendMessage("⚡ Bạn cần có ID để thực hiện hành động này!\ngõ .id để tạo ID", threadID, e.messageID);
     }
 
     // Kiểm tra tình trạng bị cấm

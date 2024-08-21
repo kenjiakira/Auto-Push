@@ -78,6 +78,7 @@
     "sequelize": "^6.17.0",
     "sharp": "^0.33.4",
     "simple-get": "^4.0.1",
+    "simple-git": "^3.25.0",
     "simple-youtube-api": "^5.2.1",
     "string-similarity": "^4.0.4",
     "translate-google": "^1.5.0",

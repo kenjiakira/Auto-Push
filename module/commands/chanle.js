@@ -28,7 +28,7 @@ module.exports.run = async ({ api, event, args, Currencies, Users }) => {
 
     // Kiểm tra ID CCCD và tình trạng bị cấm (BAN)
     if (!(await hasID(senderID))) {
-        return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện trò chơi này!\ngõ .id để tạo ID", threadID);
+        return api.sendMessage("⚡ Bạn cần có ID để thực hiện trò chơi này!\ngõ .id để tạo ID", threadID);
     }
 
     if (await isBanned(senderID)) {

@@ -4,34 +4,56 @@ const Youtube = require('youtube-search-api');
 const axios = require('axios');
 const path = require('path');
 
+const historyPath = path.join(__dirname, 'json', 'sing.json');
+
+// Ensure the history file exists
+if (!fs.existsSync(historyPath)) {
+  fs.writeFileSync(historyPath, JSON.stringify({}), 'utf8');
+}
+
+// Convert seconds to HH:MM:SS format
 const convertHMS = (value) => new Date(value * 1000).toISOString().slice(11, 19);
 
+// Configuration for the command
 const config = {
   name: "sing",
-  version: "1.0.0",
+  version: "1.0.1",
   hasPermission: 0,
   credits: "Akira",
   description: "Phát nhạc qua liên kết YouTube hoặc từ khóa tìm kiếm",
   usePrefix: true,
   commandCategory: "Phương tiện",
-  usages: "[searchMusic]",
+  usages: "[searchMusic] | history - Xem lịch sử nhạc | suggest - Đề xuất nhạc",
   cooldowns: 0
 };
 
+// Default itag for audio quality
 const ITAG = 140; 
 
 const downloadMusicFromYoutube = async (link, filePath, itag = ITAG) => {
   try {
-    if (!link || typeof link !== 'string' || !link.startsWith('https://www.youtube.com/watch?v=')) {
+    if (!link || typeof link !== 'string') {
       throw new Error('Liên kết không hợp lệ');
     }
 
-    const videoID = link.split('v=')[1];
-    if (!videoID || videoID.length !== 11) {
+    // Extract video ID from YouTube link
+    const videoIDMatch = link.match(/(?:v=|\/)([a-zA-Z0-9_-]{11})/);
+    if (!videoIDMatch || videoIDMatch.length < 2) {
+      throw new Error('ID video không hợp lệ');
+    }
+    const videoID = videoIDMatch[1];
+
+    // Validate video ID length
+    if (videoID.length !== 11) {
       throw new Error('ID video không hợp lệ');
     }
 
-    const data = await ytdl.getInfo(link);
+    // Fetch video information
+    const data = await ytdl.getInfo(`https://www.youtube.com/watch?v=${videoID}`);
+    if (!data || !data.videoDetails) {
+      throw new Error('Không thể lấy thông tin video');
+    }
+
     const result = {
       title: data.videoDetails.title,
       dur: Number(data.videoDetails.lengthSeconds),
@@ -55,16 +77,39 @@ const downloadMusicFromYoutube = async (link, filePath, itag = ITAG) => {
         });
     });
   } catch (e) {
-    console.error('Lỗi khi tải nhạc từ YouTube:', e);
-    throw e; 
+    console.error('Lỗi khi tải nhạc từ YouTube:', e.message);
+    throw e;
   }
 };
 
+const updateHistory = (userID, record) => {
+  try {
+    const historyData = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+    if (!historyData[userID]) {
+      historyData[userID] = [];
+    }
+    // Thêm bản ghi mới
+    historyData[userID].push(record);
+    // Giới hạn số lượng mục lịch sử lưu trữ
+    if (historyData[userID].length > 15) {
+      historyData[userID].shift(); // Loại bỏ mục cũ nhất nếu quá số lượng tối đa
+    }
+    fs.writeFileSync(historyPath, JSON.stringify(historyData, null, 2), 'utf8');
+  } catch (error) {
+    console.error('Lỗi khi cập nhật lịch sử:', error);
+  }
+};
 
 const handleReply = async ({ api, event, handleReply }) => {
   try {
+    const selectedIndex = parseInt(event.body) - 1; // Convert to zero-based index
     const filePath = path.resolve(__dirname, 'cache', `audio-${event.senderID}.mp3`);
-    const downloadResult = await downloadMusicFromYoutube("https://www.youtube.com/watch?v=" + handleReply.link[event.body - 1], filePath, ITAG);
+    const selectedLink = handleReply.link[selectedIndex];
+    if (!selectedLink) {
+      return api.sendMessage('⚠️ Lựa chọn không hợp lệ.', event.threadID, event.messageID);
+    }
+
+    const downloadResult = await downloadMusicFromYoutube(selectedLink, filePath, ITAG);
 
     if (!downloadResult || !downloadResult.data) {
       console.error('Lỗi: Data không xác định');
@@ -84,6 +129,14 @@ const handleReply = async ({ api, event, handleReply }) => {
       attachment: fs.createReadStream(data),
     };
 
+    // Update history
+    updateHistory(event.senderID, {
+      type: 'download',
+      title: info.title,
+      link: selectedLink,
+      timestamp: Date.now()
+    });
+
     return api.sendMessage(message, event.threadID, async () => {
       fs.unlinkSync(filePath);
     }, event.messageID);
@@ -93,13 +146,74 @@ const handleReply = async ({ api, event, handleReply }) => {
   }
 };
 
-const run = async function({ api, event, args }) {
-  if (!args?.length) return api.sendMessage('❯ Tìm kiếm không được để trống!', event.threadID, event.messageID);
+const suggestMusic = async (userID) => {
+  try {
+    const historyData = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+    const userHistory = historyData[userID] || [];
 
-  const keywordSearch = args.join(" ");
-  const filePath = path.resolve(__dirname, 'cache', `sing-${event.senderID}.mp3`);
+    if (userHistory.length > 0) {
+      // Đề xuất dựa trên lịch sử của chính người dùng
+      const titles = userHistory.map((record, index) => ({
+        index: index + 1,
+        title: record.title,
+        link: record.link
+      }));
+      return titles;
+    } else {
+      // Đề xuất ngẫu nhiên cho người dùng mới
+      const allHistories = Object.values(historyData).flat();
+      const randomSongs = allHistories
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 5) // Giới hạn số lượng đề xuất
+        .map((record, index) => ({
+          index: index + 1,
+          title: record.title,
+          link: record.link
+        }));
+
+      if (randomSongs.length === 0) {
+        return [];
+      }
+
+      return randomSongs;
+    }
+  } catch (e) {
+    console.log('Lỗi khi đề xuất nhạc:', e);
+    return [];
+  }
+};
+
+
+const run = async function({ api, event, args }) {
+  if (args.length === 0) {
+    // No arguments, show suggestions
+    try {
+      const suggestions = await suggestMusic(event.senderID);
+
+      if (suggestions.length === 0) {
+        return api.sendMessage('❯ Không có bản nhạc nào để đề xuất.', event.threadID, event.messageID);
+      }
+
+      const body = `Có ${suggestions.length} bản nhạc đề xuất cho bạn:\n\n${suggestions.map(({ index, title }) => `❍ ${index}. ${title}`).join('\n')}\n\n❯ Vui lòng trả lời với số thứ tự để chọn bản nhạc.`;
+
+      return api.sendMessage(body, event.threadID, (error, info) => {
+        global.client.handleReply.push({
+          type: 'reply',
+          name: config.name,
+          messageID: info.messageID,
+          author: event.senderID,
+          link: suggestions.map(s => s.link)
+        });
+      }, event.messageID);
+    } catch (e) {
+      console.log('Lỗi khi đề xuất nhạc:', e);
+      return api.sendMessage('⚠️Đã xảy ra lỗi khi đề xuất nhạc.', event.threadID, event.messageID);
+    }
+  }
 
   if (args[0]?.startsWith("https://")) {
+    // Handle YouTube link
+    const filePath = path.resolve(__dirname, 'cache', `sing-${event.senderID}.mp3`);
     try {
       const { data, info } = await downloadMusicFromYoutube(args[0], filePath);
       const body = `❍━━━━━━━━━━━━❍\n🎵 Tiêu đề: ${info.title}\n⏱️ Thời lượng: ${convertHMS(info.dur)}\n⏱️ Thời gian xử lý: ${Math.floor((Date.now() - info.timestart) / 1000)} giây\n❍━━━━━━━━━━━━❍`;
@@ -108,19 +222,74 @@ const run = async function({ api, event, args }) {
         return api.sendMessage('⚠️Không thể gửi tệp vì kích thước lớn hơn 25MB.', event.threadID, () => fs.unlinkSync(data), event.messageID);
       }
 
+      // Update history
+      updateHistory(event.senderID, {
+        type: 'download',
+        title: info.title,
+        link: args[0],
+        timestamp: Date.now()
+      });
+
       return api.sendMessage({ body, attachment: fs.createReadStream(data) }, event.threadID, () => fs.unlinkSync(data), event.messageID);
     } catch (e) {
       console.log('Lỗi khi tải nhạc từ YouTube:', e);
       api.sendMessage('⚠️Đã xảy ra lỗi khi tải nhạc.', event.threadID, event.messageID);
     }
+  } else if (args[0]?.toLowerCase() === "history") {
+    // Handle history
+    try {
+      const historyData = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+      const userHistory = historyData[event.senderID] || [];
+
+      if (userHistory.length === 0) {
+        return api.sendMessage('❯ Bạn chưa có lịch sử nhạc.', event.threadID, event.messageID);
+      }
+
+      const historyMessages = userHistory.map((record, index) => {
+        return `❍━━━━━━━━━━━━❍\n${index + 1} - ${record.type === 'download' ? 'Tải nhạc' : 'Tìm kiếm'}\n🎵 Tiêu đề: ${record.title}\n📅 Ngày: ${new Date(record.timestamp).toLocaleString()}\n🔗 Liên kết: ${record.link}\n\n`;
+      }).join('');
+
+      return api.sendMessage(`Lịch sử nhạc của bạn:\n\n${historyMessages}`, event.threadID, event.messageID);
+    } catch (e) {
+      console.log('Lỗi khi đọc lịch sử:', e);
+      api.sendMessage('⚠️Đã xảy ra lỗi khi đọc lịch sử.', event.threadID, event.messageID);
+    }
+  } else if (args[0]?.toLowerCase() === "suggest") {
+    // Handle suggest
+    try {
+      const suggestions = await suggestMusic(event.senderID);
+
+      if (suggestions.length === 0) {
+        return api.sendMessage('❯ Không có bản nhạc nào để đề xuất.', event.threadID, event.messageID);
+      }
+
+      const body = `Có ${suggestions.length} bản nhạc đề xuất cho bạn:\n\n${suggestions.map(({ index, title }) => `❍ ${index}. ${title}`).join('\n')}\n\n❯ Vui lòng trả lời với số thứ tự để chọn bản nhạc.`;
+
+      return api.sendMessage(body, event.threadID, (error, info) => {
+        global.client.handleReply.push({
+          type: 'reply',
+          name: config.name,
+          messageID: info.messageID,
+          author: event.senderID,
+          link: suggestions.map(s => s.link)
+        });
+      }, event.messageID);
+    } catch (e) {
+      console.log('Lỗi khi đề xuất nhạc:', e);
+      return api.sendMessage('⚠️Đã xảy ra lỗi khi đề xuất nhạc.', event.threadID, event.messageID);
+    }
   } else {
+    // Handle search
+    const keywordSearch = args.join(" ");
+    const filePath = path.resolve(__dirname, 'cache', `sing-${event.senderID}.mp3`);
+    
     try {
       const searchResults = await Youtube.GetListByKeyword(keywordSearch, false, 6);
       if (!searchResults || !searchResults.items) {
         throw new Error('Không có kết quả tìm kiếm');
       }
       const data = searchResults.items;
-      const link = data.map(value => value?.id);
+      const link = data.map(value => `https://www.youtube.com/watch?v=${value.id}`);
       const thumbnails = [];
 
       for (let i = 0; i < data.length; i++) {
@@ -163,4 +332,4 @@ const run = async function({ api, event, args }) {
   }
 };
 
-module.exports = { config, run, handleReply };
+  module.exports = { config, run, handleReply };

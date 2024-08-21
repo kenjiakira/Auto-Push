@@ -88,7 +88,6 @@ module.exports.config = {
   `,
   cooldowns: 0
 };
-
 module.exports.run = async ({ event, api, Currencies }) => {
   const { senderID, threadID } = event;
   const args = event.body.trim().split(' ');
@@ -96,7 +95,7 @@ module.exports.run = async ({ event, api, Currencies }) => {
   updateStockPrices();
 
   if (!(await hasID(senderID))) {
-    return api.sendMessage("⚡ Bạn cần có ID CCCD để thực hiện giao dịch đầu tư!\ngõ .id để tạo ID", threadID);
+    return api.sendMessage("⚡ Bạn cần có ID để thực hiện giao dịch đầu tư!\ngõ .id để tạo ID", threadID);
   }
 
   if (await isBanned(senderID)) {
@@ -194,7 +193,7 @@ module.exports.run = async ({ event, api, Currencies }) => {
   };
   updateUserInvestments(userInvestments);
 
-  const transactionFee = amount * 0.01;
+  const transactionFee = parseFloat((amount * 0.01).toFixed(2)); // Làm tròn thuế đến 2 chữ số thập phân
   const finalInvestmentAmount = amount - transactionFee;
   const investmentOutcome = Math.random() < opportunity.risk ? 'thua lỗ' : 'lợi nhuận';
   const result = investmentOutcome === 'lợi nhuận' ? finalInvestmentAmount * opportunity.return : 0;
@@ -218,11 +217,6 @@ async function recordUserInvestment(userID, investmentType, amount, outcome, ret
 
 function calculateTotalProfit(investments) {
   return investments.reduce((total, inv) => total + (inv.outcome === 'lợi nhuận' ? (inv.amount - inv.amount * 0.01) * inv.return : 0), 0);
-}
-
-function analyzeRisk(investments) {
-  if (investments.length === 0) return 0;
-  return investments.reduce((totalRisk, inv) => totalRisk + inv.risk, 0) / investments.length;
 }
 
 function analyzeRisk(investments) {

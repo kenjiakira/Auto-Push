@@ -92,7 +92,7 @@ module.exports.run = async function ({ api, event, args, Currencies }) {
   }
 
   if (!await hasID(userID)) {
-    return api.sendMessage("Bạn cần có ID CCCD để thực hiện lệnh này.\nvui lòng gõ .id để tạo id", threadID, messageID);
+    return api.sendMessage("Bạn cần có ID để thực hiện lệnh này.\nvui lòng gõ .id để tạo id", threadID, messageID);
   }
 
   if (await isBanned(userID)) {

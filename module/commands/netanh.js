@@ -13,7 +13,9 @@ module.exports.config = {
   usePrefix: true,
   usages: "netanh [reply image]",
   cooldowns: 5,
+  update: true,
   dependencies: {}
+
 };
 
 module.exports.run = async ({ api, event }) => {

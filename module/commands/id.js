@@ -39,10 +39,10 @@ module.exports.config = {
     commandCategory: "Social",
     usePrefix: true,
     usages: [
-            ".id [tên] | [ngày sinh] | [giới tính] | [địa chỉ] - Tạo hoặc cập nhật căn cước công dân với thông tin cá nhân.",
+            ".id [ngày sinh] | [giới tính] | [địa chỉ] - Tạo hoặc cập nhật căn cước công dân với thông tin cá nhân.",
             ".id remove - Xóa thông tin căn cước công dân của bạn.",
             "Ví dụ:",
-            ".id Nguyễn Văn A | 01/01/2000 | Nam | 123 Đường ABC - Tạo căn cước công dân với thông tin cá nhân cụ thể.",
+            ".id 01/01/2000 | Nam | 123 Đường ABC - Tạo căn cước công dân với thông tin cá nhân cụ thể.",
             ".id remove - Xóa thông tin căn cước công dân đã lưu."
         ],
     cooldowns: 10
@@ -68,6 +68,9 @@ module.exports.run = async ({ event, api }) => {
         }
     }
 
+    const userInfo = await api.getUserInfo(senderID);
+    const userName = userInfo[senderID].name;
+
     if (data[senderID]) {
         const idCard = data[senderID];
 
@@ -77,27 +80,42 @@ module.exports.run = async ({ event, api }) => {
         }, threadID, () => fs.unlinkSync(imagePath), event.messageID);
     }
 
-    if (args.length < 4) {
+    if (args.length < 3) {
         return api.sendMessage(
-            "Vui lòng sử dụng đúng cú pháp: .id [tên] | [ngày sinh] | [giới tính] | [địa chỉ]\n" +
-            "Trong đó:\n" +
-            "- [tên]: Tên đầy đủ của bạn\n" +
-            "- [ngày sinh]: Ngày sinh của bạn (định dạng dd/mm/yyyy)\n" +
-            "- [giới tính]: Giới tính của bạn (Nam/Nữ)\n" +
-            "- [địa chỉ]: Địa chỉ nơi bạn đang sống\n" +
-            "Ví dụ: .id Nguyễn Văn A | 01/01/2000 | Nam | 123 Đường ABC", 
+            "Vui lòng sử dụng đúng cú pháp: .id [ngày sinh] | [giới tính] | [địa chỉ]\n" +
+            "Ví dụ: .id 01/01/2000 | Nam | 123 Đường ABC", 
             threadID
         );
     }
 
-    const name = args[0] || 'Chưa cung cấp';
-    const dob = args[1] || 'Chưa cung cấp';
-    const gender = args[2] || 'Chưa cung cấp';
-    const address = args[3] || 'Chưa cung cấp';
+    const dob = args[0] || 'Chưa cung cấp';
+    let gender = args[1] || 'Chưa cung cấp';
+    const address = args[2] || 'Chưa cung cấp';
+
+    // Normalize and validate gender input
+    gender = gender.toLowerCase();
+    if (gender !== 'nam' && gender !== 'nữ') {
+        return api.sendMessage(
+            "Giới tính không hợp lệ. Vui lòng chọn 'Nam' hoặc 'Nữ'.",
+            threadID
+        );
+    }
+
+    // Correct gender capitalization
+    gender = gender.charAt(0).toUpperCase() + gender.slice(1);
+
+    // Validate DOB input (must be in DD/MM/YYYY format with only numbers)
+    const dobRegex = /^\d{2}\/\d{2}\/\d{4}$/;
+    if (!dobRegex.test(dob)) {
+        return api.sendMessage(
+            "Ngày tháng năm sinh không hợp lệ. Vui lòng nhập ngày tháng năm sinh theo định dạng DD/MM/YYYY và chỉ chứa các ký tự số.",
+            threadID
+        );
+    }
 
     const idCard = {
         uid: senderID,
-        name: name,
+        name: userName,  // Using the user's name from the ThreadID
         dob: dob,
         gender: gender,
         address: address,
@@ -133,23 +151,24 @@ async function createIDCardImage(idCard, userID) {
     ctx.font = 'bold 23px Arial';
     ctx.fillText(`${idCard.uid}`, 320, 210);
     ctx.font = 'bold 20px Open Sans'; 
-    ctx.fillText(`${idCard.name}`, 380, 244);
+    ctx.fillText(`${idCard.name}`, 380, 244);  // Name from ThreadID
     ctx.fillText(`${idCard.dob}`, 380, 274);
     ctx.fillText(`${idCard.gender}`, 370, 305);
     ctx.fillText(`${idCard.address}`, 360, 335);
     ctx.fillText(`${idCard.issuedDate}`, 380, 367);
 
-    const avatarUrl = `https://graph.facebook.com/${userID}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
-    const avatarResponse = await axios.get(avatarUrl, { responseType: 'arraybuffer' });
-    const avatarBuffer = Buffer.from(avatarResponse.data);
-    const avatar = await circleImage(avatarBuffer);
+    // Uncomment and use the avatar section if needed
+    // const avatarUrl = `https://graph.facebook.com/${userID}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
+    // const avatarResponse = await axios.get(avatarUrl, { responseType: 'arraybuffer' });
+    // const avatarBuffer = Buffer.from(avatarResponse.data);
+    // const avatar = await circleImage(avatarBuffer);
 
-    const avatarImage = await loadImage(avatar);
-    ctx.drawImage(avatarImage, 50, 170, 200, 200);
+    // const avatarImage = await loadImage(avatar);
+    // ctx.drawImage(avatarImage, 50, 170, 200, 200);
 
     const imagePath = path.join(__dirname, 'cccd_image.png');
     const buffer = canvas.toBuffer('image/png');
     fs.writeFileSync(imagePath, buffer);
 
-    return imagePath;
+    return imagePath;   
 }
