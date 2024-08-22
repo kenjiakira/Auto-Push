@@ -157,14 +157,14 @@ async function createIDCardImage(idCard, userID) {
     ctx.fillText(`${idCard.address}`, 360, 335);
     ctx.fillText(`${idCard.issuedDate}`, 380, 367);
 
-    // Uncomment and use the avatar section if needed
-    // const avatarUrl = `https://graph.facebook.com/${userID}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
-    // const avatarResponse = await axios.get(avatarUrl, { responseType: 'arraybuffer' });
-    // const avatarBuffer = Buffer.from(avatarResponse.data);
-    // const avatar = await circleImage(avatarBuffer);
 
-    // const avatarImage = await loadImage(avatar);
-    // ctx.drawImage(avatarImage, 50, 170, 200, 200);
+     const avatarUrl = `https://graph.facebook.com/${userID}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
+     const avatarResponse = await axios.get(avatarUrl, { responseType: 'arraybuffer' });
+     const avatarBuffer = Buffer.from(avatarResponse.data);
+     const avatar = await circleImage(avatarBuffer);
+
+     const avatarImage = await loadImage(avatar);
+     ctx.drawImage(avatarImage, 50, 170, 200, 200);
 
     const imagePath = path.join(__dirname, 'cccd_image.png');
     const buffer = canvas.toBuffer('image/png');
