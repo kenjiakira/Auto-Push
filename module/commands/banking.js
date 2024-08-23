@@ -9,8 +9,12 @@ const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', '
 registerFont(path.join(__dirname, 'cache', 'Be_Vietnam_Pro', 'BeVietnamPro-Bold.ttf'), { family: 'Be Vietnam Pro' });
 
 const formatCurrency = (amount) => {
-    return amount.toLocaleString('vi-VN', { style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    amount = parseFloat(amount).toFixed(2);
+    let [integerPart, decimalPart] = amount.split('.');
+    integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return `${integerPart},${decimalPart}`;
 };
+
 
 module.exports.config = {
     name: "banking",
@@ -164,7 +168,7 @@ module.exports.run = async ({ api, event, args, Currencies, Users }) => {
     const currentTime = moment().unix();
 
     if (!await hasID(senderID)) {
-        return api.sendMessage("Bạn cần có ID CCCD để thực hiện lệnh này.\nVui lòng gõ .id để tạo ID.", threadID, messageID);
+        return api.sendMessage("Bạn cần có ID để thực hiện lệnh này.\nVui lòng gõ .id để tạo ID.", threadID, messageID);
     }
 
     if (await isBanned(senderID)) {

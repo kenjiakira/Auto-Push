@@ -84,7 +84,7 @@ module.exports.run = async function({ api, args, Users, event, Currencies }) {
 
     await api.sendMessage(msg, event.threadID, event.messageID);
 
-    // Cập nhật thời gian sử dụng cuối cùng
+
     global.cooldowns[cooldownKey] = Date.now();
 
   } catch (err) {

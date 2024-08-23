@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const request = require('request'); // Thay thế với request-promise nếu có
+const request = require('request'); 
 const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
 module.exports.config = {
     name: "mine",
-    version: "1.0.6",
+    version: "1.0.7",
     hasPermission: 0,
     credits: "Akira",
     description: "Khai thác tài nguyên [Beta]",
@@ -14,7 +14,7 @@ module.exports.config = {
     update: true,
     cooldowns: 5,
     envConfig: {
-        cooldownTime: 600000 // Thời gian cooldown 10 phút
+        cooldownTime: 600000 
     },
     dependencies: {
         "fs": "",
@@ -38,28 +38,28 @@ module.exports.handleReply = async ({ event: e, api, handleReply, Currencies }) 
             switch (e.body) {
                 case "1":
                     const minerals = ["đồng", "bạc", "vàng", "thiếc", "bạch kim", "kim cương"];
-                    const weights = [1000, 2000, 50, 500, 50, 10]; // Trọng số cho các khoáng sản mới
+                    const weights = [1000, 2000, 50, 500, 50, 10];
                     const index = weightedRandom(weights);
                     const mineral = minerals[index];
 
-                    // Số tiền khai thác cho từng khoáng sản
+                   
                     switch (index) {
-                        case 0: // Khai thác đồng
+                        case 0:
                             rewardAmount = Math.floor(Math.random() * (6000 - 2000 + 1)) + 2000;
                             break;
-                        case 1: // Khai thác bạc
+                        case 1: 
                             rewardAmount = Math.floor(Math.random() * (6000 - 2000 + 1)) + 2000;
                             break;
-                        case 2: // Khai thác vàng
+                        case 2: 
                             rewardAmount = Math.floor(Math.random() * (25000 - 20000 + 1)) + 20000;
                             break;
-                        case 3: // Khai thác thiếc
+                        case 3: 
                             rewardAmount = Math.floor(Math.random() * (10000 - 5000 + 1)) + 5000;
                             break;
-                        case 4: // Khai thác bạch kim
+                        case 4: 
                             rewardAmount = Math.floor(Math.random() * (20000 - 10000 + 1)) + 10000;
                             break;
-                        case 5: // Khai thác kim cương
+                        case 5: 
                             rewardAmount = Math.floor(Math.random() * (80000 - 70000 + 1)) + 70000;
                             break;
                     }
@@ -68,23 +68,14 @@ module.exports.handleReply = async ({ event: e, api, handleReply, Currencies }) 
                     if (rewardAmount > 0) await Currencies.increaseMoney(senderID, rewardAmount);
                     break;
 
-                case "2":
-                    const tasks = ["Khai thác KS ở Quảng Ninh", "Khai thác vật liệu ở nam Cực", "Khai thác quặng ở Lào"];
-                    const randomIndex = Math.floor(Math.random() * tasks.length);
-                    const task = tasks[randomIndex];
-                    const reward = Math.floor(Math.random() * 3000) + 3000;
-                    rewardMessage = `Bạn vừa hoàn thành công việc "${task}" và nhận được ${reward} xu.`;
-                    await Currencies.increaseMoney(senderID, reward);
-                    break;
-
                 default:
                     rewardMessage = "⚡ Lựa chọn không hợp lệ!";
                     break;
             }
 
             const choice = parseInt(e.body);
-            if (isNaN(choice) || choice < 1 || choice > 2) {
-                return api.sendMessage("⚡ Vui lòng nhập theo thứ tự 1 hoặc 2!", threadID, e.messageID);
+            if (isNaN(choice) || choice < 1 || choice > 1) { // Chỉ còn lựa chọn 1
+                return api.sendMessage("⚡ Vui lòng nhập theo thứ tự 1!", threadID, e.messageID);
             }
 
             api.unsendMessage(handleReply.messageID);
@@ -107,7 +98,7 @@ function weightedRandom(weights) {
             return i;
         }
     }
-    return weights.length - 1; // Trả về chỉ số cuối cùng nếu không tìm thấy
+    return weights.length - 1; 
 }
 
 module.exports.run = async ({ event: e, api, handleReply, Currencies }) => {
@@ -115,7 +106,6 @@ module.exports.run = async ({ event: e, api, handleReply, Currencies }) => {
     const cooldown = module.exports.config.envConfig.cooldownTime;
     let data = (await Currencies.getData(senderID)).data || {};
 
-    // Kiểm tra xem người dùng có ID CCCD không
     if (!(await hasID(senderID))) {
         return api.sendMessage("⚡ Bạn cần có ID để thực hiện hành động này!\ngõ .id để tạo ID", threadID, e.messageID);
     }
@@ -135,7 +125,6 @@ module.exports.run = async ({ event: e, api, handleReply, Currencies }) => {
     const msg = {
         body: "===💎 KHAI THÁC 💎===" +
             "\n1 ≻ KHAI THÁC KHOÁNG SẢN TẠI MỎ ĐÁ 🚛" +
-            "\n2 ≻ KHAI THÁC NHIỆM VỤ KHÁC" +
             "\n\n📌Reply để chọn hoạt động khai thác!"
     };
 

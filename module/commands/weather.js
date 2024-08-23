@@ -19,7 +19,7 @@ const apiKey = "1230a8fdc6457603234c68ead5f3f967";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
 const cities = [
-    "Hà Nội", "Hồ Chí Minh", "Đà Nẵng","cần Thơ","Huế","Nha Trang","Thái Nguyên"
+    "Hà Nội", "Hồ Chí Minh", "Đà Nẵng", "Cần Thơ", "Huế", "Nha Trang", "Thái Nguyên"
 ];
 
 function getRandomCities(num = 1) {
@@ -156,8 +156,11 @@ module.exports.run = async function({ api, event, args }) {
 
 module.exports.onLoad = function({ api }) {
   const now = new Date();
-  const minutesUntilNextHour = 60 - now.getUTCMinutes();
-  const msUntilNextHour = (minutesUntilNextHour * 60 + (60 - now.getUTCSeconds())) * 1000; 
+  const vietnamTimezoneOffset = 7 * 60 * 60 * 1000;
+  const localTime = new Date(now.getTime() + vietnamTimezoneOffset);
+  
+  const minutesUntilNextHour = 60 - localTime.getMinutes();
+  const msUntilNextHour = (minutesUntilNextHour * 60 + (60 - localTime.getSeconds())) * 1000; 
 
   console.log(`Đang chờ ${msUntilNextHour} ms để thông báo vào giờ tiếp theo.`);
 

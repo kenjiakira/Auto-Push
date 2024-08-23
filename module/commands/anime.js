@@ -7,7 +7,7 @@ module.exports.config = {
     name: "anime",
     version: "1.0.0",
     hasPermission: 0,
-    credits: "ZiaRein",//Vietsub by Hoàng Ngọc Từ
+    credits: "ZiaRein",
     description: "Tìm kiếm info Anime",
     commandCategory: "anime",
    usePrefix: true,

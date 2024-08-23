@@ -1,6 +1,6 @@
 module.exports.config = {
   name: "all",
-  version: "1.0.4",
+  version: "1.0.5", 
   hasPermission: 0,
   credits: "Hoàng Ngọc Từ",
   description: "tag toàn bộ thành viên",
@@ -14,7 +14,11 @@ module.exports.run = async function({ api, event, args }) {
   try {
     const botID = api.getCurrentUserID();
     const listUserID = event.participantIDs.filter(ID => ID != botID && ID != event.senderID);
-    var body = (args.length != 0) ? args.join(" ") : "@mọi người", mentions = [], index = 0;
+
+    const randomMessages = ["Alo", "Hú hú", "Éc éc"];
+
+    var body = (args.length != 0) ? args.join(" ") : randomMessages[Math.floor(Math.random() * randomMessages.length)];
+    var mentions = [], index = 0;
 
     for (const idUser of listUserID) {
       body = "‎" + body;
@@ -24,6 +28,7 @@ module.exports.run = async function({ api, event, args }) {
 
     return api.sendMessage({ body, mentions }, event.threadID, event.messageID);
 
+  } catch (e) { 
+    return console.log(e); 
   }
-  catch (e) { return console.log(e); }
 }

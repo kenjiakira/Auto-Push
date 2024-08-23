@@ -330,7 +330,7 @@
     "gender": "nam",
     "address": "Trần Duy Hưng",
     "issuedDate": "2024-08-20T08:16:32.070Z",
-    "status": "BAN"
+    "status": "Bình Thường"
   },
   "100065482477696": {
     "uid": "100065482477696",
@@ -780,6 +780,468 @@
     "gender": "Nam",
     "address": "đường mmb",
     "issuedDate": "2024-08-21T15:03:07.802Z",
+    "status": "Bình Thường"
+  },
+  "100054035411784": {
+    "status": "Bình thường"
+  },
+  "100028211910319": {
+    "uid": "100028211910319",
+    "name": "Học Sinh Giỏi",
+    "dob": "30/04/2009",
+    "gender": "Nam",
+    "address": "kcj 11",
+    "issuedDate": "2024-08-22T02:10:29.181Z",
+    "status": "Bình Thường"
+  },
+  "100034697145198": {
+    "uid": "100034697145198",
+    "name": "Công Nguyên",
+    "dob": "30/04/2009",
+    "gender": "Nam",
+    "address": "kcj 11",
+    "issuedDate": "2024-08-22T02:12:35.839Z",
+    "status": "Bình Thường"
+  },
+  "100014034669306": {
+    "uid": "100014034669306",
+    "name": "Nguyen Thao Anh",
+    "dob": "30/04/2009",
+    "gender": "Nam",
+    "address": "kcj 11",
+    "issuedDate": "2024-08-22T02:16:04.706Z",
+    "status": "Bình Thường"
+  },
+  "61563495132701": {
+    "uid": "61563495132701",
+    "name": "Kuri Ona",
+    "dob": "13/13/1313",
+    "gender": "Nam",
+    "address": "Toà",
+    "issuedDate": "2024-08-22T02:21:07.941Z",
+    "status": "Bình Thường"
+  },
+  "61554160139365": {
+    "uid": "61554160139365",
+    "name": "Crot Cte",
+    "dob": "24/05/2003",
+    "gender": "Nam",
+    "address": "chợ đầm",
+    "issuedDate": "2024-08-22T03:16:30.395Z",
+    "status": "Bình Thường"
+  },
+  "61557027483376": {
+    "uid": "61557027483376",
+    "name": "NL Hổ",
+    "dob": "09/05/2009",
+    "gender": "Nam",
+    "address": "phi vào tim anh",
+    "issuedDate": "2024-08-22T03:21:07.635Z",
+    "status": "Bình Thường"
+  },
+  "61563762007343": {
+    "uid": "61563762007343",
+    "name": "Dương Bảo Ngọc",
+    "dob": "10/12/2009",
+    "gender": "Nữ",
+    "address": "dĩ an",
+    "issuedDate": "2024-08-22T03:48:15.868Z",
+    "status": "Bình Thường"
+  },
+  "100082305626126": {
+    "uid": "100082305626126",
+    "name": "Khanh Juan",
+    "dob": "02/05/2008",
+    "gender": "Nam",
+    "address": "123 Đường admin bú cặc",
+    "issuedDate": "2024-08-22T03:53:48.981Z",
+    "status": "Bình Thường"
+  },
+  "100051222560890": {
+    "uid": "100051222560890",
+    "name": "He He",
+    "dob": "22/02/2022",
+    "gender": "Nam",
+    "address": "sapa",
+    "issuedDate": "2024-08-22T04:28:03.961Z",
+    "status": "Bình Thường"
+  },
+  "100074784444270": {
+    "uid": "100074784444270",
+    "name": "Bich Ngoc",
+    "dob": "01/01/2000",
+    "gender": "Nam",
+    "address": "123 Đường ABC",
+    "issuedDate": "2024-08-22T04:48:59.262Z",
+    "status": "Bình Thường"
+  },
+  "100049928363635": {
+    "uid": "100049928363635",
+    "name": "Tran Bao Nam",
+    "dob": "13/01/2001",
+    "gender": "Nam",
+    "address": "Bồn cầu",
+    "issuedDate": "2024-08-22T06:27:59.923Z",
+    "status": "Bình Thường"
+  },
+  "100060002140311": {
+    "uid": "100060002140311",
+    "name": "Huong ChoDien",
+    "dob": "04/12/2000",
+    "gender": "Nữ",
+    "address": "Kẹo con",
+    "issuedDate": "2024-08-22T06:28:12.919Z",
+    "status": "Bình Thường"
+  },
+  "61551937277879": {
+    "uid": "61551937277879",
+    "name": "Hoang Long",
+    "dob": "24/09/2000",
+    "gender": "Nam",
+    "address": "tù",
+    "issuedDate": "2024-08-22T06:33:52.439Z",
+    "status": "Bình Thường"
+  },
+  "100058320200877": {
+    "uid": "100058320200877",
+    "name": "Khuong Duy",
+    "dob": "24/09/2001",
+    "gender": "Nam",
+    "address": "ở cùng mẹ m",
+    "issuedDate": "2024-08-22T07:19:57.245Z",
+    "status": "Bình Thường"
+  },
+  "100065260538283": {
+    "uid": "100065260538283",
+    "name": "Khanh Nguyen",
+    "dob": "01/01/2000",
+    "gender": "Nam",
+    "address": "123 Đường ABC",
+    "issuedDate": "2024-08-22T07:28:10.779Z",
+    "status": "Bình Thường"
+  },
+  "100090600335468": {
+    "uid": "100090600335468",
+    "name": "Thanh Trí",
+    "dob": "05/05/2002",
+    "gender": "Nữ",
+    "address": "trần cáp",
+    "issuedDate": "2024-08-22T07:34:42.321Z",
+    "status": "Bình Thường"
+  },
+  "100081829689323": {
+    "uid": "100081829689323",
+    "name": "Bao Han",
+    "dob": "11/10/2000",
+    "gender": "Nam",
+    "address": "123 Đường Kính`",
+    "issuedDate": "2024-08-22T07:39:06.903Z",
+    "status": "Bình Thường"
+  },
+  "100073634873522": {
+    "uid": "100073634873522",
+    "name": "Ngọc Đan",
+    "dob": "01/01/2000",
+    "gender": "Nam",
+    "address": "123 Đường ABC",
+    "issuedDate": "2024-08-22T07:39:18.781Z",
+    "status": "Bình Thường"
+  },
+  "61550029377591": {
+    "uid": "61550029377591",
+    "name": "Sadgirl Mon",
+    "dob": "13/03/2000",
+    "gender": "Nữ",
+    "address": "123 Đường ABC",
+    "issuedDate": "2024-08-22T07:39:36.662Z",
+    "status": "Bình Thường"
+  },
+  "61554551461157": {
+    "uid": "61554551461157",
+    "name": "Nguyễn Ngọc Quỳnh",
+    "dob": "01/01/2000",
+    "gender": "Nam",
+    "address": "269 Đường Trần Phú",
+    "issuedDate": "2024-08-22T07:53:50.759Z",
+    "status": "Bình Thường"
+  },
+  "61560745416437": {
+    "uid": "61560745416437",
+    "name": "Khánh Trần",
+    "dob": "10/12/2009",
+    "gender": "Nam",
+    "address": "đường bên trai sang bên phải đối diện quán bi cafe có 1 cái ngõ đi thẳng 10m thấy cái cửa nhà trắng thì rẽ vào xong đi thêm 50m có cửa nhà số 9 là tới",
+    "issuedDate": "2024-08-22T08:07:03.401Z",
+    "status": "Bình Thường"
+  },
+  "61555650345033": {
+    "uid": "61555650345033",
+    "name": "ヤ　・ nara　zᶻ　︕",
+    "dob": "24/05/2003",
+    "gender": "Nữ",
+    "address": "love you",
+    "issuedDate": "2024-08-22T09:55:51.184Z",
+    "status": "Bình Thường"
+  },
+  "61551592086371": {
+    "uid": "61551592086371",
+    "name": "Ngân Phan",
+    "dob": "12/01/3000",
+    "gender": "Nữ",
+    "address": "j97 đường chuồng đom đóm",
+    "issuedDate": "2024-08-22T10:03:19.541Z",
+    "status": "Bình Thường"
+  },
+  "100050445245297": {
+    "uid": "100050445245297",
+    "name": "T Hu",
+    "dob": "01/01/2005",
+    "gender": "Nam",
+    "address": "Đường A",
+    "issuedDate": "2024-08-22T10:05:02.957Z",
+    "status": "Bình Thường"
+  },
+  "100051062554774": {
+    "uid": "100051062554774",
+    "name": "Đồ Sát Bắc Kì",
+    "dob": "99/99/9999",
+    "gender": "Nữ",
+    "address": "hân bel",
+    "issuedDate": "2024-08-22T10:20:00.065Z",
+    "status": "Bình Thường"
+  },
+  "100091665256039": {
+    "uid": "100091665256039",
+    "name": "Nhật Minh",
+    "dob": "02/09/1945",
+    "gender": "Nam",
+    "address": "304 Giải Phóng",
+    "issuedDate": "2024-08-22T10:39:04.105Z",
+    "status": "Bình Thường"
+  },
+  "100083748707691": {
+    "uid": "100083748707691",
+    "name": "Đụ Má",
+    "dob": "11/11/1111",
+    "gender": "Nam",
+    "address": "123 đường abc",
+    "issuedDate": "2024-08-22T10:56:53.937Z",
+    "status": "Bình Thường"
+  },
+  "100093208808025": {
+    "uid": "100093208808025",
+    "name": "Trương H N-Nguyn",
+    "dob": "04/11/9999",
+    "gender": "Nam",
+    "address": "Lăng Hồ Chó",
+    "issuedDate": "2024-08-22T10:59:49.487Z",
+    "status": "Bình Thường"
+  },
+  "100054579954096": {
+    "uid": "100054579954096",
+    "name": "Minh Hy",
+    "dob": "01/01/2000",
+    "gender": "Nữ",
+    "address": "123 đường abc",
+    "issuedDate": "2024-08-22T11:00:01.822Z",
+    "status": "Bình Thường"
+  },
+  "61561047028310": {
+    "uid": "61561047028310",
+    "name": "Qin Changg",
+    "dob": "21/10/2023",
+    "gender": "Nữ",
+    "address": "123 Trần Duy Hưng",
+    "issuedDate": "2024-08-22T11:03:18.580Z",
+    "status": "Bình Thường"
+  },
+  "100095174197633": {
+    "uid": "100095174197633",
+    "name": "Ha Thao",
+    "dob": "07/08/2009",
+    "gender": "Nữ",
+    "address": "25 đường gia tân",
+    "issuedDate": "2024-08-22T11:26:50.338Z",
+    "status": "Bình Thường"
+  },
+  "100047048261829": {
+    "uid": "100047048261829",
+    "name": "Anh Huy",
+    "dob": "01/01/2000",
+    "gender": "Nam",
+    "address": "đường 345",
+    "issuedDate": "2024-08-22T11:41:50.754Z",
+    "status": "Bình Thường"
+  },
+  "100074553476623": {
+    "uid": "100074553476623",
+    "name": "Thành Vinh",
+    "dob": "15/01/2007",
+    "gender": "Nam",
+    "address": "Ninh Giang Hải Dương",
+    "issuedDate": "2024-08-22T11:45:23.108Z",
+    "status": "Bình Thường"
+  },
+  "100087796854483": {
+    "uid": "100087796854483",
+    "name": "Bing Chilling",
+    "dob": "22/07/2020",
+    "gender": "Nữ",
+    "address": "Nha Trang",
+    "issuedDate": "2024-08-22T11:52:34.472Z",
+    "status": "Bình Thường"
+  },
+  "100004784116413": {
+    "uid": "100004784116413",
+    "name": "To Quyen",
+    "dob": "11/07/2025",
+    "gender": "Nữ",
+    "address": "Kiên Giang",
+    "issuedDate": "2024-08-22T11:54:44.926Z",
+    "status": "Bình Thường"
+  },
+  "61559164096957": {
+    "uid": "61559164096957",
+    "name": "Quynh Tran",
+    "dob": "05/12/2012",
+    "gender": "Nam",
+    "address": "Thái lan",
+    "issuedDate": "2024-08-22T12:15:28.063Z",
+    "status": "Bình Thường"
+  },
+  "61564444919363": {
+    "uid": "61564444919363",
+    "name": "Thao Linh",
+    "dob": "16/12/2006",
+    "gender": "Nữ",
+    "address": "Campuchia",
+    "issuedDate": "2024-08-22T12:16:17.415Z",
+    "status": "Bình Thường"
+  },
+  "100092325757607": {
+    "uid": "100092325757607",
+    "name": "Kim Ngân",
+    "dob": "01/01/2000",
+    "gender": "Nữ",
+    "address": "okvip",
+    "issuedDate": "2024-08-22T12:30:23.833Z",
+    "status": "Bình Thường"
+  },
+  "61560624424311": {
+    "uid": "61560624424311",
+    "name": "Cn Mel Bel",
+    "dob": "20/10/2010",
+    "gender": "Nữ",
+    "address": "hà thành",
+    "issuedDate": "2024-08-22T12:33:47.497Z",
+    "status": "Bình Thường"
+  },
+  "61564398355104": {
+    "uid": "61564398355104",
+    "name": "Khang Phước",
+    "dob": "25/09/9999",
+    "gender": "Nam",
+    "address": "tim gái",
+    "issuedDate": "2024-08-22T12:41:31.389Z",
+    "status": "Bình Thường"
+  },
+  "100081800629553": {
+    "uid": "100081800629553",
+    "name": "Khang Bùi",
+    "dob": "02/09/2000",
+    "gender": "Nữ",
+    "address": "187 đường phố",
+    "issuedDate": "2024-08-22T12:42:02.356Z",
+    "status": "Bình Thường"
+  },
+  "61556800505602": {
+    "uid": "61556800505602",
+    "name": "Hắc Công Tử",
+    "dob": "01/01/2000",
+    "gender": "Nam",
+    "address": "cali",
+    "issuedDate": "2024-08-22T12:45:49.033Z",
+    "status": "Bình Thường"
+  },
+  "61563023597293": {
+    "uid": "61563023597293",
+    "name": "Lê Kiệt",
+    "dob": "28/11/2005",
+    "gender": "Nam",
+    "address": "Việt Nam",
+    "issuedDate": "2024-08-22T12:45:51.673Z",
+    "status": "Bình Thường"
+  },
+  "100055074463541": {
+    "uid": "100055074463541",
+    "name": "Lê Văn Đạt",
+    "dob": "20/09/1700",
+    "gender": "Nữ",
+    "address": "999 đường cặc",
+    "issuedDate": "2024-08-22T12:46:44.083Z",
+    "status": "Bình Thường"
+  },
+  "100088600797175": {
+    "uid": "100088600797175",
+    "name": "Hoai Nam",
+    "dob": "17/02/2005",
+    "gender": "Nam",
+    "address": "brazil",
+    "issuedDate": "2024-08-22T12:57:53.894Z",
+    "status": "Bình Thường"
+  },
+  "61555962015473": {
+    "uid": "61555962015473",
+    "name": "Tân Do",
+    "dob": "01/01/2000",
+    "gender": "Nữ",
+    "address": "không có",
+    "issuedDate": "2024-08-22T13:30:39.926Z",
+    "status": "Bình Thường"
+  },
+  "61564125801274": {
+    "uid": "61564125801274",
+    "name": "Nguyên Phúc",
+    "dob": "01/01/2000",
+    "gender": "Nam",
+    "address": "123 Đường ABC",
+    "issuedDate": "2024-08-22T13:31:42.595Z",
+    "status": "Bình Thường"
+  },
+  "100047743778724": {
+    "uid": "100047743778724",
+    "name": "Hoàng Phúc",
+    "dob": "09/12/2007",
+    "gender": "Nam",
+    "address": "ABC",
+    "issuedDate": "2024-08-22T14:06:55.617Z",
+    "status": "Bình Thường"
+  },
+  "61553040361303": {
+    "uid": "61553040361303",
+    "name": "Ng Dinh Namm",
+    "dob": "11/07/2010",
+    "gender": "Nam",
+    "address": "11 đường lên thiên giới",
+    "issuedDate": "2024-08-22T14:22:50.795Z",
+    "status": "Bình Thường"
+  },
+  "100006429281218": {
+    "uid": "100006429281218",
+    "name": "Nguyễn Thu Hiền",
+    "dob": "99/99/9999",
+    "gender": "Nam",
+    "address": "hùng",
+    "issuedDate": "2024-08-22T14:41:44.512Z",
+    "status": "Bình Thường"
+  },
+  "100081173709548": {
+    "uid": "100081173709548",
+    "name": "Vu Phuong Quyen",
+    "dob": "03/04/2008",
+    "gender": "Nữ",
+    "address": "298/8c lý thường kiệt p15 q 11 tphcm",
+    "issuedDate": "2024-08-22T14:50:24.301Z",
     "status": "Bình Thường"
   }
 }

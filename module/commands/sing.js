@@ -6,15 +6,15 @@ const path = require('path');
 
 const historyPath = path.join(__dirname, 'json', 'sing.json');
 
-// Ensure the history file exists
+
 if (!fs.existsSync(historyPath)) {
   fs.writeFileSync(historyPath, JSON.stringify({}), 'utf8');
 }
 
-// Convert seconds to HH:MM:SS format
+
 const convertHMS = (value) => new Date(value * 1000).toISOString().slice(11, 19);
 
-// Configuration for the command
+
 const config = {
   name: "sing",
   version: "1.0.1",
@@ -27,7 +27,7 @@ const config = {
   cooldowns: 0
 };
 
-// Default itag for audio quality
+
 const ITAG = 140; 
 
 const downloadMusicFromYoutube = async (link, filePath, itag = ITAG) => {
@@ -36,19 +36,16 @@ const downloadMusicFromYoutube = async (link, filePath, itag = ITAG) => {
       throw new Error('Liên kết không hợp lệ');
     }
 
-    // Extract video ID from YouTube link
     const videoIDMatch = link.match(/(?:v=|\/)([a-zA-Z0-9_-]{11})/);
     if (!videoIDMatch || videoIDMatch.length < 2) {
       throw new Error('ID video không hợp lệ');
     }
     const videoID = videoIDMatch[1];
 
-    // Validate video ID length
     if (videoID.length !== 11) {
       throw new Error('ID video không hợp lệ');
     }
 
-    // Fetch video information
     const data = await ytdl.getInfo(`https://www.youtube.com/watch?v=${videoID}`);
     if (!data || !data.videoDetails) {
       throw new Error('Không thể lấy thông tin video');
@@ -88,11 +85,11 @@ const updateHistory = (userID, record) => {
     if (!historyData[userID]) {
       historyData[userID] = [];
     }
-    // Thêm bản ghi mới
+
     historyData[userID].push(record);
-    // Giới hạn số lượng mục lịch sử lưu trữ
+
     if (historyData[userID].length > 15) {
-      historyData[userID].shift(); // Loại bỏ mục cũ nhất nếu quá số lượng tối đa
+      historyData[userID].shift(); 
     }
     fs.writeFileSync(historyPath, JSON.stringify(historyData, null, 2), 'utf8');
   } catch (error) {
@@ -102,7 +99,7 @@ const updateHistory = (userID, record) => {
 
 const handleReply = async ({ api, event, handleReply }) => {
   try {
-    const selectedIndex = parseInt(event.body) - 1; // Convert to zero-based index
+    const selectedIndex = parseInt(event.body) - 1; 
     const filePath = path.resolve(__dirname, 'cache', `audio-${event.senderID}.mp3`);
     const selectedLink = handleReply.link[selectedIndex];
     if (!selectedLink) {
@@ -129,7 +126,6 @@ const handleReply = async ({ api, event, handleReply }) => {
       attachment: fs.createReadStream(data),
     };
 
-    // Update history
     updateHistory(event.senderID, {
       type: 'download',
       title: info.title,
@@ -152,7 +148,7 @@ const suggestMusic = async (userID) => {
     const userHistory = historyData[userID] || [];
 
     if (userHistory.length > 0) {
-      // Đề xuất dựa trên lịch sử của chính người dùng
+    
       const titles = userHistory.map((record, index) => ({
         index: index + 1,
         title: record.title,
@@ -160,11 +156,11 @@ const suggestMusic = async (userID) => {
       }));
       return titles;
     } else {
-      // Đề xuất ngẫu nhiên cho người dùng mới
+
       const allHistories = Object.values(historyData).flat();
       const randomSongs = allHistories
         .sort(() => 0.5 - Math.random())
-        .slice(0, 5) // Giới hạn số lượng đề xuất
+        .slice(0, 5) 
         .map((record, index) => ({
           index: index + 1,
           title: record.title,
@@ -186,7 +182,7 @@ const suggestMusic = async (userID) => {
 
 const run = async function({ api, event, args }) {
   if (args.length === 0) {
-    // No arguments, show suggestions
+
     try {
       const suggestions = await suggestMusic(event.senderID);
 
@@ -222,7 +218,7 @@ const run = async function({ api, event, args }) {
         return api.sendMessage('⚠️Không thể gửi tệp vì kích thước lớn hơn 25MB.', event.threadID, () => fs.unlinkSync(data), event.messageID);
       }
 
-      // Update history
+
       updateHistory(event.senderID, {
         type: 'download',
         title: info.title,
@@ -236,7 +232,7 @@ const run = async function({ api, event, args }) {
       api.sendMessage('⚠️Đã xảy ra lỗi khi tải nhạc.', event.threadID, event.messageID);
     }
   } else if (args[0]?.toLowerCase() === "history") {
-    // Handle history
+
     try {
       const historyData = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
       const userHistory = historyData[event.senderID] || [];
@@ -255,7 +251,7 @@ const run = async function({ api, event, args }) {
       api.sendMessage('⚠️Đã xảy ra lỗi khi đọc lịch sử.', event.threadID, event.messageID);
     }
   } else if (args[0]?.toLowerCase() === "suggest") {
-    // Handle suggest
+
     try {
       const suggestions = await suggestMusic(event.senderID);
 

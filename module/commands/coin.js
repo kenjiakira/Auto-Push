@@ -7,7 +7,7 @@ const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', '
 Chart.defaults.color = '#ffffff';
 
 const minCoinValue = 80;
-const maxCoinValue = 110;
+const maxCoinValue = 140;
 const cooldowns = new Map();
 const maxCoinsPerTransaction = 100000; 
 const maxCoinsBuyPerTransaction = 10000; 
@@ -16,6 +16,12 @@ let coinValue = Math.floor(Math.random() * (maxCoinValue - minCoinValue + 1)) + 
 let previousCoinValue = coinValue;
 
 const historicalData = Array.from({ length: 60 }, () => Math.floor(Math.random() * (maxCoinValue - minCoinValue + 1)) + minCoinValue);
+
+const notificationState = {
+    lastNotificationTime130: 0,
+    lastNotificationTime90: 0,
+    notificationCooldown: 3600000
+};
 
 function getVietnamTime() {
     const now = new Date();
@@ -112,8 +118,7 @@ function generateCoinChart() {
 function roundToTwoDecimalPlaces(value) {
     return Math.round(value * 100) / 100;
 }
-
-async function updateCoinValue() {
+async function updateCoinValue(api) {
     const baseChange = Math.floor(Math.random() * (5 - (-5) + 1)) - 5;
     const adjustedChange = Math.floor(previousCoinValue * baseChange / 100);
     coinValue = Math.max(minCoinValue, Math.min(maxCoinValue, roundToTwoDecimalPlaces(previousCoinValue + adjustedChange)));
@@ -122,6 +127,26 @@ async function updateCoinValue() {
 
     historicalData.shift();
     historicalData.push(coinValue);
+
+    const now = Date.now();
+    if (coinValue >= 130 && (now - notificationState.lastNotificationTime130) > notificationState.notificationCooldown) {
+        console.log('Thông báo: Giá coin đã đạt 130 xu');
+        notificationState.lastNotificationTime130 = now;
+        api.sendMessage(`🚨 Thông báo: Giá coin đã đạt 130 xu`);
+    }
+
+    if (coinValue <= 90 && (now - notificationState.lastNotificationTime90) > notificationState.notificationCooldown) {
+        console.log('Thông báo: Giá coin đã giảm xuống 90 xu');
+        notificationState.lastNotificationTime90 = now;
+        api.sendMessage(`🚨 Thông báo: Giá coin đã giảm xuống 90 xu`);
+    }
+}
+
+function updateChartEveryMinute(api) {
+    setInterval(async () => {
+        await updateCoinValue(api);
+        generateCoinChart();
+    }, 60000);
 }
 
 function isTradingAllowed() {
@@ -153,14 +178,12 @@ function isTransactionAllowed(userID, transactionType) {
     return true;
 }
 
-function updateChartEveryMinute() {
+function updateChartEveryMinute(api) {
     setInterval(async () => {
-        await updateCoinValue();
+        await updateCoinValue(api);
         generateCoinChart();
     }, 60000);
 }
-
-updateChartEveryMinute();
 
 module.exports.config = {
     name: "coin",
@@ -184,7 +207,6 @@ module.exports.run = async ({ event, api, Currencies }) => {
     const args = event.body.trim().split(' ');
 
     try {
-        // Kiểm tra ID CCCD và tình trạng bị cấm (BAN)
         if (!(await hasID(senderID))) {
             return api.sendMessage("⚡ Bạn cần có ID để thực hiện giao dịch này!\ngõ .id để tạo ID", threadID);
         }
@@ -298,4 +320,8 @@ module.exports.run = async ({ event, api, Currencies }) => {
         console.error(error);
         return api.sendMessage("Đã xảy ra lỗi. Vui lòng thử lại sau.", threadID);
     }
+};
+
+module.exports.init = async (api) => {
+    updateChartEveryMinute(api);
 };

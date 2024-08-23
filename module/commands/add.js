@@ -8,7 +8,7 @@ module.exports.config = {
     version: "1.0.0",
     hasPermission: 2,
     credits: "Hoàng Ngọc Từ",
-    description: "Thêm ảnh boy vào danh sách",
+    description: "lệnh admin",
     commandCategory: "Admin",
     usePrefix: true,
     usages: "Gửi ảnh để thêm vào danh sách",

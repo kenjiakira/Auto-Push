@@ -158,11 +158,10 @@ module.exports.handleEvent = async function({ event, api }) {
     let groups = readOrCreateFile(groupsPath);
 
     if (!groups.find(group => group.threadID === threadID)) {
-        groups.push({ threadID, name: null }); // Thêm nhóm với tên null
+        groups.push({ threadID, name: null }); 
         saveToFile(groupsPath, groups);
     }
-
-    // Cập nhật tên nhóm và xóa nếu cần
+    
     await updateGroupName(threadID, api);
 
     return;
