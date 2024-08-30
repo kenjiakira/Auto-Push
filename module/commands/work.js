@@ -1,6 +1,6 @@
 const { randomInt } = require('crypto');
 const path = require('path');
-const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
+// const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
 module.exports.config = {
     name: "work",
@@ -15,17 +15,22 @@ module.exports.config = {
 };
 
 module.exports.run = async ({ api, event, Currencies, Users }) => {
+
     const { threadID, messageID, senderID } = event;
     const lastWorkTime = global.lastWorkTime || {};
     const currentTime = Date.now();
 
-    if (!(await hasID(senderID))) {
-        return api.sendMessage("⚡ Bạn cần có ID để thực hiện công việc này\ngõ .id để tạo ID", threadID, messageID);
+    const adminGroups = ['6589198804475799'];
+    if (adminGroups.includes(threadID)) {
+        return api.sendMessage("Chức năng này không khả dụng trong nhóm admin.", threadID, messageID);
     }
+    // if (!(await hasID(senderID))) {
+    //     return api.sendMessage("⚡ Bạn cần có ID để thực hiện công việc này\ngõ .id để tạo ID", threadID, messageID);
+    // }
 
-    if (await isBanned(senderID)) {
-        return api.sendMessage("⚡ Bạn đã bị cấm và không thể thực hiện công việc này!", threadID, messageID);
-    }
+    // if (await isBanned(senderID)) {
+    //     return api.sendMessage("⚡ Bạn đã bị cấm và không thể thực hiện công việc này!", threadID, messageID);
+    // }
 
     if (lastWorkTime[senderID] && currentTime - lastWorkTime[senderID] < 450000) { 
         const remainingTime = Math.ceil((450000 - (currentTime - lastWorkTime[senderID])) / 1000);
@@ -41,7 +46,18 @@ module.exports.run = async ({ api, event, Currencies, Users }) => {
         { name: "Grab 🚖", minReward: 1000, maxReward: 3500, type: "grab" }
     ];
 
-    const userData = await Users.getData(senderID);
+    let userData;
+    try {
+        userData = await Users.getData(senderID);
+    } catch (error) {
+        console.error("Lỗi khi lấy dữ liệu người dùng:", error.message);
+        return api.sendMessage("Có lỗi xảy ra khi lấy thông tin người dùng. Vui lòng thử lại sau!", threadID, messageID);
+    }
+
+    if (!userData || !userData.name) {
+        return api.sendMessage("Không tìm thấy thông tin người dùng. Vui lòng kiểm tra lại.", threadID, messageID);
+    }
+
     const userName = userData.name;
     const job = jobs[randomInt(0, jobs.length)];
     const reward = randomInt(job.minReward, job.maxReward + 1);

@@ -1,5 +1,7 @@
 const { createCanvas, loadImage } = require('canvas');
 const { Chess } = require('chess.js');
+const fs = require('fs');
+const path = require('path');
 
 const _8 = [...Array(8)].map((_, i) => i);
 const piece_url_images = {
@@ -16,11 +18,17 @@ const piece_url_images = {
   'Q': 'https://upload.wikimedia.org/wikipedia/commons/4/49/Chess_qlt60.png',
   'K': 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Chess_klt60.png',
 };
-const piece_letters = Object.keys(piece_url_images);
-let piece_images;
 
-Promise.all(piece_letters.map(letter => loadImage(piece_url_images[letter])))
-  .then(images => piece_images = images.reduce((obj, img, i) => ({ ...obj, [piece_letters[i]]: img }), {}));
+const piece_letters = Object.keys(piece_url_images);
+let piece_images = {};
+
+const loadPieceImages = async () => {
+  const imagePromises = piece_letters.map(letter => loadImage(piece_url_images[letter]));
+  const images = await Promise.all(imagePromises);
+  piece_images = images.reduce((obj, img, i) => ({ ...obj, [piece_letters[i]]: img }), {});
+};
+
+loadPieceImages();
 
 const draw_chess_board = chess => {
   const canvas = createCanvas(500, 500);
@@ -48,51 +56,86 @@ const draw_chess_board = chess => {
 
   chess.board().forEach((row, i) => row.forEach((piece, j) => {
     if (piece !== null) {
-      ctx.drawImage(piece_images[piece.color === 'b' ? piece.type : piece.type.toUpperCase()], (j * 50) + 50, (i * 50) + 50, 50, 50);
+      const image = piece_images[piece.color === 'b' ? piece.type : piece.type.toUpperCase()];
+      if (image) {
+        ctx.drawImage(image, (j * 50) + 50, (i * 50) + 50, 50, 50);
+      }
     }
   }));
 
+  const imagePath = path.join(__dirname, 'cache', 'tmp.png');
+  const out = fs.createWriteStream(imagePath);
   const stream = canvas.createPNGStream();
-  stream.path = 'tmp.png';
+  stream.pipe(out);
 
-  return stream;
+  return new Promise((resolve, reject) => {
+    out.on('finish', () => resolve(imagePath));
+    out.on('error', reject);
+  });
+};
+
+const saveGameState = (gameID, chess) => {
+  const filePath = path.join(__dirname, 'gameStates', `${gameID}.json`);
+  fs.writeFileSync(filePath, JSON.stringify(chess.fen()));
+};
+
+const loadGameState = (gameID) => {
+  const filePath = path.join(__dirname, 'gameStates', `${gameID}.json`);
+  if (fs.existsSync(filePath)) {
+    const chessData = JSON.parse(fs.readFileSync(filePath));
+    return chessData;
+  }
+  return null;
 };
 
 const name = id => global.data.userName.get(id);
 
-const send_chess = (o, chess, send, _ = o.handleReply || {}, sid = o.event.senderID, uid = chess.turn() === 'b' ? _.competitor_id : _.author || sid) => send({
-  body: `Lượt phía quân ${chess.turn() === 'b' ? 'đen' : 'trắng'} ${name(uid)}`,
-  mentions: [{
-    id: uid,
-    tag: '' + name(uid),
-  }],
-  attachment: draw_chess_board(chess),
-}, (err, res) => {
-  if (chess.isCheckmate()) {
-    send(`Checkmate! ${name(uid)} thắng cuộc`);
-  } else if (chess.isStalemate()) {
-    send(`Stalemate! Trò chơi kết thúc với kết quả hòa!`);
-  } else if (chess.isInsufficientMaterial()) {
-    send(`Insufficient material! Trò chơi kết thúc với kết quả hòa!`);
-  } else if (chess.isThreefoldRepetition()) {
-    send(`Threefold repetition! Trò chơi kết thúc với kết quả hòa!`);
-  } else if (chess.isDraw()) {
-    send(`Trò chơi kết thúc với kết quả hòa!`);
-  } else {
-    res.name = exports.config.name;
-    res.o = o;
-    res.chess = chess;
-    res.competitor_id = _.competitor_id || Object.keys(o.event.mentions)[0];
-    res.author = _.author || sid;
-    global.client.handleReply.push(res);
+const send_chess = async (o, chess, send, _ = o.handleReply || {}, sid = o.event.senderID, uid = chess.turn() === 'b' ? _.competitor_id : _.author || sid) => {
+  try {
+    const imagePath = await draw_chess_board(chess);
+    send({
+      body: `Lượt phía quân ${chess.turn() === 'b' ? 'đen' : 'trắng'} ${name(uid)}`,
+      mentions: [{
+        id: uid,
+        tag: '' + name(uid),
+      }],
+      attachment: fs.createReadStream(imagePath),
+    }, (err, res) => {
+      if (err) {
+        console.error('Error sending chess board:', err);
+      } else {
+        fs.unlinkSync(imagePath); 
+        if (chess.isCheckmate()) {
+          send(`Checkmate! ${name(uid)} thắng cuộc`);
+        } else if (chess.isStalemate()) {
+          send(`Stalemate! Trò chơi kết thúc với kết quả hòa!`);
+        } else if (chess.isInsufficientMaterial()) {
+          send(`Insufficient material! Trò chơi kết thúc với kết quả hòa!`);
+        } else if (chess.isThreefoldRepetition()) {
+          send(`Threefold repetition! Trò chơi kết thúc với kết quả hòa!`);
+        } else if (chess.isDraw()) {
+          send(`Trò chơi kết thúc với kết quả hòa!`);
+        } else {
+          res.name = exports.config.name;
+          res.o = o;
+          res.chess = chess;
+          res.competitor_id = _.competitor_id || Object.keys(o.event.mentions)[0];
+          res.author = _.author || sid;
+          global.client.handleReply.push(res);
+        }
+      }
+    });
+  } catch (error) {
+    console.error('Error in send_chess:', error);
+    send('Đã xảy ra lỗi khi gửi ảnh.');
   }
-});
+};
 
 exports.config = {
   name: 'chess',
   version: '0.0.1',
   hasPermission: 0,
-  credits: 'DC-Nam',
+  credits: 'DC-Nam Fix HNT',
   description: 'chơi cờ vua',
   commandCategory: 'game',
   usePrefix: true,
@@ -106,7 +149,14 @@ exports.run = o => {
 
   if (!competitor_id) return send(`Hãy tag ai đó để làm đối thủ của bạn`);
 
-  const chess = new Chess();
+  const gameID = o.event.threadID;
+  let chess = loadGameState(gameID);
+
+  if (!chess) {
+    chess = new Chess();
+  } else {
+    chess = new Chess(chess);
+  }
 
   send_chess(o, chess, send);
 };
@@ -121,9 +171,9 @@ exports.handleReply = o => {
 
   try {
     chess.move((o.event.body || '').toLowerCase());
+    saveGameState(o.event.threadID, chess); 
+    send_chess(o, chess, send);
   } catch (e) {
     return send(e.toString());
   };
-
-  send_chess(o, chess, send);
 };

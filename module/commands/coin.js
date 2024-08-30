@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { createCanvas } = require('canvas');
 const { Chart, registerables } = require('chart.js');
-const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
 Chart.defaults.color = '#ffffff';
 
@@ -118,6 +117,7 @@ function generateCoinChart() {
 function roundToTwoDecimalPlaces(value) {
     return Math.round(value * 100) / 100;
 }
+
 async function updateCoinValue(api) {
     const baseChange = Math.floor(Math.random() * (5 - (-5) + 1)) - 5;
     const adjustedChange = Math.floor(previousCoinValue * baseChange / 100);
@@ -178,13 +178,6 @@ function isTransactionAllowed(userID, transactionType) {
     return true;
 }
 
-function updateChartEveryMinute(api) {
-    setInterval(async () => {
-        await updateCoinValue(api);
-        generateCoinChart();
-    }, 60000);
-}
-
 module.exports.config = {
     name: "coin",
     version: "2.2.0",
@@ -201,20 +194,13 @@ module.exports.config = {
     `,
     cooldowns: 0,
 };
-
+    
 module.exports.run = async ({ event, api, Currencies }) => {
+    
     const { senderID, threadID } = event;
     const args = event.body.trim().split(' ');
 
     try {
-        if (!(await hasID(senderID))) {
-            return api.sendMessage("⚡ Bạn cần có ID để thực hiện giao dịch này!\ngõ .id để tạo ID", threadID);
-        }
-
-        if (await isBanned(senderID)) {
-            return api.sendMessage("⚡ Bạn đã bị cấm và không thể thực hiện giao dịch này!", threadID);
-        }
-
         if (args[1] === 'buy') {
             if (!isTradingAllowed()) {
                 return api.sendMessage("🕒 Bạn chỉ có thể mua coin từ 6 giờ sáng đến 11 giờ tối hàng ngày", threadID);

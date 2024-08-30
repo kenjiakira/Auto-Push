@@ -15,7 +15,9 @@ module.exports.config = {
 module.exports.run = async function({ api, event, args }) {
   const { threadID, messageID } = event;
 
-  api.sendMessage("Bot đang khởi động lại...", threadID, messageID, () => {
+  api.sendMessage("Bot sẽ khởi động lại sau 5 giây...✅", threadID, messageID);
+
+  setTimeout(() => {
     exec("pm2 restart all", (error, stdout, stderr) => {
       if (error) {
         console.error(`Lỗi khi khởi động lại bot: ${error.message}`);
@@ -28,6 +30,7 @@ module.exports.run = async function({ api, event, args }) {
       }
 
       console.log(`Kết quả: ${stdout}`);
+      api.sendMessage("Bot đã khởi động lại thành công!", threadID, messageID);
     });
-  });
+  }, 5000); 
 };

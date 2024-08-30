@@ -1,19 +1,74 @@
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
+const { exec } = require('child_process');
+const FormData = require('form-data');
 
-let is_url = (url) => /^http(s)?:\/\//.test(url);
+const ffmpegPath = 'D:\\ffmpeg\\bin\\ffmpeg.exe';
+const cacheDir = path.join(__dirname, 'cache');
 
-let stream_url = async (url, type) => {
+if (!fs.existsSync(cacheDir)) {
+  fs.mkdirSync(cacheDir);
+}
+
+const is_url = (url) => /^http(s)?:\/\//.test(url);
+
+const stream_url = async (url, type) => {
   try {
     const res = await axios.get(url, { responseType: 'arraybuffer' });
-    const filePath = path.join(__dirname, 'cache', `${Date.now()}.${type}`);
-    fs.writeFileSync(filePath, res.data);
-    setTimeout(() => fs.unlinkSync(filePath), 1000 * 60); 
-    return fs.createReadStream(filePath);
+    if (res.data) {
+      const filePath = path.join(cacheDir, `${Date.now()}.${type}`);
+      fs.writeFileSync(filePath, res.data);
+      setTimeout(() => {
+        if (fs.existsSync(filePath)) {
+          fs.unlinkSync(filePath);
+        }
+      }, 1000 * 60); 
+      return filePath; 
+    } else {
+      throw new Error('No data received from URL');
+    }
   } catch (error) {
     console.error("Lỗi khi tải tệp từ URL:", error);
     throw new Error("Không thể tải tệp từ URL");
+  }
+};
+
+const convertVideoToMp3 = (videoPath) => {
+  return new Promise((resolve, reject) => {
+    const mp3Path = videoPath.replace(/\.(mp4|avi|mov)$/, '.mp3');
+    
+    exec(`"${ffmpegPath}" -i "${videoPath}" -vn -ar 44100 -ac 2 -b:a 192k "${mp3Path}"`, (error) => {
+      if (error) {
+        console.error('Lỗi khi chuyển đổi video thành MP3:', error.message);
+        reject(error);
+      } else {
+        console.log('Chuyển đổi video thành MP3 hoàn tất');
+        resolve(mp3Path);
+      }
+    });
+  });
+};
+
+const uploadToFileIo = async (filePath) => {
+  try {
+    const form = new FormData();
+    form.append('file', fs.createReadStream(filePath));
+    
+    const response = await axios.post('https://file.io', form, {
+      headers: {
+        ...form.getHeaders()
+      },
+    });
+
+    if (response.data && response.data.link) {
+      return response.data.link;
+    } else {
+      throw new Error('Không nhận được liên kết từ file.io');
+    }
+  } catch (error) {
+    console.error('Lỗi khi tải tệp lên file.io:', error);
+    throw new Error('Không thể tải tệp lên file.io');
   }
 };
 
@@ -52,14 +107,23 @@ module.exports.handleEvent = async function({ api, event }) {
           attachment.push(await stream_url(imageUrl, 'jpg'));
         }
       } else {
-        attachment.push(await stream_url(tiktok.play, 'mp4'));
+        const videoPath = await stream_url(tiktok.play, 'mp4');
+        attachment.push(videoPath);
+
+        api.sendMessage({
+          body: `🎉==[ TIKTOK DOWNLOAD ]==🎉\n\n🎬 **Tiêu đề**: ${tiktok.title}\n❤️ **Lượt thích**: ${tiktok.digg_count}\n👤 **Tác giả**: ${tiktok.author.nickname}\n🆔 **ID TikTok**: ${tiktok.author.unique_id}\n\nBạn có muốn chuyển Video này thành nhạc không?\n\n🔄 Trả lời với 'có' để chuyển video thành MP3.`,
+          attachment: [fs.createReadStream(videoPath)]
+        }, threadID, (error, info) => {
+          global.client.handleReply.push({
+            type: 'reply',
+            name: 'tiktok',
+            messageID: info.messageID,
+            author: event.senderID,
+            videoPath: videoPath,
+            title: tiktok.title
+          });
+        }, messageID);
       }
-
-      api.sendMessage({
-        body: `🎉==[ TIKTOK DOWNLOAD ]==🎉\n\n🎬 **Tiêu đề**: ${tiktok.title}\n❤️ **Lượt thích**: ${tiktok.digg_count}\n👤 **Tác giả**: ${tiktok.author.nickname}\n🆔 **ID TikTok**: ${tiktok.author.unique_id}`,
-        attachment
-      }, threadID, messageID);
-
     } catch (error) {
       console.error("Lỗi trong quá trình xử lý:", error);
       return api.sendMessage("❌ Đã xảy ra lỗi khi xử lý yêu cầu của bạn. 😥", threadID, messageID);
@@ -96,14 +160,23 @@ module.exports.run = async function({ api, event, args }) {
             attachment.push(await stream_url(imageUrl, 'jpg'));
           }
         } else {
-          attachment.push(await stream_url(tiktok.play, 'mp4'));
+          const videoPath = await stream_url(tiktok.play, 'mp4');
+          attachment.push(videoPath);
+
+          api.sendMessage({
+            body: `🎉==[ TIKTOK DOWNLOAD ]==🎉\n\n🎬 **Tiêu đề**: ${tiktok.title}\n❤️ **Lượt thích**: ${tiktok.digg_count}\n👤 **Tác giả**: ${tiktok.author.nickname}\n🆔 **ID TikTok**: ${tiktok.author.unique_id}\n\nBạn có muốn chuyển Video này thành nhạc không?\n\n🔄 Trả lời với 'có' để chuyển video thành MP3.`,
+            attachment: [fs.createReadStream(videoPath)]
+          }, threadID, (error, info) => {
+            global.client.handleReply.push({
+              type: 'reply',
+              name: 'tiktok',
+              messageID: info.messageID,
+              author: event.senderID,
+              videoPath: videoPath,
+              title: tiktok.title 
+            });
+          }, messageID);
         }
-
-        api.sendMessage({
-          body: `🎉==[ TIKTOK DOWNLOAD ]==🎉\n\n🎬 **Tiêu đề**: ${tiktok.title}\n❤️ **Lượt thích**: ${tiktok.digg_count}\n👤 **Tác giả**: ${tiktok.author.nickname}\n🆔 **ID TikTok**: ${tiktok.author.unique_id}`,
-          attachment
-        }, threadID, messageID);
-
       } catch (error) {
         console.error("Lỗi trong quá trình xử lý:", error);
         return api.sendMessage("❌ Đã xảy ra lỗi khi xử lý yêu cầu của bạn. 😥", threadID, messageID);
@@ -111,5 +184,37 @@ module.exports.run = async function({ api, event, args }) {
     });
   } else {
     return api.sendMessage("⚠️ Vui lòng cung cấp URL TikTok hợp lệ. 📲", threadID, messageID);
+  }
+};
+
+module.exports.handleReply = async function({ api, event, handleReply }) {
+  const { threadID, messageID, body, senderID } = event;
+
+  if (body.toLowerCase() === 'có') {
+    try {
+      const videoPath = handleReply.videoPath;
+      const mp3Path = await convertVideoToMp3(videoPath);
+
+      // Tải MP3 lên file.io và nhận liên kết tải xuống
+      const downloadLink = await uploadToFileIo(mp3Path);
+
+      api.sendMessage({
+        body: `🎵 Đã chuyển đổi video thành MP3 thành công! 🎵\n\n🎬 **Tiêu đề**: ${handleReply.title}\n💾 Link tải MP3: ${downloadLink}`,
+        attachment: fs.createReadStream(mp3Path) // Gửi tệp MP3 để nghe trực tiếp
+      }, threadID, async () => {
+        if (fs.existsSync(videoPath)) {
+          fs.unlinkSync(videoPath);
+        }
+        if (fs.existsSync(mp3Path)) {
+          fs.unlinkSync(mp3Path);
+        }
+      }, messageID);
+
+    } catch (error) {
+      console.error("Lỗi khi chuyển đổi video thành MP3:", error);
+      api.sendMessage("❌ Đã xảy ra lỗi khi chuyển đổi video thành MP3. 😥", threadID, messageID);
+    }
+  } else {
+    api.sendMessage("⚠️ Bạn cần trả lời với 'có' để chuyển video thành MP3.", threadID, messageID);
   }
 };

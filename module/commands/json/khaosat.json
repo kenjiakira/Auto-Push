@@ -1,278 +1,240 @@
 {
-  "61561545866379": {
+  "61561753304881": {
     "answers": [
-      "lệnh game",
-      "không",
-      "tính năng trl câu hỏi",
-      "không",
-      "ra nhiều game hơn"
+      {
+        "rating": 1,
+        "reason": "slslslkskskslslsllsddddfh"
+      }
     ],
-    "startTime": 1723882661570,
+    "startTime": 1724470246392,
     "agreed": true,
-    "currentQuestionID": "mid.$gABmqWe8UOm-XkMKKa2RX2umhk_o1"
+    "currentQuestionID": null
   },
-  "100033403783080": {
+  "61551937277879": {
     "answers": [
-      "tạo hình ảnh với lệnh",
-      "không",
-      "tăng mạnh hình phạt khi steal thất bại",
-      "không",
-      "hiện tại là ok rồi"
+      {
+        "rating": 8
+      }
     ],
-    "startTime": 1723882683128,
+    "startTime": 1724470711288,
     "agreed": true,
-    "currentQuestionID": "mid.$gABdhC6VpY6CXkMJScWRX2tu9BWa2"
+    "currentQuestionID": "mid.$gABz1vawF9PCXs7ykAGRgnc2-qwdi"
   },
-  "100020600508676": {
+  "100091758518630": {
     "answers": [
-      "lệnh tìm code phim",
-      "chắc là không",
-      "ghép đôi",
-      "lag, trả lời chậm",
-      "thêm tính năng random thành viên bị ban!"
-    ],
-    "startTime": 1723882769794,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABcZfe4PVt-XkMPbTmRX2z3zY4FD"
-  },
-  "100000709336080": {
-    "answers": [
-      "lệnh dùng cho qtv box",
-      "cũng bthg k đẹp lắm",
-      "ngăn spam",
-      "thiếu tiền",
-      "cho ra lại eveny"
-    ],
-    "startTime": 1723882919662,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABtdbLvNDgCXkMXDbWRX27fyIbaU"
-  },
-  "100077083729686": {
-    "answers": [
-      "không thêm",
-      "không cần",
-      "không",
-      "không gặp khó khăn gì",
-      "không có gì"
-    ],
-    "startTime": 1723882989370,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABw6LBcfyEyXkMiR4WRX3GuKjfpR"
-  },
-  "100026550910594": {
-    "answers": [
-      ".taglientuc",
-      "có cần thêm tag liên tục",
-      "tự động chửi",
-      "không",
-      "thêm tag liên tục"
-    ],
-    "startTime": 1723883374391,
-    "agreed": true,
-    "currentQuestionID": "mid.$gAByv42_-9E-XkMzFdWRX3XiDY1n7"
-  },
-  "61561972682900": {
-    "answers": [
-      "lệnh chửi liên tục",
-      "không biết",
-      "chửi liên tục",
-      "không",
-      "không có"
-    ],
-    "startTime": 1723884074169,
-    "agreed": true,
-    "currentQuestionID": "mid.$gAB2Ad1Ji2f2XkNd3NGRX4CTTC21W"
-  },
-  "100073764251719": {
-    "answers": [
-      "ảnh trai song song với nữ",
-      "không",
-      "thấy ok rồi",
-      "không",
-      "thêm các lệnh như giải bài tập về nhà, v, v"
-    ],
-    "startTime": 1723884100273,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABIEe2UCDqCXkNfvyWRX4ELx8Xhw"
-  },
-  "100053970942155": {
-    "answers": [
-      "xổ số",
-      "không",
-      "không",
-      "lâu lâu sài lệnh sing bị lỗi 😭",
-      "không"
-    ],
-    "startTime": 1723884127127,
-    "agreed": true,
-    "currentQuestionID": "mid.$gAFwaYvxc86aXkNjZamRX4H1lA6fZ"
-  },
-  "100065058260287": {
-    "answers": [
-      "không biết",
-      "có, làm cc gì cũng đc",
-      "cày game hộ",
-      "không",
-      "đủ hữu ích r"
-    ],
-    "startTime": 1723884989553,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABdhC6VpY6CXkOW61WRX47XOTuNI"
-  },
-  "100031327264208": {
-    "answers": [
-      "tag 10 lần liên tục",
-      "không cần cải tiến",
-      "không",
-      "không gặp khó khăn",
-      "không có đề xuất"
-    ],
-    "startTime": 1723885150333,
-    "agreed": true,
-    "currentQuestionID": "mid.$gAByv42_-9E-XkOeihWRX5C-0Ts4l"
-  },
-  "61559750286613": {
-    "answers": [
-      "lệnh gì cũng được tuỳ vào admin",
-      "dạ có đầy cải tiến",
-      "dạ nên thêm tính năng tag chửi liên tục",
-      "dạ không vì bot phèn",
-      "tui nghĩ giao admin cho tui"
-    ],
-    "startTime": 1723885717782,
-    "agreed": true,
-    "currentQuestionID": "mid.$gAB2Ad1Ji2f2XkPBEGmRX5lgWavh6"
-  },
-  "61555034078738": {
-    "answers": [
-      "trộm bank=))",
-      "ko bt",
-      "ko bt",
-      "ko có",
-      "đừng sập bot nx"
-    ],
-    "startTime": 1723886019151,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABwfpOfKGSyXkPVleGRX56B5WvhG"
-  },
-  "100087677240339": {
-    "answers": [
-      "con mẹ macy",
-      "con mẹ macy",
-      "con mẹ mày",
-      "cn mẹ mày",
-      "cn mẹ mày"
-    ],
-    "startTime": 1723886229584,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABwfpOfKGSyXkPe9v2RX6DaBJ-FP"
-  },
-  "100066878168335": {
-    "answers": [
-      "conmej mày",
-      "cn mẹ mayd",
-      "cn m3j macy",
-      "cn mek magy",
-      "con mẹ mày"
-    ],
-    "startTime": 1723886326369,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABdhC6VpY6CXkPmfVGRX6K7qa56t"
-  },
-  "100035373562412": {
-    "answers": [
-      "mỹ lệ gwming",
-      "vũd bông geming",
-      "dương linh gem",
-      "không nha",
-      "không"
-    ],
-    "startTime": 1723886449323,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABwfpOfKGSyXkPtJ3GRX6RmT-IMV"
-  },
-  "100083748707691": {
-    "answers": [
-      "ngủ treo xu",
-      "không ý kiến",
-      "tăng thuế mấy game kia",
-      "dễ sập",
-      "gõ lại thằng mark"
-    ],
-    "startTime": 1723886604068,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABwfpOfKGSyXkP5S-mRX6dvIZUqZ"
-  },
-  "61564177718429": {
-    "answers": [
-      "lệnh tán gái",
-      "có hãy thay avt bot để đc ngắm admin",
-      "tính năng cho work liên tục",
-      "không tôi dùng bình thường",
-      "bot cho nhiều gíp cốt"
-    ],
-    "startTime": 1723886889981,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABmqWe8UOm-XkQJ6yGRX6uWpX68_"
-  },
-  "100051707018510": {
-    "answers": [
-      "reverse image search",
-      "thuê dịch giả thay vì sử dụng google dịch trên .quiz",
-      "thêm nguồn trên onlyfans leak và khả năng tìm kiếm leak bằng username",
-      "tài xỉu khá dễ đoán, thậm chí có thể dùng như một dạng farm tiền.",
-      "sử dụng prefix - thay . vì một số emoticon sử dụng dấu chấm bị bot đọc như lệnh"
-    ],
-    "startTime": 1723886917428,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABdhC6VpY6CXkQXHTGRX67jwaa0T"
-  },
-  "100066234714306": {
-    "answers": [
-      "lệnh chuilientuc",
-      "có rất đẹp",
-      "không ạ",
-      "không ạ",
-      "không ạ"
-    ],
-    "startTime": 1723886963988,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABmqWe8UOm-XkQOChGRX6yelsHur"
-  },
-  "61561567035490": {
-    "answers": [
-      null,
-      null,
-      null,
-      null,
       null
     ],
-    "startTime": 1723887354771,
+    "startTime": 1724470747161,
     "agreed": false,
     "currentQuestionID": null
   },
-  "100049109850406": {
+  "100046739981416": {
     "answers": [
-      null,
-      null,
-      null,
-      null,
+      {
+        "rating": 7
+      }
+    ],
+    "startTime": 1724470751422,
+    "agreed": true,
+    "currentQuestionID": "mid.$gAB4WhdgWwmSXs70ES2RgneXjNc0A"
+  },
+  "100067146620344": {
+    "answers": [
       null
     ],
-    "startTime": 1723887367725,
-    "agreed": true,
-    "currentQuestionID": "mid.$gABmqWe8UOm-XkQk0v2RX7JQ0EeTr"
+    "startTime": 1724470756337,
+    "agreed": false,
+    "currentQuestionID": null
   },
-  "100006492165738": {
+  "61561047028310": {
     "answers": [
-      "lệnh auto win",
-      "có đỡ phải chấm đầu câu",
-      "tính năng có nhiều tiền",
-      "muốn gặp ad",
-      "tui thic ad"
+      {
+        "rating": 9
+      }
     ],
-    "startTime": 1723887396708,
+    "startTime": 1724470763136,
     "agreed": true,
-    "currentQuestionID": "mid.$gABmqWe8UOm-XkQnsA2RX7MHnYQWR"
+    "currentQuestionID": "mid.$gABz1vawF9PCXs72Y6WRgngsHxPMN"
+  },
+  "100053970942155": {
+    "answers": [
+      {
+        "rating": 5
+      }
+    ],
+    "startTime": 1724470771320,
+    "agreed": true,
+    "currentQuestionID": "mid.$gAB1w5ZI-nZaXs71VT2RgnfoeN8Yr"
+  },
+  "100077083729686": {
+    "answers": [
+      {
+        "rating": 10
+      }
+    ],
+    "startTime": 1724470772764,
+    "agreed": true,
+    "currentQuestionID": null
+  },
+  "100050445245297": {
+    "answers": [
+      {
+        "rating": 5
+      }
+    ],
+    "startTime": 1724470794953,
+    "agreed": true,
+    "currentQuestionID": "mid.$gAA9ZApSRWoaXs727nmRgnhOy5x-V"
+  },
+  "61561972682900": {
+    "answers": [
+      {
+        "rating": 7
+      }
+    ],
+    "startTime": 1724470795249,
+    "agreed": true,
+    "currentQuestionID": "mid.$gAB2Ad1Ji2f2Xs72jL2Rgng2QpsjD"
+  },
+  "100068642988238": {
+    "answers": [
+      {
+        "rating": 1,
+        "reason": "yu th ght thi"
+      }
+    ],
+    "startTime": 1724470800446,
+    "agreed": true,
+    "currentQuestionID": null
+  },
+  "100054015759917": {
+    "answers": [
+      {
+        "rating": 10
+      }
+    ],
+    "startTime": 1724470836923,
+    "agreed": true,
+    "currentQuestionID": "mid.$gAA9ZApSRWoaXs75VMGRgnjoXK92q"
+  },
+  "100058320200877": {
+    "answers": [
+      {
+        "rating": 7
+      }
+    ],
+    "startTime": 1724470851394,
+    "agreed": true,
+    "currentQuestionID": "mid.$gABz1vawF9PCXs757MWRgnkOguYz4"
+  },
+  "100089448933414": {
+    "answers": [
+      {
+        "rating": 10
+      }
+    ],
+    "startTime": 1724470907072,
+    "agreed": true,
+    "currentQuestionID": "mid.$gAA9ZApSRWoaXs79VRWRgnnoTZaU9"
+  },
+  "100088600797175": {
+    "answers": [
+      {
+        "rating": 10
+      }
+    ],
+    "startTime": 1724471447198,
+    "agreed": true,
+    "currentQuestionID": "mid.$gABz1vawF9PCXs8ea82RgoIt501Oe"
+  },
+  "100024874297909": {
+    "answers": [
+      {
+        "rating": 5
+      }
+    ],
+    "startTime": 1724471487634,
+    "agreed": true,
+    "currentQuestionID": "mid.$gABdo12YYX5eXs8hEQ2RgoLXjK8-W"
+  },
+  "100079621883786": {
+    "answers": [
+      {
+        "rating": 5
+      }
+    ],
+    "startTime": 1724472047001,
+    "agreed": true,
+    "currentQuestionID": "mid.$gABzsWd8HtHqXs9CzkmRgotG6hmCU"
+  },
+  "61556582712090": {
+    "answers": [
+      {
+        "rating": 5
+      }
+    ],
+    "startTime": 1724472123559,
+    "agreed": true,
+    "currentQuestionID": "mid.$gABzsWd8HtHqXs9HfQWRgoxyWt47W"
+  },
+  "100068382888605": {
+    "answers": [
+      {
+        "rating": 8
+      }
+    ],
+    "startTime": 1724474937727,
+    "agreed": true,
+    "currentQuestionID": "mid.$gABaFZ9PRi5iXs_1z_WRgrgHDBuM3"
+  },
+  "100083748707691": {
+    "answers": [
+      {
+        "rating": 7
+      }
+    ],
+    "startTime": 1724478056358,
+    "agreed": true,
+    "currentQuestionID": "mid.$gABwfpOfKGSyXtCygf2Rguczbfu08"
+  },
+  "100051123632162": {
+    "answers": [
+      {
+        "rating": 7
+      }
+    ],
+    "startTime": 1724564038354,
+    "agreed": true,
+    "currentQuestionID": "mid.$gAB4WhdgWwmSXuUyC2mRiAcAHnlhQ"
+  },
+  "100091799295374": {
+    "answers": [
+      {
+        "rating": 8
+      }
+    ],
+    "startTime": 1724564092742,
+    "agreed": true,
+    "currentQuestionID": "mid.$gAB4WhdgWwmSXuU1R_WRiAfPQM_Tt"
+  },
+  "61553807062697": {
+    "answers": [
+      {
+        "rating": 8
+      }
+    ],
+    "startTime": 1724564170956,
+    "agreed": true,
+    "currentQuestionID": "mid.$gAB4WhdgWwmSXuU6NnWRiAkLBDSqw"
+  },
+  "100051062554774": {
+    "answers": [
+      {
+        "rating": 7
+      }
+    ],
+    "startTime": 1724564318111,
+    "agreed": true,
+    "currentQuestionID": "mid.$gAB4WhdgWwmSXuVD3U2RiAt0khMfx"
   }
 }

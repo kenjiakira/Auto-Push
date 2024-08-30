@@ -28,13 +28,19 @@ function createProgressBar(total, current, length = 17) {
 
 async function getPing() {
     try {
-        const { stdout } = await execPromise('ping -c 1 google.com');
-        const match = stdout.match(/time=(\d+\.\d+) ms/);
+
+        const isWindows = os.platform() === 'win32';
+        const pingCommand = isWindows ? 'ping -n 1 google.com' : 'ping -c 1 google.com';
+
+        const { stdout } = await execPromise(pingCommand);
+        const match = stdout.match(isWindows ? /time=(\d+)ms/ : /time=(\d+\.\d+) ms/);
+
         return match ? `${match[1]} ms` : 'N/A';
     } catch {
         return 'N/A';
     }
 }
+
 
 async function getSystemInfo() {
     try {
@@ -75,8 +81,8 @@ module.exports.run = async function({ api, event }) {
     let hours = Math.floor((uptime / (1000 * 60 * 60)) % 24);
     let days = Math.floor(uptime / (1000 * 60 * 60 * 24));
 
-    let memoryUsage = process.memoryUsage().heapUsed / 1024 / 1024;
-    let cpuLoad = os.loadavg()[0].toFixed(2);
+    let memoryUsage = process.memoryUsage().heapUsed / 1024 / 1024; 
+    let cpuLoad = os.loadavg()[0].toFixed(2); 
     
     const ping = await getPing();
     const systemInfo = await getSystemInfo();
@@ -91,8 +97,9 @@ module.exports.run = async function({ api, event }) {
     uptimeMessage += `🖥️ Hệ điều hành: ${systemInfo.platform} (${systemInfo.arch})\n`;
     uptimeMessage += `🔧 CPU Model: ${systemInfo.cpuModel} (${systemInfo.coreCount} core(s))\n`;
     uptimeMessage += `🧠 Dung lượng bộ nhớ: ${systemInfo.freeMemory} GB (Trên tổng ${systemInfo.totalMemory} GB)\n`;
-    
-    const maxUptime = 86400000;
+    uptimeMessage += `🌐 Ping: ${ping}\n`;
+
+    const maxUptime = 86400000; 
     const uptimeBar = createProgressBar(maxUptime, uptime);
     uptimeMessage += `\n📅 Progress đến 24h: ${uptimeBar}\n`;
 

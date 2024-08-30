@@ -3,7 +3,7 @@ const path = require('path');
 const axios = require('axios');
 const FormData = require('form-data');
 
-const imgurClientId = '34dc774b8c0ddae'; //Client-ID
+const imgurClientId = '34dc774b8c0ddae'; 
 
 module.exports.config = {
     name: "imgur",

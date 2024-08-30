@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
 const giftDataPath = path.join(__dirname, 'json', 'giftcodes.json');
 const validGiftCodesPath = path.join(__dirname, 'json', 'validGiftCodes.json');
@@ -62,15 +61,7 @@ module.exports.config = {
 };
 
 module.exports.run = async function({ api, event, Currencies, args }) {
-  const { threadID, messageID, senderID } = event;
-
-  if (!(await hasID(senderID))) {
-    return api.sendMessage("⚠️ Bạn cần có ID để sử dụng lệnh này! Vui lòng gõ '.id' để tạo ID.", threadID, messageID);
-  }
-
-  if (await isBanned(senderID)) {
-    return api.sendMessage("❌ Bạn đã bị cấm và không thể sử dụng lệnh này!", threadID, messageID);
-  }
+  const { threadID, messageID } = event;
 
   if (args.length === 0) {
     return api.sendMessage("Vui lòng nhập mã gift code.", threadID, messageID);
@@ -80,20 +71,24 @@ module.exports.run = async function({ api, event, Currencies, args }) {
   const giftData = readOrCreateGiftData();
   const validGiftCodes = readValidGiftCodes();
 
-  if (giftData[senderID]) {
+  // Check if the user has already redeemed a gift code
+  if (giftData[event.senderID]) {
     return api.sendMessage("❌ Bạn đã nhận gift code trước đó. Bạn không thể nhận lại.", threadID, messageID);
   }
 
+  // Check if the gift code is valid
   if (!validGiftCodes[giftCode]) {
     return api.sendMessage("❌ Mã gift code không hợp lệ. Ví dụ: .gift VCL\nCode sẽ được công bố khi có sự kiện trong tương lai.", threadID, messageID);
   }
 
   const amount = validGiftCodes[giftCode];
 
-  giftData[senderID] = true;
+  // Mark the gift code as used
+  giftData[event.senderID] = true;
   saveGiftData(giftData);
 
-  await Currencies.increaseMoney(senderID, amount);
+  // Increase the user's money
+  await Currencies.increaseMoney(event.senderID, amount);
 
   return api.sendMessage(`🎉 Chúc mừng! Bạn đã nhận được ${amount} xu từ gift code ${giftCode}.`, threadID, messageID);
 };

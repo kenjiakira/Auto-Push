@@ -6,14 +6,11 @@ const path = require('path');
 
 const historyPath = path.join(__dirname, 'json', 'sing.json');
 
-
 if (!fs.existsSync(historyPath)) {
   fs.writeFileSync(historyPath, JSON.stringify({}), 'utf8');
 }
 
-
 const convertHMS = (value) => new Date(value * 1000).toISOString().slice(11, 19);
-
 
 const config = {
   name: "sing",
@@ -26,7 +23,6 @@ const config = {
   usages: "[searchMusic] | history - Xem lịch sử nhạc | suggest - Đề xuất nhạc",
   cooldowns: 0
 };
-
 
 const ITAG = 140; 
 
@@ -86,7 +82,11 @@ const updateHistory = (userID, record) => {
       historyData[userID] = [];
     }
 
-    historyData[userID].push(record);
+    // Kiểm tra xem liên kết có trùng không
+    const linkExists = historyData[userID].some(item => item.link === record.link);
+    if (!linkExists) {
+      historyData[userID].push(record);
+    }
 
     if (historyData[userID].length > 15) {
       historyData[userID].shift(); 
@@ -148,15 +148,26 @@ const suggestMusic = async (userID) => {
     const userHistory = historyData[userID] || [];
 
     if (userHistory.length > 0) {
-    
-      const titles = userHistory.map((record, index) => ({
-        index: index + 1,
-        title: record.title,
-        link: record.link
-      }));
-      return titles;
-    } else {
+      // Lọc các liên kết đã có trong lịch sử của người dùng
+      const userLinks = new Set(userHistory.map(record => record.link));
+      const allHistories = Object.values(historyData).flat();
+      const uniqueHistories = allHistories.filter(record => !userLinks.has(record.link));
+      
+      const randomSongs = uniqueHistories
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 5) 
+        .map((record, index) => ({
+          index: index + 1,
+          title: record.title,
+          link: record.link
+        }));
 
+      if (randomSongs.length === 0) {
+        return [];
+      }
+
+      return randomSongs;
+    } else {
       const allHistories = Object.values(historyData).flat();
       const randomSongs = allHistories
         .sort(() => 0.5 - Math.random())
@@ -179,10 +190,8 @@ const suggestMusic = async (userID) => {
   }
 };
 
-
 const run = async function({ api, event, args }) {
   if (args.length === 0) {
-
     try {
       const suggestions = await suggestMusic(event.senderID);
 
@@ -208,7 +217,6 @@ const run = async function({ api, event, args }) {
   }
 
   if (args[0]?.startsWith("https://")) {
-    // Handle YouTube link
     const filePath = path.resolve(__dirname, 'cache', `sing-${event.senderID}.mp3`);
     try {
       const { data, info } = await downloadMusicFromYoutube(args[0], filePath);
@@ -217,7 +225,6 @@ const run = async function({ api, event, args }) {
       if (fs.statSync(data).size > 26214400) {
         return api.sendMessage('⚠️Không thể gửi tệp vì kích thước lớn hơn 25MB.', event.threadID, () => fs.unlinkSync(data), event.messageID);
       }
-
 
       updateHistory(event.senderID, {
         type: 'download',
@@ -232,7 +239,6 @@ const run = async function({ api, event, args }) {
       api.sendMessage('⚠️Đã xảy ra lỗi khi tải nhạc.', event.threadID, event.messageID);
     }
   } else if (args[0]?.toLowerCase() === "history") {
-
     try {
       const historyData = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
       const userHistory = historyData[event.senderID] || [];
@@ -251,7 +257,6 @@ const run = async function({ api, event, args }) {
       api.sendMessage('⚠️Đã xảy ra lỗi khi đọc lịch sử.', event.threadID, event.messageID);
     }
   } else if (args[0]?.toLowerCase() === "suggest") {
-
     try {
       const suggestions = await suggestMusic(event.senderID);
 
@@ -275,7 +280,6 @@ const run = async function({ api, event, args }) {
       return api.sendMessage('⚠️Đã xảy ra lỗi khi đề xuất nhạc.', event.threadID, event.messageID);
     }
   } else {
-    // Handle search
     const keywordSearch = args.join(" ");
     const filePath = path.resolve(__dirname, 'cache', `sing-${event.senderID}.mp3`);
     
@@ -328,4 +332,4 @@ const run = async function({ api, event, args }) {
   }
 };
 
-  module.exports = { config, run, handleReply };
+module.exports = { config, run, handleReply };

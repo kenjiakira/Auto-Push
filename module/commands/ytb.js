@@ -114,6 +114,11 @@ const run = async function({ api, event, args }) {
       const body = `Có ${link.length} kết quả phù hợp với từ khóa tìm kiếm của bạn:\n\n${data.map((value, index) => `❍━━━━━━━━━━━━❍\n${index + 1} - ${value?.title} (${value?.length?.simpleText})\n\n`).join('')}❯ Vui lòng trả lời để chọn một trong những kết quả tìm kiếm trên`;
 
       return api.sendMessage({ attachment: thumbnails, body }, event.threadID, (error, info) => {
+        if (error) {
+          console.error('Lỗi khi gửi tin nhắn:', error);
+          return api.sendMessage('⚠️ Đã xảy ra lỗi khi gửi tin nhắn.', event.threadID, event.messageID);
+        }
+
         for (let i = 0; i < thumbnails.length; i++) {
           fs.unlinkSync(path.resolve(__dirname, 'cache', `thumbnail-${event.senderID}-${i + 1}.jpg`));
         }

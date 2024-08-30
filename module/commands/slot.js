@@ -1,6 +1,5 @@
 const { randomInt } = require('crypto');
 const path = require('path');
-const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
 const slotSymbols = ["🍒", "🍋", "🍇", "🍀", "🍉", "🍊", "🍎", "💎", "⭐"];
 const betAmounts = [500, 1000, 2000, 5000, 10000];
@@ -31,13 +30,6 @@ module.exports.config = {
 module.exports.run = async ({ api, event, args, Currencies, Users }) => {
   const { senderID, threadID } = event;
 
-  if (!(await hasID(senderID))) {
-    return api.sendMessage("⚡ Bạn cần có ID để thực hiện trò chơi này!\ngõ .id để tạo ID", threadID);
-  }
-
-  if (await isBanned(senderID)) {
-    return api.sendMessage("⚡ Bạn đã bị cấm và không thể chơi trò chơi này!", threadID);
-  }
 
   const userData = await Currencies.getData(senderID);
   const user = await Users.getData(senderID);

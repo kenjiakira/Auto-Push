@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const request = require('request'); 
-const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
+const request = require('request');
 
 module.exports.config = {
     name: "mine",
@@ -42,7 +41,6 @@ module.exports.handleReply = async ({ event: e, api, handleReply, Currencies }) 
                     const index = weightedRandom(weights);
                     const mineral = minerals[index];
 
-                   
                     switch (index) {
                         case 0:
                             rewardAmount = Math.floor(Math.random() * (6000 - 2000 + 1)) + 2000;
@@ -105,15 +103,6 @@ module.exports.run = async ({ event: e, api, handleReply, Currencies }) => {
     const { threadID, senderID } = e;
     const cooldown = module.exports.config.envConfig.cooldownTime;
     let data = (await Currencies.getData(senderID)).data || {};
-
-    if (!(await hasID(senderID))) {
-        return api.sendMessage("⚡ Bạn cần có ID để thực hiện hành động này!\ngõ .id để tạo ID", threadID, e.messageID);
-    }
-
-    // Kiểm tra tình trạng bị cấm
-    if (await isBanned(senderID)) {
-        return api.sendMessage("⚡ Bạn đã bị cấm và không thể khai thác tài nguyên!", threadID, e.messageID);
-    }
 
     if (data.work2Time && cooldown - (Date.now() - data.work2Time) > 0) {
         const timeRemaining = cooldown - (Date.now() - data.work2Time);

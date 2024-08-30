@@ -1,117 +1,54 @@
-const fs = require('fs');
-const path = require('path');
-const { createCanvas, loadImage, registerFont } = require('canvas');
-const axios = require('axios');
-const jimp = require('jimp');
-const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
-
-registerFont(path.join(__dirname, 'cache', 'Be_Vietnam_Pro', 'BeVietnamPro-Bold.ttf'), { family: 'Be Vietnam Pro' });
-
-function formatNumber(number) {
-  const [integerPart, decimalPart] = number.toFixed(2).split(".");
-  const formattedIntegerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  return `${formattedIntegerPart},${decimalPart}`;
-}
-
-async function getUserName(api, userID) {
-  try {
-    const userInfo = await api.getUserInfo(userID);
-    return userInfo[userID].name;
-  } catch (error) {
-    console.error(error);
-    return "người dùng";
-  }
-}
-
-async function createBalanceImage(userName, balance, userID) {
-  const width = 800;
-  const height = 200;
-  const canvas = createCanvas(width, height);
-  const ctx = canvas.getContext('2d');
-
-  const backgroundImagePath = path.join(__dirname, 'images', 'background.png');
-
-  try {
-    const background = await loadImage(backgroundImagePath);
-    ctx.drawImage(background, 0, 0, width, height);
-
-    ctx.shadowColor = 'rgba(0, 0, 0, 0.6)';
-    ctx.shadowBlur = 10;
-    ctx.shadowOffsetX = 5;
-    ctx.shadowOffsetY = 5;
-
-    ctx.font = "bold 35px Be Vietnam Pro";
-    ctx.fillStyle = "#ffffff";
-    const userNameUpper = userName.toUpperCase();
-    const userNameText = userNameUpper;
-    const userNameWidth = ctx.measureText(userNameText).width;
-    const userNameX = (width - userNameWidth) / 2;
-    ctx.fillText(userNameText, userNameX, 80);
-
-    ctx.font = "bold 45px Be Vietnam Pro";
-    ctx.fillStyle = "#ffd700";
-    const balanceText = `${balance} xu`;
-    const balanceWidth = ctx.measureText(balanceText).width;
-    const balanceX = (width - balanceWidth) / 2;
-    ctx.fillText(balanceText, balanceX, 150);
-
-    const imagePath = path.join(__dirname, 'cache', 'balance_image.png');
-    const buffer = canvas.toBuffer('image/png');
-    fs.writeFileSync(imagePath, buffer);
-
-    return imagePath;
-  } catch (error) {
-    console.error('Lỗi khi tải hoặc xử lý hình ảnh:', error);
-    throw new Error('Lỗi khi tạo hình ảnh');
-  }
-}
+const fs = require("fs");
 
 module.exports.config = {
   name: "money",
   version: "1.1.1",
   hasPermission: 0,
-  credits: "Hoàng Ngọc Từ",
+  credits: "Mirai Team Mod By AKIRA",
   description: "Kiểm tra số tiền của bản thân hoặc người được tag",
   commandCategory: "Tài Chính",
   usePrefix: true,
-  usages: "gõ .money để xem xu của mình hoặc của người khác bằng cách tag\nVD: bạn cần xem tiền của người tên A\ngõ [.money @A] hoặc trả lời tin nhắn của người đó",
+  usages: "gõ .balance để xem xu của mình or của người khác bằng cách tag \nvd: bạn cần xem tiền người tên A\ngõ [.balance @A] ",
   cooldowns: 5
 };
 
-module.exports.run = async function ({ api, event, args, Currencies }) {
-  const { threadID, messageID, senderID, mentions, messageReply } = event;
-
-  let userID;
-
-  if (messageReply && messageReply.senderID) {
-    userID = messageReply.senderID;
-  } else if (args[0]) {
-    userID = Object.keys(mentions)[0];
-  } else {
-    userID = senderID;
-  }
-
-  if (!await hasID(userID)) {
-    return api.sendMessage("Bạn cần có ID để thực hiện lệnh này.\nvui lòng gõ .id để tạo id", threadID, messageID);
-  }
-
-  if (await isBanned(userID)) {
-    return api.sendMessage("Bạn đã bị cấm và không thể thực hiện các lệnh tài chính!", threadID, messageID);
-  }
-
-  try {
-    const userData = await Currencies.getData(userID);
-    const balance = userData && userData.money ? userData.money : 0;
-    const formattedBalance = formatNumber(balance);
-    const userName = await getUserName(api, userID);
-
-    const imagePath = await createBalanceImage(userName, formattedBalance, userID);
-
-    return api.sendMessage({
-      attachment: fs.createReadStream(imagePath)
-    }, threadID, () => fs.unlinkSync(imagePath), messageID);
-  } catch (error) {
-    console.error(error);
-    return api.sendMessage("Đã xảy ra lỗi khi kiểm tra số tiền.", threadID, messageID);
+module.exports.languages = {
+  "vi": {
+    "balance_personal": "Số xu bạn đang có: %1 xu",
+    "balance_other": "Số xu của %1 hiện đang có là: %2 xu"
+  },
+  "en": {
+    "balance_personal": "Your current balance: %1 💰",
+    "balance_other": "%1's current balance: %2 💰"
   }
 };
+
+module.exports.run = async function ({ api, event, args, Currencies, getText }) {
+  const { threadID, messageID, senderID, mentions } = event;
+
+  if (!args[0]) {
+    const userData = await Currencies.getData(senderID);
+    const balance = userData && userData.money ? userData.money : 0;
+    const formattedBalance = formatNumber(balance);
+    return api.sendMessage(`${getText("balance_personal", formattedBalance)}`, threadID, messageID);
+  }
+
+  if (Object.keys(mentions).length === 1) {
+    const mention = Object.keys(mentions)[0];
+    const userData = await Currencies.getData(mention);
+    const balance = userData && userData.money ? userData.money : 0;
+    const formattedBalance = formatNumber(balance);
+    return api.sendMessage({
+      body: `${getText("balance_other", mentions[mention].replace(/\@/g, ""), formattedBalance)}`,
+      mentions: [
+        { tag: mentions[mention].replace(/\@/g, ""), id: mention }
+      ]
+    }, threadID, messageID);
+  }
+
+  return global.utils.throwError(this.config.name, threadID, messageID);
+};
+
+function formatNumber(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}

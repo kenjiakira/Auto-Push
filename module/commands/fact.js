@@ -1,5 +1,6 @@
 const axios = require('axios');
 const translate = require('translate-google');
+const fs = require('fs').promises;
 
 module.exports.config = {
   name: "fact",
@@ -38,8 +39,8 @@ module.exports.onLoad = function({ api }) {
   const now = new Date();
   const localTime = new Date(now.getTime() + vietnamTimezoneOffset); 
 
-  const minutesUntilNextHalfHour = 30 - (localTime.getMinutes() % 30);
-  const msUntilNextHalfHour = (minutesUntilNextHalfHour * 60 + (60 - localTime.getSeconds())) * 1000; 
+  const minutesUntilNextHalfHour = 60 - (localTime.getMinutes() % 60);
+  const msUntilNextHalfHour = (minutesUntilNextHalfHour * 360 + (360 - localTime.getSeconds())) * 1000; 
 
   console.log(`Đang chờ ${msUntilNextHalfHour} ms để gửi sự thật ngẫu nhiên đầu tiên.`);
 
@@ -49,13 +50,13 @@ module.exports.onLoad = function({ api }) {
       setInterval(() => {
           console.log('Gửi sự thật ngẫu nhiên mỗi 30 phút.');
           notifyRandomFact(api); 
-      }, 30 * 60 * 1000);
+      }, 360 * 60 * 1000);
   }, msUntilNextHalfHour);
 
   async function notifyRandomFact(api) {
     let threadIDs = [];
     try {
-        const data = await fs.readFile('module/commands/noti/groups.json', 'utf8');
+        const data = await fs.readFile('module/commands/noti/groups.json', 'utf8');  
         const jsonData = JSON.parse(data);
         threadIDs = jsonData.map(entry => entry.threadID);
     } catch (error) {

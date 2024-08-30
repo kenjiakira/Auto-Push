@@ -49,14 +49,11 @@ module.exports.run = async function({ api, event }) {
     const questionData = res.data.results[0];
     const { question, correct_answer, incorrect_answers } = questionData;
 
-    // Xáo trộn và chuẩn bị câu trả lời
     const answers = [correct_answer, ...incorrect_answers].sort(() => Math.random() - 0.5);
     const correctIndex = answers.indexOf(correct_answer);
 
-    // Tiền xử lý văn bản trước khi dịch
     const preprocessText = text => text.replace(/&quot;/g, '"').replace(/&amp;/g, '&');
 
-    // Dịch từng phần một với từ điển bổ sung cho các thuật ngữ cụ thể
     const translatedData = await Promise.all([
       translate(preprocessText(question), { to: 'vi' }),
       ...answers.map(answer => translate(preprocessText(answer), { to: 'vi' }))
@@ -66,7 +63,6 @@ module.exports.run = async function({ api, event }) {
     const translatedAnswers = translatedData.slice(1);
     const options = translatedAnswers.map((answer, index) => `${String.fromCharCode(65 + index)}. ${answer}`).join('\n');
 
-    // Thay thế các thuật ngữ chưa được dịch chính xác bằng cách sử dụng từ điển bổ sung
     const termDictionary = {
       "Erchius Ghost": "Ma Quái Erchius",
       "CETRICUB": "CETRICUB",

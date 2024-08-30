@@ -2,7 +2,7 @@ module.exports.config = {
   name: "join",
   eventType: ['log:subscribe'],
   version: "1.0.0",
-  credits: "Mirai-Team", // FIXED BY YAN MAGLINTE
+  credits: "Mirai-Team", 
   description: "Thông báo gia nhập nhóm"
 };
 

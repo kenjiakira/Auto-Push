@@ -23,7 +23,7 @@ const run = async function({ api, event, args, Currencies }) {
   };
 
   const botChoiceRaw = choices[Math.floor(Math.random() * choices.length)];
-  const botChoice = botChoiceRaw.split(' ')[0];  // Lấy tên không có emoji
+  const botChoice = botChoiceRaw.split(' ')[0];  i
 
   if (!choices.some(choice => choice.includes(userChoice))) {
     return api.sendMessage('❍━━━━━━━━━━━━━━❍\n  MiniGame Kéo Búa Bao\n❍━━━━━━━━━━━━━━❍\n\n Vui lòng chọn "kéo ✂️", "búa 🪨", hoặc "bao 📰".', threadID, messageID);

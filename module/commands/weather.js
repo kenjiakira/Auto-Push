@@ -1,31 +1,37 @@
 const axios = require('axios');
 const translate = require('translate-google');
 const fs = require('fs').promises;
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+const API_KEYS = [
+  "AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0",  
+  "AIzaSyDysChx19Lu3hAFpE2knZwkoCWGTN2gfy0",
+  "AIzaSyCTvL29weT4BIn7WtFtTvsaQ5Jt6Dm4mBE",
+  "AIzaSyDoCGS2-hagw5zWVMfL5iqAVRFNivtbam4",
+  "AIzaSyASuW0stXR61_xJ3s0XP3Qw0RoudGCjQRQ",
+  "AIzaSyC78Dqs1rdEfj4JcmlSFEBhJZLOJzWmt_Y",
+  "AIzaSyDpqfVtdyGLfipEdRNFfUQbCH-prn1sHEs",
+  "AIzaSyArI6Ww02Ill7b6Bx5itiKlHD62siAFLIc",
+  "AIzaSyBgYVR81UeL7kYouxcwzUL75YOBafgNphU" 
+];
 
 module.exports.config = {
   name: "weather",
-  version: "1.0.3",
+  version: "1.3.0", 
   hasPermission: 0,
-  credits: "Akira",
-  description: "Tra cứu thông tin thời tiết và thông báo tự động",
+  credits: "Akira, HNT",
+  description: "Tra cứu thông tin thời tiết và thông báo tự động với mô tả từ AI",
   usePrefix: true,
   commandCategory: "utilities",
   usages: "weather [tên thành phố]",
   cooldowns: 5,
-  dependencies: {}
+  dependencies: {
+    "@google/generative-ai": ""
+  }
 };
 
 const apiKey = "1230a8fdc6457603234c68ead5f3f967";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
-
-const cities = [
-    "Hà Nội", "Hồ Chí Minh", "Đà Nẵng", "Cần Thơ", "Huế", "Nha Trang", "Thái Nguyên"
-];
-
-function getRandomCities(num = 1) {
-    const shuffled = cities.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, num);
-}
 
 async function getWeather(cityName) {
   const params = {
@@ -43,77 +49,71 @@ async function getWeather(cityName) {
   }
 }
 
-async function notifyWeather(api) {
-    if (!api || !api.sendMessage) {
-        console.error('Đối tượng api không hợp lệ hoặc không có phương thức sendMessage.');
-        return;
-    }
+async function guessCityName(cityName) {
+  let guessedCityName = cityName;
 
-    console.log('Bắt đầu thông báo thời tiết...');
-    const randomCities = getRandomCities(1);
-    
-    let threadIDs = [];
+  for (let i = 0; i < API_KEYS.length; i++) {
+    const genAI = new GoogleGenerativeAI(API_KEYS[i]);
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+
+    const prompt = `
+      Đoán tên thành phố hoặc khu vực chính xác dựa trên đầu vào: "${cityName}".
+      Đề xuất tên chính xác hoặc gần đúng.
+    `;
+
     try {
-        const data = await fs.readFile('module/commands/noti/groups.json', 'utf8');
-        const jsonData = JSON.parse(data);
-        threadIDs = jsonData.map(entry => entry.threadID);
+      const result = await model.generateContent([{ text: prompt }]);
+      guessedCityName = result.response.text().trim();
+      break; 
     } catch (error) {
-        console.error("Lỗi khi đọc tệp groups.json:", error.message);
-        return;
+      console.error(`Lỗi khi sử dụng API Gemini với API key thứ ${i + 1}:`, error);
+      if (i === API_KEYS.length - 1) {
+        console.warn("Tất cả API keys đã chết, quay lại sử dụng API gốc.");
+        return null;
+      }
     }
-    
-    for (const city of randomCities) {
-        try {
-            console.log(`Dịch tên thành phố: ${city}`);
-            let translatedCityName = await translate(city, { to: "en" });
-            if (typeof translatedCityName === 'object' && translatedCityName.text) {
-                translatedCityName = translatedCityName.text;
-            }
-            console.log(`Tên thành phố đã dịch: ${translatedCityName}`);
-            const weatherData = await getWeather(translatedCityName);
+  }
 
-            if (!weatherData || !weatherData.weather || !weatherData.main || !weatherData.wind) {
-                console.log('Dữ liệu thời tiết không đầy đủ.');
-                continue;
-            }
+  return guessedCityName;
+}
 
-            const weatherDescription = weatherData.weather[0]?.description || "Không có mô tả";
-            const temp = weatherData.main?.temp || "Không có dữ liệu";
-            const tempMin = weatherData.main?.temp_min || "Không có dữ liệu";
-            const tempMax = weatherData.main?.temp_max || "Không có dữ liệu";
-            const humidity = weatherData.main?.humidity || "Không có dữ liệu";
-            const windSpeed = weatherData.wind?.speed || "Không có dữ liệu";
+async function generateWeatherDescription(weatherData) {
+  let description = '';
 
-            const message = `Thời tiết tại ${weatherData.name}:\n🌤️ Mô tả: ${weatherDescription}\n🌡️ Nhiệt độ: ${temp}°C\n🔽 Nhiệt độ tối thiểu: ${tempMin}°C\n🔼 Nhiệt độ tối đa: ${tempMax}°C\n💧 Độ ẩm: ${humidity}%\n💨 Tốc độ gió: ${windSpeed} m/s`;
+  for (let i = 0; i < API_KEYS.length; i++) {
+    const genAI = new GoogleGenerativeAI(API_KEYS[i]);
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
-            if (threadIDs.length === 0) {
-                console.log('Danh sách Thread ID không hợp lệ hoặc trống.');
-                continue;
-            }
+    const shortPrompt = `
+      Hãy tạo một đoạn mô tả ngắn gọn và hấp dẫn về thời tiết hiện tại tại ${weatherData.name}, với các thông tin:
+      - Mô tả thời tiết: ${weatherData.weather[0]?.description || "Không có mô tả"}
+      - Nhiệt độ: ${weatherData.main?.temp}°C
+      - Độ ẩm: ${weatherData.main?.humidity}%
+      - Tốc độ gió: ${weatherData.wind?.speed} m/s
+      
+      Dùng phong cách vui vẻ, thêm emoji và viết như một người dẫn chương trình thời tiết.
+    `;
 
-            console.log(`Gửi thông báo đến các Thread ID: ${threadIDs}`);
-            threadIDs.forEach(threadID => {
-                if (threadID) {
-                    try {
-                        api.sendMessage(message, threadID);
-                    } catch (sendError) {
-                        console.error(`Lỗi khi gửi thông báo đến Thread ID ${threadID}:`, sendError.message);
-                    }
-                } else {
-                    console.log('Thread ID không hợp lệ:', threadID);
-                }
-            });
-
-        } catch (error) {
-            console.error(`Lỗi khi lấy thông tin thời tiết cho ${city}:`, error.message);
-        }
+    try {
+      const result = await model.generateContent([{ text: shortPrompt }]);
+      description = result.response.text();
+      break;
+    } catch (error) {
+      console.error(`Lỗi khi sử dụng API Gemini với API key thứ ${i + 1}:`, error);
+      if (i === API_KEYS.length - 1) {
+        console.warn("Tất cả API keys đã chết, quay lại sử dụng API gốc.");
+        return `Thời tiết tại ${weatherData.name} hiện tại không thể mô tả chính xác bằng AI, xin vui lòng thử lại sau.`;
+      }
     }
+  }
+
+  return description;
 }
 
 module.exports.run = async function({ api, event, args }) {
   const cityName = args.join(" ");
   if (!cityName) {
-    return api.sendMessage("Bạn chưa nhập tên thành phố/khu vực cần tra cứu thời tiết.", event.threadID);
+    return api.sendMessage("🌍 Bạn chưa nhập tên thành phố/khu vực cần tra cứu thời tiết.", event.threadID);
   }
 
   try {
@@ -129,28 +129,28 @@ module.exports.run = async function({ api, event, args }) {
       }
     }
 
-    if (typeof translatedCityName !== 'string') {
-      return api.sendMessage("Tên thành phố không thể dịch được. Vui lòng kiểm tra lại.", event.threadID);
+    let weatherData;
+    try {
+      weatherData = await getWeather(translatedCityName);
+    } catch (error) {
+      console.warn("Không tìm thấy thành phố, đang đoán lại tên...");
+      const guessedCityName = await guessCityName(translatedCityName);
+      if (guessedCityName) {
+        weatherData = await getWeather(guessedCityName);
+      } else {
+        throw new Error("Không thể đoán được tên thành phố, quay lại API gốc.");
+      }
     }
-
-    const weatherData = await getWeather(translatedCityName);
 
     if (!weatherData || !weatherData.weather || !weatherData.main || !weatherData.wind) {
-      return api.sendMessage("Không thể lấy dữ liệu thời tiết. Vui lòng thử lại sau.", event.threadID);
+      return api.sendMessage("❗ Không thể lấy dữ liệu thời tiết. Vui lòng thử lại sau.", event.threadID);
     }
 
-    const weatherDescription = weatherData.weather[0]?.description || "Không có mô tả";
-    const temp = weatherData.main?.temp || "Không có dữ liệu";
-    const tempMin = weatherData.main?.temp_min || "Không có dữ liệu";
-    const tempMax = weatherData.main?.temp_max || "Không có dữ liệu";
-    const humidity = weatherData.main?.humidity || "Không có dữ liệu";
-    const windSpeed = weatherData.wind?.speed || "Không có dữ liệu";
+    const weatherDescription = await generateWeatherDescription(weatherData);
 
-    const message = `Thời tiết tại ${weatherData.name}:\n🌤️ Mô tả: ${weatherDescription}\n🌡️ Nhiệt độ: ${temp}°C\n🔽 Nhiệt độ tối thiểu: ${tempMin}°C\n🔼 Nhiệt độ tối đa: ${tempMax}°C\n💧 Độ ẩm: ${humidity}%\n💨 Tốc độ gió: ${windSpeed} m/s`;
-
-    api.sendMessage(message, event.threadID);
+    api.sendMessage(weatherDescription, event.threadID);
   } catch (error) {
-    api.sendMessage("Có lỗi xảy ra khi lấy thông tin thời tiết. Vui lòng thử lại sau.", event.threadID);
+    api.sendMessage("⚠️ Có lỗi xảy ra khi lấy thông tin thời tiết. Vui lòng thử lại sau.", event.threadID);
   }
 };
 
@@ -160,7 +160,7 @@ module.exports.onLoad = function({ api }) {
   const localTime = new Date(now.getTime() + vietnamTimezoneOffset);
   
   const minutesUntilNextHour = 60 - localTime.getMinutes();
-  const msUntilNextHour = (minutesUntilNextHour * 60 + (60 - localTime.getSeconds())) * 1000; 
+  const msUntilNextHour = (minutesUntilNextHour * 360 + (360 - localTime.getSeconds())) * 1000; 
 
   console.log(`Đang chờ ${msUntilNextHour} ms để thông báo vào giờ tiếp theo.`);
 
@@ -170,6 +170,6 @@ module.exports.onLoad = function({ api }) {
       setInterval(() => {
           console.log('Gửi thông báo thời tiết mỗi giờ.');
           notifyWeather(api); 
-      }, 60 * 60 * 1000);
+      }, 360 * 60 * 1000);
   }, msUntilNextHour);
 };

@@ -16,13 +16,13 @@ async function readSurveyQuestions() {
 
 module.exports.config = {
   name: "tk",
-  version: "1.0.1",
+  version: "1.0.2",
   hasPermission: 2,
   credits: "HNT",
-  description: "Thống kê kết quả khảo sát với kết quả chi tiết và trực quan",
+  description: "Thống kê kết quả khảo sát với kết quả chi tiết và trực quan, bao gồm cả lý do.",
   commandCategory: "utilities",
   usePrefix: true,
-  usages: "thongkekhaosat - Thống kê kết quả khảo sát chi tiết và trực quan",
+  usages: "thongkekhaosat - Thống kê kết quả khảo sát chi tiết và trực quan, bao gồm cả lý do.",
   cooldowns: 5
 };
 
@@ -30,42 +30,57 @@ module.exports.run = async ({ api, event }) => {
   const { threadID, messageID } = event;
 
   try {
-
     const data = await fs.readJson(dataFilePath, { default: {} });
     const surveyQuestions = await readSurveyQuestions();
 
-    const questionStats = surveyQuestions.map(() => ({
-      count: {},
-      total: 0
-    }));
-
-
-    Object.values(data).forEach(userData => {
-      if (userData.answers && Array.isArray(userData.answers)) {
-        userData.answers.forEach((answer, index) => {
-          if (answer) {
-            const answerText = answer.trim().toLowerCase();
-            if (!questionStats[index].count[answerText]) {
-              questionStats[index].count[answerText] = 0;
-            }
-            questionStats[index].count[answerText]++;
-            questionStats[index].total++;
-          }
-        });
-      } else {
-        console.warn(`Dữ liệu không hợp lệ cho người dùng: ${JSON.stringify(userData)}`);
-      }
-    });
-
+    if (surveyQuestions.length === 0) {
+      return api.sendMessage("Không có câu hỏi khảo sát nào để thống kê.", threadID, messageID);
+    }
 
     let resultMessage = "===📊 THỐNG KÊ KẾT QUẢ KHẢO SÁT ===\n\n";
-    surveyQuestions.forEach((question, index) => {
+
+    surveyQuestions.forEach((question, questionIndex) => {
+      const stats = {
+        count: {},
+        total: 0,
+        reasons: {}
+      };
+
+      Object.values(data).forEach(userData => {
+        if (userData.answers && Array.isArray(userData.answers)) {
+          const answer = userData.answers[questionIndex];
+          if (answer && answer.rating !== undefined) {
+            const rating = answer.rating;
+            if (!stats.count[rating]) {
+              stats.count[rating] = 0;
+              stats.reasons[rating] = [];
+            }
+            stats.count[rating]++;
+            stats.total++;
+
+            if (answer.reason) {
+              stats.reasons[rating].push(answer.reason);
+            }
+          }
+        }
+      });
+
       resultMessage += `\n🔹 ${question}\n`;
 
-      const stats = questionStats[index];
-      for (const [answerText, count] of Object.entries(stats.count)) {
+      for (const [rating, count] of Object.entries(stats.count)) {
         const percentage = stats.total ? ((count / stats.total) * 100).toFixed(2) : 0;
-        resultMessage += `  "${answerText}": ${count} (${percentage}%)\n`;
+        resultMessage += `  "${rating}": ${count} (${percentage}%)\n`;
+
+        if (stats.reasons[rating].length > 0) {
+          resultMessage += `    Lý do:\n`;
+          stats.reasons[rating].forEach((reason, index) => {
+            resultMessage += `      ${index + 1}. ${reason}\n`;
+          });
+        }
+      }
+
+      if (stats.total === 0) {
+        resultMessage += "  Không có dữ liệu cho câu hỏi này.\n";
       }
 
       resultMessage += "---------------------------------------";

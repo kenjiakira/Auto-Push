@@ -123,7 +123,7 @@ module.exports = function({ api, models, Users, Threads, Currencies }) {
 
     if (command && command.config && command.config.hasPermission && command.config.hasPermission > permssion) {
       return api.sendMessage(
-        global.getText("handleCommand", "permissionNotEnough", command.config.name) || "Lệnh đang cập nhật hoặc chỉ ADMIN mới có thể sử dụng lệnh này",
+        global.getText("handleCommand", "permissionNotEnough", command.config.name) || "Quyền hạn không đủ để sử dụng lệnh này.",
         threadIDStr,
         messageID
       );

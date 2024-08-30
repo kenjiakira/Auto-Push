@@ -36,5 +36,3 @@ async function startBot(index) {
     logger(`An error occurred: ${JSON.stringify(error)}`, "START");
   });
 }
-
-// THIZ BOT WAS MADE BY ME(CATALIZCS) AND MY BROTHER SPERMLORD - DO NOT STEAL MY CODE || THIZ FILE WAS MODIFIED BY ME(@HNT) - DO NOT STEAL MY CREDITS (つ ͡ ° ͜ʖ ͡° )つ ✄ ╰⋃╯

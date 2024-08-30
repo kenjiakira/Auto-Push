@@ -2,14 +2,13 @@ const moment = require('moment-timezone');
 const fs = require('fs');
 const request = require('request');
 const path = require('path');
-const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
 
-const rewardMin = 1000;
-const rewardMax = 5000;
+const rewardMin = 2000;
+const rewardMax = 7000;
 
 module.exports.config = {
     name: "daily",
-    version: "1.0.1",
+    version: "1.0.2",
     hasPermission: 0,
     credits: "Hoàng Ngọc Từ",
     description: "Nhận xu mỗi ngày",
@@ -20,26 +19,27 @@ module.exports.config = {
 };
 
 const getLastDailyClaim = async (userID, Currencies) => {
-    const userData = await Currencies.getData(userID);
-    return userData.lastDailyClaim || 0;
+    try {
+        const userData = await Currencies.getData(userID);
+        return userData?.lastDailyClaim || 0;
+    } catch (error) {
+        console.error(`Lỗi khi lấy dữ liệu người dùng: ${error.message}`);
+        return 0;
+    }
 };
 
 const setLastDailyClaim = async (userID, Currencies) => {
-    await Currencies.setData(userID, { lastDailyClaim: Date.now() });
+    try {
+        await Currencies.setData(userID, { lastDailyClaim: Date.now() });
+    } catch (error) {
+        console.error(`Lỗi khi thiết lập dữ liệu người dùng: ${error.message}`);
+    }
 };
 
 const getRandomReward = () => Math.floor(Math.random() * (rewardMax - rewardMin + 1)) + rewardMin;
 
 module.exports.run = async ({ api, event, Currencies, Users }) => {
     const { senderID, threadID } = event;
-
-    if (!(await hasID(senderID))) {
-        return api.sendMessage("⚡ Bạn cần có ID để thực hiện yêu cầu này!\ngõ .id để tạo ID", threadID, event.messageID);
-    }
-
-    if (await isBanned(senderID)) {
-        return api.sendMessage("⚡ Bạn đã bị cấm và không thể thực hiện yêu cầu này!", threadID, event.messageID);
-    }
 
     const lastClaim = await getLastDailyClaim(senderID, Currencies);
     const now = moment().tz('Asia/Ho_Chi_Minh').startOf('day').valueOf();
@@ -49,18 +49,41 @@ module.exports.run = async ({ api, event, Currencies, Users }) => {
     }
 
     const reward = getRandomReward();
-    await Currencies.increaseMoney(senderID, reward);
+
+    let userData = await Currencies.getData(senderID);
+    if (!userData || typeof userData.money === 'undefined') {
+    
+        await Currencies.setData(senderID, { money: 0 });
+        userData = await Currencies.getData(senderID);
+    }
+
+    try {
+        await Currencies.increaseMoney(senderID, reward);
+    } catch (error) {
+        console.error(`Lỗi khi tăng tiền cho người dùng: ${error.message}`);
+        return api.sendMessage("Có lỗi xảy ra khi nhận thưởng, vui lòng thử lại sau.", threadID, event.messageID);
+    }
+
     await setLastDailyClaim(senderID, Currencies);
 
-    const userData = await Users.getData(senderID);
-    const userName = userData.name || "Người dùng";
+    const userName = (await Users.getData(senderID))?.name || "Người dùng";
 
     const gifUrl = 'https://imgur.com/L3o6ZyM.gif';
     const gifPath = path.join(__dirname, 'cache', 'daily_reward.gif');
-    request(gifUrl).pipe(fs.createWriteStream(gifPath)).on('close', () => {
-        api.sendMessage({
-            body: `🎉 Chúc mừng ${userName}! Bạn đã nhận được ${reward} xu hôm nay.\nHãy quay lại vào ngày mai để nhận thưởng tiếp nhé!`,
-            attachment: fs.createReadStream(gifPath)
-        }, threadID, () => fs.unlinkSync(gifPath), event.messageID);
-    });
+
+    if (!fs.existsSync(gifPath)) {
+        request(gifUrl).pipe(fs.createWriteStream(gifPath)).on('close', () => {
+            sendRewardMessage(api, threadID, userName, reward, gifPath, event.messageID);
+        });
+    } else {
+        sendRewardMessage(api, threadID, userName, reward, gifPath, event.messageID);
+    }
+};
+
+const sendRewardMessage = (api, threadID, userName, reward, gifPath, messageID) => {
+    api.sendMessage({
+        body: `🎉 Chúc mừng ${userName}! Bạn đã nhận được ${reward} xu hôm nay.\nHãy quay lại vào ngày mai để nhận thưởng tiếp nhé!`,
+        attachment: fs.createReadStream(gifPath)
+    }, threadID, () => {
+    }, messageID);
 };

@@ -3,7 +3,7 @@ const path = require('path');
 const axios = require('axios');
 
 const cost = 10000;
-const imagePath = path.join(__dirname, 'json', 'imgur_urls.json');
+const imagePath = path.join(__dirname, 'json', 'leakonly.json');
 const groupsPath = path.join(__dirname, 'noti','groups.json');
 
 function readOrCreateData(filePath) {
