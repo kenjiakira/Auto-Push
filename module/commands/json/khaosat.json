@@ -236,5 +236,16 @@
     "startTime": 1724564318111,
     "agreed": true,
     "currentQuestionID": "mid.$gAB4WhdgWwmSXuVD3U2RiAt0khMfx"
+  },
+  "100093208808025": {
+    "answers": [
+      {
+        "rating": 1,
+        "reason": "khng bic na hong c nh"
+      }
+    ],
+    "startTime": 1725018937736,
+    "agreed": true,
+    "currentQuestionID": null
   }
 }

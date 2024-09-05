@@ -67,18 +67,8 @@ const combineImages = async (imagePaths) => {
   }
 };
 
-const { hasID, isBanned } = require(path.join(__dirname, '..', '..', 'module', 'commands', 'cache', 'accessControl.js'));
-
 module.exports.run = async function({ api, event, args, Currencies }) {
   const { threadID, messageID, senderID } = event;
-
-  if (!(await hasID(senderID))) {
-    return api.sendMessage("⚡ Bạn cần có ID để chơi trò này!\ngõ .id để tạo ID", threadID, messageID);
-  }
-
-  if (await isBanned(senderID)) {
-    return api.sendMessage("⚡ Bạn đã bị cấm và không thể chơi trò này!", threadID, messageID);
-  }
 
   if (playingUsers.has(senderID)) {
     return api.sendMessage("⏳ Bạn phải chờ 15 giây trước khi chơi lại.", threadID, messageID);

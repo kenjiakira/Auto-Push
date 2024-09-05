@@ -1,0 +1,22 @@
+[
+    {
+        "phien": 841,
+        "choice": "xỉu",
+        "betAmount": 1000
+    },
+    {
+        "phien": 862,
+        "choice": "xỉu",
+        "betAmount": 1000
+    },
+    {
+        "phien": 876,
+        "choice": "tài",
+        "betAmount": 10000
+    },
+    {
+        "phien": 877,
+        "choice": "tài",
+        "betAmount": 30000
+    }
+]

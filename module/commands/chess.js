@@ -107,14 +107,10 @@ const send_chess = async (o, chess, send, _ = o.handleReply || {}, sid = o.event
         fs.unlinkSync(imagePath); 
         if (chess.isCheckmate()) {
           send(`Checkmate! ${name(uid)} thắng cuộc`);
-        } else if (chess.isStalemate()) {
-          send(`Stalemate! Trò chơi kết thúc với kết quả hòa!`);
-        } else if (chess.isInsufficientMaterial()) {
-          send(`Insufficient material! Trò chơi kết thúc với kết quả hòa!`);
-        } else if (chess.isThreefoldRepetition()) {
-          send(`Threefold repetition! Trò chơi kết thúc với kết quả hòa!`);
-        } else if (chess.isDraw()) {
-          send(`Trò chơi kết thúc với kết quả hòa!`);
+          fs.unlinkSync(path.join(__dirname, 'gameStates', `${o.event.threadID}.json`)); 
+        } else if (chess.isStalemate() || chess.isDraw() || chess.isInsufficientMaterial() || chess.isThreefoldRepetition()) {
+          send('Trò chơi kết thúc với kết quả hòa!');
+          fs.unlinkSync(path.join(__dirname, 'gameStates', `${o.event.threadID}.json`)); 
         } else {
           res.name = exports.config.name;
           res.o = o;
@@ -133,7 +129,7 @@ const send_chess = async (o, chess, send, _ = o.handleReply || {}, sid = o.event
 
 exports.config = {
   name: 'chess',
-  version: '0.0.1',
+  version: '0.0.2',
   hasPermission: 0,
   credits: 'DC-Nam Fix HNT',
   description: 'chơi cờ vua',
@@ -149,7 +145,7 @@ exports.run = o => {
 
   if (!competitor_id) return send(`Hãy tag ai đó để làm đối thủ của bạn`);
 
-  const gameID = o.event.threadID;
+  const gameID = `${o.event.threadID}_${competitor_id}_${o.event.senderID}`; 
   let chess = loadGameState(gameID);
 
   if (!chess) {
@@ -171,7 +167,8 @@ exports.handleReply = o => {
 
   try {
     chess.move((o.event.body || '').toLowerCase());
-    saveGameState(o.event.threadID, chess); 
+    const gameID = `${o.event.threadID}_${competitor_id}_${o.event.senderID}`; 
+    saveGameState(gameID, chess);
     send_chess(o, chess, send);
   } catch (e) {
     return send(e.toString());

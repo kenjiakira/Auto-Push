@@ -340,5 +340,14 @@
     "address": "123 Đường ABC",
     "issuedDate": "2024-08-27T03:31:39.513Z",
     "status": "Bình Thường"
+  },
+  "100037364924671": {
+    "uid": "100037364924671",
+    "name": "Hoai An",
+    "dob": "01/01/2000",
+    "gender": "Nam",
+    "address": "123 đường abc",
+    "issuedDate": "2024-09-03T11:09:00.396Z",
+    "status": "Bình Thường"
   }
 }

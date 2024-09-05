@@ -41,8 +41,9 @@ module.exports.handleEvent = async ({ event, api, Users }) => {
         let textOptions = ["ngày tuyệt vời", "buổi tối vui vẻ", "một ngày thật đáng yêu", "một ngày tuyệt diệu", "buổi chiều năng động", "buổi sáng tràn đầy năng lượng"];
         let text = textOptions[Math.floor(Math.random() * textOptions.length)];
         let session = (
-            hours >= 5 && hours < 12 ? "buổi sáng" :
-            hours >= 12 && hours < 17 ? "buổi chiều" :
+            hours >= 5 && hours < 10 ? "buổi sáng" :
+            hours >= 10 && hours < 13 ? "buổi trưa" :
+            hours >= 13 && hours < 17 ? "buổi chiều" :
             hours >= 17 && hours < 21 ? "buổi tối" : 
             hours >= 21 || hours < 5 ? "buổi đêm" : 
             "không rõ"
