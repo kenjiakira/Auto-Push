@@ -1,0 +1,62 @@
+[
+    {
+        "phien": 1,
+        "choice": "xỉu",
+        "betAmount": 500000000000
+    },
+    {
+        "phien": 1,
+        "choice": "xỉu",
+        "betAmount": 500000000000
+    },
+    {
+        "phien": 2,
+        "choice": "xỉu",
+        "betAmount": 500000000000
+    },
+    {
+        "phien": 7,
+        "choice": "xỉu",
+        "betAmount": 500000000000
+    },
+    {
+        "phien": 8,
+        "choice": "xỉu",
+        "betAmount": 500000000000
+    },
+    {
+        "phien": 10,
+        "choice": "xỉu",
+        "betAmount": 11000000000000
+    },
+    {
+        "phien": 11,
+        "choice": "xỉu",
+        "betAmount": 12000000000000
+    },
+    {
+        "phien": 12,
+        "choice": "xỉu",
+        "betAmount": 12000000000000
+    },
+    {
+        "phien": 12,
+        "choice": "xỉu",
+        "betAmount": 12000000000000
+    },
+    {
+        "phien": 13,
+        "choice": "tài",
+        "betAmount": 12000000000000
+    },
+    {
+        "phien": 14,
+        "choice": "xỉu",
+        "betAmount": 12000000000000
+    },
+    {
+        "phien": 104,
+        "choice": "xỉu",
+        "betAmount": 7000000000000
+    }
+]

@@ -12,18 +12,17 @@ function formatNumber(number) {
   return `${formattedIntegerPart},${decimalPart}`;
 }
 
-//async function getUserName(api, userID) {
-//  try {
- //   const userInfo = await api.getUserInfo(userID);
- //   return userInfo[userID].name;
- // } catch (error) {
- //   console.error(error);
- //   return "người dùng";
-  //}
-//}
+async function getUserName(api, userID) {
+  try {
+    return userInfo[userID].name;
+  } catch (error) {
+    console.error(error);
+    return "người dùng";
+  }
+}
 
-//async function createBalanceImage(userName, balance, userID) {
-  async function createBalanceImage( balance, userID) {
+async function createBalanceImage(userName, balance, userID) {
+ // async function createBalanceImage( balance, userID) {
   const width = 800;
   const height = 200;
   const canvas = createCanvas(width, height);
@@ -40,13 +39,13 @@ function formatNumber(number) {
     ctx.shadowOffsetX = 5;
     ctx.shadowOffsetY = 5;
 
-  //  ctx.font = "bold 35px Sans";
-  //  ctx.fillStyle = "#ffffff";
-  //  const userNameUpper = userName.toUpperCase();
-  //  const userNameText = userNameUpper;
-  //  const userNameWidth = ctx.measureText(userNameText).width;
-  // const userNameX = (width - userNameWidth) / 2;
-  //  ctx.fillText(userNameText, userNameX, 80);
+    ctx.font = "bold 35px Sans";
+    ctx.fillStyle = "#ffffff";
+    const userNameUpper = userName.toUpperCase();
+    const userNameText = userNameUpper;
+    const userNameWidth = ctx.measureText(userNameText).width;
+   const userNameX = (width - userNameWidth) / 2;
+    ctx.fillText(userNameText, userNameX, 80);
 
     ctx.font = "bold 45px Sans";
     ctx.fillStyle = "#ffd700";
@@ -95,10 +94,10 @@ module.exports.run = async function ({ api, event, args, Currencies }) {
     const userData = await Currencies.getData(userID);
     const balance = userData && userData.money ? userData.money : 0;
     const formattedBalance = formatNumber(balance);
- //   const userName = await getUserName(api, userID);
+    const userName = await getUserName(api, userID);
 
-   // const imagePath = await createBalanceImage(userName, formattedBalance, userID);
-    const imagePath = await createBalanceImage( formattedBalance, userID);
+    const imagePath = await createBalanceImage(userName, formattedBalance, userID);
+
 
     return api.sendMessage({
       attachment: fs.createReadStream(imagePath)

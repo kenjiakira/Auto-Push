@@ -1,6 +1,1099 @@
 [
     {
-        "phien": 275
+        "phien": 2,
+        "result": "tài"
+    },
+    {
+        "phien": 3,
+        "result": "xỉu"
+    },
+    {
+        "phien": 4,
+        "result": "xỉu"
+    },
+    {
+        "phien": 5,
+        "result": "tài"
+    },
+    {
+        "phien": 6,
+        "result": "xỉu"
+    },
+    {
+        "phien": 7,
+        "result": "tài"
+    },
+    {
+        "phien": 8,
+        "result": "tài"
+    },
+    {
+        "phien": 9,
+        "result": "tài"
+    },
+    {
+        "phien": 10,
+        "result": "tài"
+    },
+    {
+        "phien": 11,
+        "result": "tài"
+    },
+    {
+        "phien": 12,
+        "result": "tài"
+    },
+    {
+        "phien": 13,
+        "result": "tài"
+    },
+    {
+        "phien": 14,
+        "result": "xỉu"
+    },
+    {
+        "phien": 15,
+        "result": "xỉu"
+    },
+    {
+        "phien": 16,
+        "result": "xỉu"
+    },
+    {
+        "phien": 17,
+        "result": "xỉu"
+    },
+    {
+        "phien": 18,
+        "result": "xỉu"
+    },
+    {
+        "phien": 19,
+        "result": "xỉu"
+    },
+    {
+        "phien": 20,
+        "result": "xỉu"
+    },
+    {
+        "phien": 21,
+        "result": "tài"
+    },
+    {
+        "phien": 22,
+        "result": "xỉu"
+    },
+    {
+        "phien": 23,
+        "result": "xỉu"
+    },
+    {
+        "phien": 24,
+        "result": "xỉu"
+    },
+    {
+        "phien": 25,
+        "result": "xỉu"
+    },
+    {
+        "phien": 26,
+        "result": "tài"
+    },
+    {
+        "phien": 27,
+        "result": "tài"
+    },
+    {
+        "phien": 28,
+        "result": "xỉu"
+    },
+    {
+        "phien": 29,
+        "result": "xỉu"
+    },
+    {
+        "phien": 30,
+        "result": "xỉu"
+    },
+    {
+        "phien": 31,
+        "result": "tài"
+    },
+    {
+        "phien": 32,
+        "result": "xỉu"
+    },
+    {
+        "phien": 33,
+        "result": "tài"
+    },
+    {
+        "phien": 34,
+        "result": "xỉu"
+    },
+    {
+        "phien": 35,
+        "result": "xỉu"
+    },
+    {
+        "phien": 36,
+        "result": "xỉu"
+    },
+    {
+        "phien": 37,
+        "result": "tài"
+    },
+    {
+        "phien": 38,
+        "result": "tài"
+    },
+    {
+        "phien": 39,
+        "result": "tài"
+    },
+    {
+        "phien": 40,
+        "result": "xỉu"
+    },
+    {
+        "phien": 41,
+        "result": "tài"
+    },
+    {
+        "phien": 42,
+        "result": "xỉu"
+    },
+    {
+        "phien": 43,
+        "result": "tài"
+    },
+    {
+        "phien": 44,
+        "result": "xỉu"
+    },
+    {
+        "phien": 45,
+        "result": "tài"
+    },
+    {
+        "phien": 46,
+        "result": "xỉu"
+    },
+    {
+        "phien": 47,
+        "result": "tài"
+    },
+    {
+        "phien": 48,
+        "result": "tài"
+    },
+    {
+        "phien": 49,
+        "result": "tài"
+    },
+    {
+        "phien": 50,
+        "result": "tài"
+    },
+    {
+        "phien": 51,
+        "result": "xỉu"
+    },
+    {
+        "phien": 52,
+        "result": "tài"
+    },
+    {
+        "phien": 53,
+        "result": "xỉu"
+    },
+    {
+        "phien": 54,
+        "result": "tài"
+    },
+    {
+        "phien": 55,
+        "result": "tài"
+    },
+    {
+        "phien": 56,
+        "result": "xỉu"
+    },
+    {
+        "phien": 57,
+        "result": "tài"
+    },
+    {
+        "phien": 58,
+        "result": "xỉu"
+    },
+    {
+        "phien": 59,
+        "result": "tài"
+    },
+    {
+        "phien": 60,
+        "result": "tài"
+    },
+    {
+        "phien": 61,
+        "result": "tài"
+    },
+    {
+        "phien": 62,
+        "result": "xỉu"
+    },
+    {
+        "phien": 63,
+        "result": "tài"
+    },
+    {
+        "phien": 64,
+        "result": "tài"
+    },
+    {
+        "phien": 65,
+        "result": "xỉu"
+    },
+    {
+        "phien": 66,
+        "result": "tài"
+    },
+    {
+        "phien": 67,
+        "result": "xỉu"
+    },
+    {
+        "phien": 68,
+        "result": "tài"
+    },
+    {
+        "phien": 69,
+        "result": "tài"
+    },
+    {
+        "phien": 70,
+        "result": "tài"
+    },
+    {
+        "phien": 71,
+        "result": "tài"
+    },
+    {
+        "phien": 72,
+        "result": "tài"
+    },
+    {
+        "phien": 73,
+        "result": "xỉu"
+    },
+    {
+        "phien": 74,
+        "result": "tài"
+    },
+    {
+        "phien": 75,
+        "result": "tài"
+    },
+    {
+        "phien": 76,
+        "result": "tài"
+    },
+    {
+        "phien": 77,
+        "result": "tài"
+    },
+    {
+        "phien": 78,
+        "result": "tài"
+    },
+    {
+        "phien": 79,
+        "result": "tài"
+    },
+    {
+        "phien": 80,
+        "result": "xỉu"
+    },
+    {
+        "phien": 81,
+        "result": "tài"
+    },
+    {
+        "phien": 82,
+        "result": "tài"
+    },
+    {
+        "phien": 83,
+        "result": "tài"
+    },
+    {
+        "phien": 84,
+        "result": "xỉu"
+    },
+    {
+        "phien": 85,
+        "result": "xỉu"
+    },
+    {
+        "phien": 86,
+        "result": "tài"
+    },
+    {
+        "phien": 87,
+        "result": "tài"
+    },
+    {
+        "phien": 88,
+        "result": "xỉu"
+    },
+    {
+        "phien": 89,
+        "result": "xỉu"
+    },
+    {
+        "phien": 90,
+        "result": "xỉu"
+    },
+    {
+        "phien": 91,
+        "result": "xỉu"
+    },
+    {
+        "phien": 92,
+        "result": "tài"
+    },
+    {
+        "phien": 93,
+        "result": "xỉu"
+    },
+    {
+        "phien": 94,
+        "result": "xỉu"
+    },
+    {
+        "phien": 95,
+        "result": "xỉu"
+    },
+    {
+        "phien": 96,
+        "result": "xỉu"
+    },
+    {
+        "phien": 97,
+        "result": "xỉu"
+    },
+    {
+        "phien": 98,
+        "result": "tài"
+    },
+    {
+        "phien": 99,
+        "result": "tài"
+    },
+    {
+        "phien": 100,
+        "result": "xỉu"
+    },
+    {
+        "phien": 101,
+        "result": "tài"
+    },
+    {
+        "phien": 102,
+        "result": "xỉu"
+    },
+    {
+        "phien": 103,
+        "result": "xỉu"
+    },
+    {
+        "phien": 104,
+        "result": "xỉu"
+    },
+    {
+        "phien": 105,
+        "result": "tài"
+    },
+    {
+        "phien": 106,
+        "result": "xỉu"
+    },
+    {
+        "phien": 107,
+        "result": "xỉu"
+    },
+    {
+        "phien": 108,
+        "result": "xỉu"
+    },
+    {
+        "phien": 109,
+        "result": "xỉu"
+    },
+    {
+        "phien": 110,
+        "result": "xỉu"
+    },
+    {
+        "phien": 111,
+        "result": "tài"
+    },
+    {
+        "phien": 112,
+        "result": "tài"
+    },
+    {
+        "phien": 113,
+        "result": "xỉu"
+    },
+    {
+        "phien": 114,
+        "result": "tài"
+    },
+    {
+        "phien": 115,
+        "result": "xỉu"
+    },
+    {
+        "phien": 116,
+        "result": "tài"
+    },
+    {
+        "phien": 117,
+        "result": "xỉu"
+    },
+    {
+        "phien": 118,
+        "result": "xỉu"
+    },
+    {
+        "phien": 119,
+        "result": "xỉu"
+    },
+    {
+        "phien": 120,
+        "result": "tài"
+    },
+    {
+        "phien": 121,
+        "result": "xỉu"
+    },
+    {
+        "phien": 122,
+        "result": "xỉu"
+    },
+    {
+        "phien": 123,
+        "result": "xỉu"
+    },
+    {
+        "phien": 124,
+        "result": "tài"
+    },
+    {
+        "phien": 125,
+        "result": "tài"
+    },
+    {
+        "phien": 126,
+        "result": "xỉu"
+    },
+    {
+        "phien": 127,
+        "result": "xỉu"
+    },
+    {
+        "phien": 128,
+        "result": "xỉu"
+    },
+    {
+        "phien": 129,
+        "result": "xỉu"
+    },
+    {
+        "phien": 130,
+        "result": "xỉu"
+    },
+    {
+        "phien": 131,
+        "result": "xỉu"
+    },
+    {
+        "phien": 132,
+        "result": "xỉu"
+    },
+    {
+        "phien": 133,
+        "result": "xỉu"
+    },
+    {
+        "phien": 134,
+        "result": "xỉu"
+    },
+    {
+        "phien": 135,
+        "result": "xỉu"
+    },
+    {
+        "phien": 136,
+        "result": "tài"
+    },
+    {
+        "phien": 137,
+        "result": "xỉu"
+    },
+    {
+        "phien": 138,
+        "result": "xỉu"
+    },
+    {
+        "phien": 139,
+        "result": "xỉu"
+    },
+    {
+        "phien": 140,
+        "result": "tài"
+    },
+    {
+        "phien": 141,
+        "result": "xỉu"
+    },
+    {
+        "phien": 142,
+        "result": "xỉu"
+    },
+    {
+        "phien": 143,
+        "result": "xỉu"
+    },
+    {
+        "phien": 144,
+        "result": "tài"
+    },
+    {
+        "phien": 145,
+        "result": "xỉu"
+    },
+    {
+        "phien": 146,
+        "result": "xỉu"
+    },
+    {
+        "phien": 147,
+        "result": "xỉu"
+    },
+    {
+        "phien": 148,
+        "result": "xỉu"
+    },
+    {
+        "phien": 149,
+        "result": "tài"
+    },
+    {
+        "phien": 150,
+        "result": "xỉu"
+    },
+    {
+        "phien": 151,
+        "result": "tài"
+    },
+    {
+        "phien": 152,
+        "result": "xỉu"
+    },
+    {
+        "phien": 153,
+        "result": "tài"
+    },
+    {
+        "phien": 154,
+        "result": "tài"
+    },
+    {
+        "phien": 155,
+        "result": "tài"
+    },
+    {
+        "phien": 156,
+        "result": "xỉu"
+    },
+    {
+        "phien": 157,
+        "result": "xỉu"
+    },
+    {
+        "phien": 158,
+        "result": "tài"
+    },
+    {
+        "phien": 159,
+        "result": "xỉu"
+    },
+    {
+        "phien": 160,
+        "result": "xỉu"
+    },
+    {
+        "phien": 161,
+        "result": "tài"
+    },
+    {
+        "phien": 162,
+        "result": "tài"
+    },
+    {
+        "phien": 163,
+        "result": "tài"
+    },
+    {
+        "phien": 164,
+        "result": "tài"
+    },
+    {
+        "phien": 165,
+        "result": "xỉu"
+    },
+    {
+        "phien": 166,
+        "result": "tài"
+    },
+    {
+        "phien": 167,
+        "result": "tài"
+    },
+    {
+        "phien": 168,
+        "result": "tài"
+    },
+    {
+        "phien": 169,
+        "result": "tài"
+    },
+    {
+        "phien": 170,
+        "result": "tài"
+    },
+    {
+        "phien": 171,
+        "result": "xỉu"
+    },
+    {
+        "phien": 172,
+        "result": "tài"
+    },
+    {
+        "phien": 173,
+        "result": "tài"
+    },
+    {
+        "phien": 174,
+        "result": "xỉu"
+    },
+    {
+        "phien": 175,
+        "result": "xỉu"
+    },
+    {
+        "phien": 176,
+        "result": "tài"
+    },
+    {
+        "phien": 177,
+        "result": "xỉu"
+    },
+    {
+        "phien": 178,
+        "result": "tài"
+    },
+    {
+        "phien": 179,
+        "result": "xỉu"
+    },
+    {
+        "phien": 180,
+        "result": "xỉu"
+    },
+    {
+        "phien": 181,
+        "result": "tài"
+    },
+    {
+        "phien": 182,
+        "result": "xỉu"
+    },
+    {
+        "phien": 183,
+        "result": "xỉu"
+    },
+    {
+        "phien": 184,
+        "result": "xỉu"
+    },
+    {
+        "phien": 185,
+        "result": "tài"
+    },
+    {
+        "phien": 186,
+        "result": "tài"
+    },
+    {
+        "phien": 187,
+        "result": "tài"
+    },
+    {
+        "phien": 188,
+        "result": "xỉu"
+    },
+    {
+        "phien": 189,
+        "result": "tài"
+    },
+    {
+        "phien": 190,
+        "result": "tài"
+    },
+    {
+        "phien": 191,
+        "result": "xỉu"
+    },
+    {
+        "phien": 192,
+        "result": "xỉu"
+    },
+    {
+        "phien": 193,
+        "result": "tài"
+    },
+    {
+        "phien": 194,
+        "result": "tài"
+    },
+    {
+        "phien": 195,
+        "result": "xỉu"
+    },
+    {
+        "phien": 196,
+        "result": "xỉu"
+    },
+    {
+        "phien": 197,
+        "result": "xỉu"
+    },
+    {
+        "phien": 198,
+        "result": "tài"
+    },
+    {
+        "phien": 199,
+        "result": "xỉu"
+    },
+    {
+        "phien": 200,
+        "result": "xỉu"
+    },
+    {
+        "phien": 201,
+        "result": "tài"
+    },
+    {
+        "phien": 202,
+        "result": "xỉu"
+    },
+    {
+        "phien": 203,
+        "result": "xỉu"
+    },
+    {
+        "phien": 204,
+        "result": "tài"
+    },
+    {
+        "phien": 205,
+        "result": "tài"
+    },
+    {
+        "phien": 206,
+        "result": "xỉu"
+    },
+    {
+        "phien": 207,
+        "result": "tài"
+    },
+    {
+        "phien": 208,
+        "result": "xỉu"
+    },
+    {
+        "phien": 209,
+        "result": "tài"
+    },
+    {
+        "phien": 210,
+        "result": "tài"
+    },
+    {
+        "phien": 211,
+        "result": "tài"
+    },
+    {
+        "phien": 212,
+        "result": "tài"
+    },
+    {
+        "phien": 213,
+        "result": "xỉu"
+    },
+    {
+        "phien": 214,
+        "result": "xỉu"
+    },
+    {
+        "phien": 215,
+        "result": "xỉu"
+    },
+    {
+        "phien": 216,
+        "result": "xỉu"
+    },
+    {
+        "phien": 217,
+        "result": "tài"
+    },
+    {
+        "phien": 218,
+        "result": "tài"
+    },
+    {
+        "phien": 219,
+        "result": "tài"
+    },
+    {
+        "phien": 220,
+        "result": "tài"
+    },
+    {
+        "phien": 221,
+        "result": "tài"
+    },
+    {
+        "phien": 222,
+        "result": "xỉu"
+    },
+    {
+        "phien": 223,
+        "result": "tài"
+    },
+    {
+        "phien": 224,
+        "result": "tài"
+    },
+    {
+        "phien": 225,
+        "result": "xỉu"
+    },
+    {
+        "phien": 226,
+        "result": "tài"
+    },
+    {
+        "phien": 227,
+        "result": "xỉu"
+    },
+    {
+        "phien": 228,
+        "result": "xỉu"
+    },
+    {
+        "phien": 229,
+        "result": "tài"
+    },
+    {
+        "phien": 230,
+        "result": "xỉu"
+    },
+    {
+        "phien": 231,
+        "result": "xỉu"
+    },
+    {
+        "phien": 232,
+        "result": "xỉu"
+    },
+    {
+        "phien": 233,
+        "result": "tài"
+    },
+    {
+        "phien": 234,
+        "result": "tài"
+    },
+    {
+        "phien": 235,
+        "result": "tài"
+    },
+    {
+        "phien": 236,
+        "result": "xỉu"
+    },
+    {
+        "phien": 237,
+        "result": "xỉu"
+    },
+    {
+        "phien": 238,
+        "result": "tài"
+    },
+    {
+        "phien": 239,
+        "result": "tài"
+    },
+    {
+        "phien": 240,
+        "result": "xỉu"
+    },
+    {
+        "phien": 241,
+        "result": "xỉu"
+    },
+    {
+        "phien": 242,
+        "result": "tài"
+    },
+    {
+        "phien": 243,
+        "result": "xỉu"
+    },
+    {
+        "phien": 244,
+        "result": "tài"
+    },
+    {
+        "phien": 245,
+        "result": "xỉu"
+    },
+    {
+        "phien": 246,
+        "result": "tài"
+    },
+    {
+        "phien": 247,
+        "result": "xỉu"
+    },
+    {
+        "phien": 248,
+        "result": "xỉu"
+    },
+    {
+        "phien": 249,
+        "result": "xỉu"
+    },
+    {
+        "phien": 250,
+        "result": "tài"
+    },
+    {
+        "phien": 251,
+        "result": "xỉu"
+    },
+    {
+        "phien": 252,
+        "result": "tài"
+    },
+    {
+        "phien": 253,
+        "result": "xỉu"
+    },
+    {
+        "phien": 254,
+        "result": "xỉu"
+    },
+    {
+        "phien": 255,
+        "result": "tài"
+    },
+    {
+        "phien": 256,
+        "result": "xỉu"
+    },
+    {
+        "phien": 257,
+        "result": "xỉu"
+    },
+    {
+        "phien": 258,
+        "result": "xỉu"
+    },
+    {
+        "phien": 259,
+        "result": "tài"
+    },
+    {
+        "phien": 260,
+        "result": "xỉu"
+    },
+    {
+        "phien": 261,
+        "result": "xỉu"
+    },
+    {
+        "phien": 262,
+        "result": "tài"
+    },
+    {
+        "phien": 263,
+        "result": "xỉu"
+    },
+    {
+        "phien": 264,
+        "result": "xỉu"
+    },
+    {
+        "phien": 265,
+        "result": "xỉu"
+    },
+    {
+        "phien": 266,
+        "result": "tài"
+    },
+    {
+        "phien": 267,
+        "result": "tài"
+    },
+    {
+        "phien": 268,
+        "result": "tài"
+    },
+    {
+        "phien": 269,
+        "result": "xỉu"
+    },
+    {
+        "phien": 270,
+        "result": "tài"
+    },
+    {
+        "phien": 271,
+        "result": "tài"
+    },
+    {
+        "phien": 272,
+        "result": "xỉu"
+    },
+    {
+        "phien": 273,
+        "result": "tài"
+    },
+    {
+        "phien": 274,
+        "result": "tài"
+    },
+    {
+        "phien": 275,
+        "result": "xỉu"
     },
     {
         "phien": 276,
@@ -8,7 +1101,7 @@
     },
     {
         "phien": 277,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 278,
@@ -20,15 +1113,15 @@
     },
     {
         "phien": 280,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 281,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 282,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 283,
@@ -36,11 +1129,11 @@
     },
     {
         "phien": 284,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 285,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 286,
@@ -48,11 +1141,11 @@
     },
     {
         "phien": 287,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 288,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 289,
@@ -60,7 +1153,7 @@
     },
     {
         "phien": 290,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 291,
@@ -68,11 +1161,11 @@
     },
     {
         "phien": 292,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 293,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 294,
@@ -92,7 +1185,7 @@
     },
     {
         "phien": 298,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 299,
@@ -100,23 +1193,23 @@
     },
     {
         "phien": 300,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 301,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 302,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 303,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 304,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 305,
@@ -136,11 +1229,11 @@
     },
     {
         "phien": 309,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 310,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 311,
@@ -148,7 +1241,7 @@
     },
     {
         "phien": 312,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 313,
@@ -160,15 +1253,15 @@
     },
     {
         "phien": 315,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 316,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 317,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 318,
@@ -176,7 +1269,7 @@
     },
     {
         "phien": 319,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 320,
@@ -188,7 +1281,7 @@
     },
     {
         "phien": 322,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 323,
@@ -200,7 +1293,7 @@
     },
     {
         "phien": 325,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 326,
@@ -212,7 +1305,7 @@
     },
     {
         "phien": 328,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 329,
@@ -220,11 +1313,11 @@
     },
     {
         "phien": 330,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 331,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 332,
@@ -240,15 +1333,15 @@
     },
     {
         "phien": 335,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 336,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 337,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 338,
@@ -256,15 +1349,15 @@
     },
     {
         "phien": 339,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 340,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 341,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 342,
@@ -272,7 +1365,7 @@
     },
     {
         "phien": 343,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 344,
@@ -280,7 +1373,7 @@
     },
     {
         "phien": 345,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 346,
@@ -292,7 +1385,7 @@
     },
     {
         "phien": 348,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 349,
@@ -308,19 +1401,19 @@
     },
     {
         "phien": 352,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 353,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 354,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 355,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 356,
@@ -332,11 +1425,11 @@
     },
     {
         "phien": 358,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 359,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 360,
@@ -344,11 +1437,11 @@
     },
     {
         "phien": 361,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 362,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 363,
@@ -360,11 +1453,11 @@
     },
     {
         "phien": 365,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 366,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 367,
@@ -392,15 +1485,15 @@
     },
     {
         "phien": 373,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 374,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 375,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 376,
@@ -412,11 +1505,11 @@
     },
     {
         "phien": 378,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 379,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 380,
@@ -428,7 +1521,7 @@
     },
     {
         "phien": 382,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 383,
@@ -436,11 +1529,11 @@
     },
     {
         "phien": 384,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 385,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 386,
@@ -448,11 +1541,11 @@
     },
     {
         "phien": 387,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 388,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 389,
@@ -464,15 +1557,15 @@
     },
     {
         "phien": 391,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 392,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 393,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 394,
@@ -496,7 +1589,7 @@
     },
     {
         "phien": 399,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 400,
@@ -508,11 +1601,11 @@
     },
     {
         "phien": 402,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 403,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 404,
@@ -520,7 +1613,7 @@
     },
     {
         "phien": 405,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 406,
@@ -548,11 +1641,11 @@
     },
     {
         "phien": 412,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 413,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 414,
@@ -564,7 +1657,7 @@
     },
     {
         "phien": 416,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 417,
@@ -572,15 +1665,15 @@
     },
     {
         "phien": 418,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 419,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 420,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 421,
@@ -588,15 +1681,15 @@
     },
     {
         "phien": 422,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 423,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 424,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 425,
@@ -604,11 +1697,11 @@
     },
     {
         "phien": 426,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 427,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 428,
@@ -616,19 +1709,19 @@
     },
     {
         "phien": 429,
-        "result": "tài"
-    },
-    {
-        "phien": 430,
         "result": "xỉu"
     },
     {
-        "phien": 431,
+        "phien": 430,
         "result": "tài"
     },
     {
+        "phien": 431,
+        "result": "xỉu"
+    },
+    {
         "phien": 432,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 433,
@@ -636,11 +1729,11 @@
     },
     {
         "phien": 434,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 435,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 436,
@@ -664,11 +1757,11 @@
     },
     {
         "phien": 441,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 442,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 443,
@@ -680,7 +1773,7 @@
     },
     {
         "phien": 445,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 446,
@@ -692,7 +1785,7 @@
     },
     {
         "phien": 448,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 449,
@@ -708,15 +1801,15 @@
     },
     {
         "phien": 452,
-        "result": "tài"
-    },
-    {
-        "phien": 453,
         "result": "xỉu"
     },
     {
-        "phien": 454,
+        "phien": 453,
         "result": "tài"
+    },
+    {
+        "phien": 454,
+        "result": "xỉu"
     },
     {
         "phien": 455,
@@ -736,7 +1829,7 @@
     },
     {
         "phien": 459,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 460,
@@ -748,15 +1841,15 @@
     },
     {
         "phien": 462,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 463,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 464,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 465,
@@ -784,7 +1877,7 @@
     },
     {
         "phien": 471,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 472,
@@ -800,7 +1893,7 @@
     },
     {
         "phien": 475,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 476,
@@ -812,15 +1905,15 @@
     },
     {
         "phien": 478,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 479,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 480,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 481,
@@ -828,7 +1921,7 @@
     },
     {
         "phien": 482,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 483,
@@ -836,7 +1929,7 @@
     },
     {
         "phien": 484,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 485,
@@ -848,7 +1941,7 @@
     },
     {
         "phien": 487,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 488,
@@ -856,11 +1949,11 @@
     },
     {
         "phien": 489,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 490,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 491,
@@ -872,23 +1965,23 @@
     },
     {
         "phien": 493,
-        "result": "xỉu"
-    },
-    {
-        "phien": 494,
         "result": "tài"
     },
     {
-        "phien": 495,
+        "phien": 494,
         "result": "xỉu"
+    },
+    {
+        "phien": 495,
+        "result": "tài"
     },
     {
         "phien": 496,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 497,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 498,
@@ -896,7 +1989,7 @@
     },
     {
         "phien": 499,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 500,
@@ -908,7 +2001,7 @@
     },
     {
         "phien": 502,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 503,
@@ -924,11 +2017,11 @@
     },
     {
         "phien": 506,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 507,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 508,
@@ -944,7 +2037,7 @@
     },
     {
         "phien": 511,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 512,
@@ -956,11 +2049,11 @@
     },
     {
         "phien": 514,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 515,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 516,
@@ -968,19 +2061,19 @@
     },
     {
         "phien": 517,
-        "result": "xỉu"
-    },
-    {
-        "phien": 518,
         "result": "tài"
     },
     {
-        "phien": 519,
+        "phien": 518,
         "result": "xỉu"
     },
     {
+        "phien": 519,
+        "result": "tài"
+    },
+    {
         "phien": 520,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 521,
@@ -1000,15 +2093,15 @@
     },
     {
         "phien": 525,
-        "result": "xỉu"
-    },
-    {
-        "phien": 526,
         "result": "tài"
     },
     {
-        "phien": 527,
+        "phien": 526,
         "result": "xỉu"
+    },
+    {
+        "phien": 527,
+        "result": "tài"
     },
     {
         "phien": 528,
@@ -1020,11 +2113,11 @@
     },
     {
         "phien": 530,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 531,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 532,
@@ -1032,7 +2125,7 @@
     },
     {
         "phien": 533,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 534,
@@ -1044,7 +2137,7 @@
     },
     {
         "phien": 536,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 537,
@@ -1056,7 +2149,7 @@
     },
     {
         "phien": 539,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 540,
@@ -1064,15 +2157,15 @@
     },
     {
         "phien": 541,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 542,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 543,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 544,
@@ -1080,7 +2173,7 @@
     },
     {
         "phien": 545,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 546,
@@ -1096,11 +2189,11 @@
     },
     {
         "phien": 549,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 550,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 551,
@@ -1108,7 +2201,7 @@
     },
     {
         "phien": 552,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 553,
@@ -1116,7 +2209,7 @@
     },
     {
         "phien": 554,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 555,
@@ -1124,7 +2217,7 @@
     },
     {
         "phien": 556,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 557,
@@ -1144,15 +2237,15 @@
     },
     {
         "phien": 561,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 562,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 563,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 564,
@@ -1160,11 +2253,11 @@
     },
     {
         "phien": 565,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 566,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 567,
@@ -1180,7 +2273,7 @@
     },
     {
         "phien": 570,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 571,
@@ -1196,7 +2289,7 @@
     },
     {
         "phien": 574,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 575,
@@ -1204,7 +2297,7 @@
     },
     {
         "phien": 576,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 577,
@@ -1212,7 +2305,7 @@
     },
     {
         "phien": 578,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 579,
@@ -1220,7 +2313,7 @@
     },
     {
         "phien": 580,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 581,
@@ -1228,7 +2321,7 @@
     },
     {
         "phien": 582,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 583,
@@ -1236,15 +2329,15 @@
     },
     {
         "phien": 584,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 585,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 586,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 587,
@@ -1256,19 +2349,19 @@
     },
     {
         "phien": 589,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 590,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 591,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 592,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 593,
@@ -1276,7 +2369,7 @@
     },
     {
         "phien": 594,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 595,
@@ -1284,23 +2377,23 @@
     },
     {
         "phien": 596,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 597,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 598,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 599,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 600,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 601,
@@ -1308,7 +2401,7 @@
     },
     {
         "phien": 602,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 603,
@@ -1320,7 +2413,7 @@
     },
     {
         "phien": 605,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 606,
@@ -1332,35 +2425,35 @@
     },
     {
         "phien": 608,
-        "result": "xỉu"
-    },
-    {
-        "phien": 609,
-        "result": "xỉu"
-    },
-    {
-        "phien": 610,
-        "result": "xỉu"
-    },
-    {
-        "phien": 611,
-        "result": "xỉu"
-    },
-    {
-        "phien": 612,
-        "result": "xỉu"
-    },
-    {
-        "phien": 613,
         "result": "tài"
     },
     {
-        "phien": 614,
+        "phien": 609,
+        "result": "tài"
+    },
+    {
+        "phien": 610,
+        "result": "tài"
+    },
+    {
+        "phien": 611,
+        "result": "tài"
+    },
+    {
+        "phien": 612,
+        "result": "tài"
+    },
+    {
+        "phien": 613,
         "result": "xỉu"
     },
     {
+        "phien": 614,
+        "result": "tài"
+    },
+    {
         "phien": 615,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 616,
@@ -1372,7 +2465,7 @@
     },
     {
         "phien": 618,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 619,
@@ -1388,7 +2481,7 @@
     },
     {
         "phien": 622,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 623,
@@ -1404,7 +2497,7 @@
     },
     {
         "phien": 626,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 627,
@@ -1416,11 +2509,11 @@
     },
     {
         "phien": 629,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 630,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 631,
@@ -1432,7 +2525,7 @@
     },
     {
         "phien": 633,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 634,
@@ -1460,11 +2553,11 @@
     },
     {
         "phien": 640,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 641,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 642,
@@ -1476,7 +2569,7 @@
     },
     {
         "phien": 644,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 645,
@@ -1484,15 +2577,15 @@
     },
     {
         "phien": 646,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 647,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 648,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 649,
@@ -1504,7 +2597,7 @@
     },
     {
         "phien": 651,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 652,
@@ -1516,11 +2609,11 @@
     },
     {
         "phien": 654,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 655,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 656,
@@ -1532,11 +2625,11 @@
     },
     {
         "phien": 658,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 659,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 660,
@@ -1544,7 +2637,7 @@
     },
     {
         "phien": 661,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 662,
@@ -1552,7 +2645,7 @@
     },
     {
         "phien": 663,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 664,
@@ -1560,7 +2653,7 @@
     },
     {
         "phien": 665,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 666,
@@ -1568,7 +2661,7 @@
     },
     {
         "phien": 667,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 668,
@@ -1580,7 +2673,7 @@
     },
     {
         "phien": 670,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 671,
@@ -1592,19 +2685,19 @@
     },
     {
         "phien": 673,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 674,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 675,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 676,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 677,
@@ -1612,23 +2705,23 @@
     },
     {
         "phien": 678,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 679,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 680,
-        "result": "tài"
-    },
-    {
-        "phien": 681,
         "result": "xỉu"
     },
     {
-        "phien": 682,
+        "phien": 681,
         "result": "tài"
+    },
+    {
+        "phien": 682,
+        "result": "xỉu"
     },
     {
         "phien": 683,
@@ -1636,11 +2729,11 @@
     },
     {
         "phien": 684,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 685,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 686,
@@ -1648,7 +2741,7 @@
     },
     {
         "phien": 687,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 688,
@@ -1656,7 +2749,7 @@
     },
     {
         "phien": 689,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 690,
@@ -1668,7 +2761,7 @@
     },
     {
         "phien": 692,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 693,
@@ -1676,7 +2769,7 @@
     },
     {
         "phien": 694,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 695,
@@ -1684,11 +2777,11 @@
     },
     {
         "phien": 696,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 697,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 698,
@@ -1704,7 +2797,7 @@
     },
     {
         "phien": 701,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 702,
@@ -1716,11 +2809,11 @@
     },
     {
         "phien": 704,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 705,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 706,
@@ -1732,7 +2825,7 @@
     },
     {
         "phien": 708,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 709,
@@ -1740,7 +2833,7 @@
     },
     {
         "phien": 710,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 711,
@@ -1748,15 +2841,15 @@
     },
     {
         "phien": 712,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 713,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 714,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 715,
@@ -1768,15 +2861,15 @@
     },
     {
         "phien": 717,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 718,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 719,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 720,
@@ -1788,15 +2881,15 @@
     },
     {
         "phien": 722,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 723,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 724,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 725,
@@ -1804,7 +2897,7 @@
     },
     {
         "phien": 726,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 727,
@@ -1816,7 +2909,7 @@
     },
     {
         "phien": 729,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 730,
@@ -1824,19 +2917,19 @@
     },
     {
         "phien": 731,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 732,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 733,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 734,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 735,
@@ -1844,15 +2937,15 @@
     },
     {
         "phien": 736,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 737,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 738,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 739,
@@ -1868,15 +2961,15 @@
     },
     {
         "phien": 742,
-        "result": "tài"
-    },
-    {
-        "phien": 743,
         "result": "xỉu"
     },
     {
-        "phien": 744,
+        "phien": 743,
         "result": "tài"
+    },
+    {
+        "phien": 744,
+        "result": "xỉu"
     },
     {
         "phien": 745,
@@ -1892,7 +2985,7 @@
     },
     {
         "phien": 748,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 749,
@@ -1900,31 +2993,31 @@
     },
     {
         "phien": 750,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 751,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 752,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 753,
-        "result": "tài"
-    },
-    {
-        "phien": 754,
         "result": "xỉu"
     },
     {
-        "phien": 755,
+        "phien": 754,
         "result": "tài"
     },
     {
+        "phien": 755,
+        "result": "xỉu"
+    },
+    {
         "phien": 756,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 757,
@@ -1940,15 +3033,15 @@
     },
     {
         "phien": 760,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 761,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 762,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 763,
@@ -1956,7 +3049,7 @@
     },
     {
         "phien": 764,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 765,
@@ -1964,11 +3057,11 @@
     },
     {
         "phien": 766,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 767,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 768,
@@ -1984,11 +3077,11 @@
     },
     {
         "phien": 771,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 772,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 773,
@@ -2004,7 +3097,7 @@
     },
     {
         "phien": 776,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 777,
@@ -2020,23 +3113,23 @@
     },
     {
         "phien": 780,
-        "result": "xỉu"
-    },
-    {
-        "phien": 781,
         "result": "tài"
     },
     {
-        "phien": 782,
+        "phien": 781,
         "result": "xỉu"
+    },
+    {
+        "phien": 782,
+        "result": "tài"
     },
     {
         "phien": 783,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 784,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 785,
@@ -2044,7 +3137,7 @@
     },
     {
         "phien": 786,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 787,
@@ -2052,11 +3145,11 @@
     },
     {
         "phien": 788,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 789,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 790,
@@ -2064,7 +3157,7 @@
     },
     {
         "phien": 791,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 792,
@@ -2072,7 +3165,7 @@
     },
     {
         "phien": 793,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 794,
@@ -2088,11 +3181,11 @@
     },
     {
         "phien": 797,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 798,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 799,
@@ -2100,7 +3193,7 @@
     },
     {
         "phien": 800,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 801,
@@ -2116,11 +3209,11 @@
     },
     {
         "phien": 804,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 805,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 806,
@@ -2132,11 +3225,11 @@
     },
     {
         "phien": 808,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 809,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 810,
@@ -2144,11 +3237,11 @@
     },
     {
         "phien": 811,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 812,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 813,
@@ -2164,23 +3257,23 @@
     },
     {
         "phien": 816,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 817,
-        "result": "tài"
-    },
-    {
-        "phien": 818,
-        "result": "tài"
-    },
-    {
-        "phien": 819,
         "result": "xỉu"
     },
     {
-        "phien": 820,
+        "phien": 818,
+        "result": "xỉu"
+    },
+    {
+        "phien": 819,
         "result": "tài"
+    },
+    {
+        "phien": 820,
+        "result": "xỉu"
     },
     {
         "phien": 821,
@@ -2192,7 +3285,7 @@
     },
     {
         "phien": 823,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 824,
@@ -2224,11 +3317,11 @@
     },
     {
         "phien": 831,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 832,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 833,
@@ -2236,7 +3329,7 @@
     },
     {
         "phien": 834,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 835,
@@ -2244,11 +3337,11 @@
     },
     {
         "phien": 836,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 837,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 838,
@@ -2256,31 +3349,31 @@
     },
     {
         "phien": 839,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 840,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 841,
-        "result": "tài"
-    },
-    {
-        "phien": 842,
-        "result": "tài"
-    },
-    {
-        "phien": 843,
         "result": "xỉu"
     },
     {
-        "phien": 844,
+        "phien": 842,
+        "result": "xỉu"
+    },
+    {
+        "phien": 843,
         "result": "tài"
     },
     {
+        "phien": 844,
+        "result": "xỉu"
+    },
+    {
         "phien": 845,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 846,
@@ -2292,7 +3385,7 @@
     },
     {
         "phien": 848,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 849,
@@ -2300,7 +3393,7 @@
     },
     {
         "phien": 850,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 851,
@@ -2312,11 +3405,11 @@
     },
     {
         "phien": 853,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 854,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 855,
@@ -2328,7 +3421,7 @@
     },
     {
         "phien": 857,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 858,
@@ -2344,7 +3437,7 @@
     },
     {
         "phien": 861,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 862,
@@ -2364,7 +3457,7 @@
     },
     {
         "phien": 866,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 867,
@@ -2376,19 +3469,19 @@
     },
     {
         "phien": 869,
-        "result": "tài"
-    },
-    {
-        "phien": 870,
         "result": "xỉu"
     },
     {
-        "phien": 871,
+        "phien": 870,
         "result": "tài"
     },
     {
+        "phien": 871,
+        "result": "xỉu"
+    },
+    {
         "phien": 872,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 873,
@@ -2396,11 +3489,11 @@
     },
     {
         "phien": 874,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 875,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 876,
@@ -2412,7 +3505,7 @@
     },
     {
         "phien": 878,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 879,
@@ -2420,7 +3513,7 @@
     },
     {
         "phien": 880,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 881,
@@ -2432,7 +3525,7 @@
     },
     {
         "phien": 883,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 884,
@@ -2440,11 +3533,11 @@
     },
     {
         "phien": 885,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 886,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 887,
@@ -2452,11 +3545,11 @@
     },
     {
         "phien": 888,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 889,
-        "result": "xỉu"
+        "result": "tài"
     },
     {
         "phien": 890,
@@ -2468,7 +3561,7 @@
     },
     {
         "phien": 892,
-        "result": "tài"
+        "result": "xỉu"
     },
     {
         "phien": 893,
@@ -2492,3010 +3585,6 @@
     },
     {
         "phien": 898,
-        "result": "xỉu"
-    },
-    {
-        "phien": 899,
         "result": "tài"
-    },
-    {
-        "phien": 900,
-        "result": "xỉu"
-    },
-    {
-        "phien": 901,
-        "result": "tài"
-    },
-    {
-        "phien": 902,
-        "result": "xỉu"
-    },
-    {
-        "phien": 903,
-        "result": "xỉu"
-    },
-    {
-        "phien": 904,
-        "result": "tài"
-    },
-    {
-        "phien": 905,
-        "result": "tài"
-    },
-    {
-        "phien": 906,
-        "result": "xỉu"
-    },
-    {
-        "phien": 907,
-        "result": "tài"
-    },
-    {
-        "phien": 908,
-        "result": "tài"
-    },
-    {
-        "phien": 909,
-        "result": "tài"
-    },
-    {
-        "phien": 910,
-        "result": "tài"
-    },
-    {
-        "phien": 911,
-        "result": "xỉu"
-    },
-    {
-        "phien": 912,
-        "result": "xỉu"
-    },
-    {
-        "phien": 913,
-        "result": "xỉu"
-    },
-    {
-        "phien": 914,
-        "result": "xỉu"
-    },
-    {
-        "phien": 915,
-        "result": "tài"
-    },
-    {
-        "phien": 916,
-        "result": "xỉu"
-    },
-    {
-        "phien": 917,
-        "result": "xỉu"
-    },
-    {
-        "phien": 918,
-        "result": "tài"
-    },
-    {
-        "phien": 919,
-        "result": "tài"
-    },
-    {
-        "phien": 920,
-        "result": "xỉu"
-    },
-    {
-        "phien": 921,
-        "result": "xỉu"
-    },
-    {
-        "phien": 922,
-        "result": "xỉu"
-    },
-    {
-        "phien": 923,
-        "result": "xỉu"
-    },
-    {
-        "phien": 924,
-        "result": "tài"
-    },
-    {
-        "phien": 925,
-        "result": "xỉu"
-    },
-    {
-        "phien": 926,
-        "result": "tài"
-    },
-    {
-        "phien": 927,
-        "result": "xỉu"
-    },
-    {
-        "phien": 928,
-        "result": "xỉu"
-    },
-    {
-        "phien": 929,
-        "result": "tài"
-    },
-    {
-        "phien": 930,
-        "result": "tài"
-    },
-    {
-        "phien": 931,
-        "result": "xỉu"
-    },
-    {
-        "phien": 932,
-        "result": "tài"
-    },
-    {
-        "phien": 933,
-        "result": "tài"
-    },
-    {
-        "phien": 934,
-        "result": "tài"
-    },
-    {
-        "phien": 935,
-        "result": "tài"
-    },
-    {
-        "phien": 936,
-        "result": "xỉu"
-    },
-    {
-        "phien": 937,
-        "result": "tài"
-    },
-    {
-        "phien": 938,
-        "result": "tài"
-    },
-    {
-        "phien": 939,
-        "result": "xỉu"
-    },
-    {
-        "phien": 940,
-        "result": "tài"
-    },
-    {
-        "phien": 941,
-        "result": "xỉu"
-    },
-    {
-        "phien": 942,
-        "result": "tài"
-    },
-    {
-        "phien": 943,
-        "result": "tài"
-    },
-    {
-        "phien": 944,
-        "result": "tài"
-    },
-    {
-        "phien": 945,
-        "result": "tài"
-    },
-    {
-        "phien": 946,
-        "result": "tài"
-    },
-    {
-        "phien": 947,
-        "result": "tài"
-    },
-    {
-        "phien": 948,
-        "result": "tài"
-    },
-    {
-        "phien": 949,
-        "result": "xỉu"
-    },
-    {
-        "phien": 950,
-        "result": "xỉu"
-    },
-    {
-        "phien": 951,
-        "result": "xỉu"
-    },
-    {
-        "phien": 952,
-        "result": "tài"
-    },
-    {
-        "phien": 953,
-        "result": "xỉu"
-    },
-    {
-        "phien": 954,
-        "result": "xỉu"
-    },
-    {
-        "phien": 955,
-        "result": "xỉu"
-    },
-    {
-        "phien": 956,
-        "result": "tài"
-    },
-    {
-        "phien": 957,
-        "result": "tài"
-    },
-    {
-        "phien": 958,
-        "result": "tài"
-    },
-    {
-        "phien": 959,
-        "result": "xỉu"
-    },
-    {
-        "phien": 960,
-        "result": "xỉu"
-    },
-    {
-        "phien": 961,
-        "result": "tài"
-    },
-    {
-        "phien": 962,
-        "result": "tài"
-    },
-    {
-        "phien": 963,
-        "result": "xỉu"
-    },
-    {
-        "phien": 964,
-        "result": "xỉu"
-    },
-    {
-        "phien": 965,
-        "result": "tài"
-    },
-    {
-        "phien": 966,
-        "result": "tài"
-    },
-    {
-        "phien": 967,
-        "result": "tài"
-    },
-    {
-        "phien": 968,
-        "result": "tài"
-    },
-    {
-        "phien": 969,
-        "result": "tài"
-    },
-    {
-        "phien": 970,
-        "result": "tài"
-    },
-    {
-        "phien": 971,
-        "result": "tài"
-    },
-    {
-        "phien": 972,
-        "result": "xỉu"
-    },
-    {
-        "phien": 973,
-        "result": "xỉu"
-    },
-    {
-        "phien": 974,
-        "result": "tài"
-    },
-    {
-        "phien": 975,
-        "result": "xỉu"
-    },
-    {
-        "phien": 976,
-        "result": "tài"
-    },
-    {
-        "phien": 977,
-        "result": "xỉu"
-    },
-    {
-        "phien": 978,
-        "result": "xỉu"
-    },
-    {
-        "phien": 979,
-        "result": "tài"
-    },
-    {
-        "phien": 980,
-        "result": "tài"
-    },
-    {
-        "phien": 981,
-        "result": "xỉu"
-    },
-    {
-        "phien": 982,
-        "result": "tài"
-    },
-    {
-        "phien": 983,
-        "result": "xỉu"
-    },
-    {
-        "phien": 984,
-        "result": "xỉu"
-    },
-    {
-        "phien": 985,
-        "result": "xỉu"
-    },
-    {
-        "phien": 986,
-        "result": "tài"
-    },
-    {
-        "phien": 987,
-        "result": "tài"
-    },
-    {
-        "phien": 988,
-        "result": "xỉu"
-    },
-    {
-        "phien": 989,
-        "result": "tài"
-    },
-    {
-        "phien": 990,
-        "result": "tài"
-    },
-    {
-        "phien": 991,
-        "result": "tài"
-    },
-    {
-        "phien": 992,
-        "result": "xỉu"
-    },
-    {
-        "phien": 993,
-        "result": "tài"
-    },
-    {
-        "phien": 994,
-        "result": "tài"
-    },
-    {
-        "phien": 995,
-        "result": "tài"
-    },
-    {
-        "phien": 996,
-        "result": "xỉu"
-    },
-    {
-        "phien": 997,
-        "result": "xỉu"
-    },
-    {
-        "phien": 998,
-        "result": "xỉu"
-    },
-    {
-        "phien": 999,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1000,
-        "result": "tài"
-    },
-    {
-        "phien": 1001,
-        "result": "tài"
-    },
-    {
-        "phien": 1002,
-        "result": "tài"
-    },
-    {
-        "phien": 1003,
-        "result": "tài"
-    },
-    {
-        "phien": 1004,
-        "result": "tài"
-    },
-    {
-        "phien": 1005,
-        "result": "tài"
-    },
-    {
-        "phien": 1006,
-        "result": "tài"
-    },
-    {
-        "phien": 1007,
-        "result": "tài"
-    },
-    {
-        "phien": 1008,
-        "result": "tài"
-    },
-    {
-        "phien": 1009,
-        "result": "tài"
-    },
-    {
-        "phien": 1010,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1011,
-        "result": "tài"
-    },
-    {
-        "phien": 1012,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1013,
-        "result": "tài"
-    },
-    {
-        "phien": 1014,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1015,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1016,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1017,
-        "result": "tài"
-    },
-    {
-        "phien": 1018,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1019,
-        "result": "tài"
-    },
-    {
-        "phien": 1020,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1021,
-        "result": "tài"
-    },
-    {
-        "phien": 1022,
-        "result": "tài"
-    },
-    {
-        "phien": 1023,
-        "result": "tài"
-    },
-    {
-        "phien": 1024,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1025,
-        "result": "tài"
-    },
-    {
-        "phien": 1026,
-        "result": "tài"
-    },
-    {
-        "phien": 1027,
-        "result": "tài"
-    },
-    {
-        "phien": 1028,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1029,
-        "result": "tài"
-    },
-    {
-        "phien": 1030,
-        "result": "tài"
-    },
-    {
-        "phien": 1031,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1032,
-        "result": "tài"
-    },
-    {
-        "phien": 1033,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1034,
-        "result": "tài"
-    },
-    {
-        "phien": 1035,
-        "result": "tài"
-    },
-    {
-        "phien": 1036,
-        "result": "tài"
-    },
-    {
-        "phien": 1037,
-        "result": "tài"
-    },
-    {
-        "phien": 1038,
-        "result": "tài"
-    },
-    {
-        "phien": 1039,
-        "result": "tài"
-    },
-    {
-        "phien": 1040,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1041,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1042,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1043,
-        "result": "tài"
-    },
-    {
-        "phien": 1044,
-        "result": "tài"
-    },
-    {
-        "phien": 1045,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1046,
-        "result": "tài"
-    },
-    {
-        "phien": 1047,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1048,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1049,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1050,
-        "result": "tài"
-    },
-    {
-        "phien": 1051,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1052,
-        "result": "tài"
-    },
-    {
-        "phien": 1053,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1054,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1055,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1056,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1057,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1058,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1059,
-        "result": "tài"
-    },
-    {
-        "phien": 1060,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1061,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1062,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1063,
-        "result": "tài"
-    },
-    {
-        "phien": 1064,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1065,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1066,
-        "result": "tài"
-    },
-    {
-        "phien": 1067,
-        "result": "tài"
-    },
-    {
-        "phien": 1068,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1069,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1070,
-        "result": "tài"
-    },
-    {
-        "phien": 1071,
-        "result": "tài"
-    },
-    {
-        "phien": 1072,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1073,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1074,
-        "result": "tài"
-    },
-    {
-        "phien": 1075,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1076,
-        "result": "tài"
-    },
-    {
-        "phien": 1077,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1078,
-        "result": "tài"
-    },
-    {
-        "phien": 1079,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1080,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1081,
-        "result": "tài"
-    },
-    {
-        "phien": 1082,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1083,
-        "result": "tài"
-    },
-    {
-        "phien": 1084,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1085,
-        "result": "tài"
-    },
-    {
-        "phien": 1086,
-        "result": "tài"
-    },
-    {
-        "phien": 1087,
-        "result": "tài"
-    },
-    {
-        "phien": 1088,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1089,
-        "result": "tài"
-    },
-    {
-        "phien": 1090,
-        "result": "tài"
-    },
-    {
-        "phien": 1091,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1092,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1093,
-        "result": "tài"
-    },
-    {
-        "phien": 1094,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1095,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1096,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1097,
-        "result": "tài"
-    },
-    {
-        "phien": 1098,
-        "result": "tài"
-    },
-    {
-        "phien": 1099,
-        "result": "tài"
-    },
-    {
-        "phien": 1100,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1101,
-        "result": "tài"
-    },
-    {
-        "phien": 1102,
-        "result": "tài"
-    },
-    {
-        "phien": 1103,
-        "result": "tài"
-    },
-    {
-        "phien": 1104,
-        "result": "tài"
-    },
-    {
-        "phien": 1105,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1106,
-        "result": "tài"
-    },
-    {
-        "phien": 1107,
-        "result": "tài"
-    },
-    {
-        "phien": 1108,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1109,
-        "result": "tài"
-    },
-    {
-        "phien": 1110,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1111,
-        "result": "tài"
-    },
-    {
-        "phien": 1112,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1113,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1114,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1115,
-        "result": "tài"
-    },
-    {
-        "phien": 1116,
-        "result": "tài"
-    },
-    {
-        "phien": 1117,
-        "result": "tài"
-    },
-    {
-        "phien": 1118,
-        "result": "tài"
-    },
-    {
-        "phien": 1119,
-        "result": "tài"
-    },
-    {
-        "phien": 1120,
-        "result": "tài"
-    },
-    {
-        "phien": 1121,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1122,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1123,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1124,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1125,
-        "result": "tài"
-    },
-    {
-        "phien": 1126,
-        "result": "tài"
-    },
-    {
-        "phien": 1127,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1128,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1129,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1130,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1131,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1132,
-        "result": "tài"
-    },
-    {
-        "phien": 1133,
-        "result": "tài"
-    },
-    {
-        "phien": 1134,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1135,
-        "result": "tài"
-    },
-    {
-        "phien": 1136,
-        "result": "tài"
-    },
-    {
-        "phien": 1137,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1138,
-        "result": "tài"
-    },
-    {
-        "phien": 1139,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1140,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1141,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1142,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1143,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1144,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1145,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1146,
-        "result": "tài"
-    },
-    {
-        "phien": 1147,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1148,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1149,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1150,
-        "result": "tài"
-    },
-    {
-        "phien": 1151,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1152,
-        "result": "tài"
-    },
-    {
-        "phien": 1153,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1154,
-        "result": "tài"
-    },
-    {
-        "phien": 1155,
-        "result": "tài"
-    },
-    {
-        "phien": 1156,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1157,
-        "result": "tài"
-    },
-    {
-        "phien": 1158,
-        "result": "tài"
-    },
-    {
-        "phien": 1159,
-        "result": "tài"
-    },
-    {
-        "phien": 1160,
-        "result": "tài"
-    },
-    {
-        "phien": 1161,
-        "result": "tài"
-    },
-    {
-        "phien": 1162,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1163,
-        "result": "tài"
-    },
-    {
-        "phien": 1164,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1165,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1166,
-        "result": "tài"
-    },
-    {
-        "phien": 1167,
-        "result": "tài"
-    },
-    {
-        "phien": 1168,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1169,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1170,
-        "result": "tài"
-    },
-    {
-        "phien": 1171,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1172,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1173,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1174,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1175,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1176,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1177,
-        "result": "tài"
-    },
-    {
-        "phien": 1178,
-        "result": "tài"
-    },
-    {
-        "phien": 1179,
-        "result": "tài"
-    },
-    {
-        "phien": 1180,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1181,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1182,
-        "result": "tài"
-    },
-    {
-        "phien": 1183,
-        "result": "tài"
-    },
-    {
-        "phien": 1184,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1185,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1186,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1187,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1188,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1189,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1190,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1191,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1192,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1193,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1194,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1195,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1196,
-        "result": "tài"
-    },
-    {
-        "phien": 1197,
-        "result": "tài"
-    },
-    {
-        "phien": 1198,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1199,
-        "result": "tài"
-    },
-    {
-        "phien": 1200,
-        "result": "tài"
-    },
-    {
-        "phien": 1201,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1202,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1203,
-        "result": "tài"
-    },
-    {
-        "phien": 1204,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1205,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1206,
-        "result": "tài"
-    },
-    {
-        "phien": 1207,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1208,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1209,
-        "result": "tài"
-    },
-    {
-        "phien": 1210,
-        "result": "tài"
-    },
-    {
-        "phien": 1211,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1212,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1213,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1214,
-        "result": "tài"
-    },
-    {
-        "phien": 1215,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1216,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1217,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1218,
-        "result": "tài"
-    },
-    {
-        "phien": 1219,
-        "result": "tài"
-    },
-    {
-        "phien": 1220,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1221,
-        "result": "tài"
-    },
-    {
-        "phien": 1222,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1223,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1224,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1225,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1226,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1227,
-        "result": "tài"
-    },
-    {
-        "phien": 1228,
-        "result": "tài"
-    },
-    {
-        "phien": 1229,
-        "result": "tài"
-    },
-    {
-        "phien": 1230,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1231,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1232,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1233,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1234,
-        "result": "tài"
-    },
-    {
-        "phien": 1235,
-        "result": "tài"
-    },
-    {
-        "phien": 1236,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1237,
-        "result": "tài"
-    },
-    {
-        "phien": 1238,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1239,
-        "result": "tài"
-    },
-    {
-        "phien": 1240,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1241,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1242,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1243,
-        "result": "tài"
-    },
-    {
-        "phien": 1244,
-        "result": "tài"
-    },
-    {
-        "phien": 1245,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1246,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1247,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1248,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1249,
-        "result": "tài"
-    },
-    {
-        "phien": 1250,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1251,
-        "result": "tài"
-    },
-    {
-        "phien": 1252,
-        "result": "tài"
-    },
-    {
-        "phien": 1253,
-        "result": "tài"
-    },
-    {
-        "phien": 1254,
-        "result": "tài"
-    },
-    {
-        "phien": 1255,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1256,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1257,
-        "result": "tài"
-    },
-    {
-        "phien": 1258,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1259,
-        "result": "tài"
-    },
-    {
-        "phien": 1260,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1261,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1262,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1263,
-        "result": "tài"
-    },
-    {
-        "phien": 1264,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1265,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1266,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1267,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1268,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1269,
-        "result": "tài"
-    },
-    {
-        "phien": 1270,
-        "result": "tài"
-    },
-    {
-        "phien": 1271,
-        "result": "tài"
-    },
-    {
-        "phien": 1272,
-        "result": "tài"
-    },
-    {
-        "phien": 1273,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1274,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1275,
-        "result": "tài"
-    },
-    {
-        "phien": 1276,
-        "result": "tài"
-    },
-    {
-        "phien": 1277,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1278,
-        "result": "tài"
-    },
-    {
-        "phien": 1279,
-        "result": "tài"
-    },
-    {
-        "phien": 1280,
-        "result": "tài"
-    },
-    {
-        "phien": 1281,
-        "result": "tài"
-    },
-    {
-        "phien": 1282,
-        "result": "tài"
-    },
-    {
-        "phien": 1283,
-        "result": "tài"
-    },
-    {
-        "phien": 1284,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1285,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1286,
-        "result": "tài"
-    },
-    {
-        "phien": 1287,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1288,
-        "result": "tài"
-    },
-    {
-        "phien": 1289,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1290,
-        "result": "tài"
-    },
-    {
-        "phien": 1291,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1292,
-        "result": "tài"
-    },
-    {
-        "phien": 1293,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1294,
-        "result": "tài"
-    },
-    {
-        "phien": 1295,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1296,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1297,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1298,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1299,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1300,
-        "result": "tài"
-    },
-    {
-        "phien": 1301,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1302,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1303,
-        "result": "tài"
-    },
-    {
-        "phien": 1304,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1305,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1306,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1307,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1308,
-        "result": "tài"
-    },
-    {
-        "phien": 1309,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1310,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1311,
-        "result": "tài"
-    },
-    {
-        "phien": 1312,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1313,
-        "result": "tài"
-    },
-    {
-        "phien": 1314,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1315,
-        "result": "tài"
-    },
-    {
-        "phien": 1316,
-        "result": "tài"
-    },
-    {
-        "phien": 1317,
-        "result": "tài"
-    },
-    {
-        "phien": 1318,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1319,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1320,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1321,
-        "result": "tài"
-    },
-    {
-        "phien": 1322,
-        "result": "tài"
-    },
-    {
-        "phien": 1323,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1324,
-        "result": "tài"
-    },
-    {
-        "phien": 1325,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1326,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1327,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1328,
-        "result": "tài"
-    },
-    {
-        "phien": 1329,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1330,
-        "result": "tài"
-    },
-    {
-        "phien": 1331,
-        "result": "tài"
-    },
-    {
-        "phien": 1332,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1333,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1334,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1335,
-        "result": "tài"
-    },
-    {
-        "phien": 1336,
-        "result": "tài"
-    },
-    {
-        "phien": 1337,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1338,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1339,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1340,
-        "result": "tài"
-    },
-    {
-        "phien": 1341,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1342,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1343,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1344,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1345,
-        "result": "tài"
-    },
-    {
-        "phien": 1346,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1347,
-        "result": "tài"
-    },
-    {
-        "phien": 1348,
-        "result": "tài"
-    },
-    {
-        "phien": 1349,
-        "result": "tài"
-    },
-    {
-        "phien": 1350,
-        "result": "tài"
-    },
-    {
-        "phien": 1351,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1352,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1353,
-        "result": "tài"
-    },
-    {
-        "phien": 1354,
-        "result": "tài"
-    },
-    {
-        "phien": 1355,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1356,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1357,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1358,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1359,
-        "result": "tài"
-    },
-    {
-        "phien": 1360,
-        "result": "tài"
-    },
-    {
-        "phien": 1361,
-        "result": "tài"
-    },
-    {
-        "phien": 1362,
-        "result": "tài"
-    },
-    {
-        "phien": 1363,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1364,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1365,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1366,
-        "result": "tài"
-    },
-    {
-        "phien": 1367,
-        "result": "tài"
-    },
-    {
-        "phien": 1368,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1369,
-        "result": "tài"
-    },
-    {
-        "phien": 1370,
-        "result": "tài"
-    },
-    {
-        "phien": 1371,
-        "result": "tài"
-    },
-    {
-        "phien": 1372,
-        "result": "tài"
-    },
-    {
-        "phien": 1373,
-        "result": "tài"
-    },
-    {
-        "phien": 1374,
-        "result": "tài"
-    },
-    {
-        "phien": 1375,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1376,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1377,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1378,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1379,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1380,
-        "result": "tài"
-    },
-    {
-        "phien": 1381,
-        "result": "tài"
-    },
-    {
-        "phien": 1382,
-        "result": "tài"
-    },
-    {
-        "phien": 1383,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1384,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1385,
-        "result": "tài"
-    },
-    {
-        "phien": 1386,
-        "result": "tài"
-    },
-    {
-        "phien": 1387,
-        "result": "tài"
-    },
-    {
-        "phien": 1388,
-        "result": "tài"
-    },
-    {
-        "phien": 1389,
-        "result": "tài"
-    },
-    {
-        "phien": 1390,
-        "result": "tài"
-    },
-    {
-        "phien": 1391,
-        "result": "tài"
-    },
-    {
-        "phien": 1392,
-        "result": "tài"
-    },
-    {
-        "phien": 1393,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1394,
-        "result": "tài"
-    },
-    {
-        "phien": 1395,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1396,
-        "result": "tài"
-    },
-    {
-        "phien": 1397,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1398,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1399,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1400,
-        "result": "tài"
-    },
-    {
-        "phien": 1401,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1402,
-        "result": "tài"
-    },
-    {
-        "phien": 1403,
-        "result": "tài"
-    },
-    {
-        "phien": 1404,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1405,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1406,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1407,
-        "result": "tài"
-    },
-    {
-        "phien": 1408,
-        "result": "tài"
-    },
-    {
-        "phien": 1409,
-        "result": "tài"
-    },
-    {
-        "phien": 1410,
-        "result": "tài"
-    },
-    {
-        "phien": 1411,
-        "result": "tài"
-    },
-    {
-        "phien": 1412,
-        "result": "tài"
-    },
-    {
-        "phien": 1413,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1414,
-        "result": "tài"
-    },
-    {
-        "phien": 1415,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1416,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1417,
-        "result": "tài"
-    },
-    {
-        "phien": 1418,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1419,
-        "result": "tài"
-    },
-    {
-        "phien": 1420,
-        "result": "tài"
-    },
-    {
-        "phien": 1421,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1422,
-        "result": "tài"
-    },
-    {
-        "phien": 1423,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1424,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1425,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1426,
-        "result": "tài"
-    },
-    {
-        "phien": 1427,
-        "result": "tài"
-    },
-    {
-        "phien": 1428,
-        "result": "tài"
-    },
-    {
-        "phien": 1429,
-        "result": "tài"
-    },
-    {
-        "phien": 1430,
-        "result": "tài"
-    },
-    {
-        "phien": 1431,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1432,
-        "result": "tài"
-    },
-    {
-        "phien": 1433,
-        "result": "tài"
-    },
-    {
-        "phien": 1434,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1435,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1436,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1437,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1438,
-        "result": "tài"
-    },
-    {
-        "phien": 1439,
-        "result": "tài"
-    },
-    {
-        "phien": 1440,
-        "result": "tài"
-    },
-    {
-        "phien": 1441,
-        "result": "tài"
-    },
-    {
-        "phien": 1442,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1443,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1444,
-        "result": "tài"
-    },
-    {
-        "phien": 1445,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1446,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1447,
-        "result": "tài"
-    },
-    {
-        "phien": 1448,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1449,
-        "result": "tài"
-    },
-    {
-        "phien": 1450,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1451,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1452,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1453,
-        "result": "tài"
-    },
-    {
-        "phien": 1454,
-        "result": "tài"
-    },
-    {
-        "phien": 1455,
-        "result": "tài"
-    },
-    {
-        "phien": 1456,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1457,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1458,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1459,
-        "result": "tài"
-    },
-    {
-        "phien": 1460,
-        "result": "tài"
-    },
-    {
-        "phien": 1461,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1462,
-        "result": "tài"
-    },
-    {
-        "phien": 1463,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1464,
-        "result": "tài"
-    },
-    {
-        "phien": 1465,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1466,
-        "result": "tài"
-    },
-    {
-        "phien": 1467,
-        "result": "tài"
-    },
-    {
-        "phien": 1468,
-        "result": "tài"
-    },
-    {
-        "phien": 1469,
-        "result": "tài"
-    },
-    {
-        "phien": 1470,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1471,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1472,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1473,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1474,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1475,
-        "result": "tài"
-    },
-    {
-        "phien": 1476,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1477,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1478,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1479,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1480,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1481,
-        "result": "tài"
-    },
-    {
-        "phien": 1482,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1483,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1484,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1485,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1486,
-        "result": "tài"
-    },
-    {
-        "phien": 1487,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1488,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1489,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1490,
-        "result": "tài"
-    },
-    {
-        "phien": 1491,
-        "result": "tài"
-    },
-    {
-        "phien": 1492,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1493,
-        "result": "tài"
-    },
-    {
-        "phien": 1494,
-        "result": "tài"
-    },
-    {
-        "phien": 1495,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1496,
-        "result": "tài"
-    },
-    {
-        "phien": 1497,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1498,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1499,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1500,
-        "result": "tài"
-    },
-    {
-        "phien": 1501,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1502,
-        "result": "tài"
-    },
-    {
-        "phien": 1503,
-        "result": "tài"
-    },
-    {
-        "phien": 1504,
-        "result": "tài"
-    },
-    {
-        "phien": 1505,
-        "result": "tài"
-    },
-    {
-        "phien": 1506,
-        "result": "tài"
-    },
-    {
-        "phien": 1507,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1508,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1509,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1510,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1511,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1512,
-        "result": "tài"
-    },
-    {
-        "phien": 1513,
-        "result": "tài"
-    },
-    {
-        "phien": 1514,
-        "result": "tài"
-    },
-    {
-        "phien": 1515,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1516,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1517,
-        "result": "tài"
-    },
-    {
-        "phien": 1518,
-        "result": "tài"
-    },
-    {
-        "phien": 1519,
-        "result": "tài"
-    },
-    {
-        "phien": 1520,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1521,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1522,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1523,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1524,
-        "result": "tài"
-    },
-    {
-        "phien": 1525,
-        "result": "tài"
-    },
-    {
-        "phien": 1526,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1527,
-        "result": "tài"
-    },
-    {
-        "phien": 1528,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1529,
-        "result": "tài"
-    },
-    {
-        "phien": 1530,
-        "result": "tài"
-    },
-    {
-        "phien": 1531,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1532,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1533,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1534,
-        "result": "tài"
-    },
-    {
-        "phien": 1535,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1536,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1537,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1538,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1539,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1540,
-        "result": "tài"
-    },
-    {
-        "phien": 1541,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1542,
-        "result": "tài"
-    },
-    {
-        "phien": 1543,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1544,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1545,
-        "result": "tài"
-    },
-    {
-        "phien": 1546,
-        "result": "tài"
-    },
-    {
-        "phien": 1547,
-        "result": "tài"
-    },
-    {
-        "phien": 1548,
-        "result": "tài"
-    },
-    {
-        "phien": 1549,
-        "result": "tài"
-    },
-    {
-        "phien": 1550,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1551,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1552,
-        "result": "tài"
-    },
-    {
-        "phien": 1553,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1554,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1555,
-        "result": "tài"
-    },
-    {
-        "phien": 1556,
-        "result": "tài"
-    },
-    {
-        "phien": 1557,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1558,
-        "result": "tài"
-    },
-    {
-        "phien": 1559,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1560,
-        "result": "tài"
-    },
-    {
-        "phien": 1561,
-        "result": "tài"
-    },
-    {
-        "phien": 1562,
-        "result": "tài"
-    },
-    {
-        "phien": 1563,
-        "result": "tài"
-    },
-    {
-        "phien": 1564,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1565,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1566,
-        "result": "tài"
-    },
-    {
-        "phien": 1567,
-        "result": "tài"
-    },
-    {
-        "phien": 1568,
-        "result": "tài"
-    },
-    {
-        "phien": 1569,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1570,
-        "result": "tài"
-    },
-    {
-        "phien": 1571,
-        "result": "tài"
-    },
-    {
-        "phien": 1572,
-        "result": "tài"
-    },
-    {
-        "phien": 1573,
-        "result": "tài"
-    },
-    {
-        "phien": 1574,
-        "result": "tài"
-    },
-    {
-        "phien": 1575,
-        "result": "tài"
-    },
-    {
-        "phien": 1576,
-        "result": "tài"
-    },
-    {
-        "phien": 1577,
-        "result": "tài"
-    },
-    {
-        "phien": 1578,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1579,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1580,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1581,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1582,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1583,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1584,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1585,
-        "result": "tài"
-    },
-    {
-        "phien": 1586,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1587,
-        "result": "tài"
-    },
-    {
-        "phien": 1588,
-        "result": "tài"
-    },
-    {
-        "phien": 1589,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1590,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1591,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1592,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1593,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1594,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1595,
-        "result": "tài"
-    },
-    {
-        "phien": 1596,
-        "result": "tài"
-    },
-    {
-        "phien": 1597,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1598,
-        "result": "tài"
-    },
-    {
-        "phien": 1599,
-        "result": "tài"
-    },
-    {
-        "phien": 1600,
-        "result": "tài"
-    },
-    {
-        "phien": 1601,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1602,
-        "result": "tài"
-    },
-    {
-        "phien": 1603,
-        "result": "tài"
-    },
-    {
-        "phien": 1604,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1605,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1606,
-        "result": "tài"
-    },
-    {
-        "phien": 1607,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1608,
-        "result": "tài"
-    },
-    {
-        "phien": 1609,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1610,
-        "result": "tài"
-    },
-    {
-        "phien": 1611,
-        "result": "tài"
-    },
-    {
-        "phien": 1612,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1613,
-        "result": "tài"
-    },
-    {
-        "phien": 1614,
-        "result": "tài"
-    },
-    {
-        "phien": 1615,
-        "result": "tài"
-    },
-    {
-        "phien": 1616,
-        "result": "tài"
-    },
-    {
-        "phien": 1617,
-        "result": "tài"
-    },
-    {
-        "phien": 1618,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1619,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1620,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1621,
-        "result": "tài"
-    },
-    {
-        "phien": 1622,
-        "result": "tài"
-    },
-    {
-        "phien": 1623,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1624,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1625,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1626,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1627,
-        "result": "tài"
-    },
-    {
-        "phien": 1628,
-        "result": "tài"
-    },
-    {
-        "phien": 1629,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1630,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1631,
-        "result": "tài"
-    },
-    {
-        "phien": 1632,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1633,
-        "result": "tài"
-    },
-    {
-        "phien": 1634,
-        "result": "tài"
-    },
-    {
-        "phien": 1635,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1636,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1637,
-        "result": "tài"
-    },
-    {
-        "phien": 1638,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1639,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1640,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1641,
-        "result": "tài"
-    },
-    {
-        "phien": 1642,
-        "result": "tài"
-    },
-    {
-        "phien": 1643,
-        "result": "tài"
-    },
-    {
-        "phien": 1644,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1645,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1646,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1647,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1648,
-        "result": "xỉu"
-    },
-    {
-        "phien": 1649,
-        "result": "xỉu"
     }
 ]

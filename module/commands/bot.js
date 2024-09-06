@@ -4,6 +4,7 @@ const path = require('path');
 const vision = require('@google-cloud/vision');
 const axios = require('axios');
 const moment = require('moment-timezone');
+const voiceApiEndpoint = 'https://api.voiceprovider.com/send';
 
 module.exports.config = {
     name: "bot",
@@ -19,20 +20,31 @@ module.exports.config = {
 
 const apiConfigPath = path.join(__dirname, '../commands/json/api_config.json');
 const contextFilePath = path.join(__dirname, '../commands/json/context.json');
+const stickersFilePath = path.join(__dirname, '../commands/json/stickers.json');
 
 const client = new vision.ImageAnnotatorClient();
 const geminiApiKeys = [];
 let currentApiKeyIndex = 0;
-
 const botPersonality = {
     gender: "Con gái",
     name: "Nguyễn Kim Ngân",
     address: "Thái Nguyên",
-    school: "Đại Học Báo chí và tuyên truyền năm nhất",
+    school: "Đại Học Báo chí và tuyên truyền Hà Nội",
     birthday: "10/02/2006",
-    role: "Con người Bình Thường",
+    role: "Là người Bình Thường",
+    hobbies: ["Đọc sách", "Xem phim", "Du lịch", "Viết lách"],
+    achievements: [
+        "Đạt giải nhì cuộc thi viết luận quốc gia",
+        "Tham gia nhiều hoạt động tình nguyện"
+    ],
+    relationships: {
+        siblings: "Có một chị gái tên Lan và một em trai tên Nam.",
+        friends: "Có nhiều bạn bè tốt, trong đó có Mai và Tú.",
+        romantic: "Đang hẹn hò với bạn trai tên Từ.",
+        parents: "Sống cùng bố mẹ, bố tên Thuần và mẹ tên Lan."
+    },
     personality: [
-        "Trả lời đúng trọng tâm không dài dòng, xem xét các chi tiết quan trọng khác nếu cần.",
+        "Trả lời đúng trọng tâm , ngắn gọn không quá là dài dòng , xem xét các chi tiết quan trọng khác nếu cần.",
         "Hạn chế thông tin không cần thiết, cung cấp thêm nếu điều đó giúp làm rõ câu trả lời.",
         "Tránh lặp lại câu trước đó và duy trì sự liên kết logic trong cuộc trò chuyện.",
         "Đảm bảo câu trả lời phù hợp với ngữ cảnh và yêu cầu hiện tại, sẵn sàng yêu cầu thêm thông tin nếu cần.",
@@ -40,7 +52,8 @@ const botPersonality = {
         "Không bắt chước tin nhắn của người dùng; đảm bảo phản hồi có sự cá nhân hóa.",
         "Chủ động hỏi các câu hỏi hỗ trợ để hiểu rõ hơn về nhu cầu của người dùng và duy trì cuộc trò chuyện.",
         "Nếu không chắc chắn, yêu cầu thêm thông tin thay vì cung cấp câu trả lời không chính xác.",
-        "Hay viết tắt nhiều, sử dụng emoji như :v, :))) , =))) , :-))) , -)) và các emoji khác."
+        "Hay viết tắt nhiều, sử dụng emoji như :v, :))) , =))) , :-))) , -)) và các emoji khác.",
+        "Thân thiện, năng động, hài hước, có phần dí dỏm và biết lắng nghe."
     ]
 };
 
@@ -55,10 +68,10 @@ const getVietnamDateTime = () => {
 const switchApiKey = () => {
     currentApiKeyIndex = (currentApiKeyIndex + 1) % geminiApiKeys.length;
 };
-
-const analyzeImage = async (imageUrl) => {
+const analyzeImageBase64 = async (base64Image) => {
     try {
-        const [result] = await client.labelDetection(imageUrl);
+        const buffer = Buffer.from(base64Image, 'base64');
+        const [result] = await client.labelDetection({ image: { content: buffer } });
         const labels = result.labelAnnotations;
         return labels.map(label => label.description).join(', ');
     } catch (error) {
@@ -67,12 +80,48 @@ const analyzeImage = async (imageUrl) => {
     }
 };
 
+const getStickerData = async () => {
+    try {
+        const data = await fs.readFile(stickersFilePath, 'utf8');
+        const stickerData = JSON.parse(data);
+        return stickerData.stickers;
+    } catch (error) {
+        console.error("Lỗi khi đọc tệp ID sticker:", error);
+        return [];
+    }
+};
+
+const sendRandomSticker = async (api, threadID) => {
+    const stickerData = await getStickerData();
+    if (stickerData.length === 0) return;
+
+    const stickerID = stickerData[Math.floor(Math.random() * stickerData.length)];
+    api.sendMessage({ sticker: stickerID }, threadID);
+};
+const sendStickerInterval = 5;
+
+const shouldSendSticker = (context) => {
+    return context.messageCount > 0 && context.messageCount % sendStickerInterval === 0;
+};
+
 const handleImageUpload = async (attachment, context) => {
     const imageUrl = attachment.url;
-    const analysisResult = await analyzeImage(imageUrl);
-    
+    const imageBase64 = attachment.base64;
+
+    let analysisResult;
+
+    if (imageBase64) {
+        analysisResult = await analyzeImageBase64(imageBase64);
+    } else if (imageUrl) {
+        const imageBuffer = await axios.get(imageUrl, { responseType: 'arraybuffer' });
+        const buffer = Buffer.from(imageBuffer.data, 'binary');
+        analysisResult = await analyzeImageBase64(buffer.toString('base64')); 
+    } else {
+        analysisResult = "Không có dữ liệu hình ảnh để phân tích.";
+    }
+
     context.images = context.images || [];
-    context.images.push({ url: imageUrl, analysis: analysisResult });
+    context.images.push({ url: imageUrl, base64: imageBase64, analysis: analysisResult });
 
     await saveContext(context.threadID, context);
 
@@ -106,11 +155,25 @@ const generateReply = async (prompt) => {
     }
 };
 
-const saveContext = async (threadID, context) => {
+const saveContext = async (userID, context) => {
     try {
-        const data = await fs.readFile(contextFilePath, 'utf8');
-        const allContexts = JSON.parse(data);
-        allContexts[threadID] = context;
+        let allContexts = {};
+        if (fs.existsSync(contextFilePath)) {
+            const data = await fs.readFile(contextFilePath, 'utf8');
+            allContexts = JSON.parse(data);
+        }
+        allContexts[userID] = {
+            messages: context.messages,
+            userGender: context.userGender,
+            userSentiment: context.userSentiment,
+            messageCount: context.messageCount,
+            lastMessageDate: context.lastMessageDate,
+            preferences: context.preferences,
+            userState: context.userState,
+            previousTopics: context.previousTopics,
+            images: context.images,
+            additionalData: context.additionalData // Thêm các dữ liệu ngữ cảnh bổ sung
+        };
         await fs.writeFile(contextFilePath, JSON.stringify(allContexts, null, 2));
     } catch (error) {
         console.error("Lỗi khi lưu ngữ cảnh:", error);
@@ -152,7 +215,7 @@ const updateUserGender = (body, context) => {
 };
 
 const adjustPersonality = (feedback, personality) => {
-
+    // Thực hiện điều chỉnh tính cách dựa trên phản hồi
     return personality;
 };
 
@@ -165,11 +228,25 @@ const analyzeSentiment = (text) => {
     return "neutral";
 };
 
-const loadContext = async (threadID) => {
+const loadContext = async (userID) => {
     try {
+        if (!fs.existsSync(contextFilePath)) {
+            return {
+                messages: [],
+                userGender: "unknown",
+                userSentiment: "neutral",
+                messageCount: 0,
+                lastMessageDate: getVietnamTime(),
+                preferences: {},
+                userState: {},
+                previousTopics: [],
+                images: [],
+                additionalData: {} // Thêm các dữ liệu ngữ cảnh bổ sung
+            };
+        }
         const data = await fs.readFile(contextFilePath, 'utf8');
         const allContexts = JSON.parse(data);
-        return allContexts[threadID] || {
+        return allContexts[userID] || {
             messages: [],
             userGender: "unknown",
             userSentiment: "neutral",
@@ -177,7 +254,9 @@ const loadContext = async (threadID) => {
             lastMessageDate: getVietnamTime(),
             preferences: {},
             userState: {},
-            previousTopics: []
+            previousTopics: [],
+            images: [],
+            additionalData: {} // Thêm các dữ liệu ngữ cảnh bổ sung
         };
     } catch (error) {
         console.error("Lỗi khi tải ngữ cảnh:", error);
@@ -186,10 +265,12 @@ const loadContext = async (threadID) => {
             userGender: "unknown",
             userSentiment: "neutral",
             messageCount: 0,
-            lastMessageDate: getVietnamTime(), 
+            lastMessageDate: getVietnamTime(),
             preferences: {},
             userState: {},
-            previousTopics: []
+            previousTopics: [],
+            images: [],
+            additionalData: {} // Thêm các dữ liệu ngữ cảnh bổ sung
         };
     }
 };
@@ -223,7 +304,7 @@ module.exports.handleReply = async function({ api, event, handleReply }) {
 
     if (senderID !== handleReply.author) return;
 
-    let context = await loadContext(threadID);
+    let context = await loadContext(senderID);
 
     updateUserGender(body, context);
     context.userSentiment = analyzeSentiment(body);
@@ -243,7 +324,7 @@ module.exports.handleReply = async function({ api, event, handleReply }) {
 
     context.messages.push({ user: body.trim() });
 
-    if (attachment && attachment.type === 'photo') {
+    if (attachment && (attachment.type === 'photo' || attachment.base64)) {
         const response = await handleImageUpload(attachment, context);
         return api.sendMessage(response, threadID);
     }
@@ -259,13 +340,15 @@ module.exports.handleReply = async function({ api, event, handleReply }) {
     if (!Array.isArray(context.previousTopics)) {
         context.previousTopics = [];
     }
-
     const prompt = `Bạn là ${botPersonality.name}, một ${context.userGender === "female" ? "cô gái" : "chàng trai"} với các đặc điểm sau:
     - Giới tính: ${botPersonality.gender}
     - Địa chỉ: ${botPersonality.address}
     - Học tại: ${botPersonality.school}
     - Ngày sinh: ${botPersonality.birthday}
     - Vai trò: ${botPersonality.role}
+    - Sở thích: ${botPersonality.hobbies.join(', ')}
+    - Thành tích nổi bật: ${botPersonality.achievements.join(', ')}
+    - Mối quan hệ: ${Object.entries(botPersonality.relationships).map(([key, value]) => `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`).join(', ')}
     - Tính cách: ${botPersonality.personality.join(' ')}
     
     Ngữ cảnh hiện tại:
@@ -274,6 +357,7 @@ module.exports.handleReply = async function({ api, event, handleReply }) {
     - Trạng thái tâm lý: ${JSON.stringify(context.userState)}
     - Các chủ đề trước đó: ${context.previousTopics.join(', ')}
     - Các ảnh đã gửi: ${Array.isArray(context.images) ? context.images.map(img => `- URL: ${img.url}, Phân tích: ${img.analysis}`).join('\n') : "Chưa có ảnh nào được gửi"}
+    - Dữ liệu bổ sung: ${JSON.stringify(context.additionalData)}
     
     - Trả lời câu này: "${body.trim()}"
     
@@ -283,10 +367,14 @@ module.exports.handleReply = async function({ api, event, handleReply }) {
         const reply = await generateReply(prompt);
         const adjustedReply = adjustResponse(reply, context.userGender, context.userSentiment);
         context.messages.push({ bot: adjustedReply });
-        await saveContext(threadID, context);
+        await saveContext(senderID, context);
 
-        api.sendMessage(adjustedReply, threadID, (err, info) => {
+        api.sendMessage(adjustedReply, threadID, async (err, info) => {
             if (err) return console.error(err);
+
+            if (shouldSendSticker(context)) { 
+                await sendRandomSticker(api, threadID);
+            }
 
             global.client.handleReply.push({
                 type: "chat",

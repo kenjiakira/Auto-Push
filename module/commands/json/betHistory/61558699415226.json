@@ -1,0 +1,12 @@
+[
+    {
+        "phien": 49,
+        "choice": "tài",
+        "betAmount": 1000000
+    },
+    {
+        "phien": 50,
+        "choice": "xỉu",
+        "betAmount": 5000000
+    }
+]
