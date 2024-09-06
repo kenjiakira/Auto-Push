@@ -3710,5 +3710,9 @@
     {
         "phien": 929,
         "result": "tài"
+    },
+    {
+        "phien": 930,
+        "result": "xỉu"
     }
 ]
