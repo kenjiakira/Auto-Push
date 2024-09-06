@@ -709,19 +709,19 @@
         "vanity": "hieuhandsomesidekick",
         "gender": 2,
         "isBirthday": false,
-        "money": 26896245,
+        "money": 26903169,
         "exp": 0,
         "createTime": {
             "timestamp": 1724554226481
         },
         "data": {
             "timestamp": 1724554226481,
-            "work2Time": 1725542912732
+            "work2Time": 1725582436934
         },
         "lastUpdate": 1724554226481,
         "lastDailyClaim": 1725456941642,
         "lastPlayTime": 1725520021528,
-        "coins": 587,
+        "coins": 609,
         "pay_limit_2024-08-25_61559188024598": 3,
         "pay_limit_2024-09-03_61559188024598": 4,
         "pay_limit_2024-09-04_61559188024598": 12,

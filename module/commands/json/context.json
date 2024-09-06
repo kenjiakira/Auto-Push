@@ -71,5 +71,30 @@
     "previousTopics": [],
     "images": [],
     "additionalData": {}
+  },
+  "61558699415226": {
+    "messages": [
+      {
+        "user": "Bot lồn"
+      },
+      {
+        "bot": "Ê ê ê, nói chuyện cho lịch sự cái nàoooo =)))))) Đừng có lỡ lời như thế chứ, kỳ kì :v \nCó chuyện gì thì cứ bảo Ngân nè, biết đâu giúp được :3  \n"
+      },
+      {
+        "user": "bot acp tui đi"
+      },
+      {
+        "bot": "Ê ê ê, \"acp\" là chi đó? Bật mí cho Ngân biết tí đi, hóng hớt xíu coi :v  😉 Chứ tự nhiên kêu acp tui hông hà, tui hong hiểu đâu nhaaa =)))) \n"
+      }
+    ],
+    "userGender": "unknown",
+    "userSentiment": "neutral",
+    "messageCount": 2,
+    "lastMessageDate": "2024-09-06",
+    "preferences": {},
+    "userState": {},
+    "previousTopics": [],
+    "images": [],
+    "additionalData": {}
   }
 }
