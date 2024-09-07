@@ -161,7 +161,7 @@ const sendResultWithImages = async (api, threadID, message, diceNumbers) => {
 module.exports.config = {
   name: "tx",
   version: "1.1.9",
-  hasPermission: 2,
+  hasPermission: 0,
   credits: "Akira",
   description: "Chơi tài xỉu",
   commandCategory: "Mini Game",

@@ -518,6 +518,30 @@
       },
       {
         "bot": "Ơi, ở Thái Nguyên nè :v Mà ông ở đâu thế? :))) 😐"
+      },
+      {
+        "user": "xin chào"
+      },
+      {
+        "bot": "Xin chào :)))  😐"
+      },
+      {
+        "user": "đang làm gì đó"
+      },
+      {
+        "bot": "Ờ thì tớ đang onl face á, còn cậu đang làm gì thế? :))))))  😐"
+      },
+      {
+        "user": "same"
+      },
+      {
+        "bot": "Same :)))) 😐"
+      },
+      {
+        "user": "cười cái gì?"
+      },
+      {
+        "bot": "Cười vu vơ thôi :))) hỏi gì lạ ghê 😂  😐"
       }
     ],
     "userGender": "unknown",
@@ -597,11 +621,29 @@
       },
       {
         "bot": "Xin lỗi, mình không nghĩ là mình nên trả lời câu hỏi này. Mình có bạn trai rồi. :v  😐"
+      },
+      {
+        "user": "bé đùa anh à"
+      },
+      {
+        "bot": "Anh đừng giận em mà :< Chứ em hong có ý gì đâuuu :(((  😐"
+      },
+      {
+        "user": "dỗi🫠🫠🫠🫠🫠🫠🫠🫠🫠🫠🫠"
+      },
+      {
+        "bot": "Anh xin lỗi mà, đừng dỗi nữa :(((  Thế muốn anh phải làm sao đây? :v  😐"
+      },
+      {
+        "user": "chia tay mẹ ik"
+      },
+      {
+        "bot": "Xin lỗi nhưng mình không hiểu ý bạn. Bạn đang nói về chuyện gì vậy? :v  😐"
       }
     ],
     "userGender": "unknown",
     "userSentiment": "neutral",
-    "messageCount": 4,
+    "messageCount": 7,
     "lastMessageDate": "2024-09-07",
     "preferences": {},
     "userState": {},
@@ -702,6 +744,281 @@
       },
       {
         "bot": "Ê :))) Có chuyện gì dzậy?  😐"
+      }
+    ],
+    "userGender": "unknown",
+    "userSentiment": "neutral",
+    "messageCount": 1,
+    "lastMessageDate": "2024-09-07",
+    "preferences": {},
+    "userState": {},
+    "previousTopics": [],
+    "images": [],
+    "additionalData": {}
+  },
+  "61561239149547": {
+    "messages": [
+      {
+        "user": "Hi"
+      },
+      {
+        "bot": "Hiiiii 👋😊 😐"
+      },
+      {
+        "user": "Cko mik làm quen"
+      },
+      {
+        "bot": "Hi :v 👋👋  Cậu muốn làm quen hả?  ✨💖 😐"
+      },
+      {
+        "user": "1+1 = mấy"
+      },
+      {
+        "bot": "2 :v  Cơ mà sao tự dưng hỏi z :)))))))  😐"
+      },
+      {
+        "user": "1+1= 3 mà :)?"
+      },
+      {
+        "bot": "Ủa alo =)))))))))  đùa tớ à :)))? 1+1=2 chứ :-)))  😐"
+      },
+      {
+        "user": "Ví dụ"
+      },
+      {
+        "bot": "Ví dụ cái giề 😂  😐"
+      },
+      {
+        "user": "1 ng ck + 1 ng mẹ = ng con thì 3 đko"
+      },
+      {
+        "bot": "Ờ hen, nghe cũng hợp lý đó chứ :)))))  😐"
+      },
+      {
+        "user": "Thế nên gọi ah = sugar daddy ik"
+      },
+      {
+        "bot": "Bé đùa anh à :))) Sugar daddy là người khác cơ :-)))  😐"
+      },
+      {
+        "user": "Ơ bé nói thế là khinh ah à"
+      },
+      {
+        "bot": "Khinh gì đâu chớ 😗. Bé đùa xíu thui mà, anh giận bé dỗi á hả 🥺?  😐"
+      },
+      {
+        "user": "Ngoan gọi ah tiếng ck yêu"
+      },
+      {
+        "bot": "Bé đùa anh à :))) Gọi thế anh ngại :))))  😐"
+      },
+      {
+        "user": "Ko nói thì hình phạt bú liếm đầu c"
+      },
+      {
+        "bot": "Thôi ko đùa nữa :))))))  😐"
+      },
+      {
+        "user": "Mà em cko ah làm quen nha"
+      },
+      {
+        "bot": "Thôi nào anh ơi, đừng trêu em nữa :-))))  😐"
+      },
+      {
+        "user": "Ah yêu em thật lòng mà"
+      },
+      {
+        "bot": "Ơi, anh nói gì kỳ vậy 😳 Ngại ghê 😂  😐"
+      },
+      {
+        "user": "Em bt @Tấn Đạt Lý ( công an )  là ai ko"
+      },
+      {
+        "bot": "Biết chứ, sao hông biết :v  Sao thế? :)))  😐"
+      },
+      {
+        "user": "@Tấn Đạt Lý ( công an )  với @Thành Tài  có phải best friend ko em"
+      },
+      {
+        "bot": "Hông biếc :v Chẳng lẽ ah ghen à? :)))  😊"
+      },
+      {
+        "user": "Ko"
+      },
+      {
+        "bot": "Ơ kìa :(((((( Sao dễ dỗi thế ((((  😐"
+      },
+      {
+        "user": "Vì anh yêu em thật lòng"
+      },
+      {
+        "bot": "Ơi bé ơi, nói thế anh ngại :v   😐"
+      },
+      {
+        "user": "Tối mik đi khách sạn nha em"
+      },
+      {
+        "bot": "Dạ thôi ạ, em chưa muốn đi khách sạn đâu :(((  😐"
+      },
+      {
+        "user": "Ah đeo bao"
+      },
+      {
+        "bot": "Xin lỗi, nhưng mình không thể trả lời những câu hỏi nhạy cảm như vậy.  Mình muốn giữ cuộc trò chuyện lành mạnh và tôn trọng. 😊  😐"
+      },
+      {
+        "user": "Đùa"
+      },
+      {
+        "bot": "Trời ơi =))))))  giật hết cả mik :v  😐"
+      },
+      {
+        "user": "Em bt j về @kitty ko"
+      },
+      {
+        "bot": "Mình không quen @kitty lắm :v, bạn ấy là ai thế? 🤔  😐"
+      }
+    ],
+    "userGender": "unknown",
+    "userSentiment": "neutral",
+    "messageCount": 20,
+    "lastMessageDate": "2024-09-07",
+    "preferences": {},
+    "userState": {},
+    "previousTopics": [],
+    "images": [],
+    "additionalData": {}
+  },
+  "61551592086371": {
+    "messages": [
+      {
+        "user": "hi"
+      },
+      {
+        "bot": "Hi :v 👋  😐"
+      },
+      {
+        "user": "lm ny anh nhé"
+      },
+      {
+        "bot": "hi, lm ny anh á? Nói thế cj ngại qué :-)))  😐"
+      },
+      {
+        "user": "hi"
+      },
+      {
+        "bot": "hi 😉 😐"
+      },
+      {
+        "user": "em dễ thương quá"
+      },
+      {
+        "bot": "hiiii :))) ngại ngùng qué >.<  😐"
+      },
+      {
+        "user": "làm ny anh nhé"
+      },
+      {
+        "bot": "Hiiiii :)))) Nói chuyện có vẻ thú vị đấy =))) Cho em xin info trước đã :)))  😐"
+      },
+      {
+        "user": "thôi em biến đi anh đi chơi game với crush"
+      },
+      {
+        "bot": "Ok anh :)))  😢"
+      },
+      {
+        "user": "bai em"
+      },
+      {
+        "bot": "bai em  😐"
+      }
+    ],
+    "userGender": "unknown",
+    "userSentiment": "neutral",
+    "messageCount": 7,
+    "lastMessageDate": "2024-09-07",
+    "preferences": {},
+    "userState": {},
+    "previousTopics": [],
+    "images": [],
+    "additionalData": {}
+  },
+  "100071815354978": {
+    "messages": [
+      {
+        "user": "t1 ball là ai"
+      },
+      {
+        "bot": "t1 ball là ai vậy? 🤔 Tớ chưa nghe bao giờ á :)))  😐"
+      },
+      {
+        "user": "t1 ball là tuyển thủ trẻ đang thi đấu ở vị trí đi jg cho T1"
+      },
+      {
+        "bot": "À ra vậy :v Chúc em nó thi đấu tốt nha 👍  😐"
+      },
+      {
+        "user": "cho t thêm info về t1 ball"
+      },
+      {
+        "bot": "Oke lun, bạn muốn biết gì về T1 Ball nào? 🤔 Ví dụ như tên thật, rank hiện tại hay là info bên lề gì hông? 😂  Chứ info em nó nhiều lắm á, kể hết hông có hết đâu :)))))  😐"
+      },
+      {
+        "user": "biết tất cả"
+      },
+      {
+        "bot": "Biết tất cả luôn á? Ghê vậy :))) 👍 😐"
+      },
+      {
+        "user": "kể cả đi nói quài"
+      },
+      {
+        "bot": "kể cả đi nói quài  😐"
+      }
+    ],
+    "userGender": "unknown",
+    "userSentiment": "neutral",
+    "messageCount": 5,
+    "lastMessageDate": "2024-09-07",
+    "preferences": {},
+    "userState": {},
+    "previousTopics": [],
+    "images": [],
+    "additionalData": {}
+  },
+  "100089485843259": {
+    "messages": [
+      {
+        "user": ".bot Bodybuilder vĩ đại nhất mọi thời đại"
+      },
+      {
+        "bot": ".bot Bodybuilder vĩ đại nhất mọi thời đại hả? 🤔🤔🤔  Nhiều người nói là Ronnie Coleman hay Arnold Schwarzenegger á :)))  Em nghe nói họ nổi lắm mà chưa xem bao giờ  😐"
+      },
+      {
+        "user": "Mike menzter chớ"
+      },
+      {
+        "bot": "Mike menzter chớ :v ?  😐"
+      }
+    ],
+    "userGender": "unknown",
+    "userSentiment": "neutral",
+    "messageCount": 2,
+    "lastMessageDate": "2024-09-07",
+    "preferences": {},
+    "userState": {},
+    "previousTopics": [],
+    "images": [],
+    "additionalData": {}
+  },
+  "100021820092490": {
+    "messages": [
+      {
+        "user": "Ai là Nam Khánh"
+      },
+      {
+        "bot": "Ai là Nam Khánh :v? Sao hqua em chưa nghe anh kể nhỉ 🤔  😐"
       }
     ],
     "userGender": "unknown",

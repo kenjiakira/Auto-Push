@@ -275,18 +275,18 @@
         "vanity": "trunq.06",
         "gender": 2,
         "isBirthday": false,
-        "money": 13561,
+        "money": 4568,
         "exp": 0,
         "createTime": {
             "timestamp": 1724552879955
         },
         "data": {
             "timestamp": 1724552879955,
-            "work2Time": 1725528296251
+            "work2Time": 1725715969535
         },
         "lastUpdate": 1724552879955,
-        "coins": 21,
-        "lastPlayTime": 1725442881652,
+        "coins": 42,
+        "lastPlayTime": 1725715962537,
         "lastDailyClaim": 1724749250138,
         "pay_limit_2024-08-26_100062097905258": 1,
         "pay_limit_2024-08-27_100062097905258": 5
@@ -659,7 +659,7 @@
         "vanity": "100012456850890",
         "gender": 2,
         "isBirthday": false,
-        "money": 687,
+        "money": 1340,
         "exp": 0,
         "createTime": {
             "timestamp": 1724554147650
@@ -670,7 +670,7 @@
         },
         "lastUpdate": 1724554147650,
         "coins": 25,
-        "lastPlayTime": 1724814649199,
+        "lastPlayTime": 1725715525701,
         "lastDailyClaim": 1724637990184,
         "pay_limit_2024-08-26_100012456850890": 13,
         "pay_limit_2024-08-27_100012456850890": 17,
@@ -3348,7 +3348,7 @@
         "vanity": "100081800629553",
         "gender": 2,
         "isBirthday": false,
-        "money": 17500280002581,
+        "money": 0,
         "exp": 0,
         "createTime": {
             "timestamp": 1724563945861
@@ -3358,7 +3358,7 @@
             "work2Time": 1724564733690
         },
         "lastUpdate": 1724563945861,
-        "lastPlayTime": 1725519502432,
+        "lastPlayTime": 1725715834470,
         "coins": 0,
         "pay_limit_2024-09-01_100081800629553": 3,
         "pay_limit_2024-09-03_100081800629553": 8,
@@ -4667,7 +4667,7 @@
         "vanity": "100091758518630",
         "gender": 2,
         "isBirthday": false,
-        "money": 2397,
+        "money": 6452,
         "exp": 0,
         "createTime": {
             "timestamp": 1724578153822
@@ -4679,7 +4679,7 @@
         "lastUpdate": 1724578153822,
         "coins": 45,
         "lastPlayTime": 1725094348413,
-        "lastDailyClaim": 1724818788331,
+        "lastDailyClaim": 1725715637413,
         "pay_limit_2024-08-30_100091758518630": 1
     },
     "100091965840132": {
@@ -10568,5 +10568,25 @@
             "timestamp": 873248249823749
         },
         "lastUpdate": 873248249823749
+    },
+    "61565378334820": {
+        "userID": "61565378334820",
+        "name": "Cho Con",
+        "vanity": "61565378334820",
+        "gender": 2,
+        "isBirthday": false,
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1725715561950
+        },
+        "data": {
+            "timestamp": 1725715561950,
+            "work2Time": 1725715573451
+        },
+        "lastUpdate": 1725715561950,
+        "coins": 0,
+        "lastDailyClaim": 1725715575894,
+        "lastPlayTime": 1725715587178
     }
 }
