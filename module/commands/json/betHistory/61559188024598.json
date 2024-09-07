@@ -28,5 +28,10 @@
         "phien": 921,
         "choice": "tài",
         "betAmount": 100000
+    },
+    {
+        "phien": 1365,
+        "choice": "tài",
+        "betAmount": 200
     }
 ]

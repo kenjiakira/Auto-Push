@@ -226,6 +226,11 @@
                 "id": "GvPHKkzUtt",
                 "input": "khangbui",
                 "output": ".pay 4000000000"
+            },
+            {
+                "id": "OsDvYGFfQA",
+                "input": "ê",
+                "output": "ê"
             }
         ]
     },
@@ -260,6 +265,11 @@
                 "id": "SqKvuRkhCg",
                 "input": "😁😁😁",
                 "output": "😁😁😁 làm chó suốt đời"
+            },
+            {
+                "id": "LKWabhYttj",
+                "input": "👍",
+                "output": "no no no"
             }
         ]
     },

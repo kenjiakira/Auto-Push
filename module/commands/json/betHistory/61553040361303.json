@@ -58,5 +58,10 @@
         "phien": 104,
         "choice": "xỉu",
         "betAmount": 7000000000000
+    },
+    {
+        "phien": 1162,
+        "choice": "xỉu",
+        "betAmount": 100
     }
 ]

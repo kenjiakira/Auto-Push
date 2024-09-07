@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { createCanvas, loadImage, registerFont } = require('canvas');
 const axios = require('axios');
-const jimp = require('jimp');
 
 registerFont(path.join(__dirname, 'cache', 'Be_Vietnam_Pro', 'BeVietnamPro-Bold.ttf'), { family: 'Be Vietnam Pro' });
 
@@ -14,7 +13,8 @@ function formatNumber(number) {
 
 async function getUserName(api, userID) {
   try {
-    return userInfo[userID].name;
+    const userInfo = await api.getUserInfo(userID);
+    return userInfo[userID].name || "người dùng";
   } catch (error) {
     console.error(error);
     return "người dùng";
@@ -22,7 +22,6 @@ async function getUserName(api, userID) {
 }
 
 async function createBalanceImage(userName, balance, userID) {
- // async function createBalanceImage( balance, userID) {
   const width = 800;
   const height = 200;
   const canvas = createCanvas(width, height);
@@ -44,7 +43,7 @@ async function createBalanceImage(userName, balance, userID) {
     const userNameUpper = userName.toUpperCase();
     const userNameText = userNameUpper;
     const userNameWidth = ctx.measureText(userNameText).width;
-   const userNameX = (width - userNameWidth) / 2;
+    const userNameX = (width - userNameWidth) / 2;
     ctx.fillText(userNameText, userNameX, 80);
 
     ctx.font = "bold 45px Sans";
@@ -97,7 +96,6 @@ module.exports.run = async function ({ api, event, args, Currencies }) {
     const userName = await getUserName(api, userID);
 
     const imagePath = await createBalanceImage(userName, formattedBalance, userID);
-
 
     return api.sendMessage({
       attachment: fs.createReadStream(imagePath)
