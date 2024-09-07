@@ -22,7 +22,7 @@ module.exports.config = {
   version: "1.0.0",
   hasPermission: 0,
   credits: "Hoàng Ngọc Từ",
-  description: "Cung cấp một câu chuyện cười với nhiều thể loại khác nhau.",
+  description: "Cung cấp một câu chuyện cười",
   commandCategory: "fun",
   usePrefix: true,
   cooldowns: 5

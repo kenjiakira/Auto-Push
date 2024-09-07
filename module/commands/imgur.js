@@ -7,13 +7,13 @@ const imgurClientId = '34dc774b8c0ddae';
 
 module.exports.config = {
     name: "imgur",
-    version: "1.1.0",
+    version: "1.2.0", 
     hasPermission: 0,
     credits: "Hoàng Ngọc Từ",
-    description: "Tải ảnh để lấy link Imgur",
+    description: "lấy link Imgur",
     commandCategory: "Tiện ích",
     usePrefix: true,
-    usages: "Reply nhiều ảnh hoặc video để tải lên Imgur",
+    usages: "Reply nhiều ảnh hoặc GIF để tải lên Imgur",
     cooldowns: 5
 };
 
@@ -21,18 +21,18 @@ module.exports.run = async ({ api, event }) => {
     const { threadID, messageID, messageReply } = event;
 
     if (!messageReply || !messageReply.attachments || messageReply.attachments.length === 0) {
-        return api.sendMessage("Vui lòng reply nhiều ảnh hoặc video để tải lên Imgur.", threadID, messageID);
+        return api.sendMessage("Vui lòng reply nhiều ảnh hoặc GIF để tải lên Imgur.", threadID, messageID);
     }
 
     const attachments = messageReply.attachments.filter(att => att.type === 'photo' || att.type === 'video');
 
     if (attachments.length === 0) {
-        return api.sendMessage("Vui lòng reply ít nhất một ảnh hoặc video để tải lên Imgur.", threadID, messageID);
+        return api.sendMessage("Vui lòng reply ít nhất một ảnh hoặc GIF để tải lên Imgur.", threadID, messageID);
     }
 
     let uploadPromises = attachments.map(async (attachment) => {
         const fileUrl = attachment.url;
-        const fileExtension = attachment.type === 'photo' ? 'jpg' : 'mp4';
+        const fileExtension = attachment.type === 'photo' ? 'jpg' : attachment.type === 'video' ? 'mp4' : 'gif';
         const tempFilePath = path.join(__dirname, 'cache', `temp_file_${Date.now()}.${fileExtension}`);
 
         try {
@@ -61,7 +61,7 @@ module.exports.run = async ({ api, event }) => {
 
             const imgurUrl = imgurResponse.data.data.link;
 
-            console.log(`Ảnh đã được tải lên Imgur: ${imgurUrl}`);
+            console.log(`Ảnh/GIF đã được tải lên Imgur: ${imgurUrl}`);
 
             fs.unlinkSync(tempFilePath);
 
@@ -81,7 +81,7 @@ module.exports.run = async ({ api, event }) => {
         const message = `${successMessages}\n${errorMessages}`;
         api.sendMessage(message || "Không có tệp nào được tải lên.", threadID, messageID);
     } catch (error) {
-        console.error('Lỗi khi xử lý ảnh/video:', error);
-        api.sendMessage("Có lỗi xảy ra khi xử lý ảnh/video.", threadID, messageID);
+        console.error('Lỗi khi xử lý ảnh/GIF:', error);
+        api.sendMessage("Có lỗi xảy ra khi xử lý ảnh/GIF.", threadID, messageID);
     }
 };

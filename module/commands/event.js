@@ -21,7 +21,7 @@ const { execSync } = require('child_process');
 const loadEventModules = function({ moduleList, threadID, messageID }) {
   const eventModuleDir = join(__dirname, 'module', 'events');
   const configPath = join(__dirname, 'config.json');
-  const logger = require('../utils/log');  // Điều chỉnh đường dẫn nếu cần
+  const logger = require('../utils/log'); 
 
 
   var errorList = [];

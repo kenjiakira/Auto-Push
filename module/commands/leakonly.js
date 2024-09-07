@@ -23,9 +23,9 @@ function isNSFWGroup(threadID) {
 module.exports.config = {
     name: "leakonly",
     version: "1.0.0",
-    hasPermission: 0,
+    hasPermission: 2,
     credits: "Hoàng Ngọc Từ",
-    description: "Chỉ bán quạt🌚 NSFW",
+    description: "Chỉ bán quạt",
     commandCategory: "Tài Chính",
     usePrefix: true,
     usages: [
@@ -69,7 +69,7 @@ module.exports.run = async ({ api, event, Currencies }) => {
     const imgurImageUrls = readOrCreateData(imagePath);
 
     const selectedUrls = [];
-    while (selectedUrls.length < 15 && imgurImageUrls.length > 0) {
+    while (selectedUrls.length < 1 && imgurImageUrls.length > 0) {
         const randomIndex = Math.floor(Math.random() * imgurImageUrls.length);
         const url = imgurImageUrls.splice(randomIndex, 1)[0];
         selectedUrls.push(url);
