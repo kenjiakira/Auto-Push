@@ -2730,7 +2730,7 @@
         "vanity": "howrutoday.7",
         "gender": 1,
         "isBirthday": false,
-        "money": 711774115,
+        "money": 100000000000,
         "exp": 0,
         "createTime": {
             "timestamp": 1724558379199
@@ -2740,7 +2740,7 @@
             "work2Time": 1724581927471
         },
         "lastUpdate": 1724558379199,
-        "lastPlayTime": 1725519992881,
+        "lastPlayTime": 1725716619737,
         "coins": 228000,
         "pay_limit_2024-08-25_100028202556430": 3,
         "lastDailyClaim": 1724728377530,
@@ -4601,7 +4601,7 @@
         "vanity": "100080149704587",
         "gender": 2,
         "isBirthday": false,
-        "money": 5809500000000,
+        "money": 5684500000000,
         "exp": 0,
         "createTime": {
             "timestamp": 1724577183877
@@ -4612,7 +4612,8 @@
         },
         "lastUpdate": 1724577183877,
         "coins": 20,
-        "lastPlayTime": 1725716534759
+        "lastPlayTime": 1725716534759,
+        "pay_limit_2024-09-07_100080149704587": 4
     },
     "100064812527124": {
         "userID": "100064812527124",
@@ -5563,7 +5564,7 @@
         "vanity": "nothingisfrvs",
         "gender": 2,
         "isBirthday": false,
-        "money": 144590062500,
+        "money": 0,
         "exp": 0,
         "createTime": {
             "timestamp": 1724637144014
@@ -5572,7 +5573,7 @@
             "timestamp": 1724637144014
         },
         "lastUpdate": 1724637144014,
-        "lastPlayTime": 1725716604508,
+        "lastPlayTime": 1725716780180,
         "pay_limit_2024-08-27_100044992386960": 11
     },
     "100087589244396": {
@@ -10086,7 +10087,7 @@
         "vanity": "61561972921907",
         "gender": 6,
         "isBirthday": false,
-        "money": 37074431853,
+        "money": 0,
         "exp": 0,
         "createTime": {
             "timestamp": 1725355984212
@@ -10097,7 +10098,7 @@
         },
         "lastUpdate": 1725355984212,
         "coins": 366,
-        "lastPlayTime": 1725716517729,
+        "lastPlayTime": 1725716623075,
         "pay_limit_2024-09-03_61561972921907": 23,
         "lastDailyClaim": 1725385710230,
         "pay_limit_2024-09-04_61561972921907": 10
@@ -10588,7 +10589,7 @@
         "lastUpdate": 1725715561950,
         "coins": 0,
         "lastDailyClaim": 1725715575894,
-        "lastPlayTime": 1725716431395,
+        "lastPlayTime": 1725716707720,
         "pay_limit_2024-09-07_61565378334820": 1
     }
 }
