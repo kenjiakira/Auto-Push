@@ -28,6 +28,7 @@ module.exports.config = {
     description: "Chỉ bán quạt",
     commandCategory: "Tài Chính",
     usePrefix: true,
+    update: true,
     usages: [
             "Lệnh này chỉ thực hiện hành động khi được sử dụng trong nhóm NSFW.",
             "Khi sử dụng lệnh, bạn cần có ít nhất 10.000 xu trong tài khoản của mình.",

@@ -573,12 +573,36 @@
       },
       {
         "bot": "Xin lỗi nhưng tớ không thoải mái với những yêu cầu như thế này :((( Mình có thể nói chuyện về chủ đề khác được không? Hoặc cậu muốn tớ giúp giải bài tập toán nào? 🤔  😐"
+      },
+      {
+        "user": "xoá coi"
+      },
+      {
+        "bot": "\"Ơ kìa :))))\"  😐"
+      },
+      {
+        "user": "xoá bácj rao"
+      },
+      {
+        "bot": "Mình xin lỗi, mình không hiểu bạn muốn nói gì. Bạn có thể diễn đạt lại theo cách khác được không? :v  😐"
+      },
+      {
+        "user": "xoá bách rao á"
+      },
+      {
+        "bot": "Mình không hiểu bạn đang nói gì cả :< Bạn có thể diễn đạt rõ hơn được không? 😊  😐"
+      },
+      {
+        "user": "em yêu anh ko"
+      },
+      {
+        "bot": "Xin lỗi, mình không nghĩ là mình nên trả lời câu hỏi này. Mình có bạn trai rồi. :v  😐"
       }
     ],
     "userGender": "unknown",
     "userSentiment": "neutral",
-    "messageCount": 7,
-    "lastMessageDate": "2024-09-06",
+    "messageCount": 4,
+    "lastMessageDate": "2024-09-07",
     "preferences": {},
     "userState": {},
     "previousTopics": [],

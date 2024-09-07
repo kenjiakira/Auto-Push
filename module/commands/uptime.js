@@ -9,7 +9,7 @@ let commandCount = 0;
 
 module.exports.config = {
     name: "uptime",
-    version: "1.4.0",
+    version: "1.5.0",
     hasPermission: 0,
     credits: "HNT",
     description: "Xem thời gian bot đã online và thông tin hệ thống.",
@@ -37,37 +37,6 @@ async function getPing() {
     }
 }
 
-async function getDiskUsage() {
-    try {
-        const { stdout } = await execPromise('df -h');
-        const lines = stdout.split('\n');
-        const diskInfo = lines.find(line => line.includes('/'));
-        if (diskInfo) {
-            const parts = diskInfo.split(/\s+/);
-            return {
-                totalDisk: parts[1],
-                usedDisk: parts[2],
-                availableDisk: parts[3],
-                usagePercentage: parts[4]
-            };
-        } else {
-            return {
-                totalDisk: 'N/A',
-                usedDisk: 'N/A',
-                availableDisk: 'N/A',
-                usagePercentage: 'N/A'
-            };
-        }
-    } catch {
-        return {
-            totalDisk: 'N/A',
-            usedDisk: 'N/A',
-            availableDisk: 'N/A',
-            usagePercentage: 'N/A'
-        };
-    }
-}
-
 async function getSystemInfo() {
     try {
         const platform = os.platform();
@@ -83,7 +52,6 @@ async function getSystemInfo() {
         const usedMemory = (totalMemory - freeMemory).toFixed(2);
         const uptime = os.uptime();
         const networkInterfaces = os.networkInterfaces();
-        const diskUsage = await getDiskUsage();
 
         return {
             platform,
@@ -98,8 +66,7 @@ async function getSystemInfo() {
             freeMemory,
             usedMemory,
             uptime,
-            networkInterfaces,
-            diskUsage
+            networkInterfaces
         };
     } catch (error) {
         return {
@@ -115,23 +82,8 @@ async function getSystemInfo() {
             freeMemory: 'N/A',
             usedMemory: 'N/A',
             uptime: 'N/A',
-            networkInterfaces: 'N/A',
-            diskUsage: {
-                totalDisk: 'N/A',
-                usedDisk: 'N/A',
-                availableDisk: 'N/A',
-                usagePercentage: 'N/A'
-            }
+            networkInterfaces: 'N/A'
         };
-    }
-}
-
-async function getDockerInfo() {
-    try {
-        const { stdout } = await execPromise('docker stats --no-stream --format "{{.Name}}: CPU {{.CPUPerc}}, MEM {{.MemUsage}}"');
-        return stdout || 'N/A';
-    } catch {
-        return 'N/A';
     }
 }
 
@@ -152,34 +104,6 @@ async function getSystemUptime() {
     return `${sysUptimeDays} ngày, ${sysUptimeHours} giờ, ${sysUptimeMinutes} phút, ${sysUptimeSeconds} giây`;
 }
 
-async function getNetworkSpeed() {
-    try {
-        const { stdout } = await execPromise('speedtest-cli --simple');
-        const lines = stdout.trim().split('\n');
-        return {
-            ping: lines[0]?.split(': ')[1] || 'N/A',
-            download: lines[1]?.split(': ')[1] || 'N/A',
-            upload: lines[2]?.split(': ')[1] || 'N/A'
-        };
-    } catch {
-        return {
-            ping: 'N/A',
-            download: 'N/A',
-            upload: 'N/A'
-        };
-    }
-}
-
-async function getTemperature() {
-    try {
-        const { stdout } = await execPromise('sensors');
-        const tempMatch = stdout.match(/temp1:\s+\+([\d\.]+)°C/);
-        return tempMatch ? `${tempMatch[1]}°C` : 'N/A';
-    } catch {
-        return 'N/A';
-    }
-}
-
 module.exports.run = async function({ api, event }) {
     const { threadID, messageID } = event;
 
@@ -194,11 +118,7 @@ module.exports.run = async function({ api, event }) {
     let cpuLoad = os.loadavg()[0].toFixed(2); 
     
     const ping = await getPing();
-    const diskUsage = await getDiskUsage();
     const systemInfo = await getSystemInfo();
-    const networkSpeed = await getNetworkSpeed();
-    const temperature = await getTemperature();
-    const dockerInfo = await getDockerInfo();
     const nodeVersion = await getNodeVersion();
     const systemUptime = await getSystemUptime();
 
@@ -220,20 +140,7 @@ module.exports.run = async function({ api, event }) {
     uptimeMessage += `- Bộ nhớ còn lại: ${systemInfo.freeMemory} GB\n`;
     uptimeMessage += `- Bộ nhớ đã sử dụng: ${systemInfo.usedMemory} GB\n`;
     uptimeMessage += `=======================\n`;
-    uptimeMessage += `💽 Disk Usage:\n`;
-    uptimeMessage += `- Total Disk: ${diskUsage.totalDisk}\n`;
-    uptimeMessage += `- Used Disk: ${diskUsage.usedDisk}\n`;
-    uptimeMessage += `- Available Disk: ${diskUsage.availableDisk}\n`;
-    uptimeMessage += `- Usage Percentage: ${diskUsage.usagePercentage}\n`;
-    uptimeMessage += `=======================\n`;
-    uptimeMessage += `🌐 Network Speed:\n`;
-    uptimeMessage += `- Ping: ${networkSpeed.ping}\n`;
-    uptimeMessage += `- Download: ${networkSpeed.download}\n`;
-    uptimeMessage += `- Upload: ${networkSpeed.upload}\n`;
-    uptimeMessage += `=======================\n`;
-    uptimeMessage += `🔥 Nhiệt độ hệ thống: ${temperature}\n`;
-    uptimeMessage += `=======================\n`;
-    uptimeMessage += `🐳 Docker Info:\n${dockerInfo}\n`;
+    uptimeMessage += `🌐 Ping: ${ping}\n`;
     uptimeMessage += `=======================\n`;
     uptimeMessage += `🔢 Node.js Version: ${nodeVersion}\n`;
 

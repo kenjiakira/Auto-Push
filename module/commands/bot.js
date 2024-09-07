@@ -15,6 +15,7 @@
         description: "AI trò chuyện.",
         commandCategory: "advanced",
         usePrefix: true,
+        update: true,
         usages: "dùng để giao tiếp tự nhiên và cảm xúc",
         cooldowns: 5
     };

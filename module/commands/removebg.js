@@ -1,60 +1,85 @@
+module.exports.config = {
+    name: 'removebg',
+    version: '1.6.0',
+    hasPermission: 0,
+    credits: 'HNT',
+    description: 'Tách Background ảnh',
+    commandCategory: 'Công cụ',
+    usages: 'Reply ảnh hoặc gửi URL ảnh để tách Background',
+    cooldowns: 5,
+    usePrefix: true,
+    dependencies: {
+        'form-data': '',
+        'image-downloader': '',
+        'winston': ''
+    }
+};
+
 const axios = require('axios');
 const FormData = require('form-data');
 const fs = require('fs-extra');
 const path = require('path');
 const { image } = require('image-downloader');
+const { promisify } = require('util');
+const { exec } = require('child_process');
+const execPromise = promisify(exec);
+const winston = require('winston');
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.combine(
+        winston.format.timestamp(),
+        winston.format.json()
+    ),
+    transports: [
+        new winston.transports.Console(),
+        new winston.transports.File({ filename: 'removebg.log' })
+    ]
+});
 
-module.exports.config = {
-    name: 'removebg',
-    version: '1.2.0',
-    hasPermission: 0,
-    credits: 'HNT',
-    description: 'Tách Background ảnh',
-    commandCategory: 'Công cụ',
-    usages: 'Reply ảnh hoặc URL ảnh để tách Background',
-    cooldowns: 2,
-    dependencies: {
-        'form-data': '',
-        'image-downloader': ''
-    }
-};
+const apiKeys = [
+    "t4Jf1ju4zEpiWbKWXxoSANn4",
+    "CTWSe4CZ5AjNQgR8nvXKMZBd",
+    "PtwV35qUq557yQ7ZNX1vUXED",
+    "wGXThT64dV6qz3C6AhHuKAHV",
+    "82odzR95h1nRp97Qy7bSRV5M",
+    "4F1jQ7ZkPbkQ6wEQryokqTmo",
+    "sBssYDZ8qZZ4NraJhq7ySySR",
+    "NuZtiQ53S2F5CnaiYy4faMek",
+    "f8fujcR1G43C1RmaT4ZSXpwW"
+];
 
-module.exports.run = async function ({ api, event, args }) {
+function generateUniqueFileName(extension) {
+    return path.resolve(__dirname, 'cache', `photo_${Date.now()}.${extension}`);
+}
+
+async function processImage(imageUrl, format = 'png') {
+    const inputPath = generateUniqueFileName('png');
+    const outputPath = generateUniqueFileName(format);
+
     try {
-        const successMessage = `📸[ TÁCH BACKGROUND ]📸
-━━━━━━━━━━━━━━━
-[✔️]➜ Tách Background thành công! Background của ảnh bạn đã được loại bỏ.`;
+    
+        await image({ url: imageUrl, dest: inputPath });
+        logger.info('Đã tải ảnh về', { inputPath });
 
-        if (event.type !== "message_reply") {
-            return api.sendMessage("[❗]➜ Vui lòng reply một ảnh để thực hiện tách Background.", event.threadID, event.messageID);
-        }
-        if (!event.messageReply.attachments || event.messageReply.attachments.length == 0) {
-            return api.sendMessage("[❗]➜ Bạn cần reply ít nhất một ảnh.", event.threadID, event.messageID);
-        }
-        if (event.messageReply.attachments[0].type != "photo") {
-            return api.sendMessage("[❗]➜ Đối tượng reply không phải là ảnh.", event.threadID, event.messageID);
-        }
+        await removeBackground(inputPath, outputPath);
+        logger.info('Đã xóa nền ảnh', { outputPath });
 
-        const content = event.messageReply.attachments[0].url;
-        const KeyApi = [
-            "t4Jf1ju4zEpiWbKWXxoSANn4",
-            "CTWSe4CZ5AjNQgR8nvXKMZBd",
-            "PtwV35qUq557yQ7ZNX1vUXED",
-            "wGXThT64dV6qz3C6AhHuKAHV",
-            "82odzR95h1nRp97Qy7bSRV5M",
-            "4F1jQ7ZkPbkQ6wEQryokqTmo",
-            "sBssYDZ8qZZ4NraJhq7ySySR",
-            "NuZtiQ53S2F5CnaiYy4faMek",
-            "f8fujcR1G43C1RmaT4ZSXpwW"
-        ];
-        const inputPath = path.resolve(__dirname, 'cache', `photo.png`);
+        fs.unlinkSync(inputPath);
 
-        await image({ url: content, dest: inputPath });
+        return outputPath;
+    } catch (error) {
+        logger.error('Lỗi khi xử lý ảnh', { error: error.message });
+        throw new Error(`Lỗi khi xử lý ảnh: ${error.message}`);
+    }
+}
 
+async function removeBackground(inputPath, outputPath) {
+    try {
         const formData = new FormData();
         formData.append('size', 'auto');
         formData.append('image_file', fs.createReadStream(inputPath), path.basename(inputPath));
 
+        const apiKey = await getApiKey();
         const response = await axios({
             method: 'post',
             url: 'https://api.remove.bg/v1.0/removebg',
@@ -62,7 +87,7 @@ module.exports.run = async function ({ api, event, args }) {
             responseType: 'arraybuffer',
             headers: {
                 ...formData.getHeaders(),
-                'X-Api-Key': KeyApi[Math.floor(Math.random() * KeyApi.length)],
+                'X-Api-Key': apiKey,
             },
             encoding: null
         });
@@ -71,11 +96,51 @@ module.exports.run = async function ({ api, event, args }) {
             throw new Error(`Error: ${response.status} - ${response.statusText}`);
         }
 
-        fs.writeFileSync(inputPath, response.data);
-        api.sendMessage({ body: successMessage, attachment: fs.createReadStream(inputPath) }, event.threadID, () => fs.unlinkSync(inputPath));
+        fs.writeFileSync(outputPath, response.data);
+    } catch (error) {
+        throw new Error(`Lỗi khi xóa nền ảnh: ${error.message}`);
+    }
+}
+
+async function getApiKey() {
+
+    return apiKeys[Math.floor(Math.random() * apiKeys.length)];
+}
+
+module.exports.run = async function ({ api, event, args }) {
+    const { threadID, messageID } = event;
+
+    try {
+        let imageUrl;
+        let format = 'png'; 
+
+        if (args.length > 0) {
+            format = args[0].toLowerCase();
+        }
+
+        if (event.type === 'message_reply') {
+            if (!event.messageReply.attachments || event.messageReply.attachments.length == 0) {
+                return api.sendMessage("[❗]➜ Bạn cần reply ít nhất một ảnh.", threadID, messageID);
+            }
+            if (event.messageReply.attachments[0].type !== "photo") {
+                return api.sendMessage("[❗]➜ Đối tượng reply không phải là ảnh.", threadID, messageID);
+            }
+            imageUrl = event.messageReply.attachments[0].url;
+        } else if (event.messageReply && event.messageReply.body) {
+            imageUrl = event.messageReply.body;
+        } else {
+            return api.sendMessage("[❗]➜ Vui lòng reply ảnh hoặc gửi URL ảnh để tách Background.", threadID, messageID);
+        }
+
+        const outputPath = await processImage(imageUrl, format);
+        api.sendMessage({
+            body: `📸[ TÁCH BACKGROUND ]📸\n━━━━━━━━━━━━━━━\n[✔️]➜ Tách Background thành công! Nền của ảnh bạn đã được loại bỏ.`,
+            attachment: fs.createReadStream(outputPath)
+        }, threadID, () => {
+            fs.unlinkSync(outputPath);
+        });
 
     } catch (error) {
-        console.error('Lỗi:', error);
-        api.sendMessage("[❗]➜ Đã xảy ra lỗi! Vui lòng kiểm tra lại API Key hoặc thử lại sau.", event.threadID, event.messageID);
+        api.sendMessage(`[❗]➜ Đã xảy ra lỗi: ${error.message}. Vui lòng kiểm tra lại và thử lại sau.`, threadID, messageID);
     }
 };
