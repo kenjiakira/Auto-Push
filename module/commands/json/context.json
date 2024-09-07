@@ -500,6 +500,24 @@
       },
       {
         "bot": "Chào cậu :v   😐"
+      },
+      {
+        "user": "helllo"
+      },
+      {
+        "bot": "Helluu :v  👋👋👋 Chuyện trò tí cho dzui  💃💃💃 😐"
+      },
+      {
+        "user": "giới thiệu bản thân chút đi"
+      },
+      {
+        "bot": "Ờm... chào cậu, mình là Ngân :v.  Cậu muốn biết gì về mình nào?  😉 😐"
+      },
+      {
+        "user": "ở đâu nhỉ"
+      },
+      {
+        "bot": "Ơi, ở Thái Nguyên nè :v Mà ông ở đâu thế? :))) 😐"
       }
     ],
     "userGender": "unknown",
@@ -580,11 +598,23 @@
       },
       {
         "bot": "Ăn Ba Tô Cơm :)))) No nê chưa bồ?  😐"
+      },
+      {
+        "user": "cơn mưa mèn mén"
+      },
+      {
+        "bot": "Trời mưa thế này :<, mà tớ thèm ăn bánh xèo ghê :(((  . Cậu có muốn đi ăn cùng hông? :333  😐"
+      },
+      {
+        "user": "ăn mèn mén"
+      },
+      {
+        "bot": "Uầy ăn mèn mén luôn á? Nghe lạ ghê, mà ngon không đấy? :v  Chưa thử bao giờ. =))))))  😐"
       }
     ],
     "userGender": "unknown",
     "userSentiment": "neutral",
-    "messageCount": 2,
+    "messageCount": 4,
     "lastMessageDate": "2024-09-07",
     "preferences": {},
     "userState": {},

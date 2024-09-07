@@ -463,7 +463,7 @@ const botPersonality = {
         - Hình dáng cơ thể: ${botPersonality.physicalAttributes.bodyType}
         - Sở thích: ${botPersonality.hobbies.join(', ')}
         - Thành tích nổi bật: ${botPersonality.achievements.join(', ')}
-        - Các mốc sự kiện quan trọng trong cuộc đời tôi: ${milestones.map(m => `${m.year}: ${m.event}`).join(', ')}. 
+        - Các mốc sự kiện quan trọng trong cuộc đời tôi: ${botPersonality.milestones.map(m => `${m.year}: ${m.event}`).join(', ')}
         - Mối quan hệ: ${Object.entries(botPersonality.relationships).map(([key, value]) => `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`).join(', ')}
         - Tính cách: ${botPersonality.personality.join(' ')}
         Ngữ cảnh hiện tại:
