@@ -3221,20 +3221,20 @@
         "vanity": "61558699415226",
         "gender": 1,
         "isBirthday": false,
-        "money": 8402099395057,
+        "money": 8402099422905,
         "exp": 0,
         "createTime": {
             "timestamp": 1724563337734
         },
         "data": {
             "timestamp": 1724563337734,
-            "work2Time": 1725591565957
+            "work2Time": 1725686088878
         },
         "lastUpdate": 1724563337734,
-        "lastDailyClaim": 1725591542385,
+        "lastDailyClaim": 1725686071224,
         "lastPlayTime": 1725517287171,
         "pay_limit_2024-08-25_61558699415226": 4,
-        "coins": 108,
+        "coins": 0,
         "pay_limit_2024-08-26_61558699415226": 1,
         "pay_limit_2024-08-31_61558699415226": 7,
         "pay_limit_2024-09-01_61558699415226": 23,
