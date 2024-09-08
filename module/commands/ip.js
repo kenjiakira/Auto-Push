@@ -2,27 +2,45 @@ const axios = require('axios');
 
 module.exports.config = {
   name: "ip",
-  version: "1.0.0",
+  version: "1.1.0",
   hasPermission: 0,
   credits: "NTKhang, Nguyên Blue [convert]",
-  description: "Kiểm tra thông tin IP",
+  description: "Kiểm tra thông tin IP hoặc cung cấp IP ngẫu nhiên",
   commandCategory: "TOOLS",
   usePrefix: true,
   usages: "ip [địa chỉ IP]\n\n" +
           "Hướng dẫn sử dụng:\n" +
-          "- `ip [địa chỉ IP]`: Kiểm tra thông tin địa chỉ IP.",
+          "- `ip [địa chỉ IP]`: Kiểm tra thông tin địa chỉ IP.\n" +
+          "- `ip random`: Cung cấp thông tin IP ngẫu nhiên.",
   cooldowns: 5
 };
+
+const randomIps = [
+  '8.8.8.8', 
+  '1.1.1.1', 
+  '9.9.9.9', 
+  '208.67.222.222', 
+  '185.199.108.153' 
+];
+
+function getRandomIp() {
+  return randomIps[Math.floor(Math.random() * randomIps.length)];
+}
 
 module.exports.run = async ({ api, event, args }) => {
   const { threadID, messageID } = event;
 
-  if (!args[0]) {
-    return api.sendMessage("❎ Vui lòng nhập địa chỉ IP bạn muốn kiểm tra.", threadID, messageID);
+  let ipAddress = args.join(' ').toLowerCase();
+
+  if (ipAddress === 'random') {
+    ipAddress = getRandomIp();
+  }
+
+  if (!ipAddress) {
+    return api.sendMessage("❎ Vui lòng nhập địa chỉ IP bạn muốn kiểm tra hoặc gõ `random` để lấy IP ngẫu nhiên.", threadID, messageID);
   }
 
   try {
-    const ipAddress = args.join(' ');
     const response = await axios.get(`http://ip-api.com/json/${ipAddress}?fields=66846719`);
     const infoip = response.data;
 

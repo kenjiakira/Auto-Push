@@ -1,0 +1,8 @@
+{"inputPath":"D:\\PACK-2.1.3-main\\module\\commands\\cache\\photo_1725757937147.png","level":"info","message":"Đã tải ảnh về","timestamp":"2024-09-08T01:12:17.477Z"}
+{"level":"info","message":"Đã xóa nền ảnh","outputPath":"D:\\PACK-2.1.3-main\\module\\commands\\cache\\photo_1725757937147.png","timestamp":"2024-09-08T01:12:19.233Z"}
+{"inputPath":"D:\\PACK-2.1.3-main\\module\\commands\\cache\\photo_1725758047784.png","level":"info","message":"Đã tải ảnh về","timestamp":"2024-09-08T01:14:08.135Z"}
+{"level":"info","message":"Đã xóa nền ảnh","outputPath":"D:\\PACK-2.1.3-main\\module\\commands\\cache\\photo_1725758047784.png","timestamp":"2024-09-08T01:14:09.077Z"}
+{"error":"ENOENT: no such file or directory, unlink 'D:\\PACK-2.1.3-main\\module\\commands\\cache\\photo_1725758047784.png'","level":"warn","message":"Không thể xóa tệp đầu ra","timestamp":"2024-09-08T01:14:09.086Z"}
+{"inputPath":"D:\\PACK-2.1.3-main\\module\\commands\\cache\\photo_1725758133216.png","level":"info","message":"Đã tải ảnh về","timestamp":"2024-09-08T01:15:33.364Z"}
+{"level":"info","message":"Đã xóa nền ảnh","outputPath":"D:\\PACK-2.1.3-main\\module\\commands\\cache\\photo_1725758133216.png","timestamp":"2024-09-08T01:15:35.179Z"}
+{"error":"form-data: ENOENT: no such file or directory, open 'D:\\PACK-2.1.3-main\\module\\commands\\cache\\photo_1725758133216.png'","level":"error","message":"Lỗi khi gửi ảnh","timestamp":"2024-09-08T01:15:35.187Z"}

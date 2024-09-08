@@ -1,33 +1,52 @@
+module.exports.config = {
+  name: 'tiktok',
+  version: '1.1.0',
+  hasPermission: 0,
+  credits: 'HNT',
+  description: '🎥 Tải video, hình ảnh hoặc chuyển video thành nhạc MP3 từ TikTok 🌟',
+  commandCategory: 'Giải trí',
+  usages: 'tiktok [URL TikTok]',
+  usePrefix: true,
+  cooldowns: 5
+};
+
+module.exports.run = async function({ api, event, args }) {
+  const { threadID, messageID } = event;
+  const url = args.join(" ").trim();
+  await processTikTokUrl(url, api, threadID, messageID);
+};
+
+module.exports.handleEvent = async function({ api, event }) {
+  const { threadID, messageID, body } = event;
+
+  const urlMatch = body.match(/(https?:\/\/(?:www\.)?tiktok\.com\/[^\s]+)/);
+  if (urlMatch) {
+    const url = urlMatch[0];
+    await processTikTokUrl(url, api, threadID, messageID);
+  }
+};
+
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const FormData = require('form-data');
 
-const ffmpegPath = 'D:\\ffmpeg\\bin\\ffmpeg.exe'; 
-const cacheDir = path.join(__dirname, 'cache');
+const cacheDir = path.join(__dirname, 'cache', 'tiktok');
+const ffmpegPath = 'D:\\ffmpeg\\bin\\ffmpeg.exe';
 
 if (!fs.existsSync(cacheDir)) {
   fs.mkdirSync(cacheDir);
 }
 
-const is_url = (url) => /^http(s)?:\/\//.test(url);
+let is_url = (url) => /^http(s)?:\/\//.test(url);
 
-const stream_url = async (url, type) => {
+let stream_url = async (url, type) => {
   try {
     const res = await axios.get(url, { responseType: 'arraybuffer' });
-    if (res.data) {
-      const filePath = path.join(cacheDir, `${Date.now()}.${type}`);
-      fs.writeFileSync(filePath, res.data);
-      setTimeout(() => {
-        if (fs.existsSync(filePath)) {
-          fs.unlinkSync(filePath);
-        }
-      }, 1000 * 60);
-      return filePath;
-    } else {
-      throw new Error('No data received from URL');
-    }
+    const filePath = path.join(cacheDir, `${Date.now()}.${type}`);
+    fs.writeFileSync(filePath, res.data);
+    return filePath; 
   } catch (error) {
     console.error("Lỗi khi tải tệp từ URL:", error);
     throw new Error("Không thể tải tệp từ URL");
@@ -72,105 +91,72 @@ const uploadToFileIo = async (filePath) => {
   }
 };
 
-module.exports.config = {
-  name: 'tiktok',
-  version: '1.0.0',
-  hasPermission: 0,
-  credits: 'HNT',
-  description: '🎥 Tải video hoặc chuyển thành nhạc MP3 từ TikTok',
-  commandCategory: 'Giải trí',
-  usages: 'tiktok [URL TikTok]',
-  usePrefix: true,
-  cooldowns: 5
+const cleanupFiles = (filePaths) => {
+  setTimeout(() => {
+    filePaths.forEach(filePath => {
+      if (fs.existsSync(filePath)) {
+        fs.unlinkSync(filePath);
+        console.log(`Đã xóa tệp: ${filePath}`);
+      }
+    });
+  }, 1000 * 60); 
 };
 
-module.exports.handleEvent = async function({ api, event }) {
-  const { threadID, messageID, body } = event;
-  
-  if (typeof body !== 'string') return;
-  
-  const url = body.trim();
+const processTikTokUrl = async (url, api, threadID, messageID) => {
+  if (!is_url(url)) {
+    return api.sendMessage("❌ Vui lòng cung cấp URL hợp lệ. 🌐", threadID, messageID);
+  }
 
-  if (is_url(url) && /tiktok\.com/.test(url)) {
+  if (/tiktok\.com/.test(url)) {
     try {
       const res = await axios.post('https://www.tikwm.com/api/', { url });
 
       if (res.data.code !== 0) {
-        return api.sendMessage("⚠️ Không thể tải nội dung từ URL này.", threadID, messageID);
+        return api.sendMessage("⚠️ Không thể tải nội dung từ URL này. 😢", threadID, messageID);
       }
 
       const tiktok = res.data.data;
-      const videoPath = await stream_url(tiktok.play, 'mp4');
+      let attachments = [];
+      let filePaths = [];
 
-      const mp3Path = await convertVideoToMp3(videoPath);
+      if (Array.isArray(tiktok.images) && tiktok.images.length > 0) {
+        for (let imageUrl of tiktok.images) {
+          const imagePath = await stream_url(imageUrl, 'jpg');
+          attachments.push(fs.createReadStream(imagePath));
+          filePaths.push(imagePath);
+        }
+        await api.sendMessage({
+          body: `==[ TIKTOK ATDOWN ]==\n\n🎬 -Tiêu đề: ${tiktok.title}\n❤️ -Lượt thích: ${tiktok.digg_count}\n👤 -Tác giả: ${tiktok.author.nickname}\n🆔 -ID TikTok: ${tiktok.author.unique_id}`,
+          attachment: attachments
+        }, threadID, messageID);
+
+        cleanupFiles(filePaths);
+        return;
+      }
+
+      if (tiktok.play && typeof tiktok.play === 'string') {
+        const videoPath = await stream_url(tiktok.play, 'mp4');
+        if (videoPath) {
+          const mp3Path = await convertVideoToMp3(videoPath);
+          const downloadLink = await uploadToFileIo(mp3Path);
+
+          attachments.push(fs.createReadStream(videoPath));
+          filePaths.push(videoPath);
+
+          const messageBody = `==[ TIKTOK ATDOWN ]==\n\n🎬 -Tiêu đề: ${tiktok.title}\n❤️ -Lượt thích: ${tiktok.digg_count}\n👤 -Tác giả: ${tiktok.author.nickname}\n🆔 -ID TikTok: ${tiktok.author.unique_id}\n\n🔗 -Link tải MP3: ${downloadLink}`;
+          
+          await api.sendMessage({ body: messageBody, attachment: attachments }, threadID, messageID);
+
+          cleanupFiles([...filePaths, mp3Path]);
+          return;
+        }
+      }
       
-      const downloadLink = await uploadToFileIo(mp3Path);
-
-      api.sendMessage({
-        body: `==[ TIKTOK ATDOWN ]==\n\n🎬 -Tiêu đề: ${tiktok.title}\n❤️ -Lượt thích: ${tiktok.digg_count}\n👤 -Tác giả: ${tiktok.author.nickname}\n🆔 -ID TikTok: ${tiktok.author.unique_id}\n\n🔗 -Link tải MP3: ${downloadLink}`,
-        attachment: [fs.createReadStream(videoPath)] 
-      }, threadID, async () => {
-        if (fs.existsSync(videoPath)) {
-          fs.unlinkSync(videoPath); 
-        }
-        if (fs.existsSync(mp3Path)) {
-          fs.unlinkSync(mp3Path); 
-        }
-      }, messageID);
-
     } catch (error) {
       console.error("Lỗi trong quá trình xử lý:", error);
-      return api.sendMessage("❌ Đã xảy ra lỗi khi xử lý yêu cầu của bạn.", threadID, messageID);
+      return api.sendMessage("❌ Đã xảy ra lỗi khi xử lý yêu cầu của bạn. 😥", threadID, messageID);
     }
-  }
-};
-
-module.exports.run = async function({ api, event, args }) {
-  const { threadID, messageID } = event;
-  const url = args.join(" ").trim();
-
-  if (!url) {
-    return api.sendMessage("⚠️ Vui lòng cung cấp URL TikTok.", threadID, messageID);
-  }
-
-  if (!is_url(url)) {
-    return api.sendMessage("❌ Vui lòng cung cấp URL hợp lệ.", threadID, messageID);
-  }
-
-  if (/tiktok\.com/.test(url)) {
-    api.sendMessage("⏳ Đang xử lý... Vui lòng đợi.", threadID, async () => {
-      try {
-        const res = await axios.post('https://www.tikwm.com/api/', { url });
-
-        if (res.data.code !== 0) {
-          return api.sendMessage("⚠️ Không thể tải nội dung từ URL này.", threadID, messageID);
-        }
-
-        const tiktok = res.data.data;
-        const videoPath = await stream_url(tiktok.play, 'mp4');
-
-        const mp3Path = await convertVideoToMp3(videoPath);
-        
-        const downloadLink = await uploadToFileIo(mp3Path);
-
-        api.sendMessage({
-          body: `==[ TIKTOK ATDOWN ]==\n\n🎬 -Tiêu đề: ${tiktok.title}\n❤️ -Lượt thích: ${tiktok.digg_count}\n👤 -Tác giả: ${tiktok.author.nickname}\n🆔 -ID TikTok: ${tiktok.author.unique_id}\n\n🔗 -Link tải MP3: ${downloadLink}`,
-          attachment: [fs.createReadStream(videoPath)] 
-        }, threadID, async () => {
-          if (fs.existsSync(videoPath)) {
-            fs.unlinkSync(videoPath);
-          }
-          if (fs.existsSync(mp3Path)) {
-            fs.unlinkSync(mp3Path); 
-          }
-        }, messageID);
-
-      } catch (error) {
-        console.error("Lỗi trong quá trình xử lý:", error);
-        return api.sendMessage("❌ Đã xảy ra lỗi khi xử lý yêu cầu của bạn.", threadID, messageID);
-      }
-    });
   } else {
-    return api.sendMessage("⚠️ Vui lòng cung cấp URL TikTok hợp lệ.", threadID, messageID);
+    return api.sendMessage("⚠️ Vui lòng cung cấp URL TikTok hợp lệ. 📲", threadID, messageID);
   }
 };

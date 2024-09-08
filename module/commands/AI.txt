@@ -1,0 +1,136 @@
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+const fs = require("fs-extra");
+const path = require("path");
+const axios = require('axios');
+const API_KEYS = [
+  "AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0",
+  "AIzaSyDysChx19Lu3hAFpE2knZwkoCWGTN2gfy0",
+  "AIzaSyCTvL29weT4BIn7WtFtTvsaQ5Jt6Dm4mBE",
+  "AIzaSyDoCGS2-hagw5zWVMfL5iqAVRFNivtbam4",
+  "AIzaSyASuW0stXR61_xJ3s0XP3Qw0RoudGCjQRQ",
+  "AIzaSyC78Dqs1rdEfj4JcmlSFEBhJZLOJzWmt_Y",
+  "AIzaSyDpqfVtdyGLfipEdRNFfUQbCH-prn1sHEs",
+  "AIzaSyArI6Ww02Ill7b6Bx5itiKlHD62siAFLIc",
+  "AIzaSyBgYVR81UeL7kYouxcwzUL75YOBafgNphU"
+];
+const jsonFilePath = path.resolve(__dirname, 'json', 'gmn.json');
+const statusFilePath = path.resolve(__dirname, 'json', 'stt.json');
+const systemInstruction = `Bạn là AI hỗ trợ người dùng. Hãy trả lời ngắn gọn và dễ hiểu. Cung cấp thông tin chính xác và hữu ích, và luôn giữ tông giọng thân thiện.`;
+
+const readDataFromFile = async () => {
+  if (await fs.pathExists(jsonFilePath)) {
+    return fs.readJson(jsonFilePath).catch(console.error);
+  }
+  return {};
+};
+
+const saveDataToFile = async (data) => {
+  await fs.writeJson(jsonFilePath, data, { spaces: 2 }).catch(console.error);
+};
+
+const readStatusFromFile = async () => {
+  if (await fs.pathExists(statusFilePath)) {
+    return fs.readJson(statusFilePath).catch(console.error);
+  }
+  return {};
+};
+
+const saveStatusToFile = async (status) => {
+  await fs.writeJson(statusFilePath, status, { spaces: 2 }).catch(console.error);
+};
+
+const tryApiKey = async (apiKey, prompt, imageParts) => {
+  try {
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
+
+    const result = await model.generateContent([{ text: prompt }, ...imageParts]);
+    const response = await result.response.text();
+    return response;
+  } catch (error) {
+    console.error(`Lỗi với API Key ${apiKey}:`, error.message);
+    return null;
+  }
+};
+
+module.exports.config = {
+  name: "ai",
+  version: "1.0.0",
+  hasPermission: 2,
+  credits: "HNT",
+  description: "Trợ giúp AI",
+  commandCategory: "general",
+  usages: "[prompt] - Nhập một prompt để tạo nội dung văn bản và phân tích ảnh.",
+  cooldowns: 0,
+  usePrefix: true,
+  dependencies: {
+    "@google/generative-ai": "",
+    "fs-extra": "",
+    "axios": ""
+  }
+};
+
+module.exports.handleEvent = async ({ event, api, Threads }) => {
+  const { threadID, senderID, body, attachments } = event;
+
+  if (senderID !== "61561753304881") return;
+
+  let threadData = global.data.threadData.get(threadID) || {};
+  if (!threadData["gemini"]) return;
+
+  let imageParts = [];
+
+  if (attachments?.some(att => att.type === 'photo')) {
+    for (const attachment of attachments.filter(att => att.type === 'photo')) {
+      const fileUrl = attachment.url;
+      const tempFilePath = path.join(__dirname, 'cache', `temp_image_${Date.now()}.jpg`);
+
+      await axios({
+        url: fileUrl,
+        responseType: 'stream'
+      }).then(response => {
+        response.data.pipe(fs.createWriteStream(tempFilePath))
+          .on('finish', async () => {
+            const base64Image = Buffer.from(await fs.readFile(tempFilePath)).toString('base64');
+            imageParts.push({
+              inlineData: { data: base64Image, mimeType: 'image/jpeg' }
+            });
+            fs.unlinkSync(tempFilePath);
+          });
+      }).catch(console.error);
+    }
+  }
+
+  if (body || imageParts.length > 0) {
+    const prompt = body || "Phân tích ảnh đính kèm";
+    const conversationHistory = await readDataFromFile();
+    conversationHistory[senderID] = conversationHistory[senderID] || [];
+    conversationHistory[senderID].push(`User: ${prompt}`);
+    const context = conversationHistory[senderID].join("\n");
+    const fullPrompt = `${context}\nTrả lời ngắn gọn: ${systemInstruction}`;
+
+    let response = null;
+    for (const apiKey of API_KEYS) {
+      response = await tryApiKey(apiKey, fullPrompt, imageParts);
+      if (response) break;
+    }
+
+    if (response) {
+      conversationHistory[senderID].push(response);
+      await saveDataToFile(conversationHistory);
+      api.sendMessage(response.slice(0, 2000), threadID);
+    } else {
+      api.sendMessage("Có lỗi xảy ra khi tạo nội dung.", threadID);
+    }
+  }
+};
+
+module.exports.run = async ({ api, event, Threads }) => {
+  const { threadID, messageID } = event;
+  let data = (await Threads.getData(threadID)).data || {};
+  data["gemini"] = !data["gemini"];
+  await Threads.setData(threadID, { data });
+  global.data.threadData.set(threadID, data);
+
+  return api.sendMessage(`Tính năng tự động trả lời Gemini đã ${data["gemini"] ? "bật" : "tắt"}!`, threadID, messageID);
+};

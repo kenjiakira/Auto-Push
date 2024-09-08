@@ -78,3 +78,10 @@ module.exports.run = async function({ event, api, Currencies, args, Users }) {
 function formatNumber(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
+
+
+---CÓ GÌ HOT?---
+
+--cập nhật thử nghiệm bản AI (BETA có giới hạn)--
+
+-nếu bạn rảnh bạn có thể trò chuyện cùng với trợ lý của Admin này bằng cú pháp 'ai' và Phản hồi lại tin nhắn của AI để trò chuyện. mở thử nghiệm nên sẽ có giới hạn.
