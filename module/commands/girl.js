@@ -23311,10 +23311,10 @@ module.exports.run = async ({ api, event, args, Users, Threads, Currencies }) =>
   var data = await Currencies.getData(event.senderID);
   var exp = data.exp;
   var money = data.money
-  if (money < 100) api.sendMessage("Bạn cần 100 xu để xem ảnh ?", event.threadID, event.messageID)
+  if (money < 1) api.sendMessage("Bạn cần 1 xu để xem ảnh ?", event.threadID, event.messageID)
   else {
-    Currencies.setData(event.senderID, options = { money: money - 100 })
-    var callback = () => api.sendMessage({ body: `🙉 Ảnh gái xinh\n⚜️ Số Ảnh: ${link.length}\n💸 -100 xu !`, attachment: fs.createReadStream(__dirname + "/cache/1.jpg") }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/1.jpg"), event.messageID);
+    Currencies.setData(event.senderID, options = { money: money - 1 })
+    var callback = () => api.sendMessage({ body: `🙉 Ảnh gái xinh\n🖼 Số Ảnh: ${link.length}\n💸 -1 xu !`, attachment: fs.createReadStream(__dirname + "/cache/1.jpg") }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/1.jpg"), event.messageID);
     return request(encodeURI(link[Math.floor(Math.random() * link.length)] + (max - min))).pipe(fs.createWriteStream(__dirname + "/cache/1.jpg")).on("close", () => callback());
   }
 };

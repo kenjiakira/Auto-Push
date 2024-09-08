@@ -19,10 +19,13 @@ module.exports.run = async function({ api, event, args }) {
 module.exports.handleEvent = async function({ api, event }) {
   const { threadID, messageID, body } = event;
 
-  const urlMatch = body.match(/(https?:\/\/(?:www\.)?tiktok\.com\/[^\s]+)/);
-  if (urlMatch) {
-    const url = urlMatch[0];
-    await processTikTokUrl(url, api, threadID, messageID);
+  // Kiểm tra xem body có phải là undefined không
+  if (body) {
+    const urlMatch = body.match(/(https?:\/\/(?:www\.)?tiktok\.com\/[^\s]+)/);
+    if (urlMatch) {
+      const url = urlMatch[0];
+      await processTikTokUrl(url, api, threadID, messageID);
+    }
   }
 };
 

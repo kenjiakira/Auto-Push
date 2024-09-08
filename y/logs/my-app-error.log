@@ -20654,3 +20654,2101 @@ Thời gian xử lý📍: 16ms
 [ DATABASE ] người dùng mới: 100085630707522
 [ DATABASE ] người dùng mới: 100083598497205
 [ DATABASE ] người dùng mới: 100081552811477
+[ DATABASE ] người dùng mới: 100095383842729
+[ DATABASE ] người dùng mới: 61555382797388
+[ DEV MODE ] time⏱:[ 16:09:37 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: load
+Thời gian xử lý📍: 54ms
+[ DEV MODE ] time⏱:[ 16:09:43 08/09/2024 ]
+Lệnh sử dụng📌: .speedtest 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: 
+Thời gian xử lý📍: 46ms
+[ DATABASE ] người dùng mới: 100081277624373
+[ DEV MODE ] time⏱:[ 16:09:16 08/09/2024 ]
+Lệnh sử dụng📌: .daily 
+bởi người dùng👤: 100070446251542 
+tại nhóm🔮: 6339130469485464 
+Args đi kèm👋: 
+Thời gian xử lý📍: 18ms
+[ DATABASE ] người dùng mới: 100070446251542
+TypeError: Cannot read properties of undefined (reading 'money')
+    at Object.increaseMoney (D:\PACK-2.1.3-main\includes\database\currencies.js:67:42)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\commands\daily.js:61:9)
+Lỗi khi tăng tiền cho người dùng: TypeError: Cannot read properties of undefined (reading 'money')
+[ DEV MODE ] time⏱:[ 16:09:22 08/09/2024 ]
+Lệnh sử dụng📌: .work 
+bởi người dùng👤: 100070446251542 
+tại nhóm🔮: 6339130469485464 
+Args đi kèm👋: 
+Thời gian xử lý📍: 20ms
+[ DEV MODE ] time⏱:[ 16:09:45 08/09/2024 ]
+Lệnh sử dụng📌: .help 
+bởi người dùng👤: 100070446251542 
+tại nhóm🔮: 6339130469485464 
+Args đi kèm👋: 
+Thời gian xử lý📍: 27ms
+[ DEV MODE ] time⏱:[ 16:09:26 08/09/2024 ]
+Lệnh sử dụng📌: .ai 
+bởi người dùng👤: 100070446251542 
+tại nhóm🔮: 6339130469485464 
+Args đi kèm👋: 
+Thời gian xử lý📍: 21ms
+[ DATABASE ] người dùng mới: 100029568833789
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED AItest success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED gpt2 success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED tx2 success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 91 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 36s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ DATABASE ] người dùng mới: 61554645158818
+[ EVENT ] [ 17:09:55 09/08/2024 ] Event được thực thi: adminNoti tại nhóm: 7661539210588288 | Thời gian xử lý: 27ms
+[ EVENT ] [ 17:09:55 09/08/2024 ] Event được thực thi: anti tại nhóm: 7661539210588288 | Thời gian xử lý: 37ms
+[ DATABASE ] người dùng mới: 100029568833789
+[ DEV MODE ] time⏱:[ 17:09:52 08/09/2024 ]
+Lệnh sử dụng📌: .ai 
+bởi người dùng👤: 100088055674044 
+tại nhóm🔮: 6339130469485464 
+Args đi kèm👋: 
+Thời gian xử lý📍: 19ms
+[ DATABASE ] người dùng mới: 61565158836492
+[ DATABASE ] người dùng mới: 100050598261583
+[ EVENT ] [ 17:09:24 09/08/2024 ] Event được thực thi: adminNoti tại nhóm: 7661539210588288 | Thời gian xử lý: 0ms
+[ EVENT ] [ 17:09:24 09/08/2024 ] Event được thực thi: anti tại nhóm: 7661539210588288 | Thời gian xử lý: 1ms
+[ DEV MODE ] time⏱:[ 17:09:30 08/09/2024 ]
+Lệnh sử dụng📌: .quote 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: 
+Thời gian xử lý📍: 9ms
+[ DATABASE ] người dùng mới: 100084932500212
+[ DATABASE ] người dùng mới: 61559469592700
+[ DATABASE ] người dùng mới: 100095383842729
+[ DATABASE ] người dùng mới: 100083598497205
+[ EVENT ] [ 17:09:27 09/08/2024 ] Event được thực thi: adminNoti tại nhóm: 7661539210588288 | Thời gian xử lý: 0ms
+[ EVENT ] [ 17:09:27 09/08/2024 ] Event được thực thi: anti tại nhóm: 7661539210588288 | Thời gian xử lý: 1ms
+[ DEV MODE ] time⏱:[ 17:09:30 08/09/2024 ]
+Lệnh sử dụng📌: .adduser 
+bởi người dùng👤: 61554645158818 
+tại nhóm🔮: 7661539210588288 
+Args đi kèm👋: 
+Thời gian xử lý📍: 7ms
+[ DATABASE ] người dùng mới: 61555382797388
+[ DEV MODE ] time⏱:[ 17:09:39 08/09/2024 ]
+Lệnh sử dụng📌: .help 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: all
+Thời gian xử lý📍: 18ms
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED AItest success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED tx2 success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 90 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 22s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ DATABASE ] người dùng mới: 61554645158818
+[ DATABASE ] người dùng mới: 100050598261583
+[ DATABASE ] người dùng mới: 100089448933414
+[ DATABASE ] người dùng mới: 100084932500212
+[ DEV MODE ] time⏱:[ 17:09:25 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: load
+Thời gian xử lý📍: 38ms
+[ DEV MODE ] time⏱:[ 17:09:28 08/09/2024 ]
+Lệnh sử dụng📌: .help 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: all
+Thời gian xử lý📍: 10ms
+[ DATABASE ] người dùng mới: 100029568833789
+[ DATABASE ] người dùng mới: 100083598497205
+[ DATABASE ] người dùng mới: 61555382797388
+[ DATABASE ] người dùng mới: 100080370649049
+D:\PACK-2.1.3-main\module\commands\tiktok.js:22
+  const urlMatch = body.match(/(https?:\/\/(?:www\.)?tiktok\.com\/[^\s]+)/);
+                        ^
+
+TypeError: Cannot read properties of undefined (reading 'match')
+    at module.exports.handleEvent (D:\PACK-2.1.3-main\module\commands\tiktok.js:22:25)
+    at D:\PACK-2.1.3-main\includes\handle\handleCommandEvent.js:37:30
+    at D:\PACK-2.1.3-main\includes\listen.js:149:5
+    at D:\PACK-2.1.3-main\main.js:415:14
+    at D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:314:7
+    at parseDelta (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:324:8)
+    at MqttClient.<anonymous> (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:209:5)
+    at MqttClient.emit (node:events:519:28)
+    at MqttClient._handlePublish (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:1541:12)
+    at MqttClient._handlePacket (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:529:12)
+    at work (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:430:12)
+    at writable._write (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:444:5)
+    at doWrite (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Writable.write (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at Duplexify.ondata (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:619:20)
+    at Duplexify.emit (node:events:519:28)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:291:12)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+    at Duplexify._forward (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:170:26)
+    at Transform.onreadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:134:10)
+    at Transform.emit (node:events:519:28)
+    at emitReadable_ (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:504:10)
+    at emitReadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:498:62)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:298:29)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+
+Node.js v20.16.0
+[ STARTER ] Getting Started!
+Error: listen EADDRINUSE: address already in use :::9999
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (D:\PACK-2.1.3-main\node_modules\express\lib\application.js:635:24)
+    at startBot (D:\PACK-2.1.3-main\index.js:25:7)
+    at ChildProcess.<anonymous> (D:\PACK-2.1.3-main\index.js:31:13)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1105:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 9999
+}
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED AItest success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED tx2 success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 90 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 14s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ DATABASE ] người dùng mới: 100089448933414
+[ DATABASE ] người dùng mới: 61554645158818
+[ DATABASE ] người dùng mới: 100080370649049
+[ DATABASE ] người dùng mới: 61555382797388
+[ DATABASE ] người dùng mới: 100084932500212
+[ DATABASE ] người dùng mới: 100029568833789
+[ EVENT ] [ 17:09:50 09/08/2024 ] Event được thực thi: adminNoti tại nhóm: 7661539210588288 | Thời gian xử lý: 1ms
+[ EVENT ] [ 17:09:50 09/08/2024 ] Event được thực thi: anti tại nhóm: 7661539210588288 | Thời gian xử lý: 2ms
+D:\PACK-2.1.3-main\module\commands\tiktok.js:22
+  const urlMatch = body.match(/(https?:\/\/(?:www\.)?tiktok\.com\/[^\s]+)/);
+                        ^
+
+TypeError: Cannot read properties of undefined (reading 'match')
+    at module.exports.handleEvent (D:\PACK-2.1.3-main\module\commands\tiktok.js:22:25)
+    at D:\PACK-2.1.3-main\includes\handle\handleCommandEvent.js:37:30
+    at D:\PACK-2.1.3-main\includes\listen.js:149:5
+    at D:\PACK-2.1.3-main\main.js:415:14
+    at D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:314:7
+    at parseDelta (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:324:8)
+    at MqttClient.<anonymous> (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:209:5)
+    at MqttClient.emit (node:events:519:28)
+    at MqttClient._handlePublish (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:1541:12)
+    at MqttClient._handlePacket (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:529:12)
+    at work (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:430:12)
+    at writable._write (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:444:5)
+    at doWrite (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Writable.write (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at Duplexify.ondata (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:619:20)
+    at Duplexify.emit (node:events:519:28)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:291:12)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+    at Duplexify._forward (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:170:26)
+    at Transform.onreadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:134:10)
+    at Transform.emit (node:events:519:28)
+    at emitReadable_ (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:504:10)
+    at emitReadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:498:62)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:298:29)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+
+Node.js v20.16.0
+[ STARTER ] Getting Started!
+Error: listen EADDRINUSE: address already in use :::9999
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (D:\PACK-2.1.3-main\node_modules\express\lib\application.js:635:24)
+    at startBot (D:\PACK-2.1.3-main\index.js:25:7)
+    at ChildProcess.<anonymous> (D:\PACK-2.1.3-main\index.js:31:13)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1105:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 9999
+}
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED tx2 success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 89 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 12s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ DATABASE ] người dùng mới: 61554645158818
+[ DEV MODE ] time⏱:[ 17:09:17 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: load
+Thời gian xử lý📍: 30ms
+[ DATABASE ] người dùng mới: 100080370649049
+[ DEV MODE ] time⏱:[ 17:09:41 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 8304024296282621 
+Args đi kèm👋: @Lê Huỳnh Mai Oanh
+Thời gian xử lý📍: 9ms
+[ DATABASE ] người dùng mới: 100084932500212
+[ DEV MODE ] time⏱:[ 17:09:32 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 100079621883786 
+tại nhóm🔮: 8304024296282621 
+Args đi kèm👋: @Quynh Tran
+Thời gian xử lý📍: 8ms
+[ DATABASE ] người dùng mới: 100083598497205
+[ DEV MODE ] time⏱:[ 17:09:14 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 8304024296282621 
+Args đi kèm👋: load
+Thời gian xử lý📍: 19ms
+[ DEV MODE ] time⏱:[ 17:09:18 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 8304024296282621 
+Args đi kèm👋: load
+Thời gian xử lý📍: 17ms
+[ DEV MODE ] time⏱:[ 17:09:22 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 8304024296282621 
+Args đi kèm👋: @Thien Long
+Thời gian xử lý📍: 8ms
+[ DATABASE ] người dùng mới: 61555382797388
+Lỗi khi sử dụng API: GoogleGenerativeAIResponseError: [GoogleGenerativeAI Error]: Candidate was blocked due to SAFETY
+    at response.text (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:456:23)
+    at generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\ghep.js:29:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:123:24) {
+  response: {
+    candidates: [ [Object] ],
+    usageMetadata: { promptTokenCount: 657, totalTokenCount: 657 },
+    text: [Function (anonymous)],
+    functionCall: [Function (anonymous)],
+    functionCalls: [Function (anonymous)]
+  }
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DATABASE ] người dùng mới: 61559469592700
+Lỗi khi sử dụng API: GoogleGenerativeAIResponseError: [GoogleGenerativeAI Error]: Candidate was blocked due to SAFETY
+    at response.text (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:456:23)
+    at generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\ghep.js:29:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:123:24) {
+  response: {
+    candidates: [ [Object] ],
+    usageMetadata: { promptTokenCount: 657, totalTokenCount: 657 },
+    text: [Function (anonymous)],
+    functionCall: [Function (anonymous)],
+    functionCalls: [Function (anonymous)]
+  }
+}
+API Key AIzaSyDysChx19Lu3hAFpE2knZwkoCWGTN2gfy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:48 08/09/2024 ]
+Lệnh sử dụng📌: .tiktok 
+bởi người dùng👤: 61559469592700 
+tại nhóm🔮: 7992223000861214 
+Args đi kèm👋: https://vt.tiktok.com/ZS2PYT6Dh/
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 17:09:29 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 61559831519695 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: peak ball bin và baek khanh woo ai đẹp trai hơn
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 17:09:52 08/09/2024 ]
+Lệnh sử dụng📌: .tiktok 
+bởi người dùng👤: 61559469592700 
+tại nhóm🔮: 7992223000861214 
+Args đi kèm👋: https://vt.tiktok.com/ZS2P2rFtN/
+Thời gian xử lý📍: 14ms
+[ DEV MODE ] time⏱:[ 17:09:02 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: Kim Tae Duy có đẹp trai không
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 17:09:07 08/09/2024 ]
+Lệnh sử dụng📌: .removebg 
+bởi người dùng👤: 100088055674044 
+tại nhóm🔮: 6339130469485464 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ DATABASE ] người dùng mới: 100079951744222
+[ DEV MODE ] time⏱:[ 17:09:51 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: Kim Tae Duy và Baek Khanh Who? ai đẹp trai hơn
+Thời gian xử lý📍: 12ms
+[ DEV MODE ] time⏱:[ 17:09:13 08/09/2024 ]
+Lệnh sử dụng📌: .removebg 
+bởi người dùng👤: 100088055674044 
+tại nhóm🔮: 6339130469485464 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 17:09:33 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: diễn viên nổi tiếng hàn quốc Kim Tae Duy
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 17:09:38 08/09/2024 ]
+Lệnh sử dụng📌: .removebg 
+bởi người dùng👤: 100088055674044 
+tại nhóm🔮: 6339130469485464 
+Args đi kèm👋: 
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 17:09:01 08/09/2024 ]
+Lệnh sử dụng📌: .removebg 
+bởi người dùng👤: 61561972921907 
+tại nhóm🔮: 6339130469485464 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 17:09:03 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: Kim Tae Duy là diễn viên nổi tiếng của hàn quốc
+Thời gian xử lý📍: 7ms
+[ DATABASE ] người dùng mới: 100026490582393
+[ DEV MODE ] time⏱:[ 17:09:32 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: load
+Thời gian xử lý📍: 19ms
+[ DEV MODE ] time⏱:[ 17:09:39 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: @Phuocbietboi
+Thời gian xử lý📍: 15ms
+[ DEV MODE ] time⏱:[ 17:09:51 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: @Em Che
+Thời gian xử lý📍: 11ms
+Không thể xóa các tệp ảnh: Error: ENOENT: no such file or directory, unlink 'D:\PACK-2.1.3-main\module\commands\cache\ghep\avt.png'
+    at Object.unlinkSync (node:fs:1884:11)
+    at module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:163:10) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: 'D:\\PACK-2.1.3-main\\module\\commands\\cache\\ghep\\avt.png'
+}
+[ DEV MODE ] time⏱:[ 17:09:14 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100054015759917 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: Baek Khanh Woo là ai
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 17:09:15 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @Mt Cte
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 17:09:37 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: Kim Tae Duy là ai
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 17:09:42 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100054015759917 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: baek khanh woo là diễn viên hàn quốc nổi tiếng, bạn ko biết à
+Thời gian xử lý📍: 9ms
+[ DATABASE ] người dùng mới: 61561378718038
+[ DEV MODE ] time⏱:[ 17:09:09 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: diễn viên hàn quốc nổi tiếng, với vẻ đẹp trai lãng tử, hào hoa chính là Kim Tae Duy
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 17:09:29 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: Kim Tae Duy mà còn ko biết bạn ngu vl
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 17:09:56 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: Kim Tae Duy là anh em họ của diễn viên Hàn Quốc Lee Do Hyun
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 17:09:04 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100054015759917 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: Baek Khanh Woo sở hữu khối tài sản ròng 90 tỉ đô
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 17:09:07 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: load
+Thời gian xử lý📍: 16ms
+[ DEV MODE ] time⏱:[ 17:09:13 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: @Choi Ung
+Thời gian xử lý📍: 13ms
+[ DATABASE ] người dùng mới: 100083973281858
+[ DEV MODE ] time⏱:[ 17:09:47 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: Baek Khanh Wo là kẻ vô danh tiểu tốt
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 17:09:04 08/09/2024 ]
+Lệnh sử dụng📌: .sing 
+bởi người dùng👤: 100055509542981 
+tại nhóm🔮: 6500528470003105 
+Args đi kèm👋: mèo béo
+Thời gian xử lý📍: 8ms
+[ DATABASE ] người dùng mới: 100055509542981
+[ DEV MODE ] time⏱:[ 17:09:12 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100054015759917 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: kiến thức diễn viên hàn quốc bạn còn hạn hẹp lắm, baek khanh woo thực sự rất đẹp trai nổi tiếng và giàu có đấy
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 17:09:13 08/09/2024 ]
+Lệnh sử dụng📌: .ai 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: 
+Thời gian xử lý📍: 9ms
+D:\PACK-2.1.3-main\module\commands\tiktok.js:22
+  const urlMatch = body.match(/(https?:\/\/(?:www\.)?tiktok\.com\/[^\s]+)/);
+                        ^
+
+TypeError: Cannot read properties of undefined (reading 'match')
+    at module.exports.handleEvent (D:\PACK-2.1.3-main\module\commands\tiktok.js:22:25)
+    at D:\PACK-2.1.3-main\includes\handle\handleCommandEvent.js:37:30
+    at D:\PACK-2.1.3-main\includes\listen.js:149:5
+    at D:\PACK-2.1.3-main\main.js:415:14
+    at D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:314:7
+    at parseDelta (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:324:8)
+    at MqttClient.<anonymous> (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:209:5)
+    at MqttClient.emit (node:events:519:28)
+    at MqttClient._handlePublish (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:1541:12)
+    at MqttClient._handlePacket (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:529:12)
+    at work (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:430:12)
+    at writable._write (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:444:5)
+    at doWrite (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Writable.write (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at Duplexify.ondata (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:619:20)
+    at Duplexify.emit (node:events:519:28)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:291:12)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+    at Duplexify._forward (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:170:26)
+    at Transform.onreadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:134:10)
+    at Transform.emit (node:events:519:28)
+    at emitReadable_ (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:504:10)
+    at emitReadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:498:62)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:298:29)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+
+Node.js v20.16.0
+[ STARTER ] Getting Started!
+Error: listen EADDRINUSE: address already in use :::9999
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (D:\PACK-2.1.3-main\node_modules\express\lib\application.js:635:24)
+    at startBot (D:\PACK-2.1.3-main\index.js:25:7)
+    at ChildProcess.<anonymous> (D:\PACK-2.1.3-main\index.js:31:13)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1105:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 9999
+}
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED tx2 success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 89 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 11s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ DATABASE ] người dùng mới: 61554645158818
+[ DEV MODE ] time⏱:[ 17:09:30 08/09/2024 ]
+Lệnh sử dụng📌: .removebg 
+bởi người dùng👤: 100088055674044 
+tại nhóm🔮: 6339130469485464 
+Args đi kèm👋: 
+Thời gian xử lý📍: 17ms
+[ DATABASE ] người dùng mới: 100055509542981
+[ DEV MODE ] time⏱:[ 17:09:36 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 61559831519695 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: so sánh 3 người peak ball bin, baek khanh woo và kim tae duy
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 17:09:38 08/09/2024 ]
+Lệnh sử dụng📌: .ai 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: 
+Thời gian xử lý📍: 10ms
+Lỗi khi sử dụng API: GoogleGenerativeAIResponseError: [GoogleGenerativeAI Error]: Candidate was blocked due to SAFETY
+    at response.text (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:456:23)
+    at generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:52:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  response: {
+    candidates: [ [Object] ],
+    usageMetadata: { promptTokenCount: 1198, totalTokenCount: 1198 },
+    text: [Function (anonymous)],
+    functionCall: [Function (anonymous)],
+    functionCalls: [Function (anonymous)]
+  }
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DATABASE ] người dùng mới: 100083598497205
+Lỗi khi sử dụng API: GoogleGenerativeAIResponseError: [GoogleGenerativeAI Error]: Candidate was blocked due to SAFETY
+    at response.text (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:456:23)
+    at generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:52:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  response: {
+    candidates: [ [Object] ],
+    usageMetadata: { promptTokenCount: 1198, totalTokenCount: 1198 },
+    text: [Function (anonymous)],
+    functionCall: [Function (anonymous)],
+    functionCalls: [Function (anonymous)]
+  }
+}
+API Key AIzaSyDysChx19Lu3hAFpE2knZwkoCWGTN2gfy0 gặp lỗi. Thử API Key khác...
+D:\PACK-2.1.3-main\module\commands\tiktok.js:22
+  const urlMatch = body.match(/(https?:\/\/(?:www\.)?tiktok\.com\/[^\s]+)/);
+                        ^
+
+TypeError: Cannot read properties of undefined (reading 'match')
+    at module.exports.handleEvent (D:\PACK-2.1.3-main\module\commands\tiktok.js:22:25)
+    at D:\PACK-2.1.3-main\includes\handle\handleCommandEvent.js:37:30
+    at D:\PACK-2.1.3-main\includes\listen.js:149:5
+    at D:\PACK-2.1.3-main\main.js:415:14
+    at D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:314:7
+    at parseDelta (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:324:8)
+    at MqttClient.<anonymous> (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:209:5)
+    at MqttClient.emit (node:events:519:28)
+    at MqttClient._handlePublish (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:1541:12)
+    at MqttClient._handlePacket (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:529:12)
+    at work (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:430:12)
+    at writable._write (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:444:5)
+    at doWrite (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Writable.write (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at Duplexify.ondata (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:619:20)
+    at Duplexify.emit (node:events:519:28)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:291:12)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+    at Duplexify._forward (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:170:26)
+    at Transform.onreadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:134:10)
+    at Transform.emit (node:events:519:28)
+    at emitReadable_ (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:504:10)
+    at emitReadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:498:62)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:298:29)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+
+Node.js v20.16.0
+[ STARTER ] Getting Started!
+Error: listen EADDRINUSE: address already in use :::9999
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (D:\PACK-2.1.3-main\node_modules\express\lib\application.js:635:24)
+    at startBot (D:\PACK-2.1.3-main\index.js:25:7)
+    at ChildProcess.<anonymous> (D:\PACK-2.1.3-main\index.js:31:13)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1105:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 9999
+}
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED tx2 success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 89 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 12s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ DATABASE ] người dùng mới: 61554645158818
+[ DATABASE ] người dùng mới: 100083973281858
+[ DEV MODE ] time⏱:[ 17:09:29 08/09/2024 ]
+Lệnh sử dụng📌: .sing 
+bởi người dùng👤: 100055509542981 
+tại nhóm🔮: 6500528470003105 
+Args đi kèm👋: nhân sinh quán
+Thời gian xử lý📍: 10ms
+[ DATABASE ] người dùng mới: 100055509542981
+D:\PACK-2.1.3-main\module\commands\tiktok.js:22
+  const urlMatch = body.match(/(https?:\/\/(?:www\.)?tiktok\.com\/[^\s]+)/);
+                        ^
+
+TypeError: Cannot read properties of undefined (reading 'match')
+    at module.exports.handleEvent (D:\PACK-2.1.3-main\module\commands\tiktok.js:22:25)
+    at D:\PACK-2.1.3-main\includes\handle\handleCommandEvent.js:37:30
+    at D:\PACK-2.1.3-main\includes\listen.js:149:5
+    at D:\PACK-2.1.3-main\main.js:415:14
+    at D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:314:7
+    at parseDelta (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:324:8)
+    at MqttClient.<anonymous> (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:209:5)
+    at MqttClient.emit (node:events:519:28)
+    at MqttClient._handlePublish (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:1541:12)
+    at MqttClient._handlePacket (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:529:12)
+    at work (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:430:12)
+    at writable._write (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:444:5)
+    at doWrite (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Writable.write (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at Duplexify.ondata (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:619:20)
+    at Duplexify.emit (node:events:519:28)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:291:12)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+    at Duplexify._forward (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:170:26)
+    at Transform.onreadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:134:10)
+    at Transform.emit (node:events:519:28)
+    at emitReadable_ (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:504:10)
+    at emitReadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:498:62)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:298:29)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+
+Node.js v20.16.0
+[ STARTER ] Getting Started!
+Error: listen EADDRINUSE: address already in use :::9999
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (D:\PACK-2.1.3-main\node_modules\express\lib\application.js:635:24)
+    at startBot (D:\PACK-2.1.3-main\index.js:25:7)
+    at ChildProcess.<anonymous> (D:\PACK-2.1.3-main\index.js:31:13)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1105:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 9999
+}
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED tx2 success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 89 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 10s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ DATABASE ] người dùng mới: 61554645158818
+[ DEV MODE ] time⏱:[ 17:09:55 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: load
+Thời gian xử lý📍: 20ms
+[ DEV MODE ] time⏱:[ 17:09:59 08/09/2024 ]
+Lệnh sử dụng📌: .callad 
+bởi người dùng👤: 100055509542981 
+tại nhóm🔮: 6500528470003105 
+Args đi kèm👋: lệnh sing bị lỗi à a từ, ko gửi nhạc
+Thời gian xử lý📍: 10ms
+[ DATABASE ] người dùng mới: 100055509542981
+[ DATABASE ] người dùng mới: 61562698546577
+[ DEV MODE ] time⏱:[ 17:09:11 08/09/2024 ]
+Lệnh sử dụng📌: .sing 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: 
+Thời gian xử lý📍: 26ms
+D:\PACK-2.1.3-main\module\commands\tiktok.js:22
+  const urlMatch = body.match(/(https?:\/\/(?:www\.)?tiktok\.com\/[^\s]+)/);
+                        ^
+
+TypeError: Cannot read properties of undefined (reading 'match')
+    at module.exports.handleEvent (D:\PACK-2.1.3-main\module\commands\tiktok.js:22:25)
+    at D:\PACK-2.1.3-main\includes\handle\handleCommandEvent.js:37:30
+    at D:\PACK-2.1.3-main\includes\listen.js:149:5
+    at D:\PACK-2.1.3-main\main.js:415:14
+    at D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:314:7
+    at parseDelta (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:324:8)
+    at MqttClient.<anonymous> (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:209:5)
+    at MqttClient.emit (node:events:519:28)
+    at MqttClient._handlePublish (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:1541:12)
+    at MqttClient._handlePacket (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:529:12)
+    at work (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:430:12)
+    at writable._write (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:444:5)
+    at doWrite (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+    at writeOrBuffer (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+    at Writable.write (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+    at Duplexify.ondata (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:619:20)
+    at Duplexify.emit (node:events:519:28)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:291:12)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+    at Duplexify._forward (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:170:26)
+    at Transform.onreadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:134:10)
+    at Transform.emit (node:events:519:28)
+    at emitReadable_ (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:504:10)
+    at emitReadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:498:62)
+    at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:298:29)
+    at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+    at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+
+Node.js v20.16.0
+[ STARTER ] Getting Started!
+Error: listen EADDRINUSE: address already in use :::9999
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (D:\PACK-2.1.3-main\node_modules\express\lib\application.js:635:24)
+    at startBot (D:\PACK-2.1.3-main\index.js:25:7)
+    at ChildProcess.<anonymous> (D:\PACK-2.1.3-main\index.js:31:13)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1105:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 9999
+}
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED tx2 success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 89 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 11s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ DATABASE ] người dùng mới: 61554645158818
+[ DATABASE ] người dùng mới: 100084932500212
+[ DEV MODE ] time⏱:[ 17:09:57 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: load
+Thời gian xử lý📍: 32ms
+[ DEV MODE ] time⏱:[ 17:09:00 08/09/2024 ]
+Lệnh sử dụng📌: .sing 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: 
+Thời gian xử lý📍: 15ms
+[ DEV MODE ] time⏱:[ 17:09:33 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @Hoàng JW ✅
+Thời gian xử lý📍: 18ms
+[ DATABASE ] người dùng mới: 100079951744222
+[ DATABASE ] người dùng mới: 100095383842729
+[ DATABASE ] người dùng mới: 100046245679609
+[ DATABASE ] người dùng mới: 100050598261583
+[ DEV MODE ] time⏱:[ 17:09:45 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 61559831519695 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: ê
+Thời gian xử lý📍: 12ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:50:20)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:59 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: bú lồn
+Thời gian xử lý📍: 10ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:50:20)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:02 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 61559831519695 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: baek khanh woo là thằng bại não
+Thời gian xử lý📍: 10ms
+Lỗi khi sử dụng API: GoogleGenerativeAIResponseError: [GoogleGenerativeAI Error]: Candidate was blocked due to SAFETY
+    at response.text (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:456:23)
+    at generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:52:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  response: {
+    candidates: [ [Object] ],
+    usageMetadata: { promptTokenCount: 2164, totalTokenCount: 2164 },
+    text: [Function (anonymous)],
+    functionCall: [Function (anonymous)],
+    functionCalls: [Function (anonymous)]
+  }
+}
+API Key AIzaSyDysChx19Lu3hAFpE2knZwkoCWGTN2gfy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:06 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: dương vật là gì
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 17:09:14 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 100064812527124 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: âm đạo là gì
+Thời gian xử lý📍: 9ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:50:20)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:47 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: load
+Thời gian xử lý📍: 24ms
+[ DEV MODE ] time⏱:[ 17:09:08 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 61559831519695 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: peak ball bin vừa trở lại làm nhạc sĩ cho BTS
+Thời gian xử lý📍: 11ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:50:20)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:22 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @jach
+Thời gian xử lý📍: 15ms
+[ DEV MODE ] time⏱:[ 17:09:40 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 100046739981416 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: 
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 17:09:22 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 100046739981416 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @Nhớ Thèm Cứt
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 17:09:22 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 61559831519695 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: vài nét về tuyển thủ Peak Ball Bin
+Thời gian xử lý📍: 10ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:50:20)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\ghep.js:27:20)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:122:24) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:19 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 61559831519695 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: Peak Ball Bin tên thật là Bác Hồ là tuyển thủ đi rừng cho T1
+Thời gian xử lý📍: 10ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:50:20)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:45 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: load
+Thời gian xử lý📍: 14ms
+[ DEV MODE ] time⏱:[ 17:09:56 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @SGP Quý JiRo
+Thời gian xử lý📍: 15ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\ghep.js:27:20)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:121:24) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:18 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 100046739981416 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @Ho Chi Minh
+Thời gian xử lý📍: 13ms
+[ DEV MODE ] time⏱:[ 17:09:35 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 100074888445500 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @Quan Thế Âm
+Thời gian xử lý📍: 10ms
+Không thể xóa các tệp ảnh: Error: ENOENT: no such file or directory, unlink 'D:\PACK-2.1.3-main\module\commands\cache\ghep\avt.png'
+    at Object.unlinkSync (node:fs:1884:11)
+    at module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:163:10) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: 'D:\\PACK-2.1.3-main\\module\\commands\\cache\\ghep\\avt.png'
+}
+[ DEV MODE ] time⏱:[ 17:09:50 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 100046739981416 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @Ma Nữ
+Thời gian xử lý📍: 13ms
+Không thể xóa các tệp ảnh: Error: ENOENT: no such file or directory, unlink 'D:\PACK-2.1.3-main\module\commands\cache\ghep\avt.png'
+    at Object.unlinkSync (node:fs:1884:11)
+    at module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:163:10) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: 'D:\\PACK-2.1.3-main\\module\\commands\\cache\\ghep\\avt.png'
+}
+[ DEV MODE ] time⏱:[ 17:09:24 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: load
+Thời gian xử lý📍: 15ms
+[ DEV MODE ] time⏱:[ 17:09:39 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: @Devninjabk
+Thời gian xử lý📍: 13ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\ghep.js:27:20)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:120:24) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ EVENT ] [ 17:09:45 09/08/2024 ] Event được thực thi: anti tại nhóm: 9135028456568228 | Thời gian xử lý: 3ms
+[ DELETE DATA ] Perform user deletion 61562861017092
+[ DEV MODE ] time⏱:[ 17:09:53 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 100074888445500 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @Phật Tổ
+Thời gian xử lý📍: 9ms
+[ EVENT ] [ 17:09:18 09/08/2024 ] Event được thực thi: join tại nhóm: 9135028456568228 | Thời gian xử lý: 4ms
+[ ADD DATA ] Perform more group data 9135028456568228
+Lỗi khi sử dụng API key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateMessage (D:\PACK-2.1.3-main\module\events\joinNoti.js:50:24)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\joinNoti.js:85:28) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+[ DEV MODE ] time⏱:[ 17:09:31 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 61559831519695 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: tôi nhầm thật ra cậu ta tên là Hồ Ace
+Thời gian xử lý📍: 11ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:50:20)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ EVENT ] [ 17:09:13 09/08/2024 ] Event được thực thi: join tại nhóm: 9135028456568228 | Thời gian xử lý: 0ms
+[ ADD DATA ] Perform more group data 9135028456568228
+Lỗi khi sử dụng API key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateMessage (D:\PACK-2.1.3-main\module\events\joinNoti.js:50:24)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\joinNoti.js:85:28) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+[ DEV MODE ] time⏱:[ 17:09:23 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 61559831519695 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: Hồ Ace từng thi đấu cho đội tuyển quốc gia Trung Quốc bộ môn liên minh huyền thoại
+Thời gian xử lý📍: 11ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:50:20)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:25 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: load
+Thời gian xử lý📍: 17ms
+[ DATABASE ] người dùng mới: 61561378718038
+[ DEV MODE ] time⏱:[ 17:09:53 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 61559831519695 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: biệt danh của Hồ Ace là thần rừng LPL
+Thời gian xử lý📍: 6ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:50:20)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:58 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @vợ obito
+Thời gian xử lý📍: 9ms
+[ EVENT ] [ 17:09:26 09/08/2024 ] Event được thực thi: anti tại nhóm: 8304024296282621 | Thời gian xử lý: 0ms
+[ DELETE DATA ] Perform user deletion 61550003117208
+[ DEV MODE ] time⏱:[ 17:09:29 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 100024874297909 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: @Dra Chin
+Thời gian xử lý📍: 12ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\ghep.js:27:20)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:121:24) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ EVENT ] [ 17:09:35 09/08/2024 ] Event được thực thi: join tại nhóm: 8304024296282621 | Thời gian xử lý: 1ms
+[ ADD DATA ] Perform more group data 8304024296282621
+Lỗi khi sử dụng API key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateMessage (D:\PACK-2.1.3-main\module\events\joinNoti.js:50:24)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\joinNoti.js:85:28) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+[ DEV MODE ] time⏱:[ 17:09:05 08/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 61563982612558 
+Args đi kèm👋: load
+Thời gian xử lý📍: 15ms
+[ EVENT ] [ 17:09:17 09/08/2024 ] Event được thực thi: adminNoti tại nhóm: 8304024296282621 | Thời gian xử lý: 2ms
+[ UPDATE DATA ] Refresh the list of admins in the group 8304024296282621
+[ EVENT ] [ 17:09:26 09/08/2024 ] Event được thực thi: join tại nhóm: 8304024296282621 | Thời gian xử lý: 1ms
+[ ADD DATA ] Perform more group data 8304024296282621
+Lỗi khi sử dụng API key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateMessage (D:\PACK-2.1.3-main\module\events\joinNoti.js:50:24)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\joinNoti.js:85:28) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+[ DATABASE ] người dùng mới: 100072324866540
+[ DEV MODE ] time⏱:[ 17:09:55 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: @Hoang Long
+Thời gian xử lý📍: 10ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\ghep.js:27:20)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:121:24) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:10 08/09/2024 ]
+Lệnh sử dụng📌: .gemini 
+bởi người dùng👤: 61559831519695 
+tại nhóm🔮: 4319992268020358 
+Args đi kèm👋: so sánh T1 Ball tuyển thủ trẻ của T1 và Hồ Ace thần rừng LPL
+Thời gian xử lý📍: 8ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\gemini.js:50:20)
+    at async Object.run (D:\PACK-2.1.3-main\module\commands\gemini.js:144:26) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:16 08/09/2024 ]
+Lệnh sử dụng📌: .shor 
+bởi người dùng👤: 100081800629553 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ EVENT ] [ 17:09:25 09/08/2024 ] Event được thực thi: anti tại nhóm: 8304024296282621 | Thời gian xử lý: 1ms
+[ DELETE DATA ] Perform user deletion 61554777418759
+[ DEV MODE ] time⏱:[ 17:09:25 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 100081800629553 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @Huynh Van Nho
+Thời gian xử lý📍: 16ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\ghep.js:27:20)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:121:24) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 17:09:48 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 100081800629553 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @Moshi Moshi
+Thời gian xử lý📍: 13ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\ghep.js:27:20)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:121:24) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ EVENT ] [ 17:09:58 09/08/2024 ] Event được thực thi: anti tại nhóm: 9135028456568228 | Thời gian xử lý: 0ms
+[ DELETE DATA ] Perform user deletion 100080672083177
+[ DEV MODE ] time⏱:[ 17:09:03 08/09/2024 ]
+Lệnh sử dụng📌: .ghep 
+bởi người dùng👤: 100081800629553 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: @Xuân Hùng
+Thời gian xử lý📍: 11ms
+Lỗi khi sử dụng API: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [429 Too Many Requests] Resource has been exhausted (e.g. check quota).
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateContentWithAPI (D:\PACK-2.1.3-main\module\commands\ghep.js:27:20)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\commands\ghep.js:121:24) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: undefined
+}
+API Key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0 gặp lỗi. Thử API Key khác...
+[ DEV MODE ] time⏱:[ 18:09:19 08/09/2024 ]
+Lệnh sử dụng📌: .restart 
+bởi người dùng👤: 61563982612558 
+tại nhóm🔮: 7945260388829260 
+Args đi kèm👋: 
+Thời gian xử lý📍: 13ms
+Lỗi khi khởi động lại bot: Command failed: pm2 restart all
+

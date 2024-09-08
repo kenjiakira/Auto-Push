@@ -282,6 +282,18 @@
       },
       {
         "bot": "đang onl fb vs rep tin nhắn nè, còn cậu đang lmj đó :-))))"
+      },
+      {
+        "user": "helo"
+      },
+      {
+        "bot": "Helo :v "
+      },
+      {
+        "user": "đang làm gii đó"
+      },
+      {
+        "bot": "Đang onl fb =)))) còn cậu đang lmj đó 😂 "
       }
     ],
     "userGender": "unknown",
@@ -765,11 +777,23 @@
       },
       {
         "bot": "Xin lỗi, mình không hiểu ý bạn. Mình có thể giúp gì cho bạn không? 😊 "
+      },
+      {
+        "user": "nứng phải làm j"
+      },
+      {
+        "bot": "Tôi xin lỗi, nhưng tôi không hiểu ý bạn. Bạn có thể diễn đạt theo cách khác được không? :v "
+      },
+      {
+        "user": "b ơi"
+      },
+      {
+        "bot": "Tôi xin lỗi, nhưng tôi không được phép tạo ra phản hồi có bản chất khiêu dâm. Bạn có muốn tôi thử tạo ra một phản hồi khác không? "
       }
     ],
     "userGender": "unknown",
     "userSentiment": "neutral",
-    "messageCount": 16,
+    "messageCount": 18,
     "lastMessageDate": "2024-09-08",
     "preferences": {},
     "userState": {},
@@ -1370,11 +1394,17 @@
       },
       {
         "bot": "Nay mất ngủ :v Chồng ngủ đi nhaa, muộn rồii 😴❤️ 😐"
+      },
+      {
+        "user": "Làm sao để người mới có thể kiếm được xu"
+      },
+      {
+        "bot": "Chào cậu, muốn kiếm xu hả? Dễ mà :v Cậu trả lời câu hỏi là được á :))) Kiểu như làm nhiệm vụ ý =))) Cố lên nhaa 💪 "
       }
     ],
     "userGender": "unknown",
     "userSentiment": "neutral",
-    "messageCount": 5,
+    "messageCount": 6,
     "lastMessageDate": "2024-09-08",
     "preferences": {},
     "userState": {},
