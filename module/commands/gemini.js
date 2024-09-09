@@ -1,7 +1,6 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require("fs-extra");
 const path = require("path");
-const axios = require('axios');
 
 const API_KEYS = [
   "AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0",  
@@ -13,7 +12,8 @@ const API_KEYS = [
   "AIzaSyDpqfVtdyGLfipEdRNFfUQbCH-prn1sHEs",
   "AIzaSyArI6Ww02Ill7b6Bx5itiKlHD62siAFLIc",
   "AIzaSyBgYVR81UeL7kYouxcwzUL75YOBafgNphU" 
-] 
+];
+
 const conversationHistory = {};
 const jsonFilePath = path.resolve(__dirname, 'json', 'gemini.json');
 
@@ -42,12 +42,12 @@ const cooldowns = {};
 
 const COOLDOWN_TIME = 10000;
 
-const generateContentWithAPI = async (apiKey, fullPrompt, imageParts) => {
+const generateContentWithAPI = async (apiKey, fullPrompt) => {
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
-    const result = await model.generateContent([{ text: fullPrompt }, ...imageParts]);
+    const result = await model.generateContent([{ text: fullPrompt }]);
     const response = await result.response;
     const text = await response.text();
     return text;
@@ -63,15 +63,14 @@ module.exports = {
     version: "1.0.0",
     hasPermission: 0,
     credits: "HNT",
-    description: "Tạo văn bản và phân tích hình ảnh bằng Gemini",
+    description: "Tạo văn bản bằng Gemini",
     usePrefix: true,
     commandCategory: "general",
-    usages: "[prompt] - Nhập một prompt để tạo nội dung văn bản và phân tích ảnh (nếu có).",
+    usages: "[prompt] - Nhập một prompt để tạo nội dung văn bản.",
     cooldowns: 0,
     dependencies: {
       "@google/generative-ai": "",
-      "fs-extra": "",
-      "axios": ""
+      "fs-extra": ""
     }
   },
 
@@ -82,6 +81,13 @@ module.exports = {
 
     if (!prompt) {
       return api.sendMessage("Vui lòng nhập một prompt.", threadID, messageID);
+    }
+
+    if (messageReply && messageReply.attachments && messageReply.attachments.length > 0) {
+      const hasImage = messageReply.attachments.some(att => att.type === 'photo');
+      if (hasImage) {
+        return api.sendMessage("Để phân tích hình ảnh, vui lòng sử dụng lệnh `.picai` và reply hình ảnh bạn muốn phân tích.", threadID, messageID);
+      }
     }
 
     const now = Date.now();
@@ -102,46 +108,10 @@ module.exports = {
       const context = conversationHistory[senderID].join("\n");
       const fullPrompt = `${context}\nTrả lời bằng tiếng Việt:`;
 
-      let imageParts = [];
-
-      if (messageReply && messageReply.attachments && messageReply.attachments.length > 0) {
-        const attachments = messageReply.attachments.filter(att => att.type === 'photo');
-
-        for (const attachment of attachments) {
-          const fileUrl = attachment.url;
-          const tempFilePath = path.join(__dirname, 'cache', `temp_image_${Date.now()}.jpg`);
-
-          const response = await axios({
-            url: fileUrl,
-            responseType: 'stream'
-          });
-
-          const writer = fs.createWriteStream(tempFilePath);
-          response.data.pipe(writer);
-
-          await new Promise((resolve, reject) => {
-            writer.on('finish', resolve);
-            writer.on('error', reject);
-          });
-
-          const fileData = fs.readFileSync(tempFilePath);
-          const base64Image = Buffer.from(fileData).toString('base64');
-
-          imageParts.push({
-            inlineData: {
-              data: base64Image,
-              mimeType: 'image/jpeg'
-            }
-          });
-
-          fs.unlinkSync(tempFilePath);
-        }
-      }
-
       let responseText = '';
       for (const apiKey of API_KEYS) {
         try {
-          responseText = await generateContentWithAPI(apiKey, fullPrompt, imageParts);
+          responseText = await generateContentWithAPI(apiKey, fullPrompt);
           break;  
         } catch (error) {
           console.error(`API Key ${apiKey} gặp lỗi. Thử API Key khác...`);
@@ -160,7 +130,7 @@ module.exports = {
 
     } catch (error) {
       console.error("Lỗi khi tạo nội dung:", error);
-      return api.sendMessage("GPU quá tải, Vui lòng thử lại sau.", threadID, messageID);
+      return api.sendMessage("Lỗi khi tạo nội dung. Vui lòng thử lại sau.", threadID, messageID);
     }
   }
 };

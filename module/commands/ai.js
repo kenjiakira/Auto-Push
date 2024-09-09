@@ -96,17 +96,6 @@ const botPersonality = {
     const switchApiKey = () => {
         currentApiKeyIndex = (currentApiKeyIndex + 1) % geminiApiKeys.length;
     };
-    const analyzeImageBase64 = async (base64Image) => {
-        try {
-            const buffer = Buffer.from(base64Image, 'base64');
-            const [result] = await client.labelDetection({ image: { content: buffer } });
-            const labels = result.labelAnnotations;
-            return labels.map(label => label.description).join(', ');
-        } catch (error) {
-            console.error("Lỗi khi phân tích ảnh:", error);
-            return "Không thể phân tích ảnh hiện tại.";
-        }
-    };
 
     const updateUserProfile = async (userID, info) => {
         try {
@@ -155,57 +144,6 @@ const botPersonality = {
         }
     };
     
-    const handleImageUpload = async (attachment, context) => {
-        const imageUrl = attachment.url;
-        const imageBase64 = attachment.base64;
-    
-        let analysisResult;
-    
-        try {
-            if (imageBase64) {
-            
-                analysisResult = await analyzeImageBase64(imageBase64);
-            } else if (imageUrl) {
-             
-                const tempFilePath = path.join(__dirname, 'cache', `temp_image_${Date.now()}.jpg`);
-    
-                const response = await axios({
-                    url: imageUrl,
-                    responseType: 'stream'
-                });
-    
-                const writer = fs.createWriteStream(tempFilePath);
-                response.data.pipe(writer);
-    
-                await new Promise((resolve, reject) => {
-                    writer.on('finish', resolve);
-                    writer.on('error', reject);
-                });
-    
-                const fileData = fs.readFileSync(tempFilePath);
-                const base64Image = Buffer.from(fileData).toString('base64');
-    
-                analysisResult = await analyzeImageBase64(base64Image);
-    
-                fs.unlinkSync(tempFilePath);
-            } else {
-                analysisResult = "Không có dữ liệu hình ảnh để phân tích.";
-            }
-        } catch (error) {
-            console.error("Lỗi khi phân tích ảnh:", error);
-            analysisResult = "Lỗi khi phân tích ảnh.";
-        }
-    
-        context.images = context.images || [];
-        context.images.push({ url: imageUrl, base64: imageBase64, analysis: analysisResult });
-    
-        await saveContext(context.threadID, context);
-    
-        return `Ảnh của bạn đã được lưu và phân tích. Kết quả: ${analysisResult}`;
-    };
-    
-    
-
     const generateReply = async (prompt) => {
         while (true) {
             try {
@@ -439,8 +377,8 @@ const botPersonality = {
         }
     
         if (!ADMIN_IDS.includes(senderID)) {
-            if (context.messageCount >= 20) {
-                return api.sendMessage("Bạn đã vượt quá giới hạn 20 tin nhắn trong ngày. Vui lòng quay lại vào ngày mai.", threadID);
+            if (context.messageCount >= 100) {
+                return api.sendMessage("Bạn đã vượt quá giới hạn 100 tin nhắn trong ngày. Vui lòng quay lại vào ngày mai.", threadID);
             }
             context.messageCount++;
         }
@@ -448,8 +386,7 @@ const botPersonality = {
         context.messages.push({ user: body.trim() });
     
         if (attachment && (attachment.type === 'photo' || attachment.base64)) {
-            const response = await handleImageUpload(attachment, context);
-            return api.sendMessage(response, threadID);
+            return api.sendMessage("Bạn muốn phân tích ảnh? Hãy sử dụng lệnh `.picai` để phân tích ảnh nhé!", threadID);
         }
     
         const additionalResponse = await handleUserRequest(body, context);
@@ -463,7 +400,7 @@ const botPersonality = {
         if (!Array.isArray(context.previousTopics)) {
             context.previousTopics = [];
         }
-
+    
         const prompt = `
         Bạn là ${botPersonality.name}, một ${context.userGender === "female" ? "cô gái" : "chàng trai"} với các đặc điểm sau:
         - Giới tính: ${botPersonality.gender}
@@ -493,8 +430,7 @@ const botPersonality = {
         `;
         
         const replies = await generateReply(prompt); 
-
-
+    
         try {
             for (const reply of replies) {
                 const adjustedReply = adjustResponse(reply, context); 
@@ -528,6 +464,7 @@ const botPersonality = {
         
         } catch (error) {
             console.error("Lỗi khi tạo câu trả lời:", error);
-            api.sendMessage("Sorry mình không thể trả lời bạn lúc này, vui lòng thử lại sau.", threadID);
+            api.sendMessage("Xin lỗi, mình không thể trả lời bạn lúc này, vui lòng thử lại sau.", threadID);
         }
     };
+    

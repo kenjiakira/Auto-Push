@@ -82,7 +82,6 @@ const updateHistory = (userID, record) => {
       historyData[userID] = [];
     }
 
-    // Kiểm tra xem liên kết có trùng không
     const linkExists = historyData[userID].some(item => item.link === record.link);
     if (!linkExists) {
       historyData[userID].push(record);
@@ -148,7 +147,6 @@ const suggestMusic = async (userID) => {
     const userHistory = historyData[userID] || [];
 
     if (userHistory.length > 0) {
-      // Lọc các liên kết đã có trong lịch sử của người dùng
       const userLinks = new Set(userHistory.map(record => record.link));
       const allHistories = Object.values(historyData).flat();
       const uniqueHistories = allHistories.filter(record => !userLinks.has(record.link));

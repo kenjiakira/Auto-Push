@@ -221,6 +221,26 @@
                 "id": "GvPHKkzUtt",
                 "input": "khangbui",
                 "output": ".pay 4000000000"
+            },
+            {
+                "id": "NVtoqNouzj",
+                "input": "ê",
+                "output": "j"
+            },
+            {
+                "id": "MJBRiRzQYM",
+                "input": "j",
+                "output": "kcj"
+            },
+            {
+                "id": "PVmAEBkBDp",
+                "input": "kcj",
+                "output": "cái lồn"
+            },
+            {
+                "id": "dEqKlTuFxy",
+                "input": "cái lồn",
+                "output": "con cặc"
             }
         ]
     },

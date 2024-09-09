@@ -5,8 +5,8 @@ const moment = require('moment-timezone');
 module.exports.config = {
     name: "chanle",
     version: "1.2.0",
-    hasPermission: 2,
-    credits: "Hoàng Ngọc Từ, Modified by [Your Name]",
+    hasPermission: 0,
+    credits: "Hoàng Ngọc Từ",
     description: "Chơi chẵn lẻ với hệ thống phức tạp hơn",
     commandCategory: "game",
     usePrefix: true,

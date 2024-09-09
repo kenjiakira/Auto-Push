@@ -22,7 +22,6 @@ module.exports.run = async function({ event, api, Currencies, args, Users }) {
 
   const dailyLimitKey = `pay_limit_${moment().tz("Asia/Ho_Chi_Minh").format("YYYY-MM-DD")}_${senderID}`;
   
-  // Đảm bảo rằng userData có cấu trúc dự kiến
   const userData = await Currencies.getData(senderID) || { money: 0, [dailyLimitKey]: 0 };
   let dailyLimit = userData[dailyLimitKey] || 0;
 

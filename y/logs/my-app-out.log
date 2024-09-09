@@ -2484,3 +2484,593 @@ Chuyển đổi video thành MP3 hoàn tất
 [ SYSTEM ] Loaded command ghep!
 [ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhghep
 [ SYSTEM ] Loaded command ghep!
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 19405000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:59:35)
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhsetpremium
+[ SYSTEM ] Loaded command setpremium!
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+Chuyển đổi video thành MP3 hoàn tất
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhPremium
+[ SYSTEM ] Loaded command Premium!
+Chuyển đổi video thành MP3 hoàn tất
+Chuyển đổi video thành MP3 hoàn tất
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+Chuyển đổi video thành MP3 hoàn tất
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:59:35)
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+UID: 61561753304881
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+Chuyển đổi video thành MP3 hoàn tất
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:59:35)
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhgemini
+[ SYSTEM ] Loaded command gemini!
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhgemini
+[ SYSTEM ] Loaded command gemini!
+[ SYSTEM ] Loaded command quiz!
+{
+  error: 'Problem parsing message object. Please open an issue at https://github.com/ntkhang03/fb-chat-api/issues.',
+  detail: TypeError: Cannot read properties of undefined (reading 'split')
+      at _formatAttachment (D:\PACK-2.1.3-main\includes\login\utils.js:699:65)
+      at D:\PACK-2.1.3-main\includes\login\utils.js:763:53
+      at Array.map (<anonymous>)
+      at Object.formatDeltaMessage (D:\PACK-2.1.3-main\includes\login\utils.js:763:44)
+      at resolveAttachmentUrl (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:253:21)
+      at resolveAttachmentUrl (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:284:13)
+      at parseDelta (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:287:5)
+      at MqttClient.<anonymous> (D:\PACK-2.1.3-main\includes\login\src\listenMqtt.js:209:5)
+      at MqttClient.emit (node:events:519:28)
+      at Arguments.<anonymous> (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:1529:27)
+      at MqttClient.options.customHandleAcks (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:270:150)
+      at MqttClient._handlePublish (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:1522:15)
+      at MqttClient._handlePacket (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:529:12)
+      at work (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:430:12)
+      at writable._write (D:\PACK-2.1.3-main\node_modules\mqtt\lib\client.js:444:5)
+      at doWrite (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:390:139)
+      at writeOrBuffer (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:381:5)
+      at Writable.write (D:\PACK-2.1.3-main\node_modules\readable-stream\lib\_stream_writable.js:302:11)
+      at Duplexify.ondata (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:619:20)
+      at Duplexify.emit (node:events:519:28)
+      at addChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:291:12)
+      at readableAddChunk (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:278:11)
+      at Readable.push (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:245:10)
+      at Duplexify._forward (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:170:26)
+      at Transform.onreadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\duplexify\index.js:134:10)
+      at Transform.emit (node:events:519:28)
+      at emitReadable_ (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:504:10)
+      at emitReadable (D:\PACK-2.1.3-main\node_modules\websocket-stream\node_modules\readable-stream\lib\_stream_readable.js:498:62),
+  res: {
+    delta: {
+      attachments: [Array],
+      breadcrumbs: {},
+      data: [Object],
+      irisSeqId: '9652879',
+      irisTags: [Array],
+      messageMetadata: [Object],
+      participants: [Array],
+      requestContext: [Object],
+      tqSeqId: '598864',
+      class: 'NewMessage'
+    }
+  },
+  type: 'parse_error'
+}
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 13277000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhquiz
+[ SYSTEM ] Loaded command quiz!
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:87:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+[ SYSTEM ] Loaded command quiz!
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:97:24)
+Chuyển đổi video thành MP3 hoàn tất
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+Chuyển đổi video thành MP3 hoàn tất
+Chuyển đổi video thành MP3 hoàn tất
+Chuyển đổi video thành MP3 hoàn tất
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:59:35)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:59:35)
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:59:35)
+Chuyển đổi video thành MP3 hoàn tất
+Chuyển đổi video thành MP3 hoàn tất
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+Chuyển đổi video thành MP3 hoàn tất
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+API Response: 200 OK
+API Response Data: � �,nki�?��ɉ����u׵�c��tU�M���m�����[�u�{��@�AH@H��¥[�{�)� $�n�BR�ZYȼPs�K�Vk� c)𥢢΋I����o�o����h���RU��x"�@P�x�q��z]��\�ak
+[ SYSTEM ] Loaded command chanle!
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+Gửi thông báo thời tiết đầu tiên.
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 19771000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+Gửi thông báo thời tiết đầu tiên.
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+Error retrieving userID. This can be caused by a lot of things, including getting blocked by Facebook for logging in from an unknown location. Try logging in with a browser to verify.
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+Error retrieving userID. This can be caused by a lot of things, including getting blocked by Facebook for logging in from an unknown location. Try logging in with a browser to verify.
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 7894000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Got this account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 7190000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 5365000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+Chuyển đổi video thành MP3 hoàn tất
+Chuyển đổi video thành MP3 hoàn tất
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 691000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+Chuyển đổi video thành MP3 hoàn tất
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhpicai
+[ SYSTEM ] Loaded command picai!
+Gửi thông báo thời tiết đầu tiên.
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 17978000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 15427000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+Hình ảnh đã được kết hợp và lưu tại: D:\PACK-2.1.3-main\module\commands\dice_images\combined_dice_image.png
+[ SYSTEM ] Loaded command daily!
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 7143000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 6793000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 6424000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ] Loaded command daily!
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+Error retrieving userID. This can be caused by a lot of things, including getting blocked by Facebook for logging in from an unknown location. Try logging in with a browser to verify.
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 714000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+Ảnh/GIF đã được tải lên Imgur: https://i.imgur.com/eIHIbRK.jpeg
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhPremium
+[ SYSTEM ] Loaded command Premium!
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhPremium
+[ SYSTEM ] Loaded command Premium!
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhPremium
+[ SYSTEM ] Loaded command Premium!
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+Đang chờ 20101000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 37 threads and 621 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ]  Đã tải thành công toàn bộ package cho lệnhPremium
+[ SYSTEM ] Loaded command Premium!
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (D:\PACK-2.1.3-main\module\events\adminNoti.js:38:23)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\adminNoti.js:59:35)
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+Error retrieving userID. This can be caused by a lot of things, including getting blocked by Facebook for logging in from an unknown location. Try logging in with a browser to verify.

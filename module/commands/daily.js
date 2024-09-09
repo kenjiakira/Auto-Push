@@ -1,14 +1,6 @@
-const moment = require('moment-timezone');
-const fs = require('fs');
-const request = require('request');
-const path = require('path');
-
-const rewardMin = 2000;
-const rewardMax = 7000;
-
 module.exports.config = {
     name: "daily",
-    version: "1.0.2",
+    version: "1.0.5",
     hasPermission: 0,
     credits: "Hoàng Ngọc Từ",
     description: "Nhận xu mỗi ngày",
@@ -17,6 +9,15 @@ module.exports.config = {
     usages: "Nhận xu ngẫu nhiên mỗi ngày",
     cooldowns: 0
 };
+
+const moment = require('moment-timezone');
+const fs = require('fs');
+const request = require('request');
+const path = require('path');
+
+const rewardMin = 20000;
+const rewardMax = 70000;
+const PREMIUM_FILE_PATH = path.resolve(__dirname, 'json', 'premium.json');
 
 const getLastDailyClaim = async (userID, Currencies) => {
     try {
@@ -38,6 +39,19 @@ const setLastDailyClaim = async (userID, Currencies) => {
 
 const getRandomReward = () => Math.floor(Math.random() * (rewardMax - rewardMin + 1)) + rewardMin;
 
+const readPremiumData = async () => {
+    try {
+        if (fs.existsSync(PREMIUM_FILE_PATH)) {
+            return await fs.promises.readFile(PREMIUM_FILE_PATH, 'utf-8').then(JSON.parse);
+        } else {
+            return {};
+        }
+    } catch (error) {
+        console.error(`Lỗi khi đọc tệp dữ liệu Premium: ${error.message}`);
+        return {};
+    }
+};
+
 module.exports.run = async ({ api, event, Currencies, Users }) => {
     const { senderID, threadID } = event;
 
@@ -48,13 +62,19 @@ module.exports.run = async ({ api, event, Currencies, Users }) => {
         return api.sendMessage("Bạn đã nhận thưởng hôm nay rồi. Vui lòng quay lại vào ngày mai.", threadID, event.messageID);
     }
 
-    const reward = getRandomReward();
+    let reward = getRandomReward();
 
     let userData = await Currencies.getData(senderID);
     if (!userData || typeof userData.money === 'undefined') {
-    
         await Currencies.setData(senderID, { money: 0 });
         userData = await Currencies.getData(senderID);
+    }
+
+    const premiumData = await readPremiumData();
+    const isPremium = premiumData[senderID]?.isPremium || false;
+
+    if (isPremium) {
+        reward *= 3;
     }
 
     try {
