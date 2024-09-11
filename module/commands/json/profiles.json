@@ -17,7 +17,7 @@
   "100006842495827": {
     "gender": "unknown",
     "sentiment": "neutral",
-    "messageCount": 7
+    "messageCount": 10
   },
   "100029043375434": {
     "gender": "unknown",
@@ -67,7 +67,7 @@
   "100070446251542": {
     "gender": "unknown",
     "sentiment": "neutral",
-    "messageCount": 6
+    "messageCount": 3
   },
   "100081552811477": {
     "gender": "unknown",
@@ -102,11 +102,31 @@
   "61551937277879": {
     "gender": "unknown",
     "sentiment": "neutral",
-    "messageCount": 12
+    "messageCount": 11
   },
   "100024874297909": {
     "gender": "unknown",
+    "sentiment": "angry",
+    "messageCount": 6
+  },
+  "61552577791528": {
+    "gender": "unknown",
     "sentiment": "neutral",
-    "messageCount": 20
+    "messageCount": 7
+  },
+  "100050363228652": {
+    "gender": "unknown",
+    "sentiment": "neutral",
+    "messageCount": 8
+  },
+  "100073600573044": {
+    "gender": "unknown",
+    "sentiment": "neutral",
+    "messageCount": 7
+  },
+  "100071639513410": {
+    "gender": "unknown",
+    "sentiment": "neutral",
+    "messageCount": 0
   }
 }

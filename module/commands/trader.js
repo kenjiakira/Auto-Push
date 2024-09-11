@@ -94,15 +94,6 @@ module.exports.run = async ({ event, api, Currencies }) => {
 
   updateStockPrices();
 
-  // Loại bỏ các kiểm tra ID và bị cấm
-  // if (!(await hasID(senderID))) {
-  //   return api.sendMessage("⚡ Bạn cần có ID để thực hiện giao dịch đầu tư!\ngõ .id để tạo ID", threadID);
-  // }
-
-  // if (await isBanned(senderID)) {
-  //   return api.sendMessage("⚡ Bạn đã bị cấm và không thể thực hiện giao dịch đầu tư!", threadID);
-  // }
-
   if (args.length === 1 && args[0].toLowerCase() === '.trader') {
     const investmentOpportunities = readInvestmentOpportunities();
     const list = investmentOpportunities.map(op => 
@@ -194,7 +185,7 @@ module.exports.run = async ({ event, api, Currencies }) => {
   };
   updateUserInvestments(userInvestments);
 
-  const transactionFee = parseFloat((amount * 0.01).toFixed(2)); // Làm tròn thuế đến 2 chữ số thập phân
+  const transactionFee = parseFloat((amount * 0.01).toFixed(2)); 
   const finalInvestmentAmount = amount - transactionFee;
   const investmentOutcome = Math.random() < opportunity.risk ? 'thua lỗ' : 'lợi nhuận';
   const result = investmentOutcome === 'lợi nhuận' ? finalInvestmentAmount * opportunity.return : 0;

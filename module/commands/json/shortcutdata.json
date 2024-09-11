@@ -241,6 +241,11 @@
                 "id": "dEqKlTuFxy",
                 "input": "cái lồn",
                 "output": "con cặc"
+            },
+            {
+                "id": "oFOCQWYheJ",
+                "input": "@mọi người",
+                "output": "tag cái lồn mẹ mày"
             }
         ]
     },

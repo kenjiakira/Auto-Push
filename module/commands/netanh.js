@@ -1,79 +1,142 @@
-const FormData = require('form-data');
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
+const FormData = require('form-data');
+const sharp = require('sharp');
 
-module.exports.config = {
-  name: "netanh",
-  version: "1.0",
-  hasPermission: 2,
-  credits: "Mod HNT",
-  description: "Làm nét ảnh người thật.",
-  commandCategory: "tools",
-  usePrefix: true,
-  usages: "netanh [reply image]",
-  cooldowns: 5,
-  update: true,
-  dependencies: {}
+const cacheDir = path.join(__dirname, 'cache');
+if (!fs.existsSync(cacheDir)) {
+  fs.mkdirSync(cacheDir);
+}
 
+const API_KEY = '81877a1e333d6976ef9eb75df402046be41681edc4456176555b0f28f5f49eb0cb3e46a5c8a96ed2255714e02bbe7cd7';
+
+const checkPremium = (userId) => {
+  const premiumData = JSON.parse(fs.readFileSync('module/commands/json/premium.json', 'utf8'));
+  const user = premiumData[userId];
+  return user && user.isPremium;
 };
 
-module.exports.run = async ({ api, event }) => {
-  const { threadID, messageID, messageReply } = event;
+const getImageDimensions = async (imagePath) => {
+  const image = sharp(imagePath);
+  const metadata = await image.metadata();
+  return { width: metadata.width, height: metadata.height };
+};
 
-  if (!messageReply || !messageReply.attachments || messageReply.attachments.length === 0) {
-    return api.sendMessage("⚠️ Không có hình ảnh được phản hồi", threadID, messageID);
-  }
-
-  const attachments = messageReply.attachments;
-  const imageAttachment = attachments[0];
-  if (!imageAttachment.url) {
-    return api.sendMessage("⚠️ Không tìm thấy đường dẫn hình ảnh", threadID, messageID);
-  }
+const upscaleImageSync = async (imagePath, targetWidth, targetHeight) => {
+  const form = new FormData();
+  form.append('image_file', fs.createReadStream(imagePath));
+  form.append('target_width', targetWidth.toString());
+  form.append('target_height', targetHeight.toString());
 
   try {
-    const response = await axios.get(imageAttachment.url, { responseType: 'arraybuffer' });
-    const buffer = Buffer.from(response.data, 'binary');
-    const filename = path.join(__dirname, 'cache', 'abc.jpg');
-    fs.writeFileSync(filename, buffer);
-
-    const form = new FormData();
-    form.append('file', fs.createReadStream(filename));
-
-    const headers = {
-      'Content-Type': `multipart/form-data; boundary=${form.getBoundary()}`,
-      'Accept': '*/*',
-      'Accept-Encoding': 'gzip, deflate, br, zstd',
-      'Accept-Language': 'en-US,en;q=0.9,vi;q=0.8',
-      'Origin': 'https://taoanhdep.com',
-      'Sec-Fetch-Dest': 'empty',
-      'Sec-Fetch-Mode': 'cors',
-      'Sec-Fetch-Site': 'same-origin',
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36'
-    };
-
-    const response2 = await axios.post('https://taoanhdep.com/public/net-anh-nguoi-2.php', form, {
-      headers: headers
+    const response = await axios.post('https://clipdrop-api.co/image-upscaling/v1/upscale', form, {
+      headers: {
+        ...form.getHeaders(),
+        'x-api-key': API_KEY,
+      },
+      responseType: 'arraybuffer'
     });
 
-    console.log(`API Response: ${response2.status} ${response2.statusText}`);
-    console.log(`API Response Data: ${response2.data}`);
+    const contentType = response.headers['content-type'];
+    if (contentType.includes('image')) {
+      return response.data; 
+    } else {
+      console.error('API response is not an image:', response.data);
+      throw new Error('API response is not an image.');
+    }
+  } catch (error) {
+    console.error("Lỗi khi nâng cao ảnh:", error.response ? error.response.data : error.message);
+    throw error;
+  }
+};
 
-    const imageUrl = response2.data;
-    if (!imageUrl) {
-      return api.sendMessage("⚠️ Không thể làm nét ảnh", threadID, messageID);
+const processImage = async (imagePath) => {
+  const { width, height } = await getImageDimensions(imagePath);
+  const outputFilePath = path.join(cacheDir, `upscaled_${Date.now()}.jpg`);
+  try {
+   
+    const targetWidth = width * 2;  
+    const targetHeight = height * 2;
+
+    const imageData = await upscaleImageSync(imagePath, targetWidth, targetHeight);
+    fs.writeFileSync(outputFilePath, imageData);
+    return outputFilePath;
+  } catch (error) {
+    console.error("Lỗi khi lưu ảnh nâng cao:", error);
+    throw error;
+  }
+};
+
+module.exports = {
+  config: {
+    name: "netanh",
+    version: "1.0.3",
+    hasPermission: 0,
+    credits: "HNT",
+    description: "Làm nét ảnh với sự hỗ trợ của API nâng cao ảnh.",
+    commandCategory: "image",
+    usages: "[reply ảnh]",
+    usePrefix: true,
+    cooldowns: 5
+  },
+
+  run: async function({ api, event, args }) {
+    const { threadID, messageID, messageReply, senderID } = event;
+
+    const isPremiumUser = checkPremium(senderID);
+
+    if (!isPremiumUser) {
+      return api.sendMessage("Bạn cần có Premium để sử dụng tính năng này.\nVui lòng liên hệ để mua quyền Premium.", threadID, messageID);
     }
 
-    const imageResponse = await axios.get(imageUrl, { responseType: 'arraybuffer' });
-    const outputFilename = path.join(__dirname, 'cache', 'xyz.jpg');
-    fs.writeFileSync(outputFilename, imageResponse.data);
+    if (!messageReply || !messageReply.attachments || messageReply.attachments.length === 0 || messageReply.attachments[0].type !== 'photo') {
+      return api.sendMessage("Vui lòng reply một ảnh để làm nét.", threadID, messageID);
+    }
 
-    api.sendMessage({
-      body: 'Làm nét thành công!',
-      attachment: fs.createReadStream(outputFilename)
-    }, threadID, messageID);
-  } catch (error) {
-    console.error(error);
-    return api.sendMessage("⚠️ Có lỗi xảy ra", threadID, messageID);
+    try {
+      await api.sendMessage("Chờ một chút trong khi chúng tôi làm nét ảnh của bạn...", threadID, async (error, info) => {
+        if (error) {
+          console.error("Lỗi khi gửi thông báo chờ:", error);
+          return;
+        }
+
+        try {
+          const imageUrl = messageReply.attachments[0].url;
+          const imageFileName = `original_${Date.now()}.jpg`;
+          const imagePath = path.join(cacheDir, imageFileName);
+
+          const response = await axios({
+            url: imageUrl,
+            responseType: 'stream',
+          });
+
+          await new Promise((resolve, reject) => {
+            response.data.pipe(fs.createWriteStream(imagePath))
+              .on('finish', resolve)
+              .on('error', reject);
+          });
+
+          const outputFilePath = await processImage(imagePath);
+
+          const imageStream = fs.createReadStream(outputFilePath);
+          api.sendMessage({
+            body: "Ảnh đã được làm nét thành công!",
+            attachment: imageStream,
+          }, threadID, () => {
+            fs.unlinkSync(imagePath);
+            fs.unlinkSync(outputFilePath);
+          }, messageID);
+
+        } catch (error) {
+          console.error("Lỗi khi làm nét ảnh:", error);
+          return api.sendMessage("Đã xảy ra lỗi khi làm nét ảnh. Vui lòng thử lại sau.", threadID, messageID);
+        }
+      });
+      
+    } catch (error) {
+      console.error("Lỗi khi gửi thông báo chờ:", error);
+      return api.sendMessage("Đã xảy ra lỗi khi gửi thông báo chờ. Vui lòng thử lại sau.", threadID, messageID);
+    }
   }
 };

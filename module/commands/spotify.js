@@ -9,7 +9,7 @@ module.exports.config = {
     version: '1.1.0',
     hasPermission: 0,
     credits: 'HNT',
-    description: 'Tìm kiếm thông tin bài hát hoặc album từ Spotify 🎶',
+    description: 'Tìm kiếm thông tin bài hát hoặc album từ Spotify',
     commandCategory: 'Công cụ',
     usePrefix: true,
     usages: 'spotify [từ khóa]',

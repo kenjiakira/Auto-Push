@@ -20,7 +20,7 @@ module.exports.config = {
     version: "1.0.0",
     hasPermission: 2, 
     credits: "Hoàng Ngọc Từ",
-    description: "Cập nhật thuộc tính NSFW cho nhóm",
+    description: "Cập nhật thuộc tính NSFW cho nhóm (lệnh admin)",
     commandCategory: "Admin",
     usePrefix: true,
     usages: "nsfw [ID] [on/off]",

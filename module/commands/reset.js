@@ -5,7 +5,7 @@ module.exports.config = {
   version: "1.0.0",
   hasPermission: 2,
   credits: "Yae Miko",
-  description: "Reset số Xu người dùng",
+  description: "lệnh admin",
   commandCategory: "Hệ Thống",
   usePrefix: true,
   usages: "reset [%]",

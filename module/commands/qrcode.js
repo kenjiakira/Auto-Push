@@ -1,8 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const Canvas = require('canvas');
-const qrcode = require('qrcode');
+const QrCode = require('qrcode-reader'); // Sử dụng đúng thư viện
 const imageDownloader = require('image-downloader');
+const jimp = require('jimp'); 
+const qrcode = require('qrcode');
 
 function getRandomColor() {
   let color;
@@ -105,15 +107,24 @@ module.exports.run = async function ({ api, event, args }) {
 
       const image = await jimp.read(imagePath);
       const qrReader = new QrCode();
-      const qrResult = await new Promise((resolve, reject) => {
-        qrReader.callback = (err, value) => err ? reject(err) : resolve(value.result);
-        qrReader.decode(image.bitmap);
+      const qrResults = await new Promise((resolve, reject) => {
+        qrReader.callback = (err, value) => {
+          if (err) {
+            reject(err);
+          } else {
+            const results = Array.isArray(value) ? value.map(v => v.result) : [value.result];
+            resolve(results);
+          }
+        };
+        const imageBuffer = image.bitmap;
+        qrReader.decode(imageBuffer);
       });
 
-      if (qrResult) {
+      if (qrResults.length > 0) {
         const userData = await api.getUserInfo(senderID);
         const userName = userData[senderID].name;
-        return api.sendMessage(`» Chào ${userName}, đây là kết quả quét mã QR: ${qrResult}`, threadID, messageID);
+        const formattedResults = qrResults.map((result, index) => `Mã QR ${index + 1}: ${result}`).join('\n');
+        return api.sendMessage(`» Chào ${userName}, đây là kết quả quét mã QR:\n${formattedResults}`, threadID, messageID);
       } else {
         return api.sendMessage("» Không tìm thấy mã QR trong ảnh!", threadID, messageID);
       }

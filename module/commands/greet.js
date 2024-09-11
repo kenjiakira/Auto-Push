@@ -6,7 +6,7 @@ module.exports.config = {
     version: "1.0.0",
     hasPermission: 0,
     credit: "HNT",
-    description: "Gửi sticker và tin nhắn chào hoặc tạm biệt.",
+    description: "lệnh admin",
     commandCategory: "Quản Trị Viên",
     usages: "[text]",
     usePrefix: false,

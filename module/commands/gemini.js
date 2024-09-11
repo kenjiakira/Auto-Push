@@ -3,7 +3,7 @@ const fs = require("fs-extra");
 const path = require("path");
 
 const API_KEYS = [
-  "AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0",  
+  "AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0", 
   "AIzaSyDysChx19Lu3hAFpE2knZwkoCWGTN2gfy0",
   "AIzaSyCTvL29weT4BIn7WtFtTvsaQ5Jt6Dm4mBE",
   "AIzaSyDoCGS2-hagw5zWVMfL5iqAVRFNivtbam4",
@@ -16,6 +16,7 @@ const API_KEYS = [
 
 const conversationHistory = {};
 const jsonFilePath = path.resolve(__dirname, 'json', 'gemini.json');
+const USAGE_FILE_PATH = path.resolve(__dirname, 'json', 'premium.json');
 
 const readDataFromFile = async () => {
   try {
@@ -36,16 +37,31 @@ const saveDataToFile = async () => {
   }
 };
 
+const readUsageData = async () => {
+  try {
+    if (await fs.pathExists(USAGE_FILE_PATH)) {
+      return await fs.readJson(USAGE_FILE_PATH);
+    } else {
+      return {};
+    }
+  } catch (error) {
+    console.error("Lỗi khi đọc tệp dữ liệu sử dụng:", error);
+    return {};
+  }
+};
+
 readDataFromFile();
 
-const cooldowns = {};
-
-const COOLDOWN_TIME = 10000;
-
-const generateContentWithAPI = async (apiKey, fullPrompt) => {
+const generateContentWithAPI = async (apiKey, fullPrompt, isPremium) => {
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+    const model = genAI.getGenerativeModel({ 
+      model: isPremium ? "gemini-1.5-pro" : "gemini-1.5-flash", 
+      generationConfig: {
+        maxOutputTokens: isPremium ? 1000 : 200,
+        temperature: isPremium ? 1.5 : 0.8
+      }
+    });
 
     const result = await model.generateContent([{ text: fullPrompt }]);
     const response = await result.response;
@@ -60,10 +76,10 @@ const generateContentWithAPI = async (apiKey, fullPrompt) => {
 module.exports = {
   config: {
     name: "gemini",
-    version: "1.0.0",
+    version: "1.0.1", 
     hasPermission: 0,
     credits: "HNT",
-    description: "Tạo văn bản bằng Gemini",
+    description: "Tạo văn bản bằng AI",
     usePrefix: true,
     commandCategory: "general",
     usages: "[prompt] - Nhập một prompt để tạo nội dung văn bản.",
@@ -77,6 +93,14 @@ module.exports = {
   run: async function({ api, event, args }) {
     const { threadID, messageID, senderID, messageReply } = event;
 
+    const customParamsRegex = /--max_tokens=(\d+)\s+--temperature=([\d.]+)/i;
+    const match = args.join(" ").match(customParamsRegex);
+    if (match) {
+      maxOutputTokens = parseInt(match[1]);
+      temperature = parseFloat(match[2]);
+      args = args.slice(0, match.index).concat(args.slice(match.index + match[0].length)); 
+    }
+
     const prompt = args.join(" ");
 
     if (!prompt) {
@@ -89,14 +113,8 @@ module.exports = {
         return api.sendMessage("Để phân tích hình ảnh, vui lòng sử dụng lệnh `.picai` và reply hình ảnh bạn muốn phân tích.", threadID, messageID);
       }
     }
-
-    const now = Date.now();
-    if (cooldowns[senderID] && now - cooldowns[senderID] < COOLDOWN_TIME) {
-      const timeLeft = Math.ceil((COOLDOWN_TIME - (now - cooldowns[senderID])) / 1000);
-      return api.sendMessage(`Bạn phải chờ thêm ${timeLeft} giây trước khi gửi lệnh tiếp theo.`, threadID, messageID);
-    }
-
-    cooldowns[senderID] = now;
+    const usageData = await readUsageData();
+    const isPremium = usageData[senderID]?.isPremium || false; 
 
     try {
       if (!Array.isArray(conversationHistory[senderID])) {
@@ -111,8 +129,8 @@ module.exports = {
       let responseText = '';
       for (const apiKey of API_KEYS) {
         try {
-          responseText = await generateContentWithAPI(apiKey, fullPrompt);
-          break;  
+          responseText = await generateContentWithAPI(apiKey, fullPrompt, isPremium); 
+          break; 
         } catch (error) {
           console.error(`API Key ${apiKey} gặp lỗi. Thử API Key khác...`);
         }

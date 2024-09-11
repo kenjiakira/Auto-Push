@@ -9,9 +9,6 @@
         "AIzaSyDpqfVtdyGLfipEdRNFfUQbCH-prn1sHEs",
         "AIzaSyArI6Ww02Ill7b6Bx5itiKlHD62siAFLIc",
         "AIzaSyBgYVR81UeL7kYouxcwzUL75YOBafgNphU" 
-    ],
-    "joke_api": "https://official-joke-api.appspot.com/random_joke",
-    "quote_api": "https://api.quotable.io/random",
-    "fact_api": "https://uselessfacts.jsph.pl/api/v2/facts/random"
+    ]
   }
   

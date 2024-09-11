@@ -57,7 +57,39 @@ module.exports = {
 
             await streamPipeline(response.data, fs.createWriteStream(imagePath));
 
-            return api.sendMessage({ body: "📣 -Thông Báo Nâng Cấp Premium-", attachment: fs.createReadStream(imagePath) }, threadID, messageID);
+            const premiumInfo = `
+📣 Nâng cấp lên Premium ngay hôm nay!
+
+⋗🌟 Gói Premium (149,000 VNĐ/tháng)⋖
+
+⋗Đặc quyền cho lệnh CapAI:⋖
+    1. Không giới hạn số lần sử dụng
+    2. Phân tích hình ảnh chi tiết và chuyên sâu
+    3. Cho phép gửi văn bản kèm theo hình ảnh
+    4. Độ dài đầu ra tối đa: 1000 tokens
+    5. Sử dụng mô hình Gemini Pro: Nhanh chóng và chính xác hơn
+
+⋗Đặc quyền cho lệnh Gemini:⋖
+    1. Sử dụng mô hình Gemini Pro: Mạnh mẽ, xử lý phức tạp, sáng tạo
+    2. Độ dài đầu ra tối đa: 1000 tokens
+    3. Độ sáng tạo: Cao
+
+⋗Đặc quyền khác:⋖
+    1. Nhận gấp 3 lần xu miễn phí mỗi ngày
+    2. Sử dụng miễn phí tất cả các lệnh khác (trừ lệnh Admin)
+
+⋗🆓 Gói Free⋖
+
+- Giới hạn 5 lần sử dụng/ngày
+- Phân tích hình ảnh cơ bản
+- Không thể gửi văn bản kèm theo hình ảnh
+- Độ dài đầu ra tối đa: 350 tokens
+- Sử dụng mô hình Gemini-1.5-Flash
+- Độ sáng tạo: Bình thường
+- Một số lệnh cơ bản miễn phí
+Cách nâng cấp: Chuyển khoản 149,000 VNĐ vào tài khoản ngân hàng theo hướng dẫn để nhận gói Premium và sử dụng các quyền lợi đặc biệt! 😊`;
+
+            return api.sendMessage({ body: premiumInfo, attachment: fs.createReadStream(imagePath) }, threadID, messageID);
         } catch (error) {
             console.error("Lỗi khi xử lý ảnh:", error);
             return api.sendMessage("Đã xảy ra lỗi khi gửi ảnh. Vui lòng thử lại sau.", threadID, messageID);

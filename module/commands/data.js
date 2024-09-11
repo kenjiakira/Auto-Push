@@ -4,7 +4,7 @@ module.exports.config = {
     version: "0.0.2",
     hasPermission: 2,
     credits: "Hoàng Ngọc Từ",
-    description: "Lệnh admin để thay đổi số dư người dùng",
+    description: "lệnh admin",
     commandCategory: "Lệnh Admin",
     usePrefix: true,
     usages: "[UID] [số tiền] hoặc reply tin nhắn hoặc tag người dùng",

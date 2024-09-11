@@ -50,8 +50,9 @@ const getCurrentDateKey = () => {
 const generateContentWithAPI = async (apiKey, prompt, imageParts, isPremium) => {
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
+    const modelName = isPremium ? "gemini-1.5-pro" : "gemini-1.5-flash"; 
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-pro",
+      model: modelName,  
       generationConfig: {
         maxOutputTokens: isPremium ? 1000 : 350,
         temperature: isPremium ? 1.5 : 0.8,
@@ -100,7 +101,7 @@ module.exports = {
     }
 
     if (!messageReply || !messageReply.attachments || messageReply.attachments.length === 0) {
-      return api.sendMessage("Vui lòng reply một hình ảnh để phân tích.", threadID, messageID);
+      return api.sendMessage("Vui lòng reply một hoặc nhiều hình ảnh để phân tích.", threadID, messageID);
     }
 
     const dateKey = getCurrentDateKey();
@@ -163,11 +164,11 @@ module.exports = {
         fs.unlinkSync(tempFilePath);
       }
 
-      let prompt = "Phân tích hình ảnh này và cung cấp các thông tin cơ bản bằng tiếng Việt.";
+      let prompt = "Phân tích các hình ảnh này và cung cấp các thông tin cơ bản bằng tiếng Việt.";
       if (args.length > 0 && userUsage.isPremium) {
-        prompt = `${args.join(" ")}\n\nHãy phân tích hình ảnh này và cung cấp thông tin chi tiết bằng tiếng Việt.`;
+        prompt = `${args.join(" ")}\n\nHãy phân tích các hình ảnh này và cung cấp thông tin chi tiết bằng tiếng Việt.`;
       } else if (userUsage.isPremium) {
-        prompt = "Phân tích hình ảnh này và cung cấp thông tin chi tiết, phân tích chuyên sâu và rõ ràng bằng tiếng Việt.";
+        prompt = "Phân tích các hình ảnh này và cung cấp thông tin chi tiết, phân tích chuyên sâu và rõ ràng bằng tiếng Việt.";
       }
 
       let responseText = '';

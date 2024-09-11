@@ -5,7 +5,7 @@ module.exports.config = {
   version: "1.0.0",
   hasPermission: 2, 
   credits: "HNT",
-  description: "Khởi động lại bot",
+  description: "lệnh admin",
   commandCategory: "admin",
   usages: "restart",
   usePrefix: true,

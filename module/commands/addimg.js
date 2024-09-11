@@ -3,7 +3,7 @@ const path = require('path');
 const axios = require('axios');
 const FormData = require('form-data');
 
-const imgurClientId = '34dc774b8c0ddae'; // Thay thế bằng Client-ID của bạn
+const imgurClientId = '34dc774b8c0ddae';
 const imagePath = path.join(__dirname, 'json', 'leakonly.json');
 
 function readOrCreateData() {
@@ -51,7 +51,7 @@ module.exports.config = {
     version: "1.0.0",
     hasPermission: 2,
     credits: "Hoàng Ngọc Từ",
-    description: "Thêm URL ảnh vào danh sách",
+    description: "lệnh admin",
     commandCategory: "Admin",
     usePrefix: true,
     usages: "Gửi ảnh để thêm vào danh sách",

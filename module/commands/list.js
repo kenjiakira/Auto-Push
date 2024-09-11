@@ -15,7 +15,7 @@ module.exports.config = {
   version: "1.0.0",
   hasPermission: 2,
   credits: "Hoàng Ngọc Từ",
-  description: "Hiển thị danh sách các nhóm và cho phép người dùng tham gia nhóm bằng số thứ tự.",
+  description: "lệnh admin",
   commandCategory: "Công Cụ",
   usePrefix: true,
   usages: "[list]",

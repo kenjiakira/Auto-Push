@@ -29,7 +29,8 @@ async function getRandomWallpapers(count = 4, orientation = 'landscape') {
         const response = await axios.get('https://api.unsplash.com/photos/random', {
             params: {
                 count: count,
-                orientation: orientation
+                orientation: orientation,
+                query: 'wallpaper' 
             },
             headers: {
                 'Authorization': `Client-ID ${UNSPLASH_ACCESS_KEY}`

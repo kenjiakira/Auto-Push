@@ -3,7 +3,7 @@ module.exports.config = {
     version: "1.0.0",
     hasPermission: 2,
     credits: "Hoàng Ngọc Từ",
-    description: "Lệnh admin để quản lý và tải lại các module sự kiện.",
+    description: "lệnh admin",
     commandCategory: "ADMIN",
     usePrefix: true,
     usages: "Sử dụng .event [load] [eventModuleName] để tải lại các module sự kiện.",

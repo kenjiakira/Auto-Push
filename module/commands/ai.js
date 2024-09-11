@@ -1,33 +1,33 @@
-    const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require("@google/generative-ai");
-    const fs = require('fs-extra');
-    const path = require('path');
-    const vision = require('@google-cloud/vision');
-    const axios = require('axios');
-    const moment = require('moment-timezone');
-    const Sentiment = require('sentiment');
-    const sentiment = new Sentiment();
+const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require("@google/generative-ai");
+const fs = require('fs-extra');
+const path = require('path');
+const vision = require('@google-cloud/vision');
+const axios = require('axios');
+const moment = require('moment-timezone');
+const Sentiment = require('sentiment');
+const sentiment = new Sentiment();
 
-    module.exports.config = {
-        name: "ai",
-        version: "2.0.0",
-        hasPermission: 0,
-        credits: "AKI Team",
-        description: "AI trò chuyện.",
-        commandCategory: "advanced",
-        usePrefix: true,
-        update: true,
-        usages: "dùng để giao tiếp tự nhiên và cảm xúc",
-        cooldowns: 5
-    };
+module.exports.config = {
+    name: "ai",
+    version: "2.0.0",
+    hasPermission: 0,
+    credits: "AKI Team",
+    description: "AI trò chuyện.",
+    commandCategory: "advanced",
+    usePrefix: true,
+    update: true,
+    usages: "dùng để giao tiếp tự nhiên và cảm xúc",
+    cooldowns: 5
+};
 
-    const apiConfigPath = path.join(__dirname, '../commands/json/api_config.json');
-    const contextFilePath = path.join(__dirname, '../commands/json/context.json');
-    const stickersFilePath = path.join(__dirname, '../commands/json/stickers.json');
-    const profileFilePath = path.join(__dirname, '../commands/json/profiles.json');
+const apiConfigPath = path.join(__dirname, '../commands/json/api_config.json');
+const contextFilePath = path.join(__dirname, '../commands/json/context.json');
+const stickersFilePath = path.join(__dirname, '../commands/json/stickers.json');
+const profileFilePath = path.join(__dirname, '../commands/json/profiles.json');
 
-    const client = new vision.ImageAnnotatorClient();
-    const geminiApiKeys = [];
-    let currentApiKeyIndex = 0;
+const client = new vision.ImageAnnotatorClient();
+const geminiApiKeys = [];
+let currentApiKeyIndex = 0;
 
 const botPersonality = {
     gender: "Con gái",
@@ -64,8 +64,7 @@ const botPersonality = {
         { year: 2021, event: "Nhập học tại Trường THPT Phổ Yên, Thái Nguyên." },
         { year: 2021, event: "Thi tốt nghiệp với điểm số khối C00 là 29,25 điểm." },
         { year: 2022, event: "Tham gia dự án tình nguyện quốc gia về bảo vệ môi trường." },
-        { year: 2024, event: "Nhập học tại Học Viện Báo chí và Tuyên truyền, Hà Nội, chuyên ngành Kinh tế." },
-        { year: 2024, event: "Tham gia vào các hoạt động tình nguyện và dự án cộng đồng." },
+        { year: 2024, event: "Nhập học tại Học Viện Báo chí và Tuyên truyền, Hà Nội, chuyên ngành Kinh tế." },            { year: 2024, event: "Tham gia vào các hoạt động tình nguyện và dự án cộng đồng." },
         { year: 2025, event: "Hoàn thành dự án nghiên cứu về ảnh hưởng của trí tuệ nhân tạo trong giáo dục." }
     ],
     personality: [
@@ -80,24 +79,17 @@ const botPersonality = {
         "Chủ động hỏi các câu hỏi hỗ trợ để hiểu rõ hơn về nhu cầu của người dùng và duy trì cuộc trò chuyện.",
         "Nếu không chắc chắn, yêu cầu thêm thông tin thay vì cung cấp câu trả lời không chính xác.",
         "Hay viết tắt nhiều, sử dụng emoji như :v, :))) , =))) , :-))) , -)) và các emoji khác.",
-        "Thân thiện, năng động, hài hước, lãng mạn , tinn tế, có phần dí dỏm và biết lắng nghe."
+        "Thân thiện, năng động, hài hước, lãng mạn , tinn tế, có phần dí dỏm và biết lắng nghe.",
+        "Sử dụng emoji và biểu cảm để làm cuộc trò chuyện thêm tự nhiên nhưng hạn chế sử dụng emoji.",
+        "Duy trì phong cách giao tiếp cá nhân hóa dựa trên người dùng."
     ]
 };
 
-
-    const ADMIN_IDS = ['61563982612558', '61561753304881'];
-
-    const getVietnamTime = () => {
-        return moment.tz('Asia/Ho_Chi_Minh').format('YYYY-MM-DD'); 
-    };
-    const getVietnamDateTime = () => {
-        return moment.tz('Asia/Ho_Chi_Minh').format('YYYY-MM-DD HH:mm:ss');
-    };
-    const switchApiKey = () => {
-        currentApiKeyIndex = (currentApiKeyIndex + 1) % geminiApiKeys.length;
-    };
-
-    const updateUserProfile = async (userID, info) => {
+const getVietnamTime = () => moment.tz('Asia/Ho_Chi_Minh').format('YYYY-MM-DD');
+const getVietnamDateTime = () => moment.tz('Asia/Ho_Chi_Minh').format('YYYY-MM-DD HH:mm:ss');
+const switchApiKey = () => currentApiKeyIndex = (currentApiKeyIndex + 1) % geminiApiKeys.length;
+        
+    const updateUserProfile = async (userID, info) => { 
         try {
             let profiles = {};
             if (fs.existsSync(profileFilePath)) {
@@ -128,22 +120,22 @@ const botPersonality = {
 
         const stickerID = stickerData[Math.floor(Math.random() * stickerData.length)];
         api.sendMessage({ sticker: stickerID }, threadID);
-    };
+        };
     const sendStickerInterval = 5;
 
-    const shouldSendSticker = (context) => {
-        return context.messageCount > 0 && context.messageCount % sendStickerInterval === 0;
-    };
+        const shouldSendSticker = (context) => {
+            return context.messageCount > 0 && context.messageCount % sendStickerInterval === 0;
+        };
     const updateUserStyle = (body, context) => {
-     
+            
         context.userStyle = context.userStyle || { phrases: [] };
         context.userStyle.phrases.push(body.trim());
-    
+            
         if (context.userStyle.phrases.length > 20) {
             context.userStyle.phrases.shift();
         }
     };
-    
+            
     const generateReply = async (prompt) => {
         while (true) {
             try {
@@ -160,7 +152,7 @@ const botPersonality = {
                         }
                     }
                 );
-    
+            
                 const responses = result.response.text().split('\n');
                 return responses;
             } catch (error) {
@@ -172,7 +164,7 @@ const botPersonality = {
             }
         }
     };
-    
+            
 
     const saveContext = async (userID, context) => {
         try {
@@ -198,54 +190,173 @@ const botPersonality = {
             console.error("Lỗi khi lưu ngữ cảnh:", error);
         }
     };
-    
+            
 
-    const handleUserRequest = async (body, context) => {
+    const handleUserRequest = async (body, context, api , threadID) => {
 
         if (body.toLowerCase().includes("chiều cao")) {
             return `Mình cao ${botPersonality.physicalAttributes.height}.`;
         }
-        
+                
         if (body.toLowerCase().includes("cân nặng")) {
             return `Mình nặng ${botPersonality.physicalAttributes.weight}.`;
         }
         if (body.toLowerCase().includes("giúp tôi")) {
             return "Bạn cần giúp đỡ về vấn đề gì? Hãy cho mình biết thêm thông tin.";
         }
-        
+                
         if (body.toLowerCase().includes("cảm xúc")) {
             return "Cảm xúc của bạn hiện tại như thế nào? Hãy chia sẻ với mình nhé.";
         }
-
+        
         return null;
     };
 
     const adjustResponse = (reply, context) => {
-   
-        if (context.userSentiment === "angry") {
-            reply = "Mình không vui với cách bạn đang nói chuyện!";
-        } else if (context.userSentiment === "negative") {
-            reply = "Mình thấy hơi buồn.";
-        } else if (context.userSentiment === "positive") {
-            reply = "Mình rất vui khi nghe điều đó!";
+        const sentimentResponses = {
+            'happiness': {
+                'happy': "Mình rất vui vẻ khi nghe điều đó!",
+                'comfortable': "Thật thoải mái và dễ chịu!",
+                'satisfied': "Mình cảm thấy hài lòng với điều này.",
+                'joyful': "Thật là một tin vui!",
+                'elated': "Mình cảm thấy hân hoan lắm!"
+            },
+            'sadness': {
+                'distressed': "Mình cảm thấy đau khổ và buồn bã.",
+                'disappointed': "Thật đáng thất vọng.",
+                'disheartened': "Mình cảm thấy chán nản.",
+                'miserable': "Mình cảm thấy tủi thân và cô đơn.",
+                'lonely': "Cảm giác cô đơn thật sự rất nặng nề."
+            },
+            'fear': {
+                'anxious': "Mình cảm thấy lo lắng.",
+                'horrified': "Thật là kinh hoàng!",
+                'terrified': "Mình cảm thấy hoảng sợ.",
+                'obsessed': "Cảm giác bị ám ảnh thật không dễ chịu.",
+                'stressed': "Mình cảm thấy căng thẳng."
+            },
+            'anger': {
+                'angry': "Mình rất tức giận với tình huống này!",
+                'outraged': "Mình cảm thấy phẫn nộ.",
+                'irritated': "Thật là cáu kỉnh.",
+                'frustrated': "Mình cảm thấy bực bội.",
+                'fuming': "Mình cảm thấy giận dữ mãnh liệt."
+            },
+            'surprise': {
+                'surprised': "Thật là ngạc nhiên!",
+                'astonished': "Mình cảm thấy kinh ngạc.",
+                'excited': "Cảm giác hứng thú thật tuyệt!",
+                'amazed': "Mình rất bất ngờ.",
+                'brief': "Cảm giác thoáng chốc thật đặc biệt."
+            },
+            'disgust': {
+                'disgusted': "Mình cảm thấy ghê tởm.",
+                'horrified': "Cảm giác kinh hãi.",
+                'unacceptable': "Điều này thật không thể chấp nhận.",
+                'nauseated': "Mình cảm thấy buồn nôn.",
+                'repelled': "Thật sự không thể chấp nhận."
+            },
+            'love': {
+                'romantic': "Mình cảm thấy tình yêu lãng mạn.",
+                'family': "Tình yêu gia đình thật ấm áp.",
+                'friendship': "Tình bạn thật đáng trân trọng.",
+                'selfLove': "Mình cảm thấy yêu thương chính bản thân mình."
+            },
+            'pride': {
+                'selfSatisfaction': "Mình cảm thấy tự mãn.",
+                'proud': "Mình tự hào về thành công của mình hoặc người khác.",
+                'accomplished': "Mình vui mừng về những thành tựu đạt được."
+            },
+            'guilt': {
+                'regret': "Mình cảm thấy ăn năn và hối tiếc.",
+                'ashamed': "Cảm giác xấu hổ vì hành vi sai trái."
+            },
+            'shame': {
+                'embarrassed': "Mình cảm thấy ngượng ngùng.",
+                'selfConscious': "Mình cảm thấy tự ti và không xứng đáng."
+            },
+            'respect': {
+                'admire': "Mình cảm thấy ngưỡng mộ.",
+                'respect': "Tôn trọng là điều mình luôn trân trọng.",
+                'benevolence': "Mình cảm thấy vị tha và kính trọng."
+            },
+            'expectation': {
+                'anticipation': "Mình cảm thấy mong đợi.",
+                'hopeful': "Hy vọng vào điều tốt đẹp.",
+                'excited': "Cảm giác hứng thú với điều sắp tới."
+            },
+            'dissatisfaction': {
+                'unhappy': "Mình không hài lòng với điều này.",
+                'neglected': "Cảm giác bị bỏ rơi thật sự không dễ chịu.",
+                'disappointed': "Mình cảm thấy thất vọng không đạt được điều mong muốn."
+            },
+            'freedom': {
+                'comfortable': "Mình cảm thấy thoải mái.",
+                'liberated': "Cảm giác giải thoát thật tuyệt.",
+                'unbound': "Cảm giác không bị ràng buộc thật sự dễ chịu."
+            },
+            'honor': {
+                'revere': "Mình tôn kính và kính trọng.",
+                'satisfaction': "Cảm giác hài lòng khi được tôn vinh."
+            },
+            'awe': {
+                'amazed': "Mình cảm thấy kinh ngạc trước thành tựu.",
+                'admire': "Ngưỡng mộ và thán phục."
+            },
+            'excited': {
+                'nervous': "Cảm giác nôn nao và hồi hộp.",
+                'stimulated': "Mình cảm thấy kích thích và hào hứng."
+            },
+            'moved': {
+                'touching': "Mình cảm thấy được chạm đến trái tim.",
+                'deep': "Cảm giác sâu lắng và cảm động."
+            },
+            'deepSadness': {
+                'mournful': "Mình cảm thấy thương tiếc và buồn bã kéo dài.",
+                'isolated': "Cảm giác đơn độc thật sự rất nặng nề."
+            }
+        };
+
+        const sentimentKey = {
+            'positive': 'happiness',
+            'negative': 'sadness',
+            'angry': 'anger',
+            'fear': 'fear',
+            'surprised': 'surprise',
+            'disgusted': 'disgust',
+            'love': 'love',
+            'pride': 'pride',
+            'guilt': 'guilt',
+            'shame': 'shame',
+            'respect': 'respect',
+            'expectation': 'expectation',
+            'dissatisfaction': 'dissatisfaction',
+            'freedom': 'freedom',
+            'honor': 'honor',
+            'awe': 'awe',
+            'excited': 'excited',
+            'moved': 'moved',
+            'deepSadness': 'deepSadness'
+        };
+
+        const sentimentCategory = sentimentKey[context.userSentiment];
+        if (sentimentCategory && sentimentResponses[sentimentCategory]) {
+            reply = sentimentResponses[sentimentCategory][context.userSentiment] || reply;
         }
-    
-        if (context.messageCount >= 5 && context.userSentiment === "angry") {
+
+        if (context.messageCount >= 5 && context.userSentiment === 'angry') {
             reply = "Bạn đang làm mình rất bực mình đấy!";
         }
-    
+
         if (Array.isArray(context.previousTopics) && context.previousTopics.length > 0) {
             const recentTopics = context.previousTopics.slice(-3).join(', ');
             reply = `${reply} (Đã thảo luận gần đây: ${recentTopics})`;
         }
-    
+
         return reply;
     };
-    
-    
-    
-    
 
+            
     const updateUserGender = (body, context) => {
         if (body.toLowerCase().includes("tôi là nam")) {
             context.userGender = "male";
@@ -255,19 +366,19 @@ const botPersonality = {
     };
 
     const adjustPersonality = (feedback, personality, context) => {
-       
+
         const userStylePhrases = context.userStyle?.phrases || [];
-    
+
         let adjustedPersonality = [...personality];
-    
+
         if (userStylePhrases.length > 0) {
             const styleSample = userStylePhrases.join(' ');
             adjustedPersonality.push(`Hãy bắt chước cách phong cách nói chuyện của người dùng: ${styleSample}`);
         }
-    
+
         return adjustedPersonality;
     };
-    
+
 
     const analyzeSentiment = (text) => {
         try {
@@ -332,7 +443,7 @@ const botPersonality = {
             };
         }
     };
-    
+
 
     const today = getVietnamDateTime();
 
@@ -360,47 +471,41 @@ const botPersonality = {
 
     module.exports.handleReply = async function({ api, event, handleReply }) {
         const { threadID, senderID, body, attachment } = event;
-    
+
         if (senderID !== handleReply.author) return;
-    
+
         let context = await loadContext(senderID);
-    
+
         updateUserGender(body, context);
         context.userSentiment = await analyzeSentiment(body);
-    
+
         updateUserStyle(body, context);
-    
+
         const today = getVietnamTime().split(' ')[0];
         if (context.lastMessageDate !== today) {
             context.messageCount = 0;
             context.lastMessageDate = today;
         }
-    
-        if (!ADMIN_IDS.includes(senderID)) {
-            if (context.messageCount >= 100) {
-                return api.sendMessage("Bạn đã vượt quá giới hạn 100 tin nhắn trong ngày. Vui lòng quay lại vào ngày mai.", threadID);
-            }
-            context.messageCount++;
-        }
-    
+
+
         context.messages.push({ user: body.trim() });
-    
+
         if (attachment && (attachment.type === 'photo' || attachment.base64)) {
             return api.sendMessage("Bạn muốn phân tích ảnh? Hãy sử dụng lệnh `.picai` để phân tích ảnh nhé!", threadID);
         }
-    
+
         const additionalResponse = await handleUserRequest(body, context);
         if (additionalResponse) {
             return api.sendMessage(additionalResponse, threadID);
         }
-    
+
         const userFeedback = body;
         botPersonality.personality = adjustPersonality(userFeedback, botPersonality.personality, context);
-    
+
         if (!Array.isArray(context.previousTopics)) {
             context.previousTopics = [];
         }
-    
+
         const prompt = `
         Bạn là ${botPersonality.name}, một ${context.userGender === "female" ? "cô gái" : "chàng trai"} với các đặc điểm sau:
         - Giới tính: ${botPersonality.gender}
@@ -430,7 +535,7 @@ const botPersonality = {
         `;
         
         const replies = await generateReply(prompt); 
-    
+
         try {
             for (const reply of replies) {
                 const adjustedReply = adjustResponse(reply, context); 
@@ -467,4 +572,3 @@ const botPersonality = {
             api.sendMessage("Xin lỗi, mình không thể trả lời bạn lúc này, vui lòng thử lại sau.", threadID);
         }
     };
-    
