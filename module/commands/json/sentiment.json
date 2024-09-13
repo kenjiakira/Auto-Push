@@ -1,0 +1,127 @@
+{
+    "sentimentResponses": {
+      "happiness": {
+        "happy": "Mình rất vui vẻ khi nghe điều đó!",
+        "comfortable": "Thật thoải mái và dễ chịu!",
+        "satisfied": "Mình cảm thấy hài lòng với điều này.",
+        "joyful": "Thật là một tin vui!",
+        "elated": "Mình cảm thấy hân hoan lắm!"
+      },
+      "sadness": {
+        "distressed": "Mình cảm thấy đau khổ và buồn bã.",
+        "disappointed": "Thật đáng thất vọng.",
+        "disheartened": "Mình cảm thấy chán nản.",
+        "miserable": "Mình cảm thấy tủi thân và cô đơn.",
+        "lonely": "Cảm giác cô đơn thật sự rất nặng nề."
+      },
+      "fear": {
+        "anxious": "Mình cảm thấy lo lắng.",
+        "horrified": "Thật là kinh hoàng!",
+        "terrified": "Mình cảm thấy hoảng sợ.",
+        "obsessed": "Cảm giác bị ám ảnh thật không dễ chịu.",
+        "stressed": "Mình cảm thấy căng thẳng."
+      },
+      "anger": {
+        "angry": "Mình rất tức giận với tình huống này!",
+        "outraged": "Mình cảm thấy phẫn nộ.",
+        "irritated": "Thật là cáu kỉnh.",
+        "frustrated": "Mình cảm thấy bực bội.",
+        "fuming": "Mình cảm thấy giận dữ mãnh liệt."
+      },
+      "surprise": {
+        "surprised": "Thật là ngạc nhiên!",
+        "astonished": "Mình cảm thấy kinh ngạc.",
+        "excited": "Cảm giác hứng thú thật tuyệt!",
+        "amazed": "Mình rất bất ngờ.",
+        "brief": "Cảm giác thoáng chốc thật đặc biệt."
+      },
+      "disgust": {
+        "disgusted": "Mình cảm thấy ghê tởm.",
+        "horrified": "Cảm giác kinh hãi.",
+        "unacceptable": "Điều này thật không thể chấp nhận.",
+        "nauseated": "Mình cảm thấy buồn nôn.",
+        "repelled": "Thật sự không thể chấp nhận."
+      },
+      "love": {
+        "romantic": "Mình cảm thấy tình yêu lãng mạn.",
+        "family": "Tình yêu gia đình thật ấm áp.",
+        "friendship": "Tình bạn thật đáng trân trọng.",
+        "selfLove": "Mình cảm thấy yêu thương chính bản thân mình."
+      },
+      "pride": {
+        "selfSatisfaction": "Mình cảm thấy tự mãn.",
+        "proud": "Mình tự hào về thành công của mình hoặc người khác.",
+        "accomplished": "Mình vui mừng về những thành tựu đạt được."
+      },
+      "guilt": {
+        "regret": "Mình cảm thấy ăn năn và hối tiếc.",
+        "ashamed": "Cảm giác xấu hổ vì hành vi sai trái."
+      },
+      "shame": {
+        "embarrassed": "Mình cảm thấy ngượng ngùng.",
+        "selfConscious": "Mình cảm thấy tự ti và không xứng đáng."
+      },
+      "respect": {
+        "admire": "Mình cảm thấy ngưỡng mộ.",
+        "respect": "Tôn trọng là điều mình luôn trân trọng.",
+        "benevolence": "Mình cảm thấy vị tha và kính trọng."
+      },
+      "expectation": {
+        "anticipation": "Mình cảm thấy mong đợi.",
+        "hopeful": "Hy vọng vào điều tốt đẹp.",
+        "excited": "Cảm giác hứng thú với điều sắp tới."
+      },
+      "dissatisfaction": {
+        "unhappy": "Mình không hài lòng với điều này.",
+        "neglected": "Cảm giác bị bỏ rơi thật sự không dễ chịu.",
+        "disappointed": "Mình cảm thấy thất vọng không đạt được điều mong muốn."
+      },
+      "freedom": {
+        "comfortable": "Mình cảm thấy thoải mái.",
+        "liberated": "Cảm giác giải thoát thật tuyệt.",
+        "unbound": "Cảm giác không bị ràng buộc thật sự dễ chịu."
+      },
+      "honor": {
+        "revere": "Mình tôn kính và kính trọng.",
+        "satisfaction": "Cảm giác hài lòng khi được tôn vinh."
+      },
+      "awe": {
+        "amazed": "Mình cảm thấy kinh ngạc trước thành tựu.",
+        "admire": "Ngưỡng mộ và thán phục."
+      },
+      "excited": {
+        "nervous": "Cảm giác nôn nao và hồi hộp.",
+        "stimulated": "Mình cảm thấy kích thích và hào hứng."
+      },
+      "moved": {
+        "touching": "Mình cảm thấy được chạm đến trái tim.",
+        "deep": "Cảm giác sâu lắng và cảm động."
+      },
+      "deepSadness": {
+        "mournful": "Mình cảm thấy thương tiếc và buồn bã kéo dài.",
+        "isolated": "Cảm giác đơn độc thật sự rất nặng nề."
+      }
+    },
+    "sentimentKey": {
+      "positive": "happiness",
+      "negative": "sadness",
+      "angry": "anger",
+      "fear": "fear",
+      "surprised": "surprise",
+      "disgusted": "disgust",
+      "love": "love",
+      "pride": "pride",
+      "guilt": "guilt",
+      "shame": "shame",
+      "respect": "respect",
+      "expectation": "expectation",
+      "dissatisfaction": "dissatisfaction",
+      "freedom": "freedom",
+      "honor": "honor",
+      "awe": "awe",
+      "excited": "excited",
+      "moved": "moved",
+      "deepSadness": "deepSadness"
+    }
+  }
+  
