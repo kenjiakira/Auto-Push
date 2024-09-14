@@ -60265,3 +60265,624 @@ Lỗi khi xử lý: Error: ENOENT: no such file or directory, open 'D:\PACK-2.1.
   syscall: 'open',
   path: 'D:\\PACK-2.1.3-main\\module\\commands\\json\\phiên.json'
 }
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+WARN login Cannot get sequence ID with new RegExp. Fallback to old RegExp (without seqID)...
+info login [Unused] Polling endpoint: https://edge-chat.facebook.com/mqtt/pull?region=prn",subscribedTopics:[],capabilities:10,clientCapabilities:3,chatVisibility:true,hostNameOverride:""},
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED balance success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED picai success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED Premium success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED setpremium success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 92 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 13s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED balance success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED picai success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED Premium success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED setpremium success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 92 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 10s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ DEV MODE ] time⏱:[ 10:09:41 13/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61561753304881 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: load
+Thời gian xử lý📍: 54ms
+Lỗi khi sử dụng API key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleEvent (D:\PACK-2.1.3-main\module\commands\ai.js:504:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+Lỗi khi sử dụng API key AIzaSyDysChx19Lu3hAFpE2knZwkoCWGTN2gfy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleEvent (D:\PACK-2.1.3-main\module\commands\ai.js:504:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+Lỗi khi sử dụng API key AIzaSyCTvL29weT4BIn7WtFtTvsaQ5Jt6Dm4mBE: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleEvent (D:\PACK-2.1.3-main\module\commands\ai.js:504:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+Lỗi khi sử dụng API key AIzaSyDoCGS2-hagw5zWVMfL5iqAVRFNivtbam4: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleEvent (D:\PACK-2.1.3-main\module\commands\ai.js:504:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+Lỗi khi sử dụng API key AIzaSyASuW0stXR61_xJ3s0XP3Qw0RoudGCjQRQ: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleEvent (D:\PACK-2.1.3-main\module\commands\ai.js:504:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+[ DEV MODE ] time⏱:[ 10:09:07 13/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61561753304881 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: load
+Thời gian xử lý📍: 33ms
+[ DEV MODE ] time⏱:[ 10:09:09 13/09/2024 ]
+Lệnh sử dụng📌: .ai 
+bởi người dùng👤: 61561753304881 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: 
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 10:09:09 13/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61561753304881 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: load
+Thời gian xử lý📍: 38ms
+[ DEV MODE ] time⏱:[ 10:09:11 13/09/2024 ]
+Lệnh sử dụng📌: .ai 
+bởi người dùng👤: 61561753304881 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: 
+Thời gian xử lý📍: 6ms
+Lỗi khi sử dụng API key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleReply (D:\PACK-2.1.3-main\module\commands\ai.js:386:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+[ DATABASE ] người dùng mới: 100051271041420
+[ DATABASE ] người dùng mới: 100001378940139
+[ DEV MODE ] time⏱:[ 10:09:01 13/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61561753304881 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: load
+Thời gian xử lý📍: 57ms
+[ DEV MODE ] time⏱:[ 10:09:04 13/09/2024 ]
+Lệnh sử dụng📌: .ai 
+bởi người dùng👤: 61561753304881 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: 
+Thời gian xử lý📍: 9ms
+Lỗi khi sử dụng API key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleReply (D:\PACK-2.1.3-main\module\commands\ai.js:502:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+Lỗi khi sử dụng API key AIzaSyDysChx19Lu3hAFpE2knZwkoCWGTN2gfy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleReply (D:\PACK-2.1.3-main\module\commands\ai.js:502:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+Lỗi khi sử dụng API key AIzaSyCTvL29weT4BIn7WtFtTvsaQ5Jt6Dm4mBE: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleReply (D:\PACK-2.1.3-main\module\commands\ai.js:502:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+[ DEV MODE ] time⏱:[ 10:09:52 13/09/2024 ]
+Lệnh sử dụng📌: .cmd 
+bởi người dùng👤: 61561753304881 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: load
+Thời gian xử lý📍: 48ms
+[ DEV MODE ] time⏱:[ 10:09:54 13/09/2024 ]
+Lệnh sử dụng📌: .ai 
+bởi người dùng👤: 61561753304881 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: 
+Thời gian xử lý📍: 7ms
+Lỗi khi sử dụng API key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleReply (D:\PACK-2.1.3-main\module\commands\ai.js:386:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+Lỗi khi sử dụng API key AIzaSyDysChx19Lu3hAFpE2knZwkoCWGTN2gfy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleReply (D:\PACK-2.1.3-main\module\commands\ai.js:386:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+Lỗi khi sử dụng API key AIzaSyCTvL29weT4BIn7WtFtTvsaQ5Jt6Dm4mBE: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateReply (D:\PACK-2.1.3-main\module\commands\ai.js:109:36)
+    at async module.exports.handleReply (D:\PACK-2.1.3-main\module\commands\ai.js:386:29) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+[ DEV MODE ] time⏱:[ 11:09:45 13/09/2024 ]
+Lệnh sử dụng📌: .work 
+bởi người dùng👤: 61559151106106 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: 
+Thời gian xử lý📍: 12ms
+[ DEV MODE ] time⏱:[ 11:09:50 13/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 61559151106106 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 11:09:58 13/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61559151106106 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 11:09:04 13/09/2024 ]
+Lệnh sử dụng📌: .daily 
+bởi người dùng👤: 61559151106106 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: 
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 11:09:29 13/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100068382888605 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 13ms
+[ DEV MODE ] time⏱:[ 11:09:22 13/09/2024 ]
+Lệnh sử dụng📌: .top 
+bởi người dùng👤: 100068382888605 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: 
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 11:09:05 13/09/2024 ]
+Lệnh sử dụng📌: .daily 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: 
+Thời gian xử lý📍: 7ms
+D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403
+    throw new GoogleGenerativeAIFetchError(`Error fetching from ${url.toString()}: [${response.status} ${response.statusText}] ${message}`, response.status, response.statusText, errorDetails);
+          ^
+
+GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent: [400 Bad Request] API key expired. Please renew the API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}}]
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateProactiveMessage (D:\PACK-2.1.3-main\module\commands\test2.js:57:18)
+    at async Timeout.sendProactiveMessage [as _onTimeout] (D:\PACK-2.1.3-main\module\commands\test2.js:66:19) {
+  status: 400,
+  statusText: 'Bad Request',
+  errorDetails: [
+    {
+      '@type': 'type.googleapis.com/google.rpc.ErrorInfo',
+      reason: 'API_KEY_INVALID',
+      domain: 'googleapis.com',
+      metadata: { service: 'generativelanguage.googleapis.com' }
+    }
+  ]
+}
+
+Node.js v20.16.0
+[ STARTER ] Getting Started!
+Error: listen EADDRINUSE: address already in use :::9999
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (D:\PACK-2.1.3-main\node_modules\express\lib\application.js:635:24)
+    at startBot (D:\PACK-2.1.3-main\index.js:25:7)
+    at ChildProcess.<anonymous> (D:\PACK-2.1.3-main\index.js:31:13)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1105:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 9999
+}
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+WARN login Cannot get sequence ID with new RegExp. Fallback to old RegExp (without seqID)...
+info login [Unused] Polling endpoint: https://edge-chat.facebook.com/mqtt/pull?region=prn",subscribedTopics:[],capabilities:10,clientCapabilities:3,chatVisibility:true,hostNameOverride:""},
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED balance success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED picai success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED Premium success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED setpremium success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 92 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 15s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+D:\PACK-2.1.3-main\module\commands\weather.js:202
+      notifyWeather(api); 
+      ^
+
+ReferenceError: notifyWeather is not defined
+    at Timeout._onTimeout (D:\PACK-2.1.3-main\module\commands\weather.js:202:7)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+
+Node.js v20.16.0
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+ERR! login Error: getaddrinfo ENOTFOUND www.facebook.com
+ERR! login     at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)
+ERR! login  Error: getaddrinfo ENOTFOUND www.facebook.com
+ERR! login     at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+ERR! login   errno: -3008,
+ERR! login   code: 'ENOTFOUND',
+ERR! login   syscall: 'getaddrinfo',
+ERR! login   hostname: 'www.facebook.com'
+ERR! login }
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+ERR! login Error: getaddrinfo ENOTFOUND www.facebook.com
+ERR! login     at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)
+ERR! login  Error: getaddrinfo ENOTFOUND www.facebook.com
+ERR! login     at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+ERR! login   errno: -3008,
+ERR! login   code: 'ENOTFOUND',
+ERR! login   syscall: 'getaddrinfo',
+ERR! login   hostname: 'www.facebook.com'
+ERR! login }
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success

@@ -176,152 +176,36 @@
             
             return null;
         };
-
         const adjustResponse = (reply, context) => {
-            const sentimentResponses = {
-                'happiness': {
-                    'happy': "Mình rất vui vẻ khi nghe điều đó!",
-                    'comfortable': "Thật thoải mái và dễ chịu!",
-                    'satisfied': "Mình cảm thấy hài lòng với điều này.",
-                    'joyful': "Thật là một tin vui!",
-                    'elated': "Mình cảm thấy hân hoan lắm!"
-                },
-                'sadness': {
-                    'distressed': "Mình cảm thấy đau khổ và buồn bã.",
-                    'disappointed': "Thật đáng thất vọng.",
-                    'disheartened': "Mình cảm thấy chán nản.",
-                    'miserable': "Mình cảm thấy tủi thân và cô đơn.",
-                    'lonely': "Cảm giác cô đơn thật sự rất nặng nề."
-                },
-                'fear': {
-                    'anxious': "Mình cảm thấy lo lắng.",
-                    'horrified': "Thật là kinh hoàng!",
-                    'terrified': "Mình cảm thấy hoảng sợ.",
-                    'obsessed': "Cảm giác bị ám ảnh thật không dễ chịu.",
-                    'stressed': "Mình cảm thấy căng thẳng."
-                },
-                'anger': {
-                    'angry': "Mình rất tức giận với tình huống này!",
-                    'outraged': "Mình cảm thấy phẫn nộ.",
-                    'irritated': "Thật là cáu kỉnh.",
-                    'frustrated': "Mình cảm thấy bực bội.",
-                    'fuming': "Mình cảm thấy giận dữ mãnh liệt."
-                },
-                'surprise': {
-                    'surprised': "Thật là ngạc nhiên!",
-                    'astonished': "Mình cảm thấy kinh ngạc.",
-                    'excited': "Cảm giác hứng thú thật tuyệt!",
-                    'amazed': "Mình rất bất ngờ.",
-                    'brief': "Cảm giác thoáng chốc thật đặc biệt."
-                },
-                'disgust': {
-                    'disgusted': "Mình cảm thấy ghê tởm.",
-                    'horrified': "Cảm giác kinh hãi.",
-                    'unacceptable': "Điều này thật không thể chấp nhận.",
-                    'nauseated': "Mình cảm thấy buồn nôn.",
-                    'repelled': "Thật sự không thể chấp nhận."
-                },
-                'love': {
-                    'romantic': "Mình cảm thấy tình yêu lãng mạn.",
-                    'family': "Tình yêu gia đình thật ấm áp.",
-                    'friendship': "Tình bạn thật đáng trân trọng.",
-                    'selfLove': "Mình cảm thấy yêu thương chính bản thân mình."
-                },
-                'pride': {
-                    'selfSatisfaction': "Mình cảm thấy tự mãn.",
-                    'proud': "Mình tự hào về thành công của mình hoặc người khác.",
-                    'accomplished': "Mình vui mừng về những thành tựu đạt được."
-                },
-                'guilt': {
-                    'regret': "Mình cảm thấy ăn năn và hối tiếc.",
-                    'ashamed': "Cảm giác xấu hổ vì hành vi sai trái."
-                },
-                'shame': {
-                    'embarrassed': "Mình cảm thấy ngượng ngùng.",
-                    'selfConscious': "Mình cảm thấy tự ti và không xứng đáng."
-                },
-                'respect': {
-                    'admire': "Mình cảm thấy ngưỡng mộ.",
-                    'respect': "Tôn trọng là điều mình luôn trân trọng.",
-                    'benevolence': "Mình cảm thấy vị tha và kính trọng."
-                },
-                'expectation': {
-                    'anticipation': "Mình cảm thấy mong đợi.",
-                    'hopeful': "Hy vọng vào điều tốt đẹp.",
-                    'excited': "Cảm giác hứng thú với điều sắp tới."
-                },
-                'dissatisfaction': {
-                    'unhappy': "Mình không hài lòng với điều này.",
-                    'neglected': "Cảm giác bị bỏ rơi thật sự không dễ chịu.",
-                    'disappointed': "Mình cảm thấy thất vọng không đạt được điều mong muốn."
-                },
-                'freedom': {
-                    'comfortable': "Mình cảm thấy thoải mái.",
-                    'liberated': "Cảm giác giải thoát thật tuyệt.",
-                    'unbound': "Cảm giác không bị ràng buộc thật sự dễ chịu."
-                },
-                'honor': {
-                    'revere': "Mình tôn kính và kính trọng.",
-                    'satisfaction': "Cảm giác hài lòng khi được tôn vinh."
-                },
-                'awe': {
-                    'amazed': "Mình cảm thấy kinh ngạc trước thành tựu.",
-                    'admire': "Ngưỡng mộ và thán phục."
-                },
-                'excited': {
-                    'nervous': "Cảm giác nôn nao và hồi hộp.",
-                    'stimulated': "Mình cảm thấy kích thích và hào hứng."
-                },
-                'moved': {
-                    'touching': "Mình cảm thấy được chạm đến trái tim.",
-                    'deep': "Cảm giác sâu lắng và cảm động."
-                },
-                'deepSadness': {
-                    'mournful': "Mình cảm thấy thương tiếc và buồn bã kéo dài.",
-                    'isolated': "Cảm giác đơn độc thật sự rất nặng nề."
-                }
-            };
-
-            const sentimentKey = {
-                'positive': 'happiness',
-                'negative': 'sadness',
-                'angry': 'anger',
-                'fear': 'fear',
-                'surprised': 'surprise',
-                'disgusted': 'disgust',
-                'love': 'love',
-                'pride': 'pride',
-                'guilt': 'guilt',
-                'shame': 'shame',
-                'respect': 'respect',
-                'expectation': 'expectation',
-                'dissatisfaction': 'dissatisfaction',
-                'freedom': 'freedom',
-                'honor': 'honor',
-                'awe': 'awe',
-                'excited': 'excited',
-                'moved': 'moved',
-                'deepSadness': 'deepSadness'
-            };
-
-            const sentimentCategory = sentimentKey[context.userSentiment];
-            if (sentimentCategory && sentimentResponses[sentimentCategory]) {
-                reply = sentimentResponses[sentimentCategory][context.userSentiment] || reply;
+   
+            switch (context.userSentiment) {
+                case 'happy':
+                    reply = `Rất vui vì bạn đang có tâm trạng tốt! 😊\n${reply}`;
+                    break;
+                case 'sad':
+                    reply = `Mình thấy bạn có vẻ không vui. Có chuyện gì không ổn không? 😢\n${reply}`;
+                    break;
+                case 'angry':
+                    reply = "Bạn đang làm mình rất bực mình đấy! 😡\n" + reply;
+                    break;  
+                case 'annoyed':
+                    reply = "Có vẻ như bạn đang cảm thấy bực bội. Hãy thư giãn chút nhé! 😤\n" + reply;
+                    break;
+                case 'pouting':
+                    reply = "Hơi dỗi à? Có gì mình có thể làm để làm bạn vui hơn không? 😟\n" + reply;
+                    break;
+                default:
+                    break;
             }
-
-            if (context.messageCount >= 5 && context.userSentiment === 'angry') {
-                reply = "Bạn đang làm mình rất bực mình đấy!";
-            }
-
+            
             if (Array.isArray(context.previousTopics) && context.previousTopics.length > 0) {
                 const recentTopics = context.previousTopics.slice(-3).join(', ');
                 reply = `${reply} (Đã thảo luận gần đây: ${recentTopics})`;
             }
-
+            
             return reply;
         };
-
-                
+        
         const updateUserGender = (body, context) => {
             if (body.toLowerCase().includes("tôi là nam")) {
                 context.userGender = "male";
@@ -411,6 +295,7 @@
 
 
         const today = getVietnamDateTime();
+
         module.exports.run = async function({ api, event }) {
             try {
                 const data = await fs.readFile(apiConfigPath, 'utf8');
@@ -420,111 +305,108 @@
                 console.error("Lỗi khi đọc tệp cấu hình:", error);
                 return api.sendMessage("Có lỗi xảy ra khi đọc tệp cấu hình.", event.threadID);
             }
-        
-            // Thông báo bot đã sẵn sàng
-            api.sendMessage("Cuộc trò chuyện đã bắt đầu. Hãy nói gì đó để mình có thể phản hồi!", event.threadID);
-        
-            // Đăng ký để xử lý tin nhắn
-            global.client.handleReply.push({
-                type: "chat",
-                name: this.config.name,
-                author: event.senderID,
-                messageID: event.messageID
+
+            api.sendMessage("Cuộc trò chuyện đã bắt đầu. Hãy phản hồi tin nhắn này và nói gì đó để mình có thể phản hồi!", event.threadID, async (err, info) => {
+                if (err) return console.error(err);
+
+                global.client.handleReply.push({
+                    type: "chat",
+                    name: this.config.name,
+                    author: event.senderID,
+                    messageID: info.messageID
+                });
             });
         };
-        
+
         module.exports.handleReply = async function({ api, event, handleReply }) {
             const { threadID, senderID, body, attachment } = event;
-        
-            // Xác nhận rằng người gửi là tác giả
+
             if (senderID !== handleReply.author) return;
-        
-            // Tải ngữ cảnh người dùng
+
             let context = await loadContext(senderID);
-        
-            // Cập nhật giới tính và cảm xúc của người dùng
+
             updateUserGender(body, context);
             context.userSentiment = await analyzeSentiment(body);
-        
-            // Cập nhật phong cách của người dùng
+
             updateUserStyle(body, context);
-        
-            // Cập nhật số lượng tin nhắn và ngày tin nhắn cuối cùng
+
             const today = getVietnamTime().split(' ')[0];
             if (context.lastMessageDate !== today) {
                 context.messageCount = 0;
                 context.lastMessageDate = today;
             }
-        
+
+
             context.messages.push({ user: body.trim() });
-        
-            // Xử lý ảnh nếu có
+
             if (attachment && (attachment.type === 'photo' || attachment.base64)) {
                 return api.sendMessage("Bạn muốn phân tích ảnh? Hãy sử dụng lệnh `.picai` để phân tích ảnh nhé!", threadID);
             }
-        
-            // Xử lý yêu cầu người dùng
+
             const additionalResponse = await handleUserRequest(body, context);
             if (additionalResponse) {
                 return api.sendMessage(additionalResponse, threadID);
             }
-        
-            // Điều chỉnh tính cách của bot
-            botPersonality.personality = adjustPersonality(body, botPersonality.personality, context);
-        
-            // Thực hiện phản hồi từ bot
+
+            const userFeedback = body;
+            botPersonality.personality = adjustPersonality(userFeedback, botPersonality.personality, context);
+
+            if (!Array.isArray(context.previousTopics)) {
+                context.previousTopics = [];
+            }
+
             const prompt = `
-                Bạn là ${botPersonality.name}, một ${context.userGender === "female" ? "cô gái" : "chàng trai"} với các đặc điểm sau:
-                - Giới tính: ${botPersonality.gender}
-                - Địa chỉ: ${botPersonality.address}
-                - Học tại: ${botPersonality.school}
-                - Ngày sinh: ${botPersonality.birthday}
-                - Vai trò: ${botPersonality.role}
-                - Chiều cao: ${botPersonality.physicalAttributes.height}
-                - Cân nặng: ${botPersonality.physicalAttributes.weight}
-                - Màu tóc: ${botPersonality.physicalAttributes.hairColor}
-                - Màu mắt: ${botPersonality.physicalAttributes.eyeColor}
-                - Hình dáng cơ thể: ${botPersonality.physicalAttributes.bodyType}
-                - Sở thích: ${botPersonality.hobbies.join(', ')}
-                - Thành tích nổi bật: ${botPersonality.achievements.join(', ')}
-                - Các mốc sự kiện quan trọng trong cuộc đời tôi: ${botPersonality.milestones.map(m => `${m.year}: ${m.event}`).join(', ')}
-                - Mối quan hệ: ${Object.entries(botPersonality.relationships).map(([key, value]) => `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`).join(', ')}
-                - Tính cách: ${botPersonality.personality.join(' ')}
-                Ngữ cảnh hiện tại:
-                ${context.messages.map(entry => `- ${entry.user}`).join('\n')}
-                - Thông tin sở thích: ${JSON.stringify(context.preferences)}
-                - Trạng thái tâm lý: ${context.userSentiment}
-                - Các chủ đề trước đó: ${context.previousTopics.join(', ')}
-                - Các ảnh đã gửi: ${Array.isArray(context.images) ? context.images.map(img => `- URL: ${img.url}, Phân tích: ${img.analysis}`).join('\n') : "Chưa có ảnh nào được gửi"}
-                - Dữ liệu bổ sung: ${JSON.stringify(context.additionalData)}
-                Trả lời câu này: "${body.trim()}"
-                **Hãy cân nhắc các yếu tố cảm xúc và ngữ cảnh để tạo ra phản hồi tự nhiên và chân thành nhất.**
-            `;
-        
-            const replies = await generateReply(prompt);
-        
+        Bạn là ${botPersonality.name}, một ${context.userGender === "female" ? "cô gái" : "chàng trai"} với các đặc điểm sau:
+        - Giới tính: ${botPersonality.gender}
+        - Địa chỉ: ${botPersonality.address}
+        - Học tại: ${botPersonality.school}
+        - Ngày sinh: ${botPersonality.birthday}
+        - Vai trò: ${botPersonality.role}
+        - Chiều cao: ${botPersonality.physicalAttributes.height}
+        - Cân nặng: ${botPersonality.physicalAttributes.weight}
+        - Màu tóc: ${botPersonality.physicalAttributes.hairColor}
+        - Màu mắt: ${botPersonality.physicalAttributes.eyeColor}
+        - Hình dáng cơ thể: ${botPersonality.physicalAttributes.bodyType}
+        - Sở thích: ${botPersonality.hobbies.join(', ')}
+        - Thành tích nổi bật: ${botPersonality.achievements.join(', ')}
+        - Các mốc sự kiện quan trọng trong cuộc đời tôi: ${botPersonality.milestones.map(m => `${m.year}: ${m.event}`).join(', ')}
+        - Mối quan hệ: ${Object.entries(botPersonality.relationships).map(([key, value]) => `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`).join(', ')}
+        - Tính cách: ${botPersonality.personality.join(' ')}
+        Ngữ cảnh hiện tại:
+        ${context.messages.map(entry => `- ${entry.user}`).join('\n')}
+        - Thông tin sở thích: ${JSON.stringify(context.preferences)}
+        - Trạng thái tâm lý: ${context.userSentiment}
+        - Các chủ đề trước đó: ${context.previousTopics.join(', ')}
+        - Các ảnh đã gửi: ${Array.isArray(context.images) ? context.images.map(img => `- URL: ${img.url}, Phân tích: ${img.analysis}`).join('\n') : "Chưa có ảnh nào được gửi"}
+        - Dữ liệu bổ sung: ${JSON.stringify(context.additionalData)}
+        Trả lời câu này: "${body.trim()}"
+        **Hãy cân nhắc các yếu tố cảm xúc và ngữ cảnh để tạo ra phản hồi tự nhiên và chân thành nhất.**
+        `;
+            
+            const replies = await generateReply(prompt); 
+
             try {
                 for (const reply of replies) {
-                    const adjustedReply = adjustResponse(reply, context);
+                    const adjustedReply = adjustResponse(reply, context); 
                     context.messages.push({ bot: adjustedReply });
                     await saveContext(senderID, context);
-        
+            
                     await updateUserProfile(senderID, {
                         gender: context.userGender,
                         sentiment: context.userSentiment,
                         messageCount: context.messageCount
                     });
-        
+            
                     await api.sendMessage(adjustedReply, threadID, async (err, info) => {
                         if (err) {
                             console.error(err);
                             return;
                         }
-        
+            
                         if (shouldSendSticker(context)) {
-                            await sendRandomSticker(api, threadID);
+                            await sendRandomSticker(api, threadID); 
                         }
-        
+            
                         global.client.handleReply.push({
                             type: "chat",
                             name: this.config.name,
@@ -533,9 +415,9 @@
                         });
                     });
                 }
+            
             } catch (error) {
                 console.error("Lỗi khi tạo câu trả lời:", error);
                 api.sendMessage("Xin lỗi, mình không thể trả lời bạn lúc này, vui lòng thử lại sau.", threadID);
             }
         };
-        

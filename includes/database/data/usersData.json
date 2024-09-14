@@ -3454,7 +3454,7 @@
         "vanity": "61551937277879",
         "gender": 2,
         "isBirthday": false,
-        "money": 5447,
+        "money": 73991,
         "exp": 0,
         "createTime": {
             "timestamp": 1724564097915
@@ -3465,7 +3465,7 @@
         },
         "lastUpdate": 1724564097915,
         "coins": 86,
-        "lastDailyClaim": 1725943331595,
+        "lastDailyClaim": 1726200905634,
         "lastPlayTime": 1725983424683,
         "pay_limit_2024-08-26_61551937277879": 1,
         "pay_limit_2024-08-27_61551937277879": 16,
@@ -3654,18 +3654,18 @@
         "vanity": "61559151106106",
         "gender": 2,
         "isBirthday": false,
-        "money": 209148,
+        "money": 246215,
         "exp": 0,
         "createTime": {
             "timestamp": 1724564101315
         },
         "data": {
             "timestamp": 1724564101315,
-            "work2Time": 1726137718855
+            "work2Time": 1726200115702
         },
         "lastUpdate": 1724564101315,
-        "coins": 133,
-        "lastDailyClaim": 1726137321137,
+        "coins": 156,
+        "lastDailyClaim": 1726200124218,
         "lastPlayTime": 1726138725004,
         "pay_limit_2024-08-26_61559151106106": 1,
         "pay_limit_2024-08-27_61559151106106": 13,
@@ -10767,5 +10767,53 @@
             "timestamp": 1726196377890
         },
         "lastUpdate": 1726196377890
+    },
+    "100051271041420": {
+        "userID": "100051271041420",
+        "name": "Ngô Trung Kiên",
+        "vanity": "trugkien2",
+        "gender": 6,
+        "isBirthday": false,
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1726198721773
+        },
+        "data": {
+            "timestamp": 1726198721773
+        },
+        "lastUpdate": 1726198721773
+    },
+    "100001378940139": {
+        "userID": "100001378940139",
+        "name": "𝑁𝑔𝑜̂ 𝑇𝑟𝑢𝑛𝑔 𝐾𝑖𝑒̂𝑛",
+        "vanity": "100001378940139",
+        "gender": 2,
+        "isBirthday": false,
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1726198722474
+        },
+        "data": {
+            "timestamp": 1726198722474
+        },
+        "lastUpdate": 1726198722474
+    },
+    "100087677240339": {
+        "userID": "100087677240339",
+        "name": "Hà Thị Chi Anh",
+        "vanity": "100087677240339",
+        "gender": 6,
+        "isBirthday": false,
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1726278155739
+        },
+        "data": {
+            "timestamp": 1726278155739
+        },
+        "lastUpdate": 1726278155739
     }
 }

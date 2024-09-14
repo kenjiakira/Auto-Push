@@ -4958,3 +4958,118 @@ Error retrieving userID. This can be caused by a lot of things, including gettin
   ❱ Credits to Yan Maglinte 
   ❱ Admin: Akira
 
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Got this account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+[ COMMAND ] test2.js Module is already loaded!
+Đang chờ 15446000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 38 threads and 630 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+[ COMMAND ] test2.js Module is already loaded!
+Đang chờ 15113000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 38 threads and 630 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+[ SYSTEM ] Loaded command ai!
+[ SYSTEM ] Loaded command ai!
+[ SYSTEM ] Loaded command ai!
+[ SYSTEM ] Loaded command ai!
+[ SYSTEM ] Loaded command ai!
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Got this account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●
+[ COMMAND ] test2.js Module is already loaded!
+Đang chờ 15095000 ms để thông báo vào giờ tiếp theo.
+
+──LOADING EVENTS─●
+
+──BOT START─● 
+[ SYSTEM ] Successfully loaded 38 threads and 632 users
+
+   ░█▄▄░█▀█ ▀█▀░█▀█ ▄▀█░█▀▀░█▄▀    
+   ░█▄█░█▄█░░█░░█▀▀░█▀█░█▄▄░█░█     
+  ❱ Credits to Yan Maglinte 
+  ❱ Admin: Akira
+
+Gửi thông báo thời tiết đầu tiên.
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+Error: getaddrinfo ENOTFOUND www.facebook.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'www.facebook.com'
+}
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+Error: getaddrinfo ENOTFOUND www.facebook.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'www.facebook.com'
+}
+[ SYSTEM ] Bot is running on port: 9999
+[ SYSTEM ] Found config.json file!
+[ SYSTEM ] Config Loaded!
+[ SYSTEM ] Found the bot's appstate.
+
+──DATABASE─●
+[ DATABASE ] [ CONNECT ] Logged in as 100092325757607
+[ DATABASE ] [ CONNECT ] Account's message region: PRN
+[ DATABASE ] [ CONNECT ] Done logging in.
+
+──LOADING COMMANDS─●

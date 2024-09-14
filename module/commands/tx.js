@@ -7,8 +7,6 @@ const combinedImagePath = path.join(__dirname, 'dice_images', 'combined_dice_ima
 const jackpotDataPath = path.join(__dirname, 'json', 'jackpot.json');
 const userDataPath = path.join(__dirname, 'json', 'userData.json');
 
-const adminGroups = ['6589198804475799', '6589198804475799'];
-
 function readJackpotData() {
   try {
     const rawData = fs.readFileSync(jackpotDataPath);
@@ -173,10 +171,6 @@ module.exports.run = async function ({ api, event, args, Currencies, Users }) {
   const { threadID, messageID, senderID } = event;
 
   try {
-    // Check if the command is being run in an admin group
-    if (adminGroups.includes(threadID)) {
-      return api.sendMessage("Chức năng này không khả dụng trong nhóm admin.", threadID, messageID);
-    }
 
     const cooldown = 30; 
     const dataMoney = await Currencies.getData(senderID);
@@ -188,7 +182,6 @@ module.exports.run = async function ({ api, event, args, Currencies, Users }) {
 
     const moneyUser = dataMoney.money;
 
-    // Check if args[0] is defined and valid
     if (!args[0] || (args[0].toLowerCase() !== 'tài' && args[0].toLowerCase() !== 'xỉu')) {
       return api.sendMessage("Bạn chưa nhập đúng cú pháp. Hãy sử dụng: tx [tài/xỉu] [số xu hoặc Allin]", threadID, messageID);
     }

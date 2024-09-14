@@ -14,8 +14,6 @@ module.exports.config = {
     cooldowns: 5,
 };
 
-const adminGroups = ['6589198804475799'];
-
 const playerCooldowns = {};
 const userDataPath = path.join(__dirname, '..', '..', 'module', 'commands', 'json', 'userDatacl.json');
 
@@ -99,10 +97,6 @@ const isWithinAllowedTime = () => {
 
 module.exports.run = async ({ api, event, args, Currencies, Users }) => {
     const { threadID, messageID, senderID } = event;
-
-    if (adminGroups.includes(threadID)) {
-        return api.sendMessage("Chức năng này không khả dụng trong nhóm admin.", threadID, messageID);
-    }
 
     if (!isWithinAllowedTime()) {
         return api.sendMessage("Bạn chỉ có thể chơi từ 18:00 đến 22:00", threadID, messageID);

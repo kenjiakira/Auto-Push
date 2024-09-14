@@ -19,10 +19,6 @@ module.exports.run = async ({ api, event, Currencies, Users }) => {
     const lastWorkTime = global.lastWorkTime || {};
     const currentTime = Date.now();
 
-    const adminGroups = ['6589198804475799'];
-    if (adminGroups.includes(threadID)) {
-        return api.sendMessage("Chức năng này không khả dụng trong nhóm admin.", threadID, messageID);
-    }
     if (lastWorkTime[senderID] && currentTime - lastWorkTime[senderID] < 450000) { 
         const remainingTime = Math.ceil((450000 - (currentTime - lastWorkTime[senderID])) / 1000);
         return api.sendMessage(`⏳ Vui lòng đợi ${remainingTime} giây trước khi làm việc lại.`, threadID, messageID);
