@@ -60886,3 +60886,1312 @@ ERR! login }
 [ COMMAND ] LOADED add success
 [ COMMAND ] LOADED addimg success
 [ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED balance success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED picai success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED Premium success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED setpremium success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 92 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 25s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+Lỗi khi đọc tệp JSON: SyntaxError: D:\PACK-2.1.3-main\module\commands\json\ai.json: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at Object._readFile (D:\PACK-2.1.3-main\node_modules\jsonfile\index.js:25:16)
+    at async readDataFromFile (D:\PACK-2.1.3-main\module\commands\test2.js:75:20)
+[ DATABASE ] người dùng mới: 100087677240339
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+ERR! login Error retrieving userID. This can be caused by a lot of things, including getting blocked by Facebook for logging in from an unknown location. Try logging in with a browser to verify.
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED balance success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED picai success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED Premium success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED setpremium success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 92 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 32s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ DEV MODE ] time⏱:[ 13:09:02 14/09/2024 ]
+Lệnh sử dụng📌: .speedtest 
+bởi người dùng👤: 100092325757607 
+tại nhóm🔮: 6589198804475799 
+Args đi kèm👋: 
+Thời gian xử lý📍: 1207ms
+[ DEV MODE ] time⏱:[ 13:09:41 14/09/2024 ]
+Lệnh sử dụng📌: .dai 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 18ms
+[ DEV MODE ] time⏱:[ 13:09:49 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:58 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 5000
+Thời gian xử lý📍: 330ms
+[ DEV MODE ] time⏱:[ 13:09:21 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 10000
+Thời gian xử lý📍: 12ms
+[ DEV MODE ] time⏱:[ 13:09:29 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 10000
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:17 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 3000
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:01 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:12 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 12ms
+[ DEV MODE ] time⏱:[ 13:09:18 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 13:09:29 14/09/2024 ]
+Lệnh sử dụng📌: .coine 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: sell 25
+Thời gian xử lý📍: 14ms
+[ DEV MODE ] time⏱:[ 13:09:37 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 2000
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:44 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 12ms
+[ DEV MODE ] time⏱:[ 13:09:57 14/09/2024 ]
+Lệnh sử dụng📌: .dai 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:07 14/09/2024 ]
+Lệnh sử dụng📌: .wor 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:14 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 13ms
+[ DEV MODE ] time⏱:[ 13:09:50 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 13:09:55 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: sell
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 13:09:00 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:08 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: sell 32
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:17 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: sell 23
+Thời gian xử lý📍: 19ms
+[ DEV MODE ] time⏱:[ 13:09:02 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 20000
+Thời gian xử lý📍: 9ms
+[ ADD DATA ] Perform more group data 7643481742422249
+[ DEV MODE ] time⏱:[ 13:09:24 14/09/2024 ]
+Lệnh sử dụng📌: .work 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 13ms
+[ DEV MODE ] time⏱:[ 13:09:29 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 13ms
+[ DEV MODE ] time⏱:[ 13:09:37 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 5ms
+[ DEV MODE ] time⏱:[ 13:09:39 14/09/2024 ]
+Lệnh sử dụng📌: .daily 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:45 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:09 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 13:09:10 14/09/2024 ]
+Lệnh sử dụng📌: .work 
+bởi người dùng👤: 100046739981416 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 13:09:16 14/09/2024 ]
+Lệnh sử dụng📌: .wor 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 13:09:22 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100046739981416 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 100
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:24 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 200
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:00 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 20000
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:26 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:49 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:00 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: check
+Thời gian xử lý📍: 4436ms
+[ DEV MODE ] time⏱:[ 13:09:20 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100046739981416 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: check
+Thời gian xử lý📍: 241ms
+[ DEV MODE ] time⏱:[ 13:09:31 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 14ms
+[ DEV MODE ] time⏱:[ 13:09:34 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 200
+Thời gian xử lý📍: 20ms
+[ DEV MODE ] time⏱:[ 13:09:41 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100046739981416 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:42 14/09/2024 ]
+Lệnh sử dụng📌: .work 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 22ms
+[ DEV MODE ] time⏱:[ 13:09:22 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 200 hủ
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:33 14/09/2024 ]
+Lệnh sử dụng📌: .wor 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 17ms
+[ DEV MODE ] time⏱:[ 13:09:40 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:52 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 200 hủ
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:58 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 200
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:15 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:20 14/09/2024 ]
+Lệnh sử dụng📌: .wor 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:24 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 6ms
+[ DEV MODE ] time⏱:[ 13:09:47 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 200
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 13:09:57 14/09/2024 ]
+Lệnh sử dụng📌: .wor 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 13ms
+[ DEV MODE ] time⏱:[ 13:09:01 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 12ms
+[ DEV MODE ] time⏱:[ 13:09:14 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:22 14/09/2024 ]
+Lệnh sử dụng📌: .work 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 15ms
+[ DEV MODE ] time⏱:[ 13:09:25 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:30 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 2000
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:42 14/09/2024 ]
+Lệnh sử dụng📌: .mon 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:49 14/09/2024 ]
+Lệnh sử dụng📌: .top 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 12ms
+[ DEV MODE ] time⏱:[ 13:09:49 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:57 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:03 14/09/2024 ]
+Lệnh sử dụng📌: .wor 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 17ms
+[ DEV MODE ] time⏱:[ 13:09:28 14/09/2024 ]
+Lệnh sử dụng📌: .work 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:32 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 13:09:44 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 40000
+Thời gian xử lý📍: 16ms
+[ DEV MODE ] time⏱:[ 13:09:48 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:54 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 200
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:04 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allim
+Thời gian xử lý📍: 6ms
+[ DEV MODE ] time⏱:[ 13:09:12 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:16 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:22 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 6ms
+[ DEV MODE ] time⏱:[ 13:09:39 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 400
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:00 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:19 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:30 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:36 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:57 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: on
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:15 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:19 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mỉn
+Thời gian xử lý📍: 128ms
+[ DEV MODE ] time⏱:[ 13:09:24 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:27 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:33 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: sell 70
+Thời gian xử lý📍: 6ms
+[ DEV MODE ] time⏱:[ 13:09:40 14/09/2024 ]
+Lệnh sử dụng📌: .trader 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: REIT 2000
+Thời gian xử lý📍: 15ms
+[ DEV MODE ] time⏱:[ 13:09:43 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 200
+Thời gian xử lý📍: 12ms
+[ DEV MODE ] time⏱:[ 13:09:56 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 200
+Thời gian xử lý📍: 6ms
+[ DEV MODE ] time⏱:[ 13:09:59 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 11ms
+[ ADD DATA ] Perform more group data 7643481742422249
+[ DATABASE ] người dùng mới: 61565630426814
+[ DEV MODE ] time⏱:[ 13:09:26 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 200 hủ
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:33 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 200
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:34 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:37 14/09/2024 ]
+Lệnh sử dụng📌: .wor 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 13:09:43 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:52 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: sell 70
+Thời gian xử lý📍: 16ms
+[ DEV MODE ] time⏱:[ 13:09:01 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 2000
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:02 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: check
+Thời gian xử lý📍: 177ms
+[ DEV MODE ] time⏱:[ 13:09:14 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 1000
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 13:09:18 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:05 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:18 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allim
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:27 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:27 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:29 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:33 14/09/2024 ]
+Lệnh sử dụng📌: .wor 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:38 14/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: sell 24
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:41 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 200
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:53 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 3000
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:01 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 2000
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:12 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 6ms
+[ DEV MODE ] time⏱:[ 13:09:35 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 2000
+Thời gian xử lý📍: 9ms
+[ EVENT ] [ 13:09:15 09/14/2024 ] Event được thực thi: adminNoti tại nhóm: 7643481742422249 | Thời gian xử lý: 5ms
+[ EVENT ] [ 13:09:15 09/14/2024 ] Event được thực thi: anti tại nhóm: 7643481742422249 | Thời gian xử lý: 5ms
+[ DEV MODE ] time⏱:[ 13:09:41 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 2000
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:52 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:01 14/09/2024 ]
+Lệnh sử dụng📌: .mon 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:04 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:18 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 100001387645574 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 1000
+Thời gian xử lý📍: 10ms
+[ DEV MODE ] time⏱:[ 13:09:01 14/09/2024 ]
+Lệnh sử dụng📌: .wor 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:08 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 3000
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:01 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 20000
+Thời gian xử lý📍: 6ms
+[ DEV MODE ] time⏱:[ 13:09:49 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu 2000
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:34 14/09/2024 ]
+Lệnh sử dụng📌: .work 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 7ms
+[ DEV MODE ] time⏱:[ 13:09:40 14/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 6ms
+[ DEV MODE ] time⏱:[ 13:09:59 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61554281312896 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài 2000
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 13:09:00 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: xỉu allin
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:29 14/09/2024 ]
+Lệnh sử dụng📌: .trader 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: REIT 10000
+Thời gian xử lý📍: 8ms
+[ DEV MODE ] time⏱:[ 13:09:39 14/09/2024 ]
+Lệnh sử dụng📌: .tx 
+bởi người dùng👤: 61551937277879 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: tài allin
+Thời gian xử lý📍: 8ms
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED balance success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED picai success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED Premium success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED setpremium success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 92 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 35s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ DATABASE ] người dùng mới: 61563157013766
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+ERR! login Error retrieving userID. This can be caused by a lot of things, including getting blocked by Facebook for logging in from an unknown location. Try logging in with a browser to verify.
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+ERR! login Error retrieving userID. This can be caused by a lot of things, including getting blocked by Facebook for logging in from an unknown location. Try logging in with a browser to verify.
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+ERR! login Error retrieving userID. This can be caused by a lot of things, including getting blocked by Facebook for logging in from an unknown location. Try logging in with a browser to verify.
+[ STARTER ] Getting Started!
+[ SYSTEM ] Can't find the bot's appstate.
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+[ COMMAND ] LOADED add success
+[ COMMAND ] LOADED addimg success
+[ COMMAND ] LOADED adduser success
+[ COMMAND ] LOADED ai success
+[ COMMAND ] LOADED all success
+[ COMMAND ] LOADED anime success
+[ COMMAND ] LOADED antiout success
+[ COMMAND ] LOADED autoseen success
+[ COMMAND ] LOADED balance success
+[ COMMAND ] LOADED banking success
+[ COMMAND ] LOADED baucua success
+[ COMMAND ] LOADED boy success
+[ COMMAND ] LOADED btc success
+[ COMMAND ] LOADED callad success
+[ COMMAND ] LOADED chanle success
+[ COMMAND ] LOADED chess success
+[ COMMAND ] LOADED cmd success
+[ COMMAND ] LOADED coin success
+[ COMMAND ] LOADED contact success
+[ COMMAND ] LOADED count success
+[ COMMAND ] LOADED daily success
+[ COMMAND ] LOADED data success
+[ COMMAND ] LOADED dictionary success
+[ COMMAND ] LOADED emoji success
+[ COMMAND ] LOADED event success
+[ COMMAND ] LOADED file success
+[ COMMAND ] LOADED gemini success
+[ COMMAND ] LOADED ghep success
+[ COMMAND ] LOADED gift success
+[ COMMAND ] LOADED girl success
+[ COMMAND ] LOADED greet success
+[ COMMAND ] LOADED help success
+[ COMMAND ] LOADED id success
+[ COMMAND ] LOADED imgur success
+[ COMMAND ] LOADED ip success
+[ COMMAND ] LOADED joke success
+[ COMMAND ] LOADED kbb success
+[ COMMAND ] LOADED khaosat success
+[ COMMAND ] LOADED leakonly success
+[ COMMAND ] LOADED list success
+[ COMMAND ] LOADED lucky success
+[ COMMAND ] LOADED mine success
+[ COMMAND ] LOADED money success
+[ COMMAND ] LOADED morse success
+[ COMMAND ] LOADED movie success
+[ COMMAND ] LOADED netanh success
+[ COMMAND ] LOADED news success
+[ COMMAND ] LOADED noti success
+[ COMMAND ] LOADED npm success
+[ COMMAND ] LOADED nsfw success
+[ COMMAND ] LOADED pay success
+[ COMMAND ] LOADED picai success
+[ COMMAND ] LOADED poem success
+[ COMMAND ] LOADED Premium success
+[ COMMAND ] LOADED qrcode success
+[ COMMAND ] LOADED quiz success
+[ COMMAND ] LOADED quote success
+[ COMMAND ] LOADED reload success
+[ COMMAND ] LOADED removebg success
+[ COMMAND ] LOADED reset success
+[ COMMAND ] LOADED restart success
+[ COMMAND ] LOADED rizz success
+[ COMMAND ] LOADED roblox success
+[ COMMAND ] LOADED rules success
+[ COMMAND ] LOADED say success
+[ COMMAND ] LOADED setpremium success
+[ COMMAND ] LOADED shortcut success
+[ COMMAND ] LOADED shortenurl success
+[ COMMAND ] LOADED sing success
+[ COMMAND ] LOADED slot success
+[ COMMAND ] LOADED spam success
+[ COMMAND ] LOADED speedtest success
+[ COMMAND ] LOADED spotify success
+[ COMMAND ] LOADED stock success
+[ COMMAND ] LOADED tid success
+[ COMMAND ] LOADED tiktok success
+[ COMMAND ] LOADED tk success
+[ COMMAND ] LOADED top success
+[ COMMAND ] LOADED trader success
+[ COMMAND ] LOADED translate success
+[ COMMAND ] LOADED tt success
+[ COMMAND ] LOADED ttt success
+[ COMMAND ] LOADED tx success
+[ COMMAND ] LOADED uid success
+[ COMMAND ] LOADED unsend success
+[ COMMAND ] LOADED updatedata success
+[ COMMAND ] LOADED uptime success
+[ COMMAND ] LOADED wallpaper success
+[ COMMAND ] LOADED weather success
+[ COMMAND ] LOADED wiki success
+[ COMMAND ] LOADED work success
+[ COMMAND ] LOADED ytb success
+[ EVENT ] LOADED adminNoti success
+[ EVENT ] LOADED anti success
+[ EVENT ] LOADED join success
+[ LOADED ] [ SUCCESS ] Loaded 92 commands and 3 events successfully
+[ LOADED ] [ TIMESTART ] Launch time: 31s
+[ LOADED ] [ BOT_INFO ] success!
+[ NAME ]: AKI 
+[ FBID ]: 100092325757607 
+[ PRFX ]: .
+[ ADD DATA ] Perform more group data 7643481742422249
+[ DATABASE ] người dùng mới: 100063354169822
+[ EVENT ] [ 17:09:43 09/18/2024 ] Event được thực thi: anti tại nhóm: 7643481742422249 | Thời gian xử lý: 4ms
+[ DELETE DATA ] Perform user deletion 100063354169822
+[ ADD DATA ] Perform more group data 7643481742422249
+[ DEV MODE ] time⏱:[ 18:09:04 18/09/2024 ]
+Lệnh sử dụng📌: girl 
+bởi người dùng👤: 61552603356147 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 37ms
+[ DEV MODE ] time⏱:[ 18:09:14 18/09/2024 ]
+Lệnh sử dụng📌: girl 
+bởi người dùng👤: 61552603356147 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 9ms
+[ DEV MODE ] time⏱:[ 18:09:24 18/09/2024 ]
+Lệnh sử dụng📌: girl 
+bởi người dùng👤: 61552603356147 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 11ms
+[ DEV MODE ] time⏱:[ 18:09:32 18/09/2024 ]
+Lệnh sử dụng📌: girl 
+bởi người dùng👤: 61552603356147 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 13ms
+[ ADD DATA ] Perform more group data 7643481742422249
+[ DATABASE ] người dùng mới: 61562698546577
+[ DEV MODE ] time⏱:[ 18:09:47 18/09/2024 ]
+Lệnh sử dụng📌: .top 
+bởi người dùng👤: 61559188024598 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 13ms
+[ DEV MODE ] time⏱:[ 18:09:32 18/09/2024 ]
+Lệnh sử dụng📌: .work 
+bởi người dùng👤: 61559188024598 
+tại nhóm🔮: 7945521172163288 
+Args đi kèm👋: 
+Thời gian xử lý📍: 813ms
+[ DEV MODE ] time⏱:[ 18:09:37 18/09/2024 ]
+Lệnh sử dụng📌: .mine 
+bởi người dùng👤: 61559188024598 
+tại nhóm🔮: 7945521172163288 
+Args đi kèm👋: 
+Thời gian xử lý📍: 13ms
+[ DEV MODE ] time⏱:[ 18:09:43 18/09/2024 ]
+Lệnh sử dụng📌: .coin 
+bởi người dùng👤: 61559188024598 
+tại nhóm🔮: 7945521172163288 
+Args đi kèm👋: mine
+Thời gian xử lý📍: 21ms
+[ DEV MODE ] time⏱:[ 18:09:01 18/09/2024 ]
+Lệnh sử dụng📌: .mon 
+bởi người dùng👤: 100053970942155 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 19ms
+[ DEV MODE ] time⏱:[ 18:09:15 18/09/2024 ]
+Lệnh sử dụng📌: .chanle 
+bởi người dùng👤: 100053970942155 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: chẵn allin
+Thời gian xử lý📍: 19ms
+[ EVENT ] [ 18:09:52 09/18/2024 ] Event được thực thi: join tại nhóm: 7643481742422249 | Thời gian xử lý: 3ms
+[ ADD DATA ] Perform more group data 7643481742422249
+Lỗi khi sử dụng API key AIzaSyDMp6YNWYUw_wQBdv4DjkAOvZXJv7ITRy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateMessage (D:\PACK-2.1.3-main\module\events\joinNoti.js:50:24)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\joinNoti.js:85:28) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+Lỗi khi sử dụng API key AIzaSyDysChx19Lu3hAFpE2knZwkoCWGTN2gfy0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent: [500 Internal Server Error] An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+    at handleResponseNotOk (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:403:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:376:9)
+    at async generateContent (D:\PACK-2.1.3-main\node_modules\@google\generative-ai\dist\index.js:815:22)
+    at async generateMessage (D:\PACK-2.1.3-main\module\events\joinNoti.js:50:24)
+    at async module.exports.run (D:\PACK-2.1.3-main\module\events\joinNoti.js:85:28) {
+  status: 500,
+  statusText: 'Internal Server Error',
+  errorDetails: undefined
+}
+[ EVENT ] [ 18:09:34 09/18/2024 ] Event được thực thi: adminNoti tại nhóm: 7643481742422249 | Thời gian xử lý: 1ms
+[ UPDATE DATA ] Refresh the list of admins in the group 7643481742422249
+[ EVENT ] [ 18:09:48 09/18/2024 ] Event được thực thi: adminNoti tại nhóm: 7643481742422249 | Thời gian xử lý: 0ms
+[ UPDATE DATA ] Refresh the list of admins in the group 7643481742422249
+[ DEV MODE ] time⏱:[ 18:09:53 18/09/2024 ]
+Lệnh sử dụng📌: girl 
+bởi người dùng👤: 61552603356147 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 14ms
+[ DEV MODE ] time⏱:[ 18:09:10 18/09/2024 ]
+Lệnh sử dụng📌: girl 
+bởi người dùng👤: 61552603356147 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: 
+Thời gian xử lý📍: 32ms
+[ DATABASE ] người dùng mới: 100083113280723
+[ DEV MODE ] time⏱:[ 18:09:24 18/09/2024 ]
+Lệnh sử dụng📌: .callad 
+bởi người dùng👤: 61552603356147 
+tại nhóm🔮: 7643481742422249 
+Args đi kèm👋: còn bot bên này không out này ad
+Thời gian xử lý📍: 12ms
+D:\PACK-2.1.3-main\module\commands\weather.js:202
+      notifyWeather(api); 
+      ^
+
+ReferenceError: notifyWeather is not defined
+    at Timeout._onTimeout (D:\PACK-2.1.3-main\module\commands\weather.js:202:7)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+
+Node.js v20.16.0
+[ STARTER ] Getting Started!
+Error: listen EADDRINUSE: address already in use :::9999
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (D:\PACK-2.1.3-main\node_modules\express\lib\application.js:635:24)
+    at startBot (D:\PACK-2.1.3-main\index.js:25:7)
+    at ChildProcess.<anonymous> (D:\PACK-2.1.3-main\index.js:31:13)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1105:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 9999
+}
+[ STARTER ] Getting Started!
+[ DATABASE ] [ CONNECT ] Connected to JSON database successfully!
+ERR! login Error retrieving userID. This can be caused by a lot of things, including getting blocked by Facebook for logging in from an unknown location. Try logging in with a browser to verify.
+[ STARTER ] Getting Started!
