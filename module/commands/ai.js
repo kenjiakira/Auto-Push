@@ -180,19 +180,19 @@
    
             switch (context.userSentiment) {
                 case 'happy':
-                    reply = `Rất vui vì bạn đang có tâm trạng tốt! 😊\n${reply}`;
+                    reply = `${reply}`;
                     break;
                 case 'sad':
-                    reply = `Mình thấy bạn có vẻ không vui. Có chuyện gì không ổn không? 😢\n${reply}`;
+                    reply = `${reply}`;
                     break;
                 case 'angry':
-                    reply = "Bạn đang làm mình rất bực mình đấy! 😡\n" + reply;
+                    reply = "" + reply;
                     break;  
                 case 'annoyed':
-                    reply = "Có vẻ như bạn đang cảm thấy bực bội. Hãy thư giãn chút nhé! 😤\n" + reply;
+                    reply = "" + reply;
                     break;
                 case 'pouting':
-                    reply = "Hơi dỗi à? Có gì mình có thể làm để làm bạn vui hơn không? 😟\n" + reply;
+                    reply = "" + reply;
                     break;
                 default:
                     break;
