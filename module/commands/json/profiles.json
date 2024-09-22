@@ -7,7 +7,34 @@
   "61561753304881": {
     "gender": "unknown",
     "sentiment": "neutral",
-    "messageCount": 0
+    "messageCount": 0,
+    "previousResponses": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   "100088055674044": {
     "gender": "unknown",
@@ -17,7 +44,13 @@
   "100006842495827": {
     "gender": "unknown",
     "sentiment": "neutral",
-    "messageCount": 10
+    "messageCount": 0,
+    "previousResponses": [
+      null,
+      null,
+      null,
+      null
+    ]
   },
   "100029043375434": {
     "gender": "unknown",
@@ -27,7 +60,17 @@
   "100071081723886": {
     "gender": "unknown",
     "sentiment": "neutral",
-    "messageCount": 1
+    "messageCount": 0,
+    "previousResponses": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   "61561239149547": {
     "gender": "unknown",
@@ -56,8 +99,8 @@
   },
   "100092325757607": {
     "gender": "unknown",
-    "sentiment": "neutral",
-    "messageCount": 2
+    "sentiment": "positive",
+    "messageCount": 0
   },
   "100081173709548": {
     "gender": "unknown",
@@ -107,7 +150,26 @@
   "100024874297909": {
     "gender": "unknown",
     "sentiment": "angry",
-    "messageCount": 6
+    "messageCount": 0,
+    "previousResponses": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   "61552577791528": {
     "gender": "unknown",
@@ -117,7 +179,7 @@
   "100050363228652": {
     "gender": "unknown",
     "sentiment": "neutral",
-    "messageCount": 8
+    "messageCount": 0
   },
   "100073600573044": {
     "gender": "unknown",
@@ -128,5 +190,39 @@
     "gender": "unknown",
     "sentiment": "neutral",
     "messageCount": 0
+  },
+  "100083113280723": {
+    "gender": "unknown",
+    "sentiment": "positive",
+    "messageCount": 0
+  },
+  "100068382888605": {
+    "gender": "unknown",
+    "sentiment": "positive",
+    "messageCount": 0
+  },
+  "100093208808025": {
+    "gender": "unknown",
+    "sentiment": "happy",
+    "messageCount": 0,
+    "previousResponses": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   }
 }
