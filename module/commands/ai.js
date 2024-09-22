@@ -274,6 +274,7 @@ const loadContext = async (userID) => {
             images: [],
             additionalData: {}
         };
+<<<<<<< HEAD
     } catch (error) {
         console.error("Lỗi khi tải ngữ cảnh:", error);
         return {
@@ -287,6 +288,36 @@ const loadContext = async (userID) => {
             previousTopics: [],
             images: [],
             additionalData: {}
+=======
+        const adjustResponse = (reply, context) => {
+   
+            switch (context.userSentiment) {
+                case 'happy':
+                    reply = `${reply}`;
+                    break;
+                case 'sad':
+                    reply = `${reply}`;
+                    break;
+                case 'angry':
+                    reply = "" + reply;
+                    break;  
+                case 'annoyed':
+                    reply = "" + reply;
+                    break;
+                case 'pouting':
+                    reply = "" + reply;
+                    break;
+                default:
+                    break;
+            }
+            
+            if (Array.isArray(context.previousTopics) && context.previousTopics.length > 0) {
+                const recentTopics = context.previousTopics.slice(-3).join(', ');
+                reply = `${reply} (Đã thảo luận gần đây: ${recentTopics})`;
+            }
+            
+            return reply;
+>>>>>>> 81896d2c1f51cc9f4efd237cd7cc419a4dc20ce6
         };
     }
 };
